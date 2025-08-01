@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_solid_slop_1",
-    "path": "sprites/spr_solid_slop_1/spr_solid_slop_1.yy",
+    "name": "spr_solid_slope_45",
+    "path": "sprites/spr_solid_slope_45/spr_solid_slope_45.yy",
   },
   "spriteMaskId": null,
   "visible": true,
