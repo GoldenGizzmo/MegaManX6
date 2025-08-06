@@ -43,9 +43,13 @@ palette = 1;
 
 
 
+//New
 
+hspd = 0;
+vspd = 0;
 
+player_spd = 4;
+grv = 0.2;
 
-
-
+collision_list = ds_list_create();
 
