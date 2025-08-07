@@ -26,15 +26,13 @@ if death_animation < 3
 
 	with obj_player
 		image_alpha = 0;
-		
-	if death_animation = 3
-	{
-		fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
-		fade.fade_speed = 0.005;
-	}
 }
 
-
+if death_animation = 3
+{
+	fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
+	fade.fade_speed = 0.005;
+}
 	
 	
 

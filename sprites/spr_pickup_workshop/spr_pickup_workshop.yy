@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_pickup_workshop",
-  "bbox_bottom": 455,
+  "bbox_bottom": 456,
   "bbox_left": 9,
   "bbox_right": 387,
   "bbox_top": 1,

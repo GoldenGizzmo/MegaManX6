@@ -1,14 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if flicker = true
+//draw_text(x,y-50,global.weapontank)
+
+if flicker = true or flicker_weapon_swap = true
 {
 	gpu_set_fog(true,make_color_rgb(211,232,248),0,0);
 	draw_self();
 	gpu_set_fog(false,make_color_rgb(211,232,248),0,0);
+	
+	flicker_weapon_swap = false;
 }
 else
 {
+	palette = 1;
+	if global.weapon_choice > 0 //Select right palette when using special weapons
+		palette = (4+global.weapon_choice)
+	
 	pal_swap_set(spr_player_x_palette,palette,false);
 	if shooting_charge_flicker = true
 	{
@@ -21,7 +29,7 @@ else
 	pal_swap_reset();
 }
 
-pal_swap_set(spr_effect_charging_palette,palette,false);
+pal_swap_set(spr_effect_charging_palette,1,false);
 if shooting_charge >= shooting_charge_lvl_2	
 	draw_sprite(spr_effect_charging_2,global.animate/2,x,y);
 if shooting_charge >= shooting_charge_lvl_1

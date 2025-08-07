@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pickup_health_small",
-    "path": "sprites/spr_pickup_health_small/spr_pickup_health_small.yy",
+    "name": "spr_pickup_hearttank",
+    "path": "sprites/spr_pickup_hearttank/spr_pickup_hearttank.yy",
   },
   "spriteMaskId": null,
   "visible": true,

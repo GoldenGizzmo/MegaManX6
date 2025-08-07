@@ -4,7 +4,7 @@
   "name": "spr_player_x_palette",
   "bbox_bottom": 14,
   "bbox_left": 0,
-  "bbox_right": 17,
+  "bbox_right": 12,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,

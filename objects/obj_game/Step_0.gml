@@ -1,18 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.animate++;
+//Stop drawn animations
+if global.pause = false
+	global.animate++;
 
 if global.death = false and global.life <= 0
 {
 	global.death = true;
 	alarm[0] = 15;
 	
+	var in_pit = false;
 	with obj_player
 	{
 		sprite_index = spr_player_x_hurt
 		image_speed = 0;
 		image_index = 0;
+		
+		if place_meeting(x,y,obj_pit)
+			in_pit = true;
+	}
+	
+	//If fallen into a pit, skip the death animation
+	if in_pit = true
+	{
+		alarm[0] = 60;
+		death_animation = 3;
 	}
 }
 
@@ -78,9 +91,7 @@ with obj_spawnzone
 #endregion
 
 
-
-
-
+global.lifemax = base_life+(global.hearttank*2);
 
 
 

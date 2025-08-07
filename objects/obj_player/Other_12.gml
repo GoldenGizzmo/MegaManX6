@@ -9,17 +9,13 @@ if global.life > 0 and invul = false
 		//scr_defense_calculation();
 		
 		
-		//Knockback
-		if other.x > x
-			xspeed = -knockback;
-		else
-			xspeed = knockback;
+		
 		
 		global.life = global.life-other.damage;
 			
 		if global.life > 0
 		{
-			alarm[3] = 15; //Recovery time
+			alarm[3] = 30; //Recovery time
 			recovery_time = base_recovery_time;
 		}
 			
@@ -34,6 +30,14 @@ if global.life > 0 and invul = false
 		recovery = 1;
 		dash = false;
 		hurt = true;
+		zipline = false;
+		
+		//Knockback
+		yspeed = -3;
+		if other.x > x
+			xspeed = -knockback;
+		else
+			xspeed = knockback;
 	}
 } 
 

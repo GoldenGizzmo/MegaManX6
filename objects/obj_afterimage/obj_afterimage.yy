@@ -29,10 +29,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_afterimage_dash",
-    "path": "sprites/spr_afterimage_dash/spr_afterimage_dash.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

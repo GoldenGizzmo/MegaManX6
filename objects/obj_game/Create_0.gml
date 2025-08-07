@@ -8,8 +8,9 @@ instance_create_layer(x,y,"Collision",obj_camera);
 global.animate = 0;
 pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
 
-global.life = 20;
-global.lifemax = global.life;
+base_life = 32; //Starting max health
+global.life = base_life;
+global.lifemax = base_life;
 life_tick = global.life;
 
 global.death = false;
@@ -22,5 +23,6 @@ fade.fade_speed = 0.01;
 system = part_system_create();
 part_system_depth(system,depth-1);
 
-
+//video = video_open("MMX Warning.mov");
+//video_enable_loop(false);
 

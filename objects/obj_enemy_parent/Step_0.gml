@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//Can be paused
+if global.pause = true
+	return;
+
 if camera_check = false
 {
 	camera_check = true;
@@ -109,11 +113,11 @@ else
 {	
 	if death = 0 and explode = 0 
 	{	
-		var drop_chance = irandom(2); 
+		var drop_chance = irandom(1); 
 		if drop_chance = 0
 		{
 			pickup = instance_create_layer(x,y,"Instances",obj_pickup);
-			pickup.sprite_index = choose(spr_pickup_health_small,spr_pickup_health_mid)
+			pickup.sprite_index = choose(spr_pickup_health_small,spr_pickup_health_mid,spr_pickup_energy_small,spr_pickup_energy_mid)
 			pickup.pickup_expiry = 60*5;
 		}
 		

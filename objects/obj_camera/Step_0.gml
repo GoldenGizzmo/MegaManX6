@@ -22,7 +22,7 @@ if instance_exists(obj_camera_freemove)
 			//Not in a bossfight
 			var check = false;
 			with obj_bossmanager
-				if activate = true
+				if bossfight_begin = true
 					check = true;		
 			if check = false
 				find_space = camera_lasttouch;	

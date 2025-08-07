@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if animation_lock = true
+	exit;
+
 var loop = false;
 image_speed = 1;
 changing_sprite = sprite_index;
@@ -41,6 +44,7 @@ if hurt = false
 else
 {
 	sprite_index = spr_player_x_hurt;
+	loop = true;
 }
 
 if changing_sprite != sprite_index

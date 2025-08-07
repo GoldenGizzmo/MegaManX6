@@ -3,6 +3,7 @@
 
 event_inherited()
 
+//Hostile enemies are specifically targeted by homing weapons
 event_user(3);
 
 

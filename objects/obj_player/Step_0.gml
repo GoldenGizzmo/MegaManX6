@@ -1,43 +1,30 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Player Movement
 
-global.input_left = keyboard_check(ord("A"))
-global.input_right = keyboard_check(ord("D"))
-global.input_down = keyboard_check(ord("S"))
-
-global.input_shoot = keyboard_check(ord("J"))
-global.input_shoot_pressed = keyboard_check_pressed(ord("J"))
-global.input_shoot_released = keyboard_check_released(ord("J"))
-
-global.input_jump_pressed = keyboard_check_pressed(ord("K"))
-global.input_jump_released = keyboard_check_released(ord("K"))
-global.input_dash = keyboard_check(ord("L"))
-global.input_dash_pressed = keyboard_check_pressed(ord("L"))
-global.input_dash_released = keyboard_check_released(ord("L"))
+//Can be paused
+if global.pause = true
+	return;
 
 //If alive
-if global.death = false
+if global.death = false and animation_lock = false
 {
 	//Animations
 	event_user(0);
-	//Current collision scripts
-	scr_collision(true,true);
+	
+	if weight > 0
+	{
+		//Don't fall faster than max fall speed
+		if yspeed < fall_speed and airborne = true
+			yspeed += weight
+		else
+			y = round(y); //Align to ground
+
+		if place_meeting(x,y+1,obj_solid) or place_meeting(x,y+1,obj_solid_slope)
+			y = round(y);
+	}
 
 	//If not hurt (when hurt you can't move and don't fall with gravity)
 	if hurt = false
-	{
-		if weight > 0
-		{
-			//Don't fall faster than max fall speed
-			if yspeed < fall_speed and airborne = true
-				yspeed += weight
-			else
-				y = round(y); //Align to ground
-
-			if place_meeting(x,y+1,obj_solid) or place_meeting(x,y+1,obj_solid_slope)
-				y = round(y);
-		}
-		
+	{	
 		//If allowed to move
 		if movement = true
 		{
@@ -92,6 +79,7 @@ if global.death = false
 				else //No dash wall jump
 					xspeed = move_speed*-image_xscale;
 			}
+			
 			else
 			{
 				if dash = true
@@ -119,15 +107,17 @@ if global.death = false
 					{
 						//Dash in a straight line with reverse movement stopping the motion
 						if dash_ground = true
+						{
 							xspeed = dash_speed*image_xscale;
 			
-						//Dash cancel when released
-						if global.input_dash_released
-							alarm[4] = 1;
-						if global.input_left and image_xscale = 1
-							alarm[4] = 1;	
-						if global.input_right and image_xscale = -1
-							alarm[4] = 1;
+							//Dash cancel when released
+							if global.input_dash_released
+								alarm[4] = 1;
+							if global.input_left and image_xscale = 1
+								alarm[4] = 1;	
+							if global.input_right and image_xscale = -1
+								alarm[4] = 1;
+						}
 					}	
 				}
 				else
@@ -173,11 +163,33 @@ if global.death = false
 			}
 		
 			//Shooting
-			if (global.input_shoot or global.input_shoot_released) and shooting_lock = false
+			if shooting_lock = false
 			{
-				event_user(1);
-				shooting_charge++;
+				//X-Buster
+				if global.input_shoot or global.input_shoot_released
+				{
+					event_user(1);
+					shooting_charge++;
+					
+				}
+				//Special Weapons
+				if global.input_special or global.input_special_released
+				{
+					event_user(3);
+					
+					//Only charge if you have the ammo for it
+					if global.weapon[global.weapon_choice].charge_cost <= global.weapon[global.weapon_choice].ammo
+						shooting_charge++;
+				}
 				
+				//If not holding down any buttons
+				if !(global.input_shoot or global.input_special)
+				{
+					shooting_charge_flicker = false;
+					shooting_charge = 0;
+				}
+				
+				//Curent Bug: holding down both shoot buttons will cause the player to flicker way faster	
 				//Flashing visual effect
 				if shooting_charge%2 = 0
 				{
@@ -187,10 +199,58 @@ if global.death = false
 						shooting_charge_flicker = false;
 				}
 			}
-			else
+		}
+	}
+	
+	//Current collision scripts
+	scr_collision();
+	
+	//Changing weapons
+	if global.input_swap_left_pressed or global.input_swap_right_pressed
+	{
+		if global.input_swap_right_pressed //Swapping next
+		{
+			for (i = 1; i < 10; i++)
 			{
-				shooting_charge_flicker = false;
-				shooting_charge = 0;
+				if global.weapon_choice+i > array_length(global.weapon)-1 //If reaching the end of the list
+				{
+					global.weapon_choice = 0; //Go back to the start (X-Buster)
+					flicker_weapon_swap = true;
+					break;
+				}
+				else if global.weapon[global.weapon_choice+i].type != 0 //If next spot is not vacant
+				{
+					global.weapon_choice = global.weapon_choice+i; //Swap to that weapon
+					flicker_weapon_swap = true;
+					break;
+				}
+			}
+		}
+		else if global.input_swap_left_pressed //Swapping previous
+		{
+			for (i = 1; i < 10; i++)
+			{
+				if global.weapon_choice = 0 //If using the X-Buster
+				{
+					//Go to the end of the list
+					for (a = 1; a < 10; a++)
+					{
+						//Check backwards for a weapon to be equipped
+						if global.weapon[array_length(global.weapon)-a] != 0
+						{
+							global.weapon_choice = array_length(global.weapon)-a;
+							flicker_weapon_swap = true;
+							break;
+						}
+					}
+					break;
+				}
+				else if global.weapon[global.weapon_choice-i].type != 0 //If previous spot is not vacant
+				{
+					global.weapon_choice = global.weapon_choice-i; //Swap to that weapon
+					flicker_weapon_swap = true;
+					break;
+				}
 			}
 		}
 	}
@@ -205,9 +265,85 @@ if global.death = false
 		afterimage.image_xscale = image_xscale;
 	}
 }
+else
+{
+	shooting_charge_flicker = false;
+	shooting_charge = 0;
+}
 
+/*
+else if zipline = true
+{
+	//Moving up and down
+	if global.input_up
+	{
+		yspeed = -move_speed;
+		if dash = true
+			yspeed = -dash_speed;
+	}
+	else if global.input_down
+	{
+		yspeed = move_speed;
+		if dash = true
+			yspeed = dash_speed;
+	}
+	else
+		yspeed = 0;
+	//BUG: Dash jumping onto a zipline from a wall causes displacement
+	if !place_meeting(x,y+yspeed,obj_zipline)
+		yspeed = 0;
+				
+	//Zipline dash
+	if global.input_dash_pressed and dash = false
+	{
+		dash = true;
+		alarm[4] = 30;
+	}
+				
+	//Stopping dash
+	if dash = true
+	{
+		if yspeed > 0 and global.input_up
+			dash = false;
+		else if yspeed < 0 and global.input_down
+			dash = false;
+		else if yspeed = 0
+			dash = false;
+	}
+				
+	//Facing left and right
+	if global.input_left
+		image_xscale = -1;
+	else if global.input_right 
+		image_xscale = 1;
+				
+	//Jumping off
+	if global.input_jump_pressed
+	{
+		zipline = false;
+		zipline_dismount = true;
+					
+		yspeed = -jump_height;
+		if global.input_dash
+			dash = true;
+	}
+}
 
-
-
+//Grabbing onto a zipline
+if (global.input_up or global.input_down) and place_meeting(x,y,obj_zipline) and zipline = false and zipline_dismount = false
+{
+	zipline = true;
+					
+	//Snap to zipline
+	x = instance_place(x,y,obj_zipline).x+8;
+					
+	//Stop all speed
+	yspeed = 0;
+	xspeed = 0;
+	dash = false;
+	alarm[4] = 1;
+}
+if !global.input_up and !global.input_down //Repress to grab
+	zipline_dismount = false;
 
 
