@@ -53,3 +53,5 @@ grv = 0.2;
 
 collision_list = ds_list_create();
 
+jumping = false;
+

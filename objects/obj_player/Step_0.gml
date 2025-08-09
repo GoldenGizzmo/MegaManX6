@@ -22,8 +22,16 @@ var dir = global.input_right - global.input_left;
 hspd = dir * player_spd;
 vspd += grv;
 
-if(global.input_jump_pressed)vspd -= 6;
+if(global.input_jump_pressed){
+	jumping = true;
+	vspd -= 6;
+}
+
+
+var hsp = hspd;
+var vsp = vspd;
 
 
 hspd = scr_move(hspd, AXIS_HORIZONTAL);
+
 vspd = scr_move(vspd, AXIS_VERTICAL);

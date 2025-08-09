@@ -37,7 +37,20 @@ function scr_move(spd, axis, object = obj_solid){
 		
 		if(col.slope and (axis != AXIS_VERTICAL or spd < 0)){
 				
-			return scr_collide_slope(spd, axis, col, _x, _y);
+				
+			var res = scr_collide_slope(spd, axis, col, _x, _y);
+			if res != 0 return res;
+			
+			//Run code for when the player lands or hits the ceiling
+			if(spd > 0){
+				scr_stop_floor()
+			}
+			else
+			{
+				scr_stop_ceiling()
+			}
+				
+			return 0;
 		}
 		
 		if(axis == AXIS_HORIZONTAL){
@@ -46,9 +59,35 @@ function scr_move(spd, axis, object = obj_solid){
 		else
 		{
 			y = scr_snap_to_object(spd, axis, col);
+			
+			
+			//Run code for when the player lands or hits the ceiling
+			if(spd > 0){
+				scr_stop_floor()
+			}
+			else
+			{
+				scr_stop_ceiling()
+			}
+			
 		}
 		
 		return 0;
+	}
+	
+	//Attach to slopes when going down
+	
+	if(!jumping and axis == AXIS_VERTICAL and spd > 0){
+		
+		var obj = instance_place(x, y + SLOPE_CHECK_REACH, object)
+		
+		show_debug_message(obj)
+		
+		if(obj and obj.slope){
+			x -= (hspd - hspd/SLOPE_SPEED_FACTOR)
+			y = scr_snap_to_object(1, AXIS_VERTICAL, obj, x, y + SLOPE_CHECK_REACH);
+			return 0;
+		}
 	}
 	
 	return spd;
@@ -56,7 +95,7 @@ function scr_move(spd, axis, object = obj_solid){
 
 function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 	
-	var step = ceil(abs(spd)/sqrt(2));
+	var step = ceil(abs(spd)/SLOPE_SPEED_FACTOR);
 	
 	
 	var side = sign(spd)
@@ -70,8 +109,6 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 	{
 		y = scr_snap_to_object(side, axis, col, _x, _y)
 	}
-	
-	show_debug_message($"Slope collided")
 	
 	
 	if(axis == AXIS_HORIZONTAL){
@@ -136,7 +173,6 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 		
 		_x = floor(abs(x_)) * sign(x_) + frac(col.x)	
 		while(place_meeting(_x, y_, col)){
-			show_debug_message($"horizontal loop {spd}")
 			_x -= sign(spd);
 		}
 		
@@ -145,7 +181,6 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 	
 	_y = floor(abs(y_)) * sign(y_) + frac(col.y)	
 	while(place_meeting(x_, _y, col)){
-		show_debug_message($"vertical loop {spd}")
 		_y -= sign(spd);
 	}
 	

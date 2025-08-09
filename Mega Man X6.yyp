@@ -104,6 +104,7 @@
     {"id":{"name":"scr_move","path":"scripts/scr_move/scr_move.yy",},},
     {"id":{"name":"scr_retro_pal_swapper_utilities","path":"scripts/scr_retro_pal_swapper_utilities/scr_retro_pal_swapper_utilities.yy",},},
     {"id":{"name":"scr_retro_pal_swapper","path":"scripts/scr_retro_pal_swapper/scr_retro_pal_swapper.yy",},},
+    {"id":{"name":"scr_stop","path":"scripts/scr_stop/scr_stop.yy",},},
     {"id":{"name":"scrViewMacros","path":"scripts/scrViewMacros/scrViewMacros.yy",},},
     {"id":{"name":"sh_better_scaling_5xbra","path":"shaders/sh_better_scaling_5xbra/sh_better_scaling_5xbra.yy",},},
     {"id":{"name":"sh_better_scaling_5xbrb","path":"shaders/sh_better_scaling_5xbrb/sh_better_scaling_5xbrb.yy",},},

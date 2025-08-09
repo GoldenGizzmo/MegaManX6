@@ -70,6 +70,7 @@
     {"name":"scr_collision","order":2,"path":"scripts/scr_collision/scr_collision.yy",},
     {"name":"scr_globals","order":4,"path":"scripts/scr_globals/scr_globals.yy",},
     {"name":"scr_retro_pal_swapper_utilities","order":1,"path":"scripts/scr_retro_pal_swapper_utilities/scr_retro_pal_swapper_utilities.yy",},
+    {"name":"scr_stop","order":1,"path":"scripts/scr_stop/scr_stop.yy",},
     {"name":"scrViewMacros","order":2,"path":"scripts/scrViewMacros/scrViewMacros.yy",},
     {"name":"sh_better_scaling_5xbra","order":3,"path":"shaders/sh_better_scaling_5xbra/sh_better_scaling_5xbra.yy",},
     {"name":"sh_better_scaling_5xbrb","order":4,"path":"shaders/sh_better_scaling_5xbrb/sh_better_scaling_5xbrb.yy",},
