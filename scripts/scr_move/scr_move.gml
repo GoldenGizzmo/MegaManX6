@@ -1,25 +1,32 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_move(spd, axis, object = obj_solid){
+
 	
-	if(spd == 0)return 0;
+	//Save original coordinates
+		var _x = x;
+		var _y = y;
 	
-	var x_offset = (axis == AXIS_HORIZONTAL) ? spd : 0;
-	var y_offset = (axis == AXIS_VERTICAL) ? spd : 0;	
-	var _x = x;
-	var _y = y;
-	var internal_spd = ceil(abs(spd)) * sign(spd)
+	//Get the position to check
+	//It needs to be a bit longer than just the coordinate + the speed
+		var internal_spd = ceil(abs(spd)) * sign(spd)
+		if(axis == AXIS_HORIZONTAL){
+			_x += internal_spd
+		}
+		else
+		{
+			_y += internal_spd
+		}
 	
-	x += x_offset;
-	y += y_offset;
 	
-	if(axis == AXIS_HORIZONTAL){
-		_x = ceil(abs(x)) * sign(x)
-	}
-	else
-	{
-		_y = ceil(abs(y)) * sign(y)
-	}
+	//Move the instance
+		var x_offset = (axis == AXIS_HORIZONTAL) ? spd : 0;
+		var y_offset = (axis == AXIS_VERTICAL) ? spd : 0;	
+	
+		x += x_offset;
+		y += y_offset;
+	
+
 	
 	ds_list_clear(collision_list)
 	var size = instance_place_list(_x, _y, object, collision_list, true)
@@ -29,19 +36,8 @@ function scr_move(spd, axis, object = obj_solid){
 		var col = collision_list[| i];
 		
 		if(col.slope and (axis != AXIS_VERTICAL or spd < 0)){
-			
-			
-			var res = scr_collide_slope(internal_spd, axis, col, _x, _y);
-			
-			if(axis == AXIS_HORIZONTAL){
-				y = res[0]
-			}
-			else
-			{
-				x = res[0]
-			}
-			
-			return res[1];
+				
+			return scr_collide_slope(spd, axis, col, _x, _y);
 		}
 		
 		if(axis == AXIS_HORIZONTAL){
@@ -60,37 +56,44 @@ function scr_move(spd, axis, object = obj_solid){
 
 function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 	
-	var step = abs(spd);
+	var step = ceil(abs(spd)/sqrt(2));
+	
+	
 	var side = sign(spd)
 	var new_axis = axis == AXIS_HORIZONTAL ? AXIS_VERTICAL : AXIS_HORIZONTAL
 	
-	var new_x = _x;
-	var new_y = _y;
-	
 	
 	if(axis == AXIS_HORIZONTAL){
-		_x = scr_snap_to_object(side, axis, col, _x, _y)
+		x = scr_snap_to_object(side, axis, col, _x, _y)
 	}
 	else
 	{
-		_y = scr_snap_to_object(side, axis, col, _x, _y)
+		y = scr_snap_to_object(side, axis, col, _x, _y)
 	}
+	
+	show_debug_message($"Slope collided")
 	
 	
 	if(axis == AXIS_HORIZONTAL){
 		
 		for(var i = step; i > 0; i--){
-				
-			new_y = scr_snap_to_object(-1, new_axis, col, _x + i * side)
+			_y = scr_snap_to_object(-1, new_axis, col, x + side * i)
 			
-			if(abs(_y - new_y) <= step){
-				return [new_y, spd];
+			if(abs(_y - y) <= step){
+				x += side * i;
+				y = _y;
+				return spd;
 			}
+		}
+		
+		
+		for(var i = step; i > 0; i--){
+			_y = scr_snap_to_object(1, new_axis, col, x + side * i)
 			
-			new_y = scr_snap_to_object(1, new_axis, col, _x + i * side)
-			
-			if(abs(_y - new_y) <= step){
-				return [new_y, spd];
+			if(abs(_y - y) <= step){
+				x += side * i;
+				y = _y;
+				return spd;
 			}
 		}
 	}
@@ -98,22 +101,29 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 	{
 		
 		for(var i = step; i > 0; i--){
-				
-			new_x = scr_snap_to_object(-1, new_axis, col, _x, _y + i * side)
-		
-			if(abs(_x - new_x) <= step){
-				return [new_x, spd];
+			_x = scr_snap_to_object(-1, new_axis, col, undefined, y + side * i)
+			
+			if(abs(_x - x) <= step){
+				y += side * i;
+				x = _x;
+				return spd;
 			}
+		}
+		
+		
+		for(var i = step; i > 0; i--){
+			_x = scr_snap_to_object(1, new_axis, col, undefined, y + side * i)
 			
-			new_x = scr_snap_to_object(1, new_axis, col, _x, _y + i * side)
-			
-			if(abs(_x - new_x) <= step){
-				return [new_x, spd];
+			if(abs(_x - x) <= step){
+				y += side * i;
+				x = _x;
+				return spd;
 			}
 		}
 	}
 	
-	return [axis == AXIS_HORIZONTAL ? _x : _y, 0];
+	
+	return 0;
 }
 
 
@@ -125,13 +135,19 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 	if(axis == AXIS_HORIZONTAL){
 		
 		_x = floor(abs(x_)) * sign(x_) + frac(col.x)	
-		while(place_meeting(_x, y_, col))_x -= sign(spd);
+		while(place_meeting(_x, y_, col)){
+			show_debug_message($"horizontal loop {spd}")
+			_x -= sign(spd);
+		}
 		
 		return _x;
 	}
 	
 	_y = floor(abs(y_)) * sign(y_) + frac(col.y)	
-	while(place_meeting(x_, _y, col))_y -= sign(spd);
+	while(place_meeting(x_, _y, col)){
+		show_debug_message($"vertical loop {spd}")
+		_y -= sign(spd);
+	}
 	
 	return _y;
 }

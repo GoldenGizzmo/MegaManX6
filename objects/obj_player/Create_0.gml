@@ -48,7 +48,7 @@ palette = 1;
 hspd = 0;
 vspd = 0;
 
-player_spd = 4;
+player_spd = 2.7;
 grv = 0.2;
 
 collision_list = ds_list_create();
