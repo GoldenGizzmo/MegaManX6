@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//draw_text(x,y-50,global.weapontank)
+draw_set_font(fnt_game)
+draw_text(x,y-50,obj_bossmanager.bossfight_state)
+//draw_text(x,y-70,sprite_index)
 
 if flicker = true or flicker_weapon_swap = true
 {

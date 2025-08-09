@@ -8,9 +8,18 @@ if global.pause = true
 if global.death = false and animation_lock = false
 {
 	//Animations
+	//if attack_priority = 0
+	if attack_action = "X-Saber Jump" and sprite_index != spr_player_x_jump_saber
+		attack_action = 0;
+	if attack_action = "X-Saber Wall" and sprite_index != spr_player_x_walljump_saber
+		attack_action = 0;
+	if attack_action = "X-Saber Standing" and sprite_index != spr_player_x_idle_saber
+		attack_action = 0;
+	if attack_action = 0
+		attack_priority = 0;
 	event_user(0);
 	
-	if weight > 0
+	if weight > 0 and climbing = false
 	{
 		//Don't fall faster than max fall speed
 		if yspeed < fall_speed and airborne = true
@@ -23,12 +32,12 @@ if global.death = false and animation_lock = false
 	}
 
 	//If not hurt (when hurt you can't move and don't fall with gravity)
-	if hurt = false
+	if hurt = false and attack_priority < 2
 	{	
 		//If allowed to move
 		if movement = true
 		{
-			if global.input_jump_pressed and airborne = false
+			if global.input_jump_pressed and airborne = false and attack_priority = 0
 			{
 				yspeed -= jump_height;
 				if global.input_dash
@@ -72,68 +81,103 @@ if global.death = false and animation_lock = false
 			else
 				wall_slide = false;
 		
-			if wall_jump = true //Wall jumping
+			if attack_priority = 0
 			{
-				if dash = true //Dash wall jump
-					xspeed = dash_speed*-image_xscale;
-				else //No dash wall jump
-					xspeed = move_speed*-image_xscale;
-			}
-			
-			else
-			{
-				if dash = true
+				if wall_jump = true //Wall jumping
 				{
-					//Dash and move freely while in the air
-					if airborne = true
+					if dash = true //Dash wall jump
+						xspeed = dash_speed*-image_xscale;
+					else //No dash wall jump
+						xspeed = move_speed*-image_xscale;
+				}
+				else if climbing = true
+				{
+					//Moving up and down
+					if global.input_up
+						yspeed = -move_speed;
+					else if global.input_down and place_meeting(x,y+move_speed,obj_ladder)
+						yspeed = move_speed;
+					else
+						yspeed = 0;
+
+					//Facing left and right
+					if global.input_left
+						image_xscale = -1;
+					else if global.input_right 
+						image_xscale = 1;
+					
+					//Falling off the bottom
+					if !global.input_up and y > instance_place(x,y+16*other.image_yscale,obj_ladder)
+						climbing = false;
+					if !place_meeting(x,y,obj_ladder)
+						climbing = false;
+				
+					//Jumping off
+					if global.input_jump_pressed
 					{
-						alarm[4] = 1;
-						dash_ground = false;
+						climbing = false;
+						climbing_dismount = true;
+					
+						yspeed = -jump_height;
+						if global.input_dash
+							dash = true;
+					}
+				}
+				else
+				{
+					if dash = true
+					{
+						//Dash and move freely while in the air
+						if airborne = true
+						{
+							alarm[4] = 1;
+							dash_ground = false;
 			
+							if global.input_left
+							{
+								xspeed = -dash_speed;
+								image_xscale = -1;
+							}
+							else if global.input_right
+							{
+								xspeed = dash_speed;
+								image_xscale = 1;
+							}
+							else
+								xspeed = 0;
+						}
+						else
+						{
+							//Dash in a straight line with reverse movement stopping the motion
+							if dash_ground = true
+							{
+								xspeed = dash_speed*image_xscale;
+			
+								//Dash cancel when released
+								if global.input_dash_released
+									alarm[4] = 1;
+								if global.input_left and image_xscale = 1
+									alarm[4] = 1;	
+								if global.input_right and image_xscale = -1
+									alarm[4] = 1;
+							}
+						}	
+					}
+					else
+					{
 						if global.input_left
 						{
-							xspeed = -dash_speed;
+							xspeed = -move_speed;
 							image_xscale = -1;
 						}
 						else if global.input_right
 						{
-							xspeed = dash_speed;
+							xspeed = move_speed;
 							image_xscale = 1;
 						}
 						else
 							xspeed = 0;
 					}
-					else
-					{
-						//Dash in a straight line with reverse movement stopping the motion
-						if dash_ground = true
-						{
-							xspeed = dash_speed*image_xscale;
-			
-							//Dash cancel when released
-							if global.input_dash_released
-								alarm[4] = 1;
-							if global.input_left and image_xscale = 1
-								alarm[4] = 1;	
-							if global.input_right and image_xscale = -1
-								alarm[4] = 1;
-						}
-					}	
-				}
-				else
-				{
-					if global.input_left
-					{
-						xspeed = -move_speed;
-						image_xscale = -1;
-					}
-					else if global.input_right
-					{
-						xspeed = move_speed;
-						image_xscale = 1;
-					}
-					else
-						xspeed = 0;
 				}
 			}
 	
@@ -161,6 +205,8 @@ if global.death = false and animation_lock = false
 						yspeed = 0;
 				}
 			}
+			
+			
 		
 			//Shooting
 			if shooting_lock = false
@@ -177,8 +223,8 @@ if global.death = false and animation_lock = false
 				{
 					event_user(3);
 					
-					//Only charge if you have the ammo for it
-					if global.weapon[global.weapon_choice].charge_cost <= global.weapon[global.weapon_choice].ammo
+					//Only charge if you have the ammo for it and not the x-saber
+					if global.weapon[global.weapon_choice].charge_cost <= global.weapon[global.weapon_choice].ammo and global.weapon_choice != 0
 						shooting_charge++;
 				}
 				
@@ -206,7 +252,7 @@ if global.death = false and animation_lock = false
 	scr_collision();
 	
 	//Changing weapons
-	if global.input_swap_left_pressed or global.input_swap_right_pressed
+	if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
 	{
 		if global.input_swap_right_pressed //Swapping next
 		{
@@ -264,6 +310,8 @@ if global.death = false and animation_lock = false
 		afterimage.image_index = image_index;
 		afterimage.image_xscale = image_xscale;
 	}
+	
+	
 }
 else
 {

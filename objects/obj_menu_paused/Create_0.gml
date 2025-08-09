@@ -71,7 +71,7 @@ controller[3] = gp_axislh;
 	
 controller[4] = gp_face3;
 controller[5] = gp_face1;
-controller[6] = gp_face2;
+controller[6] = gp_shoulderr;
 controller[7] = gp_shoulderl;
 controller[8] = gp_face4;
 

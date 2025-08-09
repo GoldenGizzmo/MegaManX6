@@ -9,8 +9,8 @@ explosion = spr_explosion_player;
 
 piercing = false;
 phasing = false;
-
-
+melee = false;
+melee_frames = 0;
 
 
 

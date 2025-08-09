@@ -7,7 +7,7 @@ life = 10;
 damage = 4;
 bullet_damage = 4;
 
-state = "Shooting";
+state = "Follow";
 action = 0;
 alarm[0] = 120;
 

@@ -17,6 +17,8 @@ airborne = false;
 
 death = 0; 
 enemy_type = 0;
+boss = false;
+boss_iframes = -1;
 
 spawn = 0;
 despawn = true; //Variable to decide despawning

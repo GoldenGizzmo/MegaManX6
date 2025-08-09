@@ -7,6 +7,7 @@ bossfight_begin = false;
 image_alpha = 0;
 run_direction = 1;
 
+boss = noone;
 
 
 

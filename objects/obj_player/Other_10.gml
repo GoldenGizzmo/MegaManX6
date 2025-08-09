@@ -13,9 +13,36 @@ if hurt = false
 	if airborne = true
 	{
 		if wall_slide = true
-			sprite_index = spr_player_x_walljump_simple;
+		{
+			if attack_action = "X-Saber Wall"
+			{
+				sprite_index = spr_player_x_walljump_saber;
+				loop = true;
+			}
+			else
+				sprite_index = spr_player_x_walljump_simple;
+		}
+		else if climbing = true
+		{
+			loop = true;
+			sprite_index = spr_player_x_climb_simple
+			if yspeed < 0
+				image_speed = 1;
+			else if yspeed > 0
+				image_speed = -1;
+			else
+				image_speed = 0;
+		}
 		else
-			sprite_index = spr_player_x_jump;
+		{
+			if attack_action = "X-Saber Jump"
+			{
+				sprite_index = spr_player_x_jump_saber;
+				loop = true;
+			}
+			else
+				sprite_index = spr_player_x_jump;
+		}
 	}
 	else
 	{
@@ -34,8 +61,16 @@ if hurt = false
 					sprite_index = spr_player_x_crouch;
 				else
 				{
-					sprite_index = spr_player_x_idle;
-					loop = true;
+					if attack_action = "X-Saber Standing"
+					{
+						sprite_index = spr_player_x_idle_saber;
+						loop = true;
+					}
+					else
+					{
+						sprite_index = spr_player_x_idle;
+						loop = true;
+					}
 				}
 			}
 		}

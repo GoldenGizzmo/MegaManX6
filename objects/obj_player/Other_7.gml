@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if sprite_index = spr_player_x_idle_saber or sprite_index = spr_player_x_jump_saber or sprite_index = spr_player_x_walljump_saber
+{
+	image_index = -1;
+	attack_action = 0;
+}
+
 /*
 if sprite_index = spr_player_x_dash
 	sprite_index = spr_player_x_idle

@@ -15,7 +15,8 @@ fall_speed = 6;
 movement = true;
 
 //zipline = false;
-//zipline_dismount = false;
+climbing_dismount = false;
+climbing = false;
 wall_jump = false;
 wall_slide = false;
 crouch = false;
@@ -30,6 +31,10 @@ set_knockback = 1.5;
 knockback = set_knockback;
 flicker = false;
 invul = false;
+
+//Special attack
+attack_action = 0;
+attack_priority = 0; //Determines if it can be cancelled by moving or dash
 
 changing_sprite = noone;
 animation_lock = false; //Stop using gravity when openning a door

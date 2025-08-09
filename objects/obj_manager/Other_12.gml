@@ -15,7 +15,7 @@ if global.controller = true
 	button_right_2 = gp_padr;
 	
 	button_shoot = gp_face3;
-	button_special = gp_face2;
+	button_special = gp_shoulderr;
 	button_jump = gp_face1;
 	button_dash = gp_shoulderl;
 	button_giga = gp_face4;

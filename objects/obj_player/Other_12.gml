@@ -30,7 +30,8 @@ if global.life > 0 and invul = false
 		recovery = 1;
 		dash = false;
 		hurt = true;
-		zipline = false;
+		climbing = false;
+		attack_action = 0;
 		
 		//Knockback
 		yspeed = -3;

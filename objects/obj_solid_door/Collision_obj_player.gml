@@ -22,7 +22,8 @@ if open_state = 0 and ((image_xscale = 1 and obj_player.x < x) or (image_xscale 
 	}
 	
 	with obj_enemy_hostile
-		instance_destroy(id,false);
+		if boss = false //Bosses don't get removed
+			instance_destroy(id,false);
 	with obj_bullet_default
 		instance_destroy(id,false);
 }

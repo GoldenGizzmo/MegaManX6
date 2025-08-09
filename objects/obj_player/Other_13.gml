@@ -13,6 +13,47 @@ if sprite_index = spr_player_x_dash_simple or sprite_index = spr_player_x_crouch
 
 switch (global.weapon[global.weapon_choice].type)
 {
+	case "X-Saber":
+		if global.input_special_pressed and sprite_index != spr_player_x_idle_saber and sprite_index != spr_player_x_jump_saber and sprite_index != spr_player_x_walljump_saber
+		{
+			bullet = instance_create_layer(x,y,"Projectiles",obj_bullet_saber)
+			bullet.image_xscale = image_xscale;
+			bullet.melee_damage = 4;
+			bullet.melee_frames = 6;
+
+			if wall_slide = true
+			{
+				attack_action = "X-Saber Wall";
+				
+				sprite_index = spr_player_x_walljump_saber;
+				bullet.sprite_index = spr_bullet_x_saber_wall;
+			}
+			else if airborne = false
+			{
+				attack_action = "X-Saber Standing";
+				attack_priority = 1; //Can be dash cancelled or damaged out of it
+				
+				sprite_index = spr_player_x_idle_saber;
+				bullet.sprite_index = spr_bullet_x_saber;
+				
+				xspeed = 0;
+				dash = false;	
+			}
+			else
+			{
+				attack_action = "X-Saber Jump";
+				wall_jump = false; //Funny X-Saber wall scaling tech
+				
+				sprite_index = spr_player_x_jump_saber;
+				bullet.sprite_index = spr_bullet_x_saber_jump;
+			}
+			
+			image_index = 0;
+			shot_fired = true;
+			crouch = false;
+		}
+		break;
+	
 	case "Meteor Rain":
 	
 		break;

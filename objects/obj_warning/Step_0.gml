@@ -35,7 +35,7 @@ if flash_phase = 2
 	}
 }
 
-if flash_count = flash_max
+if flash_count >= flash_max
 	instance_destroy();
 
 

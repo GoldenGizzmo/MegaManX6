@@ -14,6 +14,8 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"416693fd-f45f-460d-819e-4d3a97c91e55",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ec2e4a21-5f8b-4248-aac9-2c3b418902ec",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8821756-fe2a-4ddb-aa1c-bdf6c9b5336e",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,11 +45,11 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -55,6 +57,8 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"416693fd-f45f-460d-819e-4d3a97c91e55","path":"sprites/spr_stage_stencil/spr_stage_stencil.yy",},},},"Disabled":false,"id":"49e3b9d4-2a2e-494b-95e6-bda68a90ef53","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ec2e4a21-5f8b-4248-aac9-2c3b418902ec","path":"sprites/spr_stage_stencil/spr_stage_stencil.yy",},},},"Disabled":false,"id":"c854d5bf-6e43-42bc-9141-f3acdef0ce09","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e8821756-fe2a-4ddb-aa1c-bdf6c9b5336e","path":"sprites/spr_stage_stencil/spr_stage_stencil.yy",},},},"Disabled":false,"id":"3db13240-9e29-4228-95b7-2112396ceac1","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

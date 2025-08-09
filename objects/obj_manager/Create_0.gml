@@ -10,7 +10,7 @@ event_user(2); //Key bindings
 scr_get_input();
 
 current_area = noone;
-global.pause = false
+global.pause = false;
 
 
 //Special Weapons
