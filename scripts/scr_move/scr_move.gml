@@ -25,7 +25,6 @@ function scr_move(spd, axis, object = obj_solid){
 	
 		x += x_offset;
 		y += y_offset;
-	
 
 	
 	ds_list_clear(collision_list)
@@ -42,12 +41,14 @@ function scr_move(spd, axis, object = obj_solid){
 			if res != 0 return res;
 			
 			//Run code for when the player lands or hits the ceiling
-			if(spd > 0){
-				scr_stop_floor()
-			}
-			else
-			{
-				scr_stop_ceiling()
+			if(AXIS_VERTICAL){
+				if(spd > 0){
+					scr_stop_floor()
+				}
+				else
+				{
+					scr_stop_ceiling()
+				}
 			}
 				
 			return 0;
@@ -76,19 +77,24 @@ function scr_move(spd, axis, object = obj_solid){
 	}
 	
 	//Attach to slopes when going down
-	
+
 	if(!jumping and axis == AXIS_VERTICAL and spd > 0){
 		
-		var obj = instance_place(x, y + SLOPE_CHECK_REACH, object)
+		ds_list_clear(collision_list)
+		size = instance_place_list(x, y + SLOPE_CHECK_REACH, object, collision_list, true)
 		
-		show_debug_message(obj)
-		
-		if(obj and obj.slope){
+		for(var i = 0; i < size; i++){
+			
+			var col = collision_list[| i];
+			if(!col.slope)continue;
+			
 			x -= (hspd - hspd/SLOPE_SPEED_FACTOR)
-			y = scr_snap_to_object(1, AXIS_VERTICAL, obj, x, y + SLOPE_CHECK_REACH);
-			return 0;
+			y = scr_snap_to_object(1, AXIS_VERTICAL, col, x, y + SLOPE_CHECK_REACH);
+			return 0;	
 		}
+
 	}
+
 	
 	return spd;
 }
@@ -97,68 +103,95 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 	
 	var step = ceil(abs(spd)/SLOPE_SPEED_FACTOR);
 	
-	
 	var side = sign(spd)
 	var new_axis = axis == AXIS_HORIZONTAL ? AXIS_VERTICAL : AXIS_HORIZONTAL
 	
+	var res1 = 0;
+	var res2 = 0;
+	
+	var _x1 = 0;
+	var _x2 = 0;
+	
+	var _y1 = 0;
+	var _y2 = 0;
 	
 	if(axis == AXIS_HORIZONTAL){
-		x = scr_snap_to_object(side, axis, col, _x, _y)
+		
+		_x = scr_snap_to_object(side, axis, col)
+		
+		for(var i = step; i > 0; i--){
+			_y1 = scr_snap_to_object(-1, new_axis, col, _x + side * i)
+			
+			
+			if(abs(_y1 - y) <= step){
+				res1 = abs(_y1 - y);
+				break;
+			}
+		}
+		
+		
+		for(var i = step; i > 0; i--){
+			_y2 = scr_snap_to_object(1, new_axis, col, _x + side * i)
+			
+			if(abs(_y1 - y) <= step){
+				res2 = abs(_y1 - y);
+				break;
+			}
+		}
+		
+		if(res1 != 0 or res2 != 0){
+		
+			if(res1 > res2){
+				y = _y1;
+			}
+			else{
+				y = _y2;
+			}
+			
+			show_debug_message($"Horizontal snap")
+			
+			x = scr_snap_to_object(side, axis, col);
+			
+			return spd;
+		}
+		
 	}
 	else
 	{
-		y = scr_snap_to_object(side, axis, col, _x, _y)
-	}
-	
-	
-	if(axis == AXIS_HORIZONTAL){
+		
+		_y = scr_snap_to_object(side, axis, col)
 		
 		for(var i = step; i > 0; i--){
-			_y = scr_snap_to_object(-1, new_axis, col, x + side * i)
+			_x1 = scr_snap_to_object(-1, new_axis, col, undefined, _y + side * i)
 			
-			if(abs(_y - y) <= step){
-				x += side * i;
-				y = _y;
-				return spd;
+			if(abs(_x1 - x) <= step){
+				res1 = abs(_x1 - x);
 			}
 		}
 		
 		
 		for(var i = step; i > 0; i--){
-			_y = scr_snap_to_object(1, new_axis, col, x + side * i)
+			_x2 = scr_snap_to_object(1, new_axis, col, undefined, _y + side * i)
 			
-			if(abs(_y - y) <= step){
-				x += side * i;
-				y = _y;
-				return spd;
-			}
-		}
-	}
-	else
-	{
-		
-		for(var i = step; i > 0; i--){
-			_x = scr_snap_to_object(-1, new_axis, col, undefined, y + side * i)
-			
-			if(abs(_x - x) <= step){
-				y += side * i;
-				x = _x;
-				return spd;
+			if(abs(_x2 - x) <= step){
+				res2 = abs(_x2 - x);
 			}
 		}
 		
+		if(res1 != 0 or res2 != 0){
 		
-		for(var i = step; i > 0; i--){
-			_x = scr_snap_to_object(1, new_axis, col, undefined, y + side * i)
-			
-			if(abs(_x - x) <= step){
-				y += side * i;
-				x = _x;
-				return spd;
+			if(res1 > res2){
+				x = _x1;
 			}
+			else{
+				x = _x2;
+			}
+			
+			y = scr_snap_to_object(side, axis, col);
+			
+			return spd;
 		}
 	}
-	
 	
 	return 0;
 }
@@ -169,6 +202,13 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 	var _x = x_;
 	var _y = y_;
 	
+	var arr = debug_get_callstack(10)
+	
+	array_foreach(arr, function(e){
+		show_debug_message(e)
+	})
+
+	
 	if(axis == AXIS_HORIZONTAL){
 		
 		_x = floor(abs(x_)) * sign(x_) + frac(col.x)	
@@ -178,6 +218,7 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 		
 		return _x;
 	}
+
 	
 	_y = floor(abs(y_)) * sign(y_) + frac(col.y)	
 	while(place_meeting(x_, _y, col)){
