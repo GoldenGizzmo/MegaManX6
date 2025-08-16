@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_set_font(fnt_game)
-draw_text(x,y-50,obj_bossmanager.bossfight_state)
-//draw_text(x,y-70,sprite_index)
+
+//draw_text(x,y-50,obj_boss_yanmark.state)
+//draw_text(x,y-70,movement)
 
 if flicker = true or flicker_weapon_swap = true
 {
@@ -29,6 +29,16 @@ else
 	}	
 	draw_self();
 	pal_swap_reset();
+	
+	image_blend = c_white;
+	if slowed > 0
+	{
+		image_blend = make_color_rgb(200,88,192);
+		
+		draw_sprite(spr_bullet_powder,global.animate/5,x-3,y-15);
+		draw_sprite(spr_bullet_powder,global.animate/5,x+8,y-2);
+		draw_sprite(spr_bullet_powder,global.animate/5,x-5,y+10);
+	}
 }
 
 pal_swap_set(spr_effect_charging_palette,1,false);

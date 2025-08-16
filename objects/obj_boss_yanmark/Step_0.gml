@@ -8,7 +8,7 @@ y += yspeed;
 x += xspeed;
 
 //Being openning appearance
-if state = "Openning" and action = 0
+if state = "Appearance" and action = 0
 {
 	action++;
 	alarm[0] = 1;

@@ -53,21 +53,60 @@ switch (bossfight_state)
 		
 	case 4: //Boss appears (Boss object has the openning code)
 		with boss
-			state = "Openning";
+			state = "Appearance";
 		break;
 		
 	case 5: //Dialogue (Skipped on retry)
+		bossfight_state++;
+		alarm[0] = 10;
+	
+		if dialogue != 0 and global.seen_boss_cutscene != boss
+		{
+			conversation = instance_create_depth(0,0,0,obj_dialogue);
+			conversation.dialogue = dialogue;
+			
+			//Only see this dialogue once
+			global.seen_boss_cutscene = boss;
+		}
 		break;
 		
 	case 6: //Do opening animation
+		if !instance_exists(obj_dialogue)
+		{
+			with boss
+			{
+				state = "Openning";
+				action = 0;
+				alarm[0] = 60;
+			}
+		}
+		else
+		{
+			alarm[0] = 1;
+			//Start music
+		}
 		break;
 		
 	case 7:	//Fill healthbar
-	
+		if lifebar_intro > 0
+		{
+			alarm[0] = 1;	
+			lifebar_intro -= boss.lifemax/100;
+		}
+		else
+		{
+			bossfight_state++;
+			alarm[0] = 60;
+		}
 		break;
 		
 	case 8: //Being bossfight
-	
+		bossfight_begin = true;
+		with obj_player
+		{
+			movement = true;
+			animation_lock = false;
+		}
 		break;
 }
 

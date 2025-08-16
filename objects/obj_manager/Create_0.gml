@@ -12,6 +12,8 @@ scr_get_input();
 current_area = noone;
 global.pause = false;
 
+global.fnt_game = font_add_sprite_ext(spr_font_game,"!~#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPKRSTUVWXYZ[\]^_``abcdefghijklmnopqrstuvwxyz",true,1);
+draw_set_font(global.fnt_game);
 
 //Special Weapons
 global.weapon_choice = 0;
@@ -23,6 +25,8 @@ global.weapon[0] = {type : "X-Saber", ammo_max : -1, ammo : -1, charge_cost : -1
 global.weapon[6] = {type : "Meteor Rain", ammo_max : 20, ammo : 20, charge_cost : 3}; 
 global.weapon[8] = {type : "Ray Arrow", ammo_max : 55, ammo : 55, charge_cost : 25}; 	
 
+global.nightmare_souls = 0;
+
 //Heart Tanks
 global.hearttank = 0;
 //Other Tanks
@@ -32,3 +36,4 @@ global.weapontank = -1;
 global.powertank = 0;
 //EX Tank LMAO
 
+global.seen_boss_cutscene = 0;

@@ -1,81 +1,85 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var x_pos = 20*global.ui_scale;
-var y_pos = (display_get_gui_height()/2)-10*global.ui_scale;
-
-ammo_font = font_add_sprite_ext(spr_hud_weapon_count,"0123456789",true,0);
-draw_set_font(ammo_font);
-
-//HUD
-var hud_type = 0;
-if global.weapon_choice > 0
-	hud_type = 1;
-draw_sprite_ext(spr_hud_player,hud_type,x_pos,y_pos,global.ui_scale,global.ui_scale,0,c_white,1);
-draw_sprite_ext(spr_hud_player_extend,0,x_pos,y_pos-(global.hearttank*2)*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,1);
-if hud_type = 1
-	draw_sprite_ext(spr_hud_player_extend,1,x_pos,y_pos-(global.powertank*12)*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,1);
-
-//Health Bar
-var bar_height = -(global.lifemax*global.ui_scale)-1;
-var bar_start_y = y_pos;
-
-//Normal life bar
-var bar_limit = (global.life/global.lifemax)
-if global.life > global.lifemax //If breaching the limit
-	bar_limit = 1;
-			
-//White bar that appears when player takes damage
-if life_tick != global.life
-	life_tick += (global.life-life_tick)*0.025;
-	
-draw_rectangle_color(x_pos,bar_start_y,x_pos+(3*global.ui_scale)-1,bar_start_y+(bar_height+global.ui_scale)*(life_tick/global.lifemax),c_red,c_red,c_red,c_red,0);
-if global.life > 0
-	draw_rectangle_color(x_pos,bar_start_y,x_pos+(3*global.ui_scale)-1,bar_start_y+bar_height*bar_limit,c_lime,c_lime,c_yellow,c_yellow,0);
-	
-//Special Weapon Bar
-if global.weapon_choice > 0
+if global.hud_toggle = true
 {
-	var bar_height = -((36+(global.powertank*12))*global.ui_scale)-1;
+	var x_pos = 20*global.ui_scale;
+	var y_pos = (display_get_gui_height()/2)-10*global.ui_scale;
+
+	ammo_font = font_add_sprite_ext(spr_hud_weapon_count,"0123456789",true,0);
+	draw_set_font(ammo_font);
+
+	//HUD
+	var hud_type = 0;
+	if global.weapon_choice > 0
+		hud_type = 1;
+	draw_sprite_ext(spr_hud_player,hud_type,x_pos,y_pos,global.ui_scale,global.ui_scale,0,c_white,1);
+	draw_sprite_ext(spr_hud_player_extend,0,x_pos,y_pos-(global.hearttank*2)*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,1);
+	if hud_type = 1
+		draw_sprite_ext(spr_hud_player_extend,1,x_pos,y_pos-(global.powertank*12)*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,1);
+
+	//Health Bar
+	var bar_height = -(global.lifemax*global.ui_scale)-1;
 	var bar_start_y = y_pos;
 
-	//Ammo bar
-	var bar_limit = (global.weapon[global.weapon_choice].ammo/global.weapon[global.weapon_choice].ammo_max)
-	if global.weapon[global.weapon_choice].ammo > global.weapon[global.weapon_choice].ammo_max //If breaching the limit
+	//Normal life bar
+	var bar_limit = (global.life/global.lifemax)
+	if global.life > global.lifemax //If breaching the limit
 		bar_limit = 1;
+			
+	//White bar that appears when player takes damage
+	if life_tick != global.life and life_tick > 0
+		life_tick += (global.life-life_tick)*0.025;
 	
-	//Colours for the ammo bars
-	var weapon_bar_colour_1 = c_yellow;
-	var weapon_bar_colour_2 = c_orange;
-	switch (global.weapon[global.weapon_choice].type)
+	if life_tick > 0
+		draw_rectangle_color(x_pos,bar_start_y,x_pos+(3*global.ui_scale)-1,bar_start_y+(bar_height+global.ui_scale)*(life_tick/global.lifemax),c_red,c_red,c_red,c_red,0);
+	if global.life > 0
+		draw_rectangle_color(x_pos,bar_start_y,x_pos+(3*global.ui_scale)-1,bar_start_y+bar_height*bar_limit,c_lime,c_lime,c_yellow,c_yellow,0);
+	
+	//Special Weapon Bar
+	if global.weapon_choice > 0
 	{
-		case "Meteor Rain":
-			weapon_bar_colour_1 = c_red;
-			weapon_bar_colour_2 = c_dkgray;
-			weapon_ammo_colour = c_red;
-			break;		
-		case "Ray Arrow":
-			weapon_bar_colour_1 = c_white;
-			weapon_bar_colour_2 = c_purple;
-			weapon_ammo_colour = c_purple;
-			break;
+		var bar_height = -((36+(global.powertank*12))*global.ui_scale)-1;
+		var bar_start_y = y_pos;
+
+		//Ammo bar
+		var bar_limit = (global.weapon[global.weapon_choice].ammo/global.weapon[global.weapon_choice].ammo_max)
+		if global.weapon[global.weapon_choice].ammo > global.weapon[global.weapon_choice].ammo_max //If breaching the limit
+			bar_limit = 1;
+	
+		//Colours for the ammo bars
+		var weapon_bar_colour_1 = c_yellow;
+		var weapon_bar_colour_2 = c_orange;
+		switch (global.weapon[global.weapon_choice].type)
+		{
+			case "Meteor Rain":
+				weapon_bar_colour_1 = c_red;
+				weapon_bar_colour_2 = c_dkgray;
+				weapon_ammo_colour = c_red;
+				break;		
+			case "Ray Arrow":
+				weapon_bar_colour_1 = c_white;
+				weapon_bar_colour_2 = c_purple;
+				weapon_ammo_colour = c_purple;
+				break;
+		}
+	
+		if global.weapon[global.weapon_choice].ammo > 0
+			draw_rectangle_color(x_pos+(9*global.ui_scale),bar_start_y,x_pos+(12*global.ui_scale)-1,bar_start_y+bar_height*bar_limit,weapon_bar_colour_1,weapon_bar_colour_1,weapon_bar_colour_2,weapon_bar_colour_2,0);
+
+		draw_sprite_ext(spr_hud_weapon,global.weapon_choice-1,x_pos+(5*global.ui_scale),y_pos+(7*global.ui_scale),global.ui_scale,global.ui_scale,0,c_white,1);
+
+	
+		draw_set_halign(fa_center);
+			draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),global.weapon[global.weapon_choice].ammo,10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,c_white,weapon_ammo_colour,weapon_ammo_colour,1);
+		draw_set_halign(fa_left);
 	}
-	
-	if global.weapon[global.weapon_choice].ammo > 0
-		draw_rectangle_color(x_pos+(9*global.ui_scale),bar_start_y,x_pos+(12*global.ui_scale)-1,bar_start_y+bar_height*bar_limit,weapon_bar_colour_1,weapon_bar_colour_1,weapon_bar_colour_2,weapon_bar_colour_2,0);
-
-	draw_sprite_ext(spr_hud_weapon,global.weapon_choice-1,x_pos+(5*global.ui_scale),y_pos+(7*global.ui_scale),global.ui_scale,global.ui_scale,0,c_white,1);
-
-	
-	draw_set_halign(fa_center);
-		draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),global.weapon[global.weapon_choice].ammo,10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,c_white,weapon_ammo_colour,weapon_ammo_colour,1);
-	draw_set_halign(fa_left);
-}
-else
-{
-	draw_set_halign(fa_center);
-		draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),ceil(global.life),10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),1);
-	draw_set_halign(fa_left);
+	else
+	{
+		draw_set_halign(fa_center);
+			draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),ceil(global.life),10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),1);
+		draw_set_halign(fa_left);
+	}
 }
 
 

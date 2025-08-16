@@ -8,9 +8,6 @@ if global.life > 0 and invul = false
 	{
 		//scr_defense_calculation();
 		
-		
-		
-		
 		global.life = global.life-other.damage;
 			
 		if global.life > 0

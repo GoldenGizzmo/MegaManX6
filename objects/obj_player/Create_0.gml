@@ -13,6 +13,7 @@ dash_ground = false;
 weight = 0.3;
 fall_speed = 6;
 movement = true;
+underwater = false;
 
 //zipline = false;
 climbing_dismount = false;
@@ -30,7 +31,7 @@ damage_taken = 999;
 set_knockback = 1.5;
 knockback = set_knockback;
 flicker = false;
-invul = false;
+invul = true;
 
 //Special attack
 attack_action = 0;
@@ -45,12 +46,24 @@ shooting_lock = false;
 shooting_charge = 0;
 shooting_charge_flicker = false;
 shooting_charge_lvl_1 = 30;
-shooting_charge_lvl_2 = 120;
+shooting_charge_lvl_2 = 80;
 
 palette = 1;
 flicker_weapon_swap = false;
 
+slowed = 0;
 
+//New
+
+hspd = 0;
+vspd = 0;
+
+player_spd = 2.7;
+grv = 0.2;
+
+collision_list = ds_list_create();
+
+jumping = false;
 
 
 

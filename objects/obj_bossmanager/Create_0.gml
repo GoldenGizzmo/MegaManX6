@@ -8,7 +8,10 @@ image_alpha = 0;
 run_direction = 1;
 
 boss = noone;
+dialogue = 0;
 
+life_tick = 0;
+lifebar_intro = -1;
 
 
 

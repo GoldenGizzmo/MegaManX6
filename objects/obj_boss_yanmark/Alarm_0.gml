@@ -3,10 +3,10 @@
 
 switch (state)
 {
-	case "Openning":
+	case "Appearance":
 		switch (action)
 		{
-			case 0:
+			case 1:
 				if y < obj_player.y-40
 				{
 					alarm[0] = 1;
@@ -15,13 +15,14 @@ switch (state)
 				}
 				else
 				{
-					alarm[0] = 1
+					action++;
+					alarm[0] = 1;
 					
 					yspeed = 0;
 				}
 				break;
 				
-			case 1:
+			case 2:
 				with obj_bossmanager
 				{
 					bossfight_state++;
@@ -30,7 +31,28 @@ switch (state)
 				break;
 		}
 		break;
-
+		
+	case "Openning":
+		switch (action)
+		{
+			case 0:
+				action++;
+				alarm[0] = 1;
+			
+				sprite_index = spr_player_x_climb
+				image_speed = 0;
+				break;
+				
+			case 1:
+				with obj_bossmanager
+				{
+					bossfight_state++;
+					alarm[0] = 10;
+				}
+				break;
+		}
+		break;
+	
 }
 
 

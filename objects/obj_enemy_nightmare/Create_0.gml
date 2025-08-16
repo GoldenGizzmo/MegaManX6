@@ -4,16 +4,19 @@
 event_inherited();
 
 life = 10;
+lifemax = life;
 damage = 4;
 bullet_damage = 4;
 
-state = "Follow";
+state = choose("Shooting","Follow");
 action = 0;
 alarm[0] = 120;
 
 shoot = 0;
 shoot_max = 4;
 
+//Is a nightmare
+nightmare = 1;
 
 
 

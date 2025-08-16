@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//Large souls are only collected while moving towards the player
+if sprite_index = spr_pickup_soul_large and large_soul_state < 2
+	exit;
+
 switch pickup_type
 {
 	case 0:
@@ -116,6 +120,10 @@ switch pickup_type
 		//Increase max ammo for all special weapons
 		for (i = 0; i < 9; i++)
 			global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 
+		break;
+		
+	case 7: //Nightmare Souls
+		global.nightmare_souls += pickup_power;
 		break;
 }
 

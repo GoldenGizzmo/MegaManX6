@@ -7,3 +7,4 @@ fade_speed = 0.01;
 fade_type = 0;
 
 image_alpha = 0;
+image_blend = c_black;

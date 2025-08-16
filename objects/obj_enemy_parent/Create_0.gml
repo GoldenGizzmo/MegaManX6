@@ -9,6 +9,8 @@ isHit = false;
 invul = false; //Whether enemy can be damaged
 
 global.damage_taken = 999;
+nightmare = 0; //Drops nightmare souls
+nightmare_pickup = spr_pickup_soul_mid;
 
 xspeed = 0;
 yspeed = 0;
@@ -24,6 +26,10 @@ spawn = 0;
 despawn = true; //Variable to decide despawning
 explode = 0; //Used for dying events
 respawn = true; //Respawn after death
+drop_pickup = true;
+
+sprite_start = sprite_index;
+image_index = 0;
 
 camera_check = false;
 event_user(3);

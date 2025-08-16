@@ -1,10 +1,12 @@
 {
-  "resourceType": "GMShader",
-  "resourceVersion": "1.0",
-  "name": "sh_better_scaling_5xbrc",
-  "parent": {
-    "name": "ScalingShader",
-    "path": "folders/ScalingShader.yy",
+  "$GMShader":"",
+  "%Name":"sh_better_scaling_5xbrc",
+  "name":"sh_better_scaling_5xbrc",
+  "parent":{
+    "name":"ScalingShader",
+    "path":"folders/ScalingShader.yy",
   },
-  "type": 1,
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "app_surface_draw_filtered",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ScalingShader",
-    "path": "folders/ScalingShader.yy",
+  "$GMScript":"v1",
+  "%Name":"app_surface_draw_filtered",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"app_surface_draw_filtered",
+  "parent":{
+    "name":"ScalingShader",
+    "path":"folders/ScalingShader.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

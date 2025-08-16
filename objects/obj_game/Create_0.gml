@@ -6,6 +6,7 @@ instance_create_layer(x,y,"Collision",obj_spawnzone);
 instance_create_layer(x,y,"Collision",obj_camera);
 
 global.animate = 0;
+global.hud_toggle = true;
 pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);
 
 base_life = 32; //Starting max health
@@ -26,3 +27,12 @@ part_system_depth(system,depth-1);
 //video = video_open("MMX Warning.mov");
 //video_enable_loop(false);
 
+//Slight delay to mechanics to allow everything to load in
+obj_player.movement = false;
+alarm[5] = 10;
+spawning_start = false;
+/*
+
+C1 = layer_get_id("Water");
+layer_script_begin(C1,scr_water_start);
+layer_script_end(C1,scr_water_end);

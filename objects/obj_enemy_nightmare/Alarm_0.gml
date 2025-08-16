@@ -12,7 +12,6 @@ if life > 0
 				alarm[0] = 1;
 				action++;
 			
-				speed = 1;
 				direction = point_direction(x,y,obj_player.x,obj_player.y);
 				
 				sprite_index = spr_enemy_nightmare_move;
@@ -22,7 +21,6 @@ if life > 0
 				alarm[0] = 60;
 				action = 0;
 			
-				speed = 0;
 				sprite_index = spr_enemy_nightmare;
 			}
 			break;

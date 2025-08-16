@@ -19,6 +19,45 @@ if global.death = false and animation_lock = false
 		attack_priority = 0;
 	event_user(0);
 	
+	//If underwater
+	var water_check = false;
+	with instance_place(x,y,obj_water) //Check if fully submerged
+			water_check = true;
+	
+	if yspeed != 0
+	{
+		//Splash when entering and exiting water
+		if underwater = false and water_check = true
+		{		
+			underwater = true;
+			with instance_place(x,y,obj_water)
+			{
+				effect = instance_create_depth(other.x,y,depth+1,obj_explosion);
+				effect.sprite_index = spr_water_splash;
+			}
+		}
+		else if underwater = true and water_check = false
+		{
+			underwater = false;
+			with instance_place(x,y+10,obj_water)
+			{
+				effect = instance_create_depth(other.x,y,depth+1,obj_explosion);
+				effect.sprite_index = spr_water_splash;
+			}
+		}
+	}	
+	
+	
+	weight = 0.3;
+	fall_speed = 6;
+	if underwater = true
+	{
+		weight = 0.15;
+		fall_speed = 3;
+		if yspeed > fall_speed
+			yspeed = fall_speed
+	}
+			
 	if weight > 0 and climbing = false
 	{
 		//Don't fall faster than max fall speed
@@ -248,8 +287,21 @@ if global.death = false and animation_lock = false
 		}
 	}
 	
+	//Slow status effect
+	if slowed > 0
+	{
+		slowed--;
+		xspeed /= 2;
+	}
+	
 	//Current collision scripts
-	scr_collision();
+	//scr_collision();
+	airborne = true;
+	xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
+	yspeed = scr_move(yspeed, AXIS_VERTICAL);
+	if place_meeting(x,y+1,obj_solid)
+		airborne = false;
+	
 	
 	//Changing weapons
 	if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
@@ -300,6 +352,7 @@ if global.death = false and animation_lock = false
 			}
 		}
 	}
+		
 	
 	//Afterimages
 	if dash = true and global.animate%3 = 0

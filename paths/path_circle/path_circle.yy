@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"path_circle",
+  "closed":true,
+  "kind":1,
+  "name":"path_circle",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Objects/Hazards/Enemies.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":288.0,"y":180.0,},
+    {"speed":100.0,"x":268.0,"y":160.0,},
+    {"speed":100.0,"x":288.0,"y":144.0,},
+    {"speed":100.0,"x":308.0,"y":160.0,},
+  ],
+  "precision":8,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
