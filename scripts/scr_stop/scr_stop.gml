@@ -4,7 +4,7 @@
 
 //Code that should run when the player hits the floor
 function scr_stop_floor(){
-	
+	airborne = false;
 	
 	
 }

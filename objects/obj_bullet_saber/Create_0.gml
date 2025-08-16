@@ -6,4 +6,4 @@ event_inherited();
 
 melee_damage = 0;
 melee = true;
-palette = 2;
+palette = 4;

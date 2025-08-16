@@ -60,6 +60,8 @@ if global.death = false and animation_lock = false
 			
 	if weight > 0 and climbing = false
 	{
+		yspeed = clamp(yspeed+weight,-fall_speed,fall_speed);
+		/*
 		//Don't fall faster than max fall speed
 		if yspeed < fall_speed and airborne = true
 			yspeed += weight
@@ -67,7 +69,7 @@ if global.death = false and animation_lock = false
 			y = round(y); //Align to ground
 
 		if place_meeting(x,y+1,obj_solid) or place_meeting(x,y+1,obj_solid_slope)
-			y = round(y);
+			y = round(y);*/
 	}
 
 	//If not hurt (when hurt you can't move and don't fall with gravity)
@@ -296,11 +298,8 @@ if global.death = false and animation_lock = false
 	
 	//Current collision scripts
 	//scr_collision();
-	airborne = true;
 	xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
 	yspeed = scr_move(yspeed, AXIS_VERTICAL);
-	if place_meeting(x,y+1,obj_solid)
-		airborne = false;
 	
 	
 	//Changing weapons

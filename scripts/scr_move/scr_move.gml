@@ -95,7 +95,7 @@ function scr_move(spd, axis, object = obj_solid){
 
 	}
 
-	
+	airborne = true;
 	return spd;
 }
 
