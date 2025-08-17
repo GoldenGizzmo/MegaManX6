@@ -3,7 +3,7 @@
 
 airborne = false
 move_speed = 2;
-jump_height = 6; //4.5
+jump_height = 6.5; //4.5
 xspeed = 0;
 yspeed = 0;
 

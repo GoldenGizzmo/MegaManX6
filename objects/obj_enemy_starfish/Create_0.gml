@@ -8,8 +8,12 @@ life = 5;
 lifemax = life;
 damage = 4;
 
-invul = true;
+armour = true;
 
 direction = 90;
 move_speed = 1;
 speed = move_speed;
+
+
+respawn = false;
+despawn = false;

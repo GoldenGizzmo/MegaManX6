@@ -5,35 +5,49 @@ if other.villainy != 2 and life > 0 and other.damage > 0
 {
 	if invul = false and isHit = false and boss_iframes <= 0
 	{
-		if other.melee = true //Saber slash
+		if armour = false or other.piercing_armour = true
 		{
-			global.pause_delay = 5;
-			global.pause = true;
+			if other.melee = true //Saber slash
+			{
+				global.pause_delay = 5;
+				global.pause = true;
 		
-			var offset_x = random_range(-3,3);
-			var offset_y = random_range(-3,3);
-			effect = instance_create_layer(x+offset_x,y+offset_y,"Explosions",obj_explosion);
-			effect.sprite_index = spr_effect_saber_hit;
-			effect.image_angle = irandom(359);
+				var offset_x = random_range(-3,3);
+				var offset_y = random_range(-3,3);
+				scr_point_between(x,y,other.x,other.y,other);
+				effect = instance_create_layer(between_x+offset_x,between_y+offset_y,"Explosions",obj_explosion);
+				effect.sprite_index = spr_effect_saber_hit;
+				effect.image_angle = irandom(359);
 		
-			cut = instance_create_layer(x+offset_x,y+offset_y,"Explosions",obj_particle_cut);
-			cut.image_angle = effect.image_angle+45;
+				cut = instance_create_layer(x+offset_x,y+offset_y,"Explosions",obj_particle_cut);
+				cut.image_angle = effect.image_angle+45;
 		
-			event_user(2);
-			isHit = true;
-			alarm[9] = other.melee_frames;
+				event_user(2);
+				isHit = true;
+				alarm[9] = other.melee_frames;
+			}
+			else if other.tick = false //Normal damage
+			{
+				event_user(2);
+				isHit = true;
+				alarm[9] = 5;
+			} 
+			else if other.tick = true and isHit = false //Piercing or DoT projectiles
+			{
+				event_user(2);
+				isHit = true;
+				alarm[9] = 9;
+			}
 		}
-		else if other.tick = false //Normal damage
+		else
 		{
-			event_user(2);
-			isHit = true;
-			alarm[9] = 5;
-		} 
-		else if other.tick = true and isHit = false //Piercing or DoT projectiles
-		{
-			event_user(2);
-			isHit = true;
-			alarm[9] = 9;
+			scr_point_between(x,y,other.x,other.y,other);
+			effect = instance_create_layer(between_x,between_y,"Explosions",obj_explosion);
+			effect.sprite_index = spr_explosion_armour;
+			if x > other.x
+				effect.image_xscale = 1;
+			else
+				effect.image_xscale = -1;
 		}
 	}
 

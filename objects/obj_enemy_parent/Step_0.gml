@@ -20,6 +20,9 @@ if despawn = true and !place_meeting(x+despawn_threshold,y,obj_spawnzone) and !p
 	else
 		spawn = 1;
 
+	//Retun to original position
+	x = xstart;
+	y = ystart;
 	death = 2; //Prevent death event
 	if respawn = false //Destroys non respawning enemies if they go offscreen
 		instance_destroy();
@@ -31,9 +34,8 @@ if respawn = true
 	if (place_meeting(x,y,obj_spawnzone) and spawn = 1) or (obj_game.spawning_start = false and !(!place_meeting(x+despawn_threshold,y,obj_spawnzone) and !place_meeting(x-despawn_threshold,y,obj_spawnzone) and !place_meeting(x,y+despawn_threshold,obj_spawnzone) and !place_meeting(x,y-despawn_threshold,obj_spawnzone)))
 	{
 		//Enemies that aren't killed and recreated are instead moved their original position and sprite
-		x = xstart;
-		y = ystart;
 		sprite_index = sprite_start;
+		speed = 0;
 		event_perform(ev_create,0); //Respawn
 	}
 }

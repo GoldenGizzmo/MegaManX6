@@ -54,22 +54,11 @@ if global.death = false and animation_lock = false
 	{
 		weight = 0.15;
 		fall_speed = 3;
-		if yspeed > fall_speed
-			yspeed = fall_speed
 	}
 			
 	if weight > 0 and climbing = false
 	{
-		yspeed = clamp(yspeed+weight,-fall_speed,fall_speed);
-		/*
-		//Don't fall faster than max fall speed
-		if yspeed < fall_speed and airborne = true
-			yspeed += weight
-		else
-			y = round(y); //Align to ground
-
-		if place_meeting(x,y+1,obj_solid) or place_meeting(x,y+1,obj_solid_slope)
-			y = round(y);*/
+		yspeed = min(yspeed+weight,fall_speed);
 	}
 
 	//If not hurt (when hurt you can't move and don't fall with gravity)
@@ -78,6 +67,7 @@ if global.death = false and animation_lock = false
 		//If allowed to move
 		if movement = true
 		{
+			
 			if global.input_jump_pressed and airborne = false and attack_priority = 0
 			{
 				yspeed -= jump_height;
@@ -94,7 +84,7 @@ if global.death = false and animation_lock = false
 			}
 			
 			//Holding the button into the wall while falling
-			if ((place_meeting(x+1,y,obj_solid) and global.input_right) or (place_meeting(x-1,y,obj_solid) and global.input_left)) and wall_jump = false and yspeed > 0
+			if ((place_meeting(x+1,y,obj_solid) and global.input_right) or (place_meeting(x-1,y,obj_solid) and global.input_left)) and wall_jump = false and yspeed > 0 and airborne = true
 			{
 				//Turn off dash
 				if yspeed != 0
@@ -222,7 +212,6 @@ if global.death = false and animation_lock = false
 				}
 			}
 	
-			
 				
 			if airborne = false
 			{
@@ -246,7 +235,7 @@ if global.death = false and animation_lock = false
 						yspeed = 0;
 				}
 			}
-			
+		
 			
 		
 			//Shooting

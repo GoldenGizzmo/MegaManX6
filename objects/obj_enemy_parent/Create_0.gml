@@ -7,6 +7,7 @@ resistance = 1;
 
 isHit = false;
 invul = false; //Whether enemy can be damaged
+armour = false; //Blocked by most attacks
 
 global.damage_taken = 999;
 nightmare = 0; //Drops nightmare souls

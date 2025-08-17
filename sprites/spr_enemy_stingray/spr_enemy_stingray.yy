@@ -21,6 +21,7 @@
   "height":28,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"7e0a6ed1-edd4-4a5e-866e-d1942abf593a","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"7e0a6ed1-edd4-4a5e-866e-d1942abf593a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"f49b3c18-707a-45dd-9718-e2bef7ca1cbf","blendMode":0,"displayName":"default","isLocked":false,"name":"f49b3c18-707a-45dd-9718-e2bef7ca1cbf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_enemy_stingray",
