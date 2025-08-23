@@ -42,16 +42,7 @@ if respawn = true
 
 if life > 0
 {
-	if weight > 0
-	{
-		if yspeed < 6 and airborne = true
-			yspeed += weight
-		else
-			y = round(y); //Align to ground
-
-		if place_meeting(x,y+1,obj_solid)
-			y = round(y);
-	}
+	yspeed = min(yspeed+weight,6);
 }
 else
 {	

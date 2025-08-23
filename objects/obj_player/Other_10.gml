@@ -75,6 +75,21 @@ if hurt = false
 			}
 		}
 	}
+	
+	if airdash_state > 0
+	{
+		if airdash_state = 2
+		{
+			if machdash_direction = 90
+				sprite_index = spr_player_x_machdash_up;
+			else if machdash_direction = 270
+				sprite_index = spr_player_x_machdash_down;
+			else
+				sprite_index = spr_player_x_machdash;
+		}
+		else
+			sprite_index = spr_player_x_machdash_hold;
+	}
 }
 else
 {

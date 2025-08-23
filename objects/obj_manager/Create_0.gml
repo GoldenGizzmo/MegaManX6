@@ -36,4 +36,20 @@ global.weapontank = -1;
 global.powertank = 0;
 //EX Tank LMAO
 
+//Light Capsules
+//Checks if capsules are aquired
+global.blade_head_get = false;
+global.blade_chest_get = false;
+global.blade_arm_get = false;
+global.blade_leg_get = false;
+global.shadow_head_get = false;
+global.shadow_chest_get = false;
+global.shadow_arm_get = false;
+global.shadow_leg_get = false;
+//Armour parts equipped right now
+global.x_armour_head = 0;
+global.x_armour_chest = 0;
+global.x_armour_arm = 0;
+global.x_armour_leg = "Blade Leg";
+
 global.seen_boss_cutscene = 0;

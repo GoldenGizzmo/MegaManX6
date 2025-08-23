@@ -19,8 +19,11 @@ if other.villainy != 2 and life > 0 and other.damage > 0
 				effect.sprite_index = spr_effect_saber_hit;
 				effect.image_angle = irandom(359);
 		
-				cut = instance_create_layer(x+offset_x,y+offset_y,"Explosions",obj_particle_cut);
-				cut.image_angle = effect.image_angle+45;
+				if other.melee_slash = true
+				{
+					cut = instance_create_layer(x+offset_x,y+offset_y,"Explosions",obj_particle_cut);
+					cut.image_angle = effect.image_angle+45;
+				}
 		
 				event_user(2);
 				isHit = true;

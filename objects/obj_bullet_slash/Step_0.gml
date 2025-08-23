@@ -6,6 +6,18 @@ event_inherited();
 
 if store_speed = 0
 	store_speed = speed;
+	
+//Check if the main grasshopper is alive
+if owner != 0
+{
+	if instance_exists(owner)
+	{
+		if owner.life <= 1
+			instance_destroy();
+	}
+	else
+		instance_destroy();
+}
 
 /*
 //Stop prematurely

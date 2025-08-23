@@ -27,8 +27,7 @@ if life > 0
 		direction += sign(dsin(a-direction))*(speed);
 		
 		//Build to this new speed
-		if speed < move_speed*4 and global.pause = false
-			speed += 0.1;
+		speed = move_speed*4;
 	}
 	
 	image_angle = direction;

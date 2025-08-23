@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.life = 0;
+if obj_player.recovery = 0
+	global.life = 0;
 
 
 

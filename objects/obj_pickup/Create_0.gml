@@ -10,13 +10,12 @@ afterimage_colour = c_white;
 animation_falling = 0;
 animation_sitting = 0;
 
-event_user(0);
-
 weight = 0.2;
 xspeed = 0;
 yspeed = 0;
 
 large_soul_state = 0;
+auto_pickup = "Off";
 
 
 

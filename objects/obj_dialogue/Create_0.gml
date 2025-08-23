@@ -30,3 +30,6 @@ text_delay = 0; //For appearance animation
 
 dialogue = 0;
 flash = 0;
+
+dr_light_flicker = false;
+alarm[3] = 60;

@@ -75,7 +75,7 @@ switch (sprite_index)
 		pickup_power = 2;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white //Lock to happen once
+		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
 			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(140,8,26);
 		break;
@@ -84,7 +84,7 @@ switch (sprite_index)
 		pickup_power = 5;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white //Lock to happen once
+		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
 			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(8,8,140);
 		break;
@@ -93,7 +93,7 @@ switch (sprite_index)
 		pickup_power = 200;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white //Lock to happen once
+		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
 			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(0,48,16);
 		pickup_expiry = -1; //Doesn't expire
@@ -106,23 +106,20 @@ switch (sprite_index)
 if pickup_type != 7
 {
 	scr_collision(obj_solid);
-
-	if weight > 0
-	{
-		if yspeed < 6 and airborne = true
-			yspeed += weight
-		else
-			y = round(y); //Align to ground
-
-		if place_meeting(x,y+1,obj_solid)
-			y = round(y);
-	}
+	yspeed = min(yspeed+weight,6);
 	
-	if image_index > animation_falling
-		image_index = 0;
-
-	if pickup_type = 1 and airborne = false and image_index < animation_sitting
-		image_index = animation_sitting;
+	if airborne = true
+	{
+		//Don't start expiring until you've hit the ground
+		pickup_expiry++;
+		if image_index > animation_falling
+			image_index = 0;
+	}
+	else
+	{
+		if pickup_type = 1 and image_index < animation_sitting
+			image_index = animation_sitting;
+	}
 }
 else
 {
@@ -181,6 +178,27 @@ else
 		}
 	}
 }
+
+//For Nightmare Souls that reploids give
+if auto_pickup != "Off"
+{
+	if auto_pickup = "Appear"
+	{
+		if speed > 0.5
+			speed -= 0.1;
+		else
+			auto_pickup = "Follow";
+	}
+	else if auto_pickup = "Follow"
+	{
+		//Pursue the player at increasing speeds
+		speed += 0.1;	
+		direction = point_direction(x,y,obj_player.x,obj_player.y);
+	}
+}
+
+
+
 
 if pickup_expiry > -1
 {

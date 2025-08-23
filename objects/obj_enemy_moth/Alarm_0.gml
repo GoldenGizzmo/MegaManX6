@@ -57,7 +57,7 @@ if life > 0
 				shoot = 0;
 				path_end();
 				
-				hover_height = random_range(40,60);
+				hover_height = random_range(50,80);
 				sprite_index = spr_enemy_moth;
 				image_index = 0;
 			}

@@ -6,7 +6,20 @@ event_inherited();
 
 if life > 0
 {
+	y += yspeed;
+	despawn = false;
 	
+	//moving up
+	if move_direction = 90
+	{
+		if yspeed > -move_speed
+			yspeed -= 0.02;
+	}
+	else if move_direction = 270
+	{
+		if yspeed < move_speed
+			yspeed += 0.02;
+	}
 }
 else
 {

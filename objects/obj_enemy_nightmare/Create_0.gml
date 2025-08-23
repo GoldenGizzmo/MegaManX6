@@ -10,7 +10,7 @@ bullet_damage = 4;
 
 state = choose("Shooting","Follow");
 action = 0;
-alarm[0] = 120;
+alarm[0] = 60;
 
 shoot = 0;
 shoot_max = 4;

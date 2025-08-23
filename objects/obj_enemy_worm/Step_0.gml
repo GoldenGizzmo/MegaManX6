@@ -18,6 +18,7 @@ if life > 0
 		alarm[0] = -1;
 		alarm[1] = 1;
 		
+		damage = 0;
 		animation_ended = false;
 		sprite_index = spr_enemy_worm_retreat;
 		image_index = 0;

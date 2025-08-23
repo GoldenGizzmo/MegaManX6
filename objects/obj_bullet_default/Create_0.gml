@@ -13,6 +13,7 @@ phasing = false; //Goes through walls
 melee = false;
 melee_frames = 0;
 
+expiry = -1;
 
 
 

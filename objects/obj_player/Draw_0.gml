@@ -2,8 +2,10 @@
 // You can write your code in this editor
 
 draw_set_font(global.fnt_game);
-draw_text(x,y-80,"airborne:   "+string(airborne))
-draw_text(x,y-70,"xspeed:   "+string(xspeed))
+
+//draw_text(x,y-80,"On Slope?:   "+string(on_slope))
+//draw_text(x,y-80,"airborne:   "+string(airborne))
+//draw_text(x,y-70,"xspeed:   "+string(xspeed))
 
 if flicker = true or flicker_weapon_swap = true
 {
@@ -40,12 +42,20 @@ else
 		draw_sprite(spr_bullet_powder,global.animate/5,x-5,y+10);
 	}
 }
-
+//Weapon charge
 pal_swap_set(spr_effect_charging_palette,1,false);
 if shooting_charge >= shooting_charge_lvl_2	
 	draw_sprite(spr_effect_charging_2,global.animate/2,x,y);
 if shooting_charge >= shooting_charge_lvl_1
 	draw_sprite(spr_effect_charging,global.animate/2,x,y);
+//Mach Dash charge
+pal_swap_set(spr_effect_charging_palette,2,false);
+if machdash_hold > 5
+{
+	if machdash_hold >= machdash_holdmax 
+		draw_sprite(spr_effect_charging_2,(global.animate/1.5),x,y-6);
+	draw_sprite(spr_effect_charging,global.animate/1.5,x,y-6);
+}
 pal_swap_reset();
 
 

@@ -80,6 +80,7 @@ if global.hud_toggle = true
 			draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),ceil(global.life),10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),1);
 		draw_set_halign(fa_left);
 	}
+	draw_set_font(global.fnt_game);
 }
 
 

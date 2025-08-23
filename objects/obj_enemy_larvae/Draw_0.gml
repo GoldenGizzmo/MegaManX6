@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+draw_set_font(global.fnt_game);
+//draw_text(x,y-60,"Airborne:   "+string(airborne))
+
 if isHit = true
 	event_inherited();
 else

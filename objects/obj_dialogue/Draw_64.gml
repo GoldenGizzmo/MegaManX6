@@ -22,15 +22,22 @@ var y_pos = (display_get_gui_height()/2)+(27*scale);
 //Dialogue box
 if animation_y = 1
 {
+	var right_alpha = 1;
+	if right_character = "Dr. Light" and dr_light_flicker = true
+	{
+		draw_sprite_ext(spr_mugshot_drlight_flicker,0,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,1);
+		right_alpha = 0.5;
+	}
+	
 	scr_get_character(left_character);
 	draw_sprite_ext(mugshot,left_blink,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
 	if mugshot_talk != 0 and left_talking > 0 //Talking
 		draw_sprite_ext(mugshot_talk,left_talking/3,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
 	
 	scr_get_character(right_character);
-	draw_sprite_ext(mugshot,right_blink,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,1);
+	draw_sprite_ext(mugshot,right_blink,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);
 	if mugshot_talk != 0 and right_talking > 0 //Talking
-		draw_sprite_ext(mugshot_talk,right_talking/3,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,1);	
+		draw_sprite_ext(mugshot_talk,right_talking/3,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);	
 }
 	
 draw_sprite_ext(spr_mugshot_closing,global.animate,x_pos-(118*scale),y_pos,-scale,scale*animation_y,0,c_white,animation_static);

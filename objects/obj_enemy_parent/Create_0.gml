@@ -15,6 +15,7 @@ nightmare_pickup = spr_pickup_soul_mid;
 
 xspeed = 0;
 yspeed = 0;
+collision_list = ds_list_create();
 weight = 0;
 airborne = false;
 
@@ -34,6 +35,7 @@ image_index = 0;
 
 camera_check = false;
 event_user(3);
+
 
 
 

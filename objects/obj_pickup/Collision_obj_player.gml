@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 //Large souls are only collected while moving towards the player
-if sprite_index = spr_pickup_soul_large and large_soul_state < 2
+if (sprite_index = spr_pickup_soul_large and large_soul_state < 2)
+	exit;
+if auto_pickup = "Appear"
 	exit;
 
 switch pickup_type

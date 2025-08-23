@@ -9,6 +9,7 @@ yspeed = 0;
 
 dash = false;
 dash_speed = 4.5;
+dash_length = 30; 
 dash_ground = false;
 weight = 0.3;
 fall_speed = 6;
@@ -31,7 +32,8 @@ damage_taken = 999;
 set_knockback = 1.5;
 knockback = set_knockback;
 flicker = false;
-invul = true;
+invul = false;
+invincible = true;
 
 //Special attack
 attack_action = 0;
@@ -53,17 +55,20 @@ flicker_weapon_swap = false;
 
 slowed = 0;
 
-//New
+//Air Dash
+airdash_lock = false; //Prevent being used twice in mid-air
+airdash_state = 0; //Stage of the airdash
+//Mach dash
+machdash_hold = 0;
+machdash_holdmax = 30;
+machdash_direction = 0;
+machdash_damage = 2;
 
-hspd = 0;
-vspd = 0;
-
-player_spd = 2.7;
-grv = 0.2;
 
 collision_list = ds_list_create();
+on_slope = false;
 
-jumping = false;
+depth -= 10; //Draw above other enemies
 
 
 

@@ -10,6 +10,7 @@ switch (state)
 		bullet.damage = bullet_damage;
 
 		bullet.villainy = 2;
+		bullet.owner = id;
 		break;
 		
 	case "Spawning": //Little minions that float down and walk around

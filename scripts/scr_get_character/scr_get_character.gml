@@ -13,11 +13,17 @@ function scr_get_character(character)
 			mugshot_talk = spr_mugshot_x_talk;
 			break;
 		
-		case "Yanmark":
+		case "Yammark":
 			character_colour = make_color_rgb(66,181,0);
-			character_name = "Commander Yanmark"; //If I were to change the name
-			mugshot = spr_mugshot_yanmark;
+			character_name = "Commander Yammark"; //If I were to change the name
+			mugshot = spr_mugshot_yammark;
 			mugshot_talk = 0;
+			break;
+			
+		case "Dr. Light":
+			character_colour = make_color_rgb(171,232,255);
+			mugshot = spr_mugshot_drlight;
+			mugshot_talk = spr_mugshot_drlight_talk;
 			break;
 	}
 }

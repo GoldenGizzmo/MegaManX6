@@ -3,6 +3,6 @@
 
 //Float up and down
 if (y > ystart)
-	vspeed -= 0.0025;
+	vspeed -= 0.002;
 else if (y < ystart)
-	vspeed += 0.0025;
+	vspeed += 0.002;
