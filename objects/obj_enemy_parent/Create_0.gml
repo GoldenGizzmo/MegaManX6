@@ -35,7 +35,8 @@ image_index = 0;
 camera_check = false;
 event_user(3);
 
-
+airborne = false;
+collision_list = ds_list_create()
 
 
 

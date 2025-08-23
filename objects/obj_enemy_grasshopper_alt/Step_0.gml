@@ -20,7 +20,9 @@ if life > 0
 	}
 	else
 	{
-		scr_collision();
+		xspeed = scr_move(xspeed, AXIS_HORIZONTAL)
+		yspeed = scr_move(yspeed, AXIS_VERTICAL)
+		
 		event_user(0);
 			
 		if state = "Roaming"

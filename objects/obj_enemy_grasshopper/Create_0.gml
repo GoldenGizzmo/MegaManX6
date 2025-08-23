@@ -33,5 +33,3 @@ flickering = 0;
 flicker = false;
 
 jet_anim_speed = 1;
-
-
