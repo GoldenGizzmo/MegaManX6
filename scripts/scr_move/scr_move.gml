@@ -83,19 +83,31 @@ function scr_move(spd, axis, object = obj_solid){
 		ds_list_clear(collision_list)
 		size = instance_place_list(x, y + SLOPE_CHECK_REACH, object, collision_list, true)
 		
+		var slope = noone;
+		var flr = noone;
+		
+		
 		for(var i = 0; i < size; i++){
 			
 			var col = collision_list[| i];
-			if(!col.slope)continue;
-			
+			if(col.slope){
+				slope = col; 
+				continue;
+			}
+			flr = col;
+		}
+		
+		if(slope or flr){
 			x -= (xspeed - xspeed/SLOPE_SPEED_FACTOR)
-			y = scr_snap_to_object(1, AXIS_VERTICAL, col, x, y + SLOPE_CHECK_REACH);
+			y = scr_snap_to_object(1, AXIS_VERTICAL, slope ? slope : flr, x, y + SLOPE_CHECK_REACH);
+			
+			scr_stop_floor()
 			return 0;	
 		}
 
 	}
 
-	airborne = true;
+	if(axis == AXIS_VERTICAL)airborne = true;
 	return spd;
 }
 
@@ -133,8 +145,8 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		for(var i = step; i > 0; i--){
 			_y2 = scr_snap_to_object(1, new_axis, col, _x + side * i)
 			
-			if(abs(_y1 - y) <= step){
-				res2 = abs(_y1 - y);
+			if(abs(_y2 - y) <= step){
+				res2 = abs(_y2 - y);
 				break;
 			}
 		}
