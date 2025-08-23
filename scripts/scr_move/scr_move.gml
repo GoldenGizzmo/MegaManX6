@@ -3,6 +3,9 @@
 function scr_move(spd, axis, object = obj_solid){
 
 	
+		var og_x = x;
+		var og_y = y;
+	
 	//Save original coordinates
 		var _x = x;
 		var _y = y;
@@ -83,6 +86,8 @@ function scr_move(spd, axis, object = obj_solid){
 		ds_list_clear(collision_list)
 		size = instance_place_list(x, y + SLOPE_CHECK_REACH, object, collision_list, true)
 		
+		//Check first for slopes
+		
 		for(var i = 0; i < size; i++){
 			
 			var col = collision_list[| i];
@@ -90,18 +95,35 @@ function scr_move(spd, axis, object = obj_solid){
 			
 			x -= (hspd - hspd/SLOPE_SPEED_FACTOR)
 			y = scr_snap_to_object(1, AXIS_VERTICAL, col, x, y + SLOPE_CHECK_REACH);
+			scr_stop_floor()
+			return 0;	
+		}
+		
+		//Check for any other object
+		
+		for(var i = 0; i < size; i++){
+			
+			var col = collision_list[| i];
+			
+			x -= (xspeed - xspeed/SLOPE_SPEED_FACTOR)
+			y = scr_snap_to_object(1, AXIS_VERTICAL, col, x, y + SLOPE_CHECK_REACH);
+			scr_stop_floor()
 			return 0;	
 		}
 
 	}
 
+<<<<<<< Updated upstream
 	
+=======
+	if(axis == AXIS_VERTICAL)airborne = true;
+>>>>>>> Stashed changes
 	return spd;
 }
 
 function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 	
-	var step = ceil(abs(spd)/SLOPE_SPEED_FACTOR);
+	var step = ceil(abs(spd));
 	
 	var side = sign(spd)
 	var new_axis = axis == AXIS_HORIZONTAL ? AXIS_VERTICAL : AXIS_HORIZONTAL
@@ -133,11 +155,12 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		for(var i = step; i > 0; i--){
 			_y2 = scr_snap_to_object(1, new_axis, col, _x + side * i)
 			
-			if(abs(_y1 - y) <= step){
-				res2 = abs(_y1 - y);
+			if(abs(_y2 - y) <= step){
+				res2 = abs(_y2 - y);
 				break;
 			}
 		}
+
 		
 		if(res1 != 0 or res2 != 0){
 		
@@ -147,8 +170,6 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 			else{
 				y = _y2;
 			}
-			
-			show_debug_message($"Horizontal snap")
 			
 			x = scr_snap_to_object(side, axis, col);
 			
@@ -201,13 +222,6 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 	
 	var _x = x_;
 	var _y = y_;
-	
-	var arr = debug_get_callstack(10)
-	
-	array_foreach(arr, function(e){
-		show_debug_message(e)
-	})
-
 	
 	if(axis == AXIS_HORIZONTAL){
 		
