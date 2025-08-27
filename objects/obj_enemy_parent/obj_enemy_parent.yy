@@ -19,7 +19,10 @@
     "name":"Hazards",
     "path":"folders/Objects/Hazards.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_dynamic",
+    "path":"objects/obj_dynamic/obj_dynamic.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

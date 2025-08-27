@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_yammark_talk_takethis",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.32650793,
+  "name":"snd_yammark_talk_takethis",
+  "parent":{
+    "name":"Commander-Yammark",
+    "path":"folders/Sounds/Commander-Yammark.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_yammark_talk_takethis.wav",
+  "type":1,
+  "volume":1.0,
+}

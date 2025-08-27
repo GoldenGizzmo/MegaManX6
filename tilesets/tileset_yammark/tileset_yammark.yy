@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_tileset_yammark_rocks",
-    "path":"sprites/spr_tileset_yammark_rocks/spr_tileset_yammark_rocks.yy",
+    "name":"spr_tileset_yammark",
+    "path":"sprites/spr_tileset_yammark/spr_tileset_yammark.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

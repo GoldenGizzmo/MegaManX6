@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_tileset_yammark_grass",
-    "path":"sprites/spr_tileset_yammark_grass/spr_tileset_yammark_grass.yy",
+    "name":"spr_tileset_yammark_top",
+    "path":"sprites/spr_tileset_yammark_top/spr_tileset_yammark_top.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

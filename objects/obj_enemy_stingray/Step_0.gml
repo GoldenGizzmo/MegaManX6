@@ -16,6 +16,10 @@ if life > 0
 			state = "Attacking";
 			//Create radius which alerts other enemies
 			instance_create_depth(x,y,0,obj_enemy_stingray_alert);
+			
+			scr_make_sound(snd_stingray,1,1,false);
+			effect = instance_create_layer(x,y,"Explosions",obj_particle_reinforcement);
+			effect.palette = 1;
 		}
 	}
 	else if state = "Attacking"
@@ -51,6 +55,7 @@ else
 	{
 		//Death event
 		instance_create_layer(x,y,"Explosions",obj_explosion);
+		scr_make_sound(snd_explosion,1,1,false);
 		death = 1;
 	}
 }

@@ -42,19 +42,29 @@ else
 		draw_sprite(spr_bullet_powder,global.animate/5,x-5,y+10);
 	}
 }
+
+//Offset for the charge to better align with the air dash pose
+var charge_offset_y = 0
+if airdash_state > 0
+	charge_offset_y = -6;
+
 //Weapon charge
 pal_swap_set(spr_effect_charging_palette,1,false);
 if shooting_charge >= shooting_charge_lvl_2	
-	draw_sprite(spr_effect_charging_2,global.animate/2,x,y);
+	draw_sprite(spr_effect_charging_2,global.animate/2,x,y+charge_offset_y);
 if shooting_charge >= shooting_charge_lvl_1
-	draw_sprite(spr_effect_charging,global.animate/2,x,y);
+	draw_sprite(spr_effect_charging,global.animate/2,x,y+charge_offset_y);
 //Mach Dash charge
 pal_swap_set(spr_effect_charging_palette,2,false);
 if machdash_hold > 5
 {
+	//SFX
+	if machdash_hold = 6
+		scr_make_sound(snd_player_x_machcharge_fadeout,1,1.25,false);
+	
 	if machdash_hold >= machdash_holdmax 
-		draw_sprite(spr_effect_charging_2,(global.animate/1.5),x,y-6);
-	draw_sprite(spr_effect_charging,global.animate/1.5,x,y-6);
+		draw_sprite(spr_effect_charging_2,(global.animate/1.5),x,y+charge_offset_y);
+	draw_sprite(spr_effect_charging,global.animate/1.5,x,y+charge_offset_y);
 }
 pal_swap_reset();
 

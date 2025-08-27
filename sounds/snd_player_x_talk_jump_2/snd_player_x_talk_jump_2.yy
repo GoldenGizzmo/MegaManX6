@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_player_x_talk_jump_2",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.25414965,
+  "name":"snd_player_x_talk_jump_2",
+  "parent":{
+    "name":"X Voice",
+    "path":"folders/Sounds/Player-Sounds/X/X Voice.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_player_x_talk_jump_2.wav",
+  "type":1,
+  "volume":1.0,
+}

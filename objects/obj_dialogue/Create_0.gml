@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+movement = true;
+
 finish = false;
 speaking_is_right = false;
 

@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited();
+
 //Can be paused
 if global.pause = true
 	return;
@@ -102,12 +104,25 @@ switch (sprite_index)
 		break;
 }
 
+if save_pickup = false
+{
+	save_pickup = true;
+	
+	//Heart Tanks, Sub Tanks, Weapon Tank, Power Tank
+	if pickup_type >= 2 and pickup_type <= 6
+	{
+		//Unique string that makes each reploid unique
+		key = room_get_name(room)+object_get_name(object_index)+string(x)+string(y);
+
+		//Destroy if already rescued
+		if ds_list_find_index(global.pickup_list,key) != -1
+			instance_destroy();
+	}
+}
+
 //Not a nightmare soul
 if pickup_type != 7
 {
-	scr_collision(obj_solid);
-	yspeed = min(yspeed+weight,6);
-	
 	if airborne = true
 	{
 		//Don't start expiring until you've hit the ground
@@ -123,6 +138,9 @@ if pickup_type != 7
 }
 else
 {
+	weight = 0;
+	colliding = false;
+	
 	//Afterimages
 	if global.animate%3 = 0
 	{

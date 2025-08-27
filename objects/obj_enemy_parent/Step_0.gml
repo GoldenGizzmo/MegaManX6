@@ -4,6 +4,8 @@
 //Can be paused
 if global.pause = true
 	return;
+	
+event_inherited();
 
 //Threshold to stop premature despawning
 var despawn_threshold = (global.view_width/2)+30;
@@ -42,10 +44,13 @@ if respawn = true
 
 if life > 0
 {
-	yspeed = min(yspeed+weight,6);
+
 }
 else
 {	
+	//Halt all movement
+	movement_freeze = true;
+	
 	if death = 0 and explode = 0 
 	{	
 		//If dying underwater, release bubbles

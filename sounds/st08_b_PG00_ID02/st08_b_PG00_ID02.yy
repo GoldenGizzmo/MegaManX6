@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st08_b_PG00_ID02",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.4933787,
+  "name":"st08_b_PG00_ID02",
+  "parent":{
+    "name":"Infinity-Mijinion",
+    "path":"folders/Sounds/Boss-Sounds/Infinity-Mijinion.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st08_b_PG00_ID02.wav",
+  "type":0,
+  "volume":1.0,
+}

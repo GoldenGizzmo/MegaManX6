@@ -138,7 +138,8 @@ if animation_y = 1 and finish = false
 				i -= length;
 			
 				//Text
-				delay = 0;
+				delay = 0; //4; //Accurate to X series
+				
 				text_colour = character_colour;
 				draw_text_transformed_color(text_x+(space*char_width),text_y+(13*line),string_char_at(text[page],i),scale,scale,0,text_colour,text_colour,text_colour,text_colour,1);
 				/*
@@ -224,8 +225,9 @@ if animation_y = 1 and finish = false
 			{
 				if timer >= delay
 				{
-					//if state = 1 and string_char_at(text[page],i) != " "
-					//	scr_make_sound(snd_menu_dialogue);
+					//if string_char_at(text[page],i) != " "
+					if cutoff%4 = 0
+						scr_make_sound(snd_text_scroll,1,1,false);
 				
 					cutoff++;
 					timer = 0;

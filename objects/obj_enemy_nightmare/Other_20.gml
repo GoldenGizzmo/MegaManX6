@@ -11,6 +11,7 @@ bullet.villainy = 2;
 bullet.piercing = true;
 bullet.phasing = true;
 
+scr_make_sound(snd_shoot_nightmare,1,1,false);
 
 
 

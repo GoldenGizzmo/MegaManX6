@@ -13,4 +13,3 @@ alarm[0] = 1;
 sprite_index = spr_enemy_grasshopper_idle_alt;
 
 palette = 1;
-weight = 0.2;

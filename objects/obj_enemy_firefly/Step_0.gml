@@ -6,12 +6,8 @@ event_inherited();
 
 if life > 0
 {
-	scr_collision();
 	//Float up and down
-	if (y > ystart)
-		yspeed -= 0.0025;
-	else if (y < ystart)
-		yspeed += 0.0025;
+	y = ystart+dsin((current_time+hover_delay)*0.2)*2;
 	
 	shoot++;
 	if shoot%10 = 0
@@ -23,6 +19,7 @@ else
 	{
 		//Death event
 		instance_create_layer(x,y,"Explosions",obj_explosion);
+		scr_make_sound(snd_explosion,1,1,false);
 		death = 1;
 	}
 }

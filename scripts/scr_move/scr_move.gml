@@ -83,20 +83,30 @@ function scr_move(spd, axis, object = obj_solid){
 		ds_list_clear(collision_list)
 		size = instance_place_list(x, y + SLOPE_CHECK_REACH, object, collision_list, true)
 		
+		var slope = noone;
+		var flr = noone;
+		
 		for(var i = 0; i < size; i++){
 			
 			var col = collision_list[| i];
-			if(!col.slope)continue;
-			
+			if(col.slope){
+				slope = col; 
+				continue;
+			}
+			flr = col;
+		}
+		
+		if(slope or flr){
 			x -= (xspeed - xspeed/SLOPE_SPEED_FACTOR)
-			y = scr_snap_to_object(1, AXIS_VERTICAL, col, x, y + SLOPE_CHECK_REACH);
+			y = scr_snap_to_object(1, AXIS_VERTICAL, slope ? slope : flr, x, y + SLOPE_CHECK_REACH);
+			
+			scr_stop_floor()
 			return 0;	
 		}
 
 	}
 
-	if axis == AXIS_VERTICAL
-		airborne = true;
+	if(axis == AXIS_VERTICAL)airborne = true;
 	return spd;
 }
 
@@ -134,8 +144,8 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		for(var i = step; i > 0; i--){
 			_y2 = scr_snap_to_object(1, new_axis, col, _x + side * i)
 			
-			if(abs(_y1 - y) <= step){
-				res2 = abs(_y1 - y);
+			if(abs(_y2 - y) <= step){
+				res2 = abs(_y2 - y);
 				break;
 			}
 		}
@@ -148,8 +158,6 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 			else{
 				y = _y2;
 			}
-			
-			show_debug_message($"Horizontal snap")
 			
 			x = scr_snap_to_object(side, axis, col);
 			
@@ -203,28 +211,26 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 	var _x = x_;
 	var _y = y_;
 	
-	var arr = debug_get_callstack(10)
-	
-	array_foreach(arr, function(e){
-		show_debug_message(e)
-	})
-
+	var move = 0;
 	
 	if(axis == AXIS_HORIZONTAL){
 		
+		if(spd == 0)return _x;
+		
 		_x = floor(abs(x_)) * sign(x_) + frac(col.x)	
-		while(place_meeting(_x, y_, col)){
-			_x -= sign(spd);
+		while(place_meeting(_x - move, y_, col)){
+			move += sign(spd);
 		}
 		
-		return _x;
+		return _x - move;
 	}
 
+	if(spd == 0)return _y;
 	
 	_y = floor(abs(y_)) * sign(y_) + frac(col.y)	
-	while(place_meeting(x_, _y, col)){
-		_y -= sign(spd);
+	while(place_meeting(x_, _y - move, col)){
+		move += sign(spd);
 	}
 	
-	return _y;
+	return _y - move;
 }

@@ -6,6 +6,10 @@ if (sprite_index = spr_pickup_soul_large and large_soul_state < 2)
 	exit;
 if auto_pickup = "Appear"
 	exit;
+	
+//Heart Tanks, Sub Tanks, Weapon Tank, Power Tank
+if pickup_type >= 2 and pickup_type <= 6
+	ds_list_add(global.pickup_list,key); //Store
 
 switch pickup_type
 {
@@ -28,6 +32,7 @@ switch pickup_type
 			//Check sub tank #1 is aquired and not full
 			if global.subtank_1 > -1 and global.subtank_1 < subtank_cap
 			{
+				scr_make_sound(snd_energy_tank,1,1,false);
 				if global.subtank_1+pickup_power < subtank_cap
 					global.subtank_1 += pickup_power;
 				else
@@ -36,6 +41,7 @@ switch pickup_type
 			//Check sub tank #2 is aquired and not full
 			else if global.subtank_2 > -1 and global.subtank_2 < subtank_cap
 			{
+				scr_make_sound(snd_energy_tank,1,1,false);
 				if global.subtank_2+pickup_power < subtank_cap
 					global.subtank_2 += pickup_power;
 				else
@@ -63,6 +69,7 @@ switch pickup_type
 		//If found a weapon to refill
 		if refilled_weapon != 0
 		{
+			scr_make_sound(snd_weapon_tank,1,1,false);
 			if refilled_weapon.ammo+pickup_power < refilled_weapon.ammo_max
 				refilled_weapon.ammo += pickup_power;
 			else 
@@ -90,6 +97,7 @@ switch pickup_type
 		global.pause_delay = 60;
 		
 		global.hearttank += pickup_power;
+		scr_make_sound(snd_pickup,1,1,false);
 		break;
 		
 	case 3:
@@ -98,6 +106,7 @@ switch pickup_type
 		global.pause_delay = 60;
 		
 		global.subtank_1 = 0;
+		scr_make_sound(snd_pickup,1,1,false);
 		break;
 	case 4:
 		//Pause the game for fanfair
@@ -105,6 +114,7 @@ switch pickup_type
 		global.pause_delay = 60;
 		
 		global.subtank_2 = 0;
+		scr_make_sound(snd_pickup,1,1,false);
 		break;
 	case 5:
 		//Pause the game for fanfair
@@ -112,6 +122,7 @@ switch pickup_type
 		global.pause_delay = 60;
 		
 		global.weapontank = 0;
+		scr_make_sound(snd_pickup,1,1,false);
 		break;
 	case 6:
 		//Pause the game for fanfair
@@ -119,6 +130,8 @@ switch pickup_type
 		global.pause_delay = 60;
 		
 		global.powertank = 1;
+		scr_make_sound(snd_pickup,1,1,false);
+		
 		//Increase max ammo for all special weapons
 		for (i = 0; i < 9; i++)
 			global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 
@@ -126,6 +139,16 @@ switch pickup_type
 		
 	case 7: //Nightmare Souls
 		global.nightmare_souls += pickup_power;
+		switch (sprite_index)
+		{
+			case spr_pickup_soul_small: scr_make_sound(snd_soul_collect,1,1.5,false); break;
+			case spr_pickup_soul_mid: scr_make_sound(snd_soul_collect,1,1,false); break;
+			case spr_pickup_soul_large: scr_make_sound(snd_soul_collect,1,0.5,false); break;
+		}
+		
+		//Display counter
+		obj_game.souls_collected += pickup_power;
+		obj_game.souls_timer = 180;
 		break;
 }
 

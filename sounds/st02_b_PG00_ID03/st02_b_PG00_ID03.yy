@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st02_b_PG00_ID03",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.699864,
+  "name":"st02_b_PG00_ID03",
+  "parent":{
+    "name":"Blizzard-Wolfang",
+    "path":"folders/Sounds/Boss-Sounds/Blizzard-Wolfang.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st02_b_PG00_ID03.wav",
+  "type":0,
+  "volume":1.0,
+}

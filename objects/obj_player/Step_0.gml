@@ -3,6 +3,8 @@
 //Can be paused
 if global.pause = true
 	return;
+	
+event_inherited();
 
 //If alive
 if global.death = false and animation_lock = false
@@ -34,6 +36,8 @@ if global.death = false and animation_lock = false
 			{
 				effect = instance_create_depth(other.x,y,depth+1,obj_explosion);
 				effect.sprite_index = spr_water_splash;
+				
+				scr_make_sound(snd_splash,1,1,false);
 			}
 		}
 		else if underwater = true and water_check = false
@@ -43,6 +47,8 @@ if global.death = false and animation_lock = false
 			{
 				effect = instance_create_depth(other.x,y,depth+1,obj_explosion);
 				effect.sprite_index = spr_water_splash;
+				
+				scr_make_sound(snd_splash,1,1,false);
 			}
 		}
 	}	
@@ -55,11 +61,9 @@ if global.death = false and animation_lock = false
 		weight = 0.15;
 		fall_speed = 3;
 	}
-			
-	if climbing = false and airdash_state = 0
-	{
-		yspeed = min(yspeed+weight,fall_speed);
-	}
+	//Turn off gravity 		
+	if climbing = true or airdash_state > 0
+		weight = 0;
 
 	//If not hurt (when hurt you can't move and don't fall with gravity)
 	if hurt = false and attack_priority < 2
@@ -73,6 +77,10 @@ if global.death = false and animation_lock = false
 				yspeed -= jump_height;
 				if global.input_dash
 					dash = true;
+				
+				audio_stop_sound(snd_player_x_dash);
+				scr_make_sound(snd_player_x_jump,1,1,false);
+				scr_player_voicelines("Jump");
 			}
 	
 			//If not facing a wall and touching the ground
@@ -81,17 +89,21 @@ if global.death = false and animation_lock = false
 				dash = true;
 				dash_ground = true;
 				alarm[4] = dash_length;
+				
+				scr_make_sound(snd_player_x_dash,1,1,false);
 			}
 			
 			//Holding the button into the wall while falling
 			if ((place_meeting(x+1,y,obj_solid) and global.input_right) or (place_meeting(x-1,y,obj_solid) and global.input_left)) and wall_jump = false and yspeed > 0 and airborne = true
 			{
-				//Turn off dash
-				if yspeed != 0
-					dash = false;
-				
 				yspeed = 1; //Wall slide	
-				wall_slide = true;
+				if wall_slide = false
+				{
+					wall_slide = true;
+					dash = false;
+					
+					scr_make_sound(snd_player_x_wallslide,1,1,false);
+				}
 				airdash_lock = false;
 			
 				//Wall Jump
@@ -99,6 +111,9 @@ if global.death = false and animation_lock = false
 				{
 					yspeed = -jump_height;
 					wall_jump = true;
+					
+					scr_make_sound(snd_player_x_walljump,1,1,false);
+					scr_player_voicelines("Wall Jump");
 					
 					if global.input_dash
 					{
@@ -153,6 +168,9 @@ if global.death = false and animation_lock = false
 						yspeed = -jump_height;
 						if global.input_dash
 							dash = true;
+							
+						scr_make_sound(snd_player_x_jump,1,1,false);
+						scr_player_voicelines("Jump");
 					}
 				}
 				else
@@ -279,9 +297,15 @@ if global.death = false and animation_lock = false
 							//Get mach dash direction
 							machdash_direction = -1;
 							if global.input_left
+							{
+								image_xscale = -1;
 								machdash_direction = 180;
+							}
 							else if global.input_right 
+							{
+								image_xscale = 1;
 								machdash_direction = 0;
+							}
 							else if global.input_up
 								machdash_direction = 90;
 							else if global.input_down
@@ -298,6 +322,8 @@ if global.death = false and animation_lock = false
 							invul = true;
 							event_user(4); //Dash hitbox, happen once
 							machdash_hold = 0;
+							
+							scr_make_sound(snd_player_x_dash,1,1,false);
 						}
 					
 						//Dash in direction
@@ -328,7 +354,7 @@ if global.death = false and animation_lock = false
 			
 		
 			//Shooting
-			if shooting_lock = false
+			if shooting_lock = false and attack_priority = 0
 			{
 				//X-Buster
 				if global.input_shoot or global.input_shoot_released
@@ -346,6 +372,9 @@ if global.death = false and animation_lock = false
 					if global.weapon[global.weapon_choice].charge_cost <= global.weapon[global.weapon_choice].ammo and global.weapon_choice != 0
 						shooting_charge++;
 				}
+				
+				if shooting_charge = shooting_charge_lvl_1
+					scr_make_sound(snd_player_x_charge_fadeout,1,1,false);
 				
 				//If not holding down any buttons
 				if !(global.input_shoot or global.input_special)
@@ -376,12 +405,14 @@ if global.death = false and animation_lock = false
 						{
 							global.weapon_choice = 0; //Go back to the start (X-Buster)
 							flicker_weapon_swap = true;
+							scr_make_sound(snd_menu_move,1,1,false);
 							break;
 						}
 						else if global.weapon[global.weapon_choice+i].type != 0 //If next spot is not vacant
 						{
 							global.weapon_choice = global.weapon_choice+i; //Swap to that weapon
 							flicker_weapon_swap = true;
+							scr_make_sound(snd_menu_move,1,1,false);
 							break;
 						}
 					}
@@ -400,6 +431,7 @@ if global.death = false and animation_lock = false
 								{
 									global.weapon_choice = array_length(global.weapon)-a;
 									flicker_weapon_swap = true;
+									scr_make_sound(snd_menu_move,1,1,false);
 									break;
 								}
 							}
@@ -409,6 +441,7 @@ if global.death = false and animation_lock = false
 						{
 							global.weapon_choice = global.weapon_choice-i; //Swap to that weapon
 							flicker_weapon_swap = true;
+							scr_make_sound(snd_menu_move,1,1,false);
 							break;
 						}
 					}
@@ -420,7 +453,7 @@ if global.death = false and animation_lock = false
 	{
 		shooting_charge_flicker = false;
 		shooting_charge = 0;
-	
+
 		event_user(5); //Air dash end
 	}
 	
@@ -430,10 +463,6 @@ if global.death = false and animation_lock = false
 		slowed--;
 		xspeed /= 2;
 	}
-	
-	//Current collision scripts
-	xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
-	yspeed = scr_move(yspeed, AXIS_VERTICAL);
 	
 	//Afterimages
 	if dash = true and global.animate%3 = 0
@@ -453,11 +482,30 @@ else
 	event_user(5); //Air dash end
 }
 
+//Stop charging sounds
+if shooting_charge = 0
+	audio_stop_sound(snd_player_x_charge_fadeout);
+if machdash_hold = 0
+	audio_stop_sound(snd_player_x_machcharge_fadeout);
+
 if place_meeting(x,y+1,obj_solid_slope)
 	on_slope = true;
 else
 	on_slope = false;
-
+	
+//Sound for doing a victory pose	
+if sprite_index = spr_player_x_victory and image_index >= 4 and image_index < 5
+	scr_make_sound(snd_pose,1,1,false);
+	
+//Check if armour parts are equipped
+if global.x_armour_head != 0 or global.x_armour_chest != 0 or global.x_armour_arm != 0 or global.x_armour_leg != 0
+{
+	//Sound for doing a armour pose
+	if sprite_index = spr_player_x_armour_up and image_index >= 4 and image_index < 5
+		scr_make_sound(snd_pose,1,1,false);
+	if sprite_index = spr_player_x_warp_in and image_index >= 14 and image_index < 15
+		scr_make_sound(snd_pose,1,1,false);
+}
 
 /*
 else if zipline = true

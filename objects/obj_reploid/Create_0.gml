@@ -17,3 +17,10 @@ sprite_index = choose
 );
 
 rescued = false;
+
+//Unique string that makes each reploid unique
+key = room_get_name(room)+object_get_name(object_index)+string(x)+string(y);
+
+//Destroy if already rescued
+if ds_list_find_index(global.rescue_list,key) != -1
+	instance_destroy();

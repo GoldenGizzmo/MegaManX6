@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_shoot_giga",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.9580952,
+  "name":"snd_shoot_giga",
+  "parent":{
+    "name":"X",
+    "path":"folders/Sounds/Player-Sounds/X.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_shoot_giga.wav",
+  "type":0,
+  "volume":1.0,
+}

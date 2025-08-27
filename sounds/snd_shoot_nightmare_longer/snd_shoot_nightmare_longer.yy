@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_shoot_nightmare_longer",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.5913832,
+  "name":"snd_shoot_nightmare_longer",
+  "parent":{
+    "name":"Stage-Sounds",
+    "path":"folders/Sounds/Stage-Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_shoot_nightmare_longer.wav",
+  "type":1,
+  "volume":1.0,
+}

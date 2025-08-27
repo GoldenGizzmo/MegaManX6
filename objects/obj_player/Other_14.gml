@@ -33,6 +33,9 @@ if machdash_hold >= machdash_holdmax
 	bullet.sprite_index = spr_bullet_x_machdash_charged;
 	bullet.melee_damage = machdash_damage*3;
 	
+	scr_make_sound(snd_machdash,1,1,false);
+	scr_player_voicelines("Charge Shot");
+	
 	alarm[4] = dash_length/1.5; //50% longer
 }
 	

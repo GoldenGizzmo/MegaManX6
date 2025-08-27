@@ -17,6 +17,6 @@ switch (upgrade)
 //Turn off
 if acquired = true
 {
-	state = 11;
+	state = 99;
 	active = false;
 }

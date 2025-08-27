@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_worm",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.6596145,
+  "name":"snd_worm",
+  "parent":{
+    "name":"Stage-Sounds",
+    "path":"folders/Sounds/Stage-Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_worm.wav",
+  "type":1,
+  "volume":1.0,
+}

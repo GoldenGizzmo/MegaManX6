@@ -36,7 +36,7 @@ if life > 0
 			alarm[0] = 20;
 		
 			sprite_index = spr_enemy_moth_spin;
-			path_start(path_circle,0.8,path_action_continue,false);
+			path_start(path_circle,path_speed,path_action_continue,false);
 			
 			image_speed = 1;
 			break;

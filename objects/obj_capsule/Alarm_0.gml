@@ -44,6 +44,9 @@ switch (state)
 		state++;
 		alarm[0] = 10;
 	
+		audio_stop_sound(global.music);
+		global.music = snd_music_dr_light;
+		
 		conversation = instance_create_depth(0,0,0,obj_dialogue);
 		conversation.dialogue = dialogue;
 		break;
@@ -64,6 +67,9 @@ switch (state)
 				alarm[0] = 30;
 			
 				obj_player.movement = true;
+				
+				audio_stop_sound(global.music);
+				global.music = "Level";
 			}
 		}	
 		break;
@@ -84,6 +90,8 @@ switch (state)
 			
 			//Draw upgrading effect
 			effect = instance_create_layer(x,y,"Explosions",obj_capsule_effect);
+			
+			scr_make_sound(snd_capsule_charging,1,1,true);
 		}
 		break;
 		
@@ -127,6 +135,9 @@ switch (state)
 		{
 			state++;
 			alarm[0] = 60;
+			
+			audio_stop_sound(snd_capsule_charging);
+			scr_make_sound(snd_capsule_finish,1,1,false);
 		
 			image_speed = 1;
 			image_blend = c_white;

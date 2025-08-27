@@ -31,7 +31,10 @@
     "name":"Player",
     "path":"folders/Objects/Player.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_dynamic",
+    "path":"objects/obj_dynamic/obj_dynamic.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

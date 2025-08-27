@@ -21,3 +21,6 @@ shoot = 0;
 shoot_max = 8
 
 hover_height = 60;
+
+weight = 0;
+colliding = false;

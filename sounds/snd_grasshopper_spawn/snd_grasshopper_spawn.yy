@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_grasshopper_spawn",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.3902721,
+  "name":"snd_grasshopper_spawn",
+  "parent":{
+    "name":"Stage-Sounds",
+    "path":"folders/Sounds/Stage-Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_grasshopper_spawn.wav",
+  "type":1,
+  "volume":1.0,
+}

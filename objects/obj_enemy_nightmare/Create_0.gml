@@ -18,6 +18,10 @@ shoot_max = 4;
 //Is a nightmare
 nightmare = 1;
 
+weight = 0;
+colliding = false;
+
+aggro_range = 120;
 
 
 

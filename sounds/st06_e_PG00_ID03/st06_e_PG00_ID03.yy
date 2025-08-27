@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st06_e_PG00_ID03",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.1706349,
+  "name":"st06_e_PG00_ID03",
+  "parent":{
+    "name":"Rainy-Turtloid-stage",
+    "path":"folders/Sounds/Stage-Sounds/Rainy-Turtloid-stage.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st06_e_PG00_ID03.wav",
+  "type":0,
+  "volume":1.0,
+}

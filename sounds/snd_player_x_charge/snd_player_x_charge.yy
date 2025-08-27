@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_player_x_charge",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.71,
+  "name":"snd_player_x_charge",
+  "parent":{
+    "name":"X",
+    "path":"folders/Sounds/Player-Sounds/X.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_player_x_charge.wav",
+  "type":1,
+  "volume":1.0,
+}

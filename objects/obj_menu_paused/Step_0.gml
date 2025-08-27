@@ -50,7 +50,10 @@ if global.pause = true
 	if global.pause_healing > 0
 	{
 		if global.life < global.pause_healing
+		{
 			global.life += 0.5; //Healing speed
+			scr_make_sound(snd_healing,0.5,1,false);
+		}
 		else
 		{
 			global.pause = false;

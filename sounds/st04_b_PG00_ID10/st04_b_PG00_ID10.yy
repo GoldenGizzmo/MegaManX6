@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st04_b_PG00_ID10",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.0033786849,
+  "name":"st04_b_PG00_ID10",
+  "parent":{
+    "name":"Metal-Shark-Player",
+    "path":"folders/Sounds/Boss-Sounds/Metal-Shark-Player.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st04_b_PG00_ID10.wav",
+  "type":0,
+  "volume":1.0,
+}

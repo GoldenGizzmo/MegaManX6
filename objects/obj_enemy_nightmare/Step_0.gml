@@ -36,6 +36,7 @@ else
 	{
 		//Death event
 		instance_create_layer(x,y,"Explosions",obj_explosion);
+		scr_make_sound(snd_explosion,1,1,false);
 		death = 1;
 	}
 }

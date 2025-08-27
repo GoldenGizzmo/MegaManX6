@@ -18,6 +18,8 @@ if other.villainy != 2 and life > 0 and other.damage > 0
 				effect = instance_create_layer(between_x+offset_x,between_y+offset_y,"Explosions",obj_explosion);
 				effect.sprite_index = spr_effect_saber_hit;
 				effect.image_angle = irandom(359);
+				
+				scr_make_sound(snd_player_x_saber_hit,1,1,false);
 		
 				if other.melee_slash = true
 				{
@@ -51,6 +53,9 @@ if other.villainy != 2 and life > 0 and other.damage > 0
 				effect.image_xscale = 1;
 			else
 				effect.image_xscale = -1;
+				
+			scr_make_sound(snd_armour,1,1,false);
+			other.explosion = 0;
 		}
 	}
 

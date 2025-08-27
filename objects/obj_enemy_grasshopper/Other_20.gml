@@ -11,13 +11,17 @@ switch (state)
 
 		bullet.villainy = 2;
 		bullet.owner = id;
+		
+		scr_make_sound(snd_grasshopper_swipe,1,1,false);
 		break;
 		
 	case "Spawning": //Little minions that float down and walk around
 		spawn = instance_create_layer(x+14*image_xscale,y-13,"Projectiles",obj_enemy_larvae);
 		spawn.damage = bullet_damage_2;
-		spawn.image_xscale = image_xscale;
+		spawn.image_xscale = -image_xscale;
 		spawn.owner = id;
+		
+		scr_make_sound(snd_grasshopper_spawn,1,1,false);
 		break;
 }
 

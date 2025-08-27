@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"boss1_PG00_ID05_LOOP",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.000136,
+  "name":"boss1_PG00_ID05_LOOP",
+  "parent":{
+    "name":"Highmax",
+    "path":"folders/Sounds/Boss-Sounds/Highmax.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"boss1_PG00_ID05_LOOP.wav",
+  "type":0,
+  "volume":1.0,
+}

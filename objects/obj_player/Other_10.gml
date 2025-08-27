@@ -102,8 +102,6 @@ if changing_sprite != sprite_index
 
 if loop = false and image_index > image_number-1
 	image_speed = 0;
-
-
 /*
 var loop = false;
 image_speed = 1;

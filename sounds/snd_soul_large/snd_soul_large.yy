@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_soul_large",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.4405215,
+  "name":"snd_soul_large",
+  "parent":{
+    "name":"Miscellaneous",
+    "path":"folders/Sounds/Miscellaneous.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_soul_large.wav",
+  "type":1,
+  "volume":1.0,
+}

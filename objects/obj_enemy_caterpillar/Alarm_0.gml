@@ -53,6 +53,8 @@ if life > 0
 					xspeed = 0;
 					armour = true;
 					
+					scr_make_sound(snd_caterpillar_curl,1,1,false);
+					
 					//Animation
 					animation_ended = false;
 					image_index = 0;
@@ -64,7 +66,7 @@ if life > 0
 					if animation_ended = true
 					{						
 						action++;
-						alarm[0] = 60;
+						alarm[0] = 30;
 						
 						image_index = -1;
 						image_speed = 0;
@@ -78,6 +80,8 @@ if life > 0
 					image_speed = 1;
 					state = "Rolling"
 					sprite_index = spr_enemy_caterpillar_rolling;
+					
+					event_user(3); //Face player
 					break;
 			}
 			break;
@@ -87,23 +91,33 @@ if life > 0
 			{
 				case 0: //Stop
 					alarm[0] = 1;
-					if image_index < 1
-					{
-						action++;
-						alarm[0] = 60;
 					
-						xspeed = 0;
+					if xspeed > 0
+						xspeed -= 0.01;
+					else if xspeed < 0
+						xspeed += 0.01;
+					else 
+					{
+						if image_index < 1
+						{
+							action++;
+							alarm[0] = 30;
+					
+							xspeed = 0;
 
-						//Animation
-						image_speed = 0;
+							//Animation
+							image_speed = 0;
+						}
 					}
 					break;
-					
+
 				case 1: //Uncurl
 					action++;
 					alarm[0] = 1;
 							
 					armour = false;
+					
+					scr_make_sound(snd_caterpillar_uncurl,1,1,false);
 					
 					//Animation
 					animation_ended = false;

@@ -14,5 +14,5 @@ move_direction = 90;
 move_speed = 1;
 yspeed = -move_speed;
 
-
-//respawn = false;
+weight = 0;
+colliding = false;

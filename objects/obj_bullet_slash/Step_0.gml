@@ -12,11 +12,11 @@ if owner != 0
 {
 	if instance_exists(owner)
 	{
-		if owner.life <= 1
-			instance_destroy();
+		if owner.life <= 0 or owner.state = "Reviving"
+			alarm[9] = 1;
 	}
 	else
-		instance_destroy();
+		alarm[9] = 1;
 }
 
 /*
