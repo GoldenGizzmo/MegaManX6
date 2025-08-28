@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+object_type = dynamic_type.grasshopper_alt
+
 life = 24;
 lifemax = life;
 damage = 6;
@@ -14,3 +16,4 @@ sprite_index = spr_enemy_grasshopper_idle_alt;
 
 palette = 1;
 weight = 0.2;
+

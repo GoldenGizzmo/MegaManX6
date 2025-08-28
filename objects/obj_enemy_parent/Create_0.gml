@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited()
+
 life = 10;
 damage = 30;
 resistance = 1;
@@ -13,8 +15,6 @@ global.damage_taken = 999;
 nightmare = 0; //Drops nightmare souls
 nightmare_pickup = spr_pickup_soul_mid;
 
-xspeed = 0;
-yspeed = 0;
 weight = 0;
 airborne = false;
 

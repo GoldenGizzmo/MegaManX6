@@ -9,3 +9,9 @@
 #macro SLOPE_CHECK_REACH 8 //How far should the code check for a slope under the player
 #macro SLOPE_SPEED_FACTOR 1 //The factor the player speed should be multiplied by when going up a slope
 //Sqrt(2) works for 45º angles, as it reduces the diagonal speed to be the same as the hspd/vspd.
+
+enum dynamic_type {
+	base,
+	player,
+	grasshopper_alt
+}

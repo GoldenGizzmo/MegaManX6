@@ -13,3 +13,24 @@ function scr_stop_floor(){
 function scr_stop_ceiling(){
 
 }
+
+function scr_stop_wall(spd = 0){
+	
+	
+	switch(object_type){
+		
+		case dynamic_type.player:
+		
+		break;
+		
+		case dynamic_type.grasshopper_alt:
+		
+			show_debug_message($"yeah")
+		
+			if(state != "Turn")alarm[0] = 1;
+		    state = "Turn"
+		
+		break;
+	}
+	
+}

@@ -56,6 +56,7 @@ function scr_move(spd, axis, object = obj_solid){
 		
 		if(axis == AXIS_HORIZONTAL){
 			x = scr_snap_to_object(spd, axis, col);
+			scr_stop_wall(spd);
 		}
 		else
 		{
@@ -91,7 +92,7 @@ function scr_move(spd, axis, object = obj_solid){
 			var col = collision_list[| i];
 			if(col.slope){
 				slope = col; 
-				continue;
+				break;
 			}
 			flr = col;
 		}

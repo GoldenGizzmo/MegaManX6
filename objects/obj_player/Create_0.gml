@@ -1,11 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-airborne = false
+event_inherited()
+
+object_type = dynamic_type.player
+
 move_speed = 2;
 jump_height = 6.5; //4.5
-xspeed = 0;
-yspeed = 0;
 
 dash = false;
 dash_speed = 4.5;
@@ -60,8 +61,6 @@ vspd = 0;
 
 player_spd = 2.7;
 grv = 0.2;
-
-collision_list = ds_list_create();
 
 jumping = false;
 
