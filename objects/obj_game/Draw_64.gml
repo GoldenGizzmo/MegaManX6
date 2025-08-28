@@ -80,6 +80,24 @@ if global.hud_toggle = true
 			draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),ceil(global.life),10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),make_color_rgb(112,240,240),1);
 		draw_set_halign(fa_left);
 	}
+	draw_set_font(global.fnt_game);
+	
+	//Draw nightmare soul counter
+	var soul_x_pos = 10*global.ui_scale;
+	var soul_y_pos = (display_get_gui_height()-5*global.ui_scale)+souls_y;
+	draw_sprite_ext(spr_hud_souls,global.animate/7,soul_x_pos,soul_y_pos,global.ui_scale,global.ui_scale,0,c_white,1);
+	//Souls text
+	var soul_text = string_repeat("0",max(0,5-string_length(string(global.nightmare_souls))))+string(global.nightmare_souls);
+	var soul_text_colour = make_color_rgb(64,132,244);
+	draw_text_transformed_color(soul_x_pos+28*global.ui_scale,soul_y_pos-16*global.ui_scale,soul_text,global.ui_scale,global.ui_scale,0,soul_text_colour,soul_text_colour,soul_text_colour,soul_text_colour,1);
+	//Added souls from collecting
+	if souls_timer > 0
+	{
+		var soul_text_colour = make_color_rgb(148,236,255);
+		draw_set_halign(fa_right);
+			draw_text_transformed_color(soul_x_pos+58*global.ui_scale,soul_y_pos-27*global.ui_scale,"+"+string(souls_collected),global.ui_scale,global.ui_scale,0,soul_text_colour,soul_text_colour,soul_text_colour,soul_text_colour,souls_alpha);
+		draw_set_halign(fa_left);
+	}
 }
 
 

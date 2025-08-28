@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_hover",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.6344444,
+  "name":"snd_hover",
+  "parent":{
+    "name":"Miscellaneous",
+    "path":"folders/Sounds/Miscellaneous.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_hover.wav",
+  "type":1,
+  "volume":1.0,
+}

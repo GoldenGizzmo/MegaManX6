@@ -23,7 +23,8 @@ if global.pause = true
 				var value = instance.alarm[alarm_index];
 			
 				if value >= 0
-					add_alarm(instance,alarm_index,value)
+					instance.alarm[alarm_index] += 1;
+					//add_alarm(instance,alarm_index,value)
 			}
 		
 			//Pause speed
@@ -49,7 +50,10 @@ if global.pause = true
 	if global.pause_healing > 0
 	{
 		if global.life < global.pause_healing
+		{
 			global.life += 0.5; //Healing speed
+			scr_make_sound(snd_healing,0.5,1,false);
+		}
 		else
 		{
 			global.pause = false;
@@ -63,7 +67,7 @@ else
 	if unpause = true
 	{
 		unpause = false;
-	
+	/*
 		for (var index = 0; index < array_length(arr_alarms); index++)
 		{
 			try
@@ -78,7 +82,7 @@ else
 			{
 				//Do nothing	
 			}
-		}
+		}*/
 	
 		for (var index = 0; index < array_length(arr_speed); index++)
 		{

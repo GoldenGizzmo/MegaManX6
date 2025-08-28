@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st03_b_PG03_ID00_LOOP",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.1655328,
+  "name":"st03_b_PG03_ID00_LOOP",
+  "parent":{
+    "name":"Blaze-Heatnix",
+    "path":"folders/Sounds/Boss-Sounds/Blaze-Heatnix.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st03_b_PG03_ID00_LOOP.wav",
+  "type":0,
+  "volume":1.0,
+}

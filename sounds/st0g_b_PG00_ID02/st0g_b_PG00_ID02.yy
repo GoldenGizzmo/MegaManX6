@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st0g_b_PG00_ID02",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.35163265,
+  "name":"st0g_b_PG00_ID02",
+  "parent":{
+    "name":"Nightmare-King",
+    "path":"folders/Sounds/Boss-Sounds/Nightmare-King.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st0g_b_PG00_ID02.wav",
+  "type":0,
+  "volume":1.0,
+}

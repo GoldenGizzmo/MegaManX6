@@ -4,8 +4,19 @@
 
 //Code that should run when the player hits the floor
 function scr_stop_floor(){
-	airborne = false;
 	
+	
+	switch(object_index){
+		
+		
+		case obj_player:
+			
+			if airborne = true scr_make_sound(snd_player_x_landing,1,1,false);	
+			airborne = false;
+			
+		break;
+		
+	}
 	
 }
 
@@ -14,23 +25,26 @@ function scr_stop_ceiling(){
 
 }
 
-function scr_stop_wall(spd = 0){
+function scr_stop_wall(){
 	
-	
-	switch(object_type){
+	switch(object_index){
 		
-		case dynamic_type.player:
 		
+		case obj_enemy_caterpillar:
+			if(state != "Turn"){
+				state = "Turn"
+				alarm[0] = 1;
+			}
 		break;
 		
-		case dynamic_type.grasshopper_alt:
 		
-			show_debug_message($"yeah")
-		
-			if(state != "Turn")alarm[0] = 1;
-		    state = "Turn"
-		
+		case obj_player:
+			
+			if airborne = true scr_make_sound(snd_player_x_landing,1,1,false);	
+			airborne = false;
+			
 		break;
+		
 	}
 	
 }

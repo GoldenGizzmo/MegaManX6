@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st00_t_PG00_ID00",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.56163263,
+  "name":"st00_t_PG00_ID00",
+  "parent":{
+    "name":"Eurasia-intro-stage",
+    "path":"folders/Sounds/Stage-Sounds/Eurasia-intro-stage.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st00_t_PG00_ID00.wav",
+  "type":0,
+  "volume":1.0,
+}

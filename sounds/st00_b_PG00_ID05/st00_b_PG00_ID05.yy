@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st00_b_PG00_ID05",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.996644,
+  "name":"st00_b_PG00_ID05",
+  "parent":{
+    "name":"D1000-Intro-Stage-Boss",
+    "path":"folders/Sounds/Boss-Sounds/D1000-Intro-Stage-Boss.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st00_b_PG00_ID05.wav",
+  "type":0,
+  "volume":1.0,
+}

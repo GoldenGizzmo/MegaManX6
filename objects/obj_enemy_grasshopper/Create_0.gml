@@ -11,6 +11,7 @@ bullet_damage = 6; //Blades
 bullet_damage_2 = 3; //Larvae
 
 drop_pickup = false;
+weight = 0.2;
 
 state = choose("Shooting","Spawning");
 sprite_index = spr_enemy_grasshopper_idle;
@@ -33,3 +34,5 @@ flickering = 0;
 flicker = false;
 
 jet_anim_speed = 1;
+
+

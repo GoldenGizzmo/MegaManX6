@@ -20,4 +20,7 @@ image_speed = 0;
 shoot = 0;
 shoot_max = 8
 
-hover_height = 40;
+hover_height = 60;
+
+weight = 0;
+colliding = false;

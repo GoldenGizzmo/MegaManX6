@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_player_x_wallslide",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.10126984,
+  "name":"snd_player_x_wallslide",
+  "parent":{
+    "name":"X",
+    "path":"folders/Sounds/Player-Sounds/X.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_player_x_wallslide.wav",
+  "type":1,
+  "volume":1.0,
+}
