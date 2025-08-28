@@ -5,6 +5,7 @@ event_inherited();
 
 if life > 0
 {
+	scr_collision();
 	if airborne = false //Turn at wall and ledges
 	{
 		event_user(0);
@@ -16,7 +17,7 @@ if life > 0
 	{
 		if instance_exists(owner)
 		{
-			if owner.life <= 0 or owner.state = "Reviving"
+			if owner.life <= 1
 				life = 0;
 		}
 		else
@@ -42,8 +43,6 @@ else
 	{
 		//Death event
 		instance_create_layer(x,y,"Explosions",obj_explosion);
-		scr_make_sound(snd_explosion,1,1,false);
-		
 		for (i = 4; i < 6; i++)
 		{
 			debris = instance_create_layer(x,y,"Explosions",obj_particle_debris)

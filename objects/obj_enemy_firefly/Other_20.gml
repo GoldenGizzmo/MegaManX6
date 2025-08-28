@@ -11,6 +11,4 @@ bullet.explosion = spr_explosion_firefly;
 
 bullet.villainy = 2;
 
-scr_make_sound(snd_firefly,1,1,false);
-
 

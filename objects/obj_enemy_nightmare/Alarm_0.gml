@@ -30,19 +30,10 @@ if life > 0
 			switch (action)
 			{
 				case 0:
-					if distance_to_object(obj_player) < aggro_range
-					{
-						alarm[0] = 60;
-						action++;
+					alarm[0] = 60;
+					action++;
 				
-						sprite_index = spr_enemy_nightmare_shoot;
-					}
-					else
-					{
-						direction = point_direction(x,y,obj_player.x,obj_player.y);
-						sprite_index = spr_enemy_nightmare_move;
-						alarm[0] = 1;
-					}
+					sprite_index = spr_enemy_nightmare_shoot;
 					break;
 					
 				case 1:

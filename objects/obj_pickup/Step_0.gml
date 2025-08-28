@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_inherited();
-
 //Can be paused
 if global.pause = true
 	return;
@@ -77,7 +75,7 @@ switch (sprite_index)
 		pickup_power = 2;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
+		if afterimage_colour = c_white //Lock to happen once
 			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(140,8,26);
 		break;
@@ -86,7 +84,7 @@ switch (sprite_index)
 		pickup_power = 5;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
+		if afterimage_colour = c_white //Lock to happen once
 			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(8,8,140);
 		break;
@@ -95,7 +93,7 @@ switch (sprite_index)
 		pickup_power = 200;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
+		if afterimage_colour = c_white //Lock to happen once
 			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(0,48,16);
 		pickup_expiry = -1; //Doesn't expire
@@ -104,43 +102,30 @@ switch (sprite_index)
 		break;
 }
 
-if save_pickup = false
-{
-	save_pickup = true;
-	
-	//Heart Tanks, Sub Tanks, Weapon Tank, Power Tank
-	if pickup_type >= 2 and pickup_type <= 6
-	{
-		//Unique string that makes each reploid unique
-		key = room_get_name(room)+object_get_name(object_index)+string(x)+string(y);
-
-		//Destroy if already rescued
-		if ds_list_find_index(global.pickup_list,key) != -1
-			instance_destroy();
-	}
-}
-
 //Not a nightmare soul
 if pickup_type != 7
 {
-	if airborne = true
+	scr_collision(obj_solid);
+
+	if weight > 0
 	{
-		//Don't start expiring until you've hit the ground
-		pickup_expiry++;
-		if image_index > animation_falling
-			image_index = 0;
+		if yspeed < 6 and airborne = true
+			yspeed += weight
+		else
+			y = round(y); //Align to ground
+
+		if place_meeting(x,y+1,obj_solid)
+			y = round(y);
 	}
-	else
-	{
-		if pickup_type = 1 and image_index < animation_sitting
-			image_index = animation_sitting;
-	}
+	
+	if image_index > animation_falling
+		image_index = 0;
+
+	if pickup_type = 1 and airborne = false and image_index < animation_sitting
+		image_index = animation_sitting;
 }
 else
 {
-	weight = 0;
-	colliding = false;
-	
 	//Afterimages
 	if global.animate%3 = 0
 	{
@@ -196,27 +181,6 @@ else
 		}
 	}
 }
-
-//For Nightmare Souls that reploids give
-if auto_pickup != "Off"
-{
-	if auto_pickup = "Appear"
-	{
-		if speed > 0.5
-			speed -= 0.1;
-		else
-			auto_pickup = "Follow";
-	}
-	else if auto_pickup = "Follow"
-	{
-		//Pursue the player at increasing speeds
-		speed += 0.1;	
-		direction = point_direction(x,y,obj_player.x,obj_player.y);
-	}
-}
-
-
-
 
 if pickup_expiry > -1
 {

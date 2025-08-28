@@ -1,1 +1,0 @@
-background = spr_bg_yammark_temples;

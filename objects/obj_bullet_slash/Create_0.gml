@@ -10,5 +10,4 @@ phasing = true;
 piercing = true;
 
 store_speed = 0;
-owner = 0; 
-explosion = spr_explosion_death;
+return_direction = 1;

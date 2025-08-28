@@ -14,12 +14,7 @@ if global.life > 0 and invul = false
 		{
 			alarm[3] = 30; //Recovery time
 			recovery_time = base_recovery_time;
-			
-			scr_make_sound(snd_explosion_bullet,1,1,false);
-			scr_player_voicelines("Hurt");
 		}
-		else
-			global.life = 0;
 			
 		//Turn off
 		if knockback > 0

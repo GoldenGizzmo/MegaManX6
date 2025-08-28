@@ -21,8 +21,6 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"1ab11c79-6687-49b6-afce-df093d57f798","blendMode":0,"displayName":"default","isLocked":false,"name":"1ab11c79-6687-49b6-afce-df093d57f798","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"Copied Layer 1","blendMode":0,"displayName":"default","isLocked":false,"name":"Copied Layer 1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"Copied Layer 2","blendMode":0,"displayName":"default","isLocked":false,"name":"Copied Layer 2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_bullet_player_lemon182",
   "nineSlice":null,
@@ -36,7 +34,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_bullet_player_lemon182",
+    "%Name":"spr_bullet_player_lemon",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -60,7 +58,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_bullet_player_lemon182",
+    "name":"spr_bullet_player_lemon",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,

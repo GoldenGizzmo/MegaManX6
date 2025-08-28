@@ -7,5 +7,3 @@ bullet.speed = 0.5;
 bullet.damage = 0;
 
 bullet.villainy = 2;
-
-scr_make_sound(snd_moth,1,1,false);

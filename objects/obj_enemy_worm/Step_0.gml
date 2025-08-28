@@ -18,9 +18,6 @@ if life > 0
 		alarm[0] = -1;
 		alarm[1] = 1;
 		
-		scr_make_sound(snd_worm,1,1,false);
-		
-		damage = 0;
 		animation_ended = false;
 		sprite_index = spr_enemy_worm_retreat;
 		image_index = 0;
@@ -32,7 +29,6 @@ else
 	{
 		//Death event
 		instance_create_layer(x,y,"Explosions",obj_explosion);
-		scr_make_sound(snd_explosion,1,1,false);
 		death = 1;
 	}
 }

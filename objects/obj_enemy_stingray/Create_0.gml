@@ -12,13 +12,10 @@ shoot = 0;
 move_speed = 0.5;
 
 state = "Roaming";
-aggro_range = 70;
+aggro_range = 100;
 
 //Direction based on spawn
 direction = 90-(90*image_xscale);
 image_xscale = 1;
 
 bubbles = irandom(60);
-
-weight = 0;
-colliding = false;

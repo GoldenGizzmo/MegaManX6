@@ -15,19 +15,12 @@ if life > 0
 			//Set stats
 			life = lifemax;
 			damage = damage_store;
-			movement_freeze = false;
 			depth -= 10;
 			event_user(3);
 			
 			//Turn off effects
 			flickering = 0;
 			flicker = false;
-			
-			scr_make_sound(snd_yammark_reinforcement,1,1,false);
-			instance_create_layer(x,y,"Explosions",obj_particle_reinforcement);
-			//revive_effect.palette = 1;
-			//if object_index = obj_enemy_grasshopper_alt
-			//	revive_effect.palette = 2;
 			
 			//Restart AI
 			event_user(11);
@@ -67,7 +60,6 @@ if life > 0
 }
 else
 {
-	speed = 0;
 	if death = 0 and global.pause = false //Lock for alarm
 	{
 		//death = 1;
@@ -87,8 +79,6 @@ else
 			if object_index = obj_enemy_grasshopper_alt
 				debris.palette = 1;
 		}
-		
-		scr_make_sound(snd_explosion,1,1,false);
 
 		//Don't actually die and instead stay at 1 Hp
 		life = 1;

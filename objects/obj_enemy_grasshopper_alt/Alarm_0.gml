@@ -53,7 +53,6 @@ if life > 0
 					if image_index > 3
 					{
 						xspeed = 6*image_xscale;
-						scr_make_sound(snd_grasshopper_swipe,1,1,false);
 					
 						action++;
 						alarm[0] = 1;

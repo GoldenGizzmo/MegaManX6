@@ -27,7 +27,6 @@
   "height":108,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"0ebdd888-89d7-4c78-a885-7822d8a44ebd","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"0ebdd888-89d7-4c78-a885-7822d8a44ebd","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"8f09446a-1da2-4092-91c1-0c0a965b6b19","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"8f09446a-1da2-4092-91c1-0c0a965b6b19","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"cb12904c-e5d7-4de1-9047-a45391ee63a8","blendMode":0,"displayName":"default","isLocked":false,"name":"cb12904c-e5d7-4de1-9047-a45391ee63a8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
@@ -73,8 +72,6 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
-    "seqHeight":108.0,
-    "seqWidth":160.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,

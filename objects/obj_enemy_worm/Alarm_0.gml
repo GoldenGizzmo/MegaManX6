@@ -11,8 +11,6 @@ if life > 0
 			{
 				action++;
 				
-				scr_make_sound(snd_worm,1,1,false);
-				
 				image_speed = 1;
 				invul = false;
 			}

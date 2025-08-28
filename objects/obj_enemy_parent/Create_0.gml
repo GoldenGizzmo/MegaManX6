@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_inherited();
+event_inherited()
 
 life = 10;
 damage = 30;
@@ -14,6 +14,9 @@ armour = false; //Blocked by most attacks
 global.damage_taken = 999;
 nightmare = 0; //Drops nightmare souls
 nightmare_pickup = spr_pickup_soul_mid;
+
+weight = 0;
+airborne = false;
 
 death = 0; 
 enemy_type = 0;
@@ -29,11 +32,11 @@ drop_pickup = true;
 sprite_start = sprite_index;
 image_index = 0;
 
+camera_check = false;
 event_user(3);
 
 airborne = false;
 collision_list = ds_list_create()
-
 
 
 

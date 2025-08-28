@@ -14,10 +14,7 @@
     "name":"Special",
     "path":"folders/Objects/Special.yy",
   },
-  "parentObjectId":{
-    "name":"obj_dynamic",
-    "path":"objects/obj_dynamic/obj_dynamic.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

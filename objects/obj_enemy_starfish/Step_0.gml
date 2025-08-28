@@ -6,20 +6,7 @@ event_inherited();
 
 if life > 0
 {
-	y += yspeed;
-	despawn = false;
 	
-	//moving up
-	if move_direction = 90
-	{
-		if yspeed > -move_speed
-			yspeed -= 0.02;
-	}
-	else if move_direction = 270
-	{
-		if yspeed < move_speed
-			yspeed += 0.02;
-	}
 }
 else
 {
@@ -27,7 +14,6 @@ else
 	{
 		//Death event
 		instance_create_layer(x,y,"Explosions",obj_explosion);
-		scr_make_sound(snd_explosion,1,1,false);
 		death = 1;
 	}
 }

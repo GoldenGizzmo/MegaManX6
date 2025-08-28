@@ -9,5 +9,3 @@ bullet.sprite_index = spr_bullet_worm;
 bullet.explosion = spr_explosion_projectile;
 
 bullet.villainy = 2;
-
-scr_make_sound(snd_worm_shoot,1,1,false);

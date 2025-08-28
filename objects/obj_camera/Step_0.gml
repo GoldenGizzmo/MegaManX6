@@ -45,15 +45,11 @@ if instance_exists(obj_camera_freemove)
 		var length_y = 16*find_space.image_yscale;
 		var border = 25; //Border which causes the screen to scroll vertically
 		var scroll_speed = obj_player.yspeed;
-		if obj_player.on_slope = true //Checks if the player is on a slope
-			scroll_speed = 1+obj_player.yspeed;
-		
 		if scroll_speed < 0 //Stay a positive number
 			scroll_speed *= -1;
 			
 		//System that stops aggressive scrolling (mostly from small actions to make it less disorientating)
-		//Scrolls slightly up more while walking up slopes
-		if (obj_player.y < y-border and obj_player.on_slope = false) or (obj_player.y < y+30 and obj_player.on_slope = true)
+		if obj_player.y < y-border 
 			y -= scroll_speed;
 		else if obj_player.y > y+border
 			y += scroll_speed;

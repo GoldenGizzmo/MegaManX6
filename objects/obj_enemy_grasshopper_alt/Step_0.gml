@@ -49,7 +49,6 @@ if life > 0
 					alarm[1] = 180; //Give up
 					
 					event_user(3);
-					scr_make_sound(snd_grasshopper_alert,1,1,false);
 					
 					xspeed = 0;
 					image_speed = 0;

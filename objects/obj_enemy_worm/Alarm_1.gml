@@ -24,7 +24,6 @@ if life > 0
 			action = 0;
 			alarm[0] = 1;
 		
-			damage = damage_store
 			image_index = 1; //Skip the openning box phase
 			sprite_index = spr_enemy_worm_rise;
 			animation_ended = false;
