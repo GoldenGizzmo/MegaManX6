@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_yammark_talk_wing",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.51315194,
+  "name":"snd_yammark_talk_wing",
+  "parent":{
+    "name":"Commander-Yammark",
+    "path":"folders/Sounds/Commander-Yammark.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_yammark_talk_wing.wav",
+  "type":0,
+  "volume":1.0,
+}

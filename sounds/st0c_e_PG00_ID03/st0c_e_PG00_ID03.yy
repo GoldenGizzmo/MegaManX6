@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"st0c_e_PG00_ID03",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.1723809,
+  "name":"st0c_e_PG00_ID03",
+  "parent":{
+    "name":"Sigma-stage",
+    "path":"folders/Sounds/Stage-Sounds/Sigma-stage.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"st0c_e_PG00_ID03.wav",
+  "type":0,
+  "volume":1.0,
+}

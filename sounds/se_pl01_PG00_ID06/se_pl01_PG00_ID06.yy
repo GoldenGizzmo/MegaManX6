@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"se_pl01_PG00_ID06",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.9763719,
+  "name":"se_pl01_PG00_ID06",
+  "parent":{
+    "name":"Zero",
+    "path":"folders/Sounds/Player-Sounds/Zero.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"se_pl01_PG00_ID06.wav",
+  "type":0,
+  "volume":1.0,
+}

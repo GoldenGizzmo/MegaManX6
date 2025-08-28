@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_capsule_finish",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.9851474,
+  "name":"snd_capsule_finish",
+  "parent":{
+    "name":"Miscellaneous",
+    "path":"folders/Sounds/Miscellaneous.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_capsule_finish.wav",
+  "type":1,
+  "volume":1.0,
+}

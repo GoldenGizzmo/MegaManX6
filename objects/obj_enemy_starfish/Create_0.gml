@@ -10,10 +10,9 @@ damage = 4;
 
 armour = true;
 
-direction = 90;
+move_direction = 90;
 move_speed = 1;
-speed = move_speed;
+yspeed = -move_speed;
 
-
-respawn = false;
-despawn = false;
+weight = 0;
+colliding = false;

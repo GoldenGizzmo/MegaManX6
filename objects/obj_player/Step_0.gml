@@ -3,6 +3,8 @@
 //Can be paused
 if global.pause = true
 	return;
+	
+event_inherited();
 
 //If alive
 if global.death = false and animation_lock = false
@@ -34,6 +36,8 @@ if global.death = false and animation_lock = false
 			{
 				effect = instance_create_depth(other.x,y,depth+1,obj_explosion);
 				effect.sprite_index = spr_water_splash;
+				
+				scr_make_sound(snd_splash,1,1,false);
 			}
 		}
 		else if underwater = true and water_check = false
@@ -43,6 +47,8 @@ if global.death = false and animation_lock = false
 			{
 				effect = instance_create_depth(other.x,y,depth+1,obj_explosion);
 				effect.sprite_index = spr_water_splash;
+				
+				scr_make_sound(snd_splash,1,1,false);
 			}
 		}
 	}	
@@ -55,11 +61,9 @@ if global.death = false and animation_lock = false
 		weight = 0.15;
 		fall_speed = 3;
 	}
-			
-	if weight > 0 and climbing = false
-	{
-		yspeed = min(yspeed+weight,fall_speed);
-	}
+	//Turn off gravity 		
+	if climbing = true or airdash_state > 0
+		weight = 0;
 
 	//If not hurt (when hurt you can't move and don't fall with gravity)
 	if hurt = false and attack_priority < 2
@@ -73,6 +77,10 @@ if global.death = false and animation_lock = false
 				yspeed -= jump_height;
 				if global.input_dash
 					dash = true;
+				
+				audio_stop_sound(snd_player_x_dash);
+				scr_make_sound(snd_player_x_jump,1,1,false);
+				scr_player_voicelines("Jump");
 			}
 	
 			//If not facing a wall and touching the ground
@@ -80,24 +88,32 @@ if global.death = false and animation_lock = false
 			{
 				dash = true;
 				dash_ground = true;
-				alarm[4] = 30;
+				alarm[4] = dash_length;
+				
+				scr_make_sound(snd_player_x_dash,1,1,false);
 			}
 			
 			//Holding the button into the wall while falling
 			if ((place_meeting(x+1,y,obj_solid) and global.input_right) or (place_meeting(x-1,y,obj_solid) and global.input_left)) and wall_jump = false and yspeed > 0 and airborne = true
 			{
-				//Turn off dash
-				if yspeed != 0
-					dash = false;
-				
 				yspeed = 1; //Wall slide	
-				wall_slide = true;
+				if wall_slide = false
+				{
+					wall_slide = true;
+					dash = false;
+					
+					scr_make_sound(snd_player_x_wallslide,1,1,false);
+				}
+				airdash_lock = false;
 			
 				//Wall Jump
 				if global.input_jump_pressed
 				{
 					yspeed = -jump_height;
 					wall_jump = true;
+					
+					scr_make_sound(snd_player_x_walljump,1,1,false);
+					scr_player_voicelines("Wall Jump");
 					
 					if global.input_dash
 					{
@@ -112,7 +128,7 @@ if global.death = false and animation_lock = false
 			else
 				wall_slide = false;
 		
-			if attack_priority = 0
+			if attack_priority = 0 and airdash_state = 0
 			{
 				if wall_jump = true //Wall jumping
 				{
@@ -152,6 +168,9 @@ if global.death = false and animation_lock = false
 						yspeed = -jump_height;
 						if global.input_dash
 							dash = true;
+							
+						scr_make_sound(snd_player_x_jump,1,1,false);
+						scr_player_voicelines("Jump");
 					}
 				}
 				else
@@ -235,11 +254,107 @@ if global.death = false and animation_lock = false
 						yspeed = 0;
 				}
 			}
-		
+			
+			//Mach dash (in air, not doing any special attack, not sliding on a wall)
+			if global.x_armour_leg = "Blade Leg" and airborne = true and attack_priority = 0 and wall_slide = false
+			{
+				switch (airdash_state)
+				{
+					case 0: //Activated mach dash 
+						//(airdash lock limits to only one air dash per jump)
+						if global.input_dash_pressed and airdash_lock = false
+						{
+							airdash_lock = true;
+							shooting_lock = true;
+							airdash_state = 1;
+						}
+						break;
+					
+					case 1: //While holding the mach dash
+						if global.input_dash
+						{
+							machdash_hold++;
+					
+							//Freeze movement
+							yspeed = 0;
+							xspeed = 0;
+							dash = false;
+						
+							//Facing left and right
+							if global.input_left
+								image_xscale = -1;
+							else if global.input_right 
+								image_xscale = 1;
+						}
+						
+						//Releasing the mach dash
+						if global.input_dash_released
+						{
+							airdash_state = 2;
+						
+							alarm[4] = dash_length/2;
+						
+							//Get mach dash direction
+							machdash_direction = -1;
+							if global.input_left
+							{
+								image_xscale = -1;
+								machdash_direction = 180;
+							}
+							else if global.input_right 
+							{
+								image_xscale = 1;
+								machdash_direction = 0;
+							}
+							else if global.input_up
+								machdash_direction = 90;
+							else if global.input_down
+								machdash_direction = 270;
+							else
+								alarm[4] = 1;
+						}
+						break;
+						
+					case 2: //While mach dashing
+						if dash = false
+						{
+							dash = true;
+							invul = true;
+							event_user(4); //Dash hitbox, happen once
+							machdash_hold = 0;
+							
+							scr_make_sound(snd_player_x_dash,1,1,false);
+						}
+					
+						//Dash in direction
+						var mach_dash_speed = dash_speed*2;
+						switch (machdash_direction)
+						{
+							case 0: xspeed = mach_dash_speed break;
+							case 180: xspeed = -mach_dash_speed break;
+							case 90: yspeed = -mach_dash_speed break;
+							case 270: yspeed = mach_dash_speed break;
+						}
+						
+						//Prematurely end dash
+						switch (machdash_direction)
+						{
+							case 0: if !global.input_right {alarm[4] =  1;} break;
+							case 180: if !global.input_left {alarm[4] =  1;} break;
+							case 90: if !global.input_up {alarm[4] =  1;} break;
+							case 270: if !global.input_down {alarm[4] =  1;} break;
+						}	
+					
+						//Stopping at walls
+						if place_meeting(x+xspeed,y+yspeed,obj_solid)
+							alarm[4] = 1;
+						break;
+				}
+			}
 			
 		
 			//Shooting
-			if shooting_lock = false
+			if shooting_lock = false and attack_priority = 0
 			{
 				//X-Buster
 				if global.input_shoot or global.input_shoot_released
@@ -258,6 +373,9 @@ if global.death = false and animation_lock = false
 						shooting_charge++;
 				}
 				
+				if shooting_charge = shooting_charge_lvl_1
+					scr_make_sound(snd_player_x_charge_fadeout,1,1,false);
+				
 				//If not holding down any buttons
 				if !(global.input_shoot or global.input_special)
 				{
@@ -275,7 +393,68 @@ if global.death = false and animation_lock = false
 						shooting_charge_flicker = false;
 				}
 			}
+			
+			//Changing weapons
+			if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
+			{
+				if global.input_swap_right_pressed //Swapping next
+				{
+					for (i = 1; i < 10; i++)
+					{
+						if global.weapon_choice+i > array_length(global.weapon)-1 //If reaching the end of the list
+						{
+							global.weapon_choice = 0; //Go back to the start (X-Buster)
+							flicker_weapon_swap = true;
+							scr_make_sound(snd_menu_move,1,1,false);
+							break;
+						}
+						else if global.weapon[global.weapon_choice+i].type != 0 //If next spot is not vacant
+						{
+							global.weapon_choice = global.weapon_choice+i; //Swap to that weapon
+							flicker_weapon_swap = true;
+							scr_make_sound(snd_menu_move,1,1,false);
+							break;
+						}
+					}
+				}
+				else if global.input_swap_left_pressed //Swapping previous
+				{
+					for (i = 1; i < 10; i++)
+					{
+						if global.weapon_choice = 0 //If using the X-Buster
+						{
+							//Go to the end of the list
+							for (a = 1; a < 10; a++)
+							{
+								//Check backwards for a weapon to be equipped
+								if global.weapon[array_length(global.weapon)-a] != 0
+								{
+									global.weapon_choice = array_length(global.weapon)-a;
+									flicker_weapon_swap = true;
+									scr_make_sound(snd_menu_move,1,1,false);
+									break;
+								}
+							}
+							break;
+						}
+						else if global.weapon[global.weapon_choice-i].type != 0 //If previous spot is not vacant
+						{
+							global.weapon_choice = global.weapon_choice-i; //Swap to that weapon
+							flicker_weapon_swap = true;
+							scr_make_sound(snd_menu_move,1,1,false);
+							break;
+						}
+					}
+				}
+			}
 		}
+	}
+	else
+	{
+		shooting_charge_flicker = false;
+		shooting_charge = 0;
+
+		event_user(5); //Air dash end
 	}
 	
 	//Slow status effect
@@ -285,63 +464,6 @@ if global.death = false and animation_lock = false
 		xspeed /= 2;
 	}
 	
-	//Current collision scripts
-	//scr_collision();
-	xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
-	yspeed = scr_move(yspeed, AXIS_VERTICAL);
-	
-	
-	//Changing weapons
-	if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
-	{
-		if global.input_swap_right_pressed //Swapping next
-		{
-			for (i = 1; i < 10; i++)
-			{
-				if global.weapon_choice+i > array_length(global.weapon)-1 //If reaching the end of the list
-				{
-					global.weapon_choice = 0; //Go back to the start (X-Buster)
-					flicker_weapon_swap = true;
-					break;
-				}
-				else if global.weapon[global.weapon_choice+i].type != 0 //If next spot is not vacant
-				{
-					global.weapon_choice = global.weapon_choice+i; //Swap to that weapon
-					flicker_weapon_swap = true;
-					break;
-				}
-			}
-		}
-		else if global.input_swap_left_pressed //Swapping previous
-		{
-			for (i = 1; i < 10; i++)
-			{
-				if global.weapon_choice = 0 //If using the X-Buster
-				{
-					//Go to the end of the list
-					for (a = 1; a < 10; a++)
-					{
-						//Check backwards for a weapon to be equipped
-						if global.weapon[array_length(global.weapon)-a] != 0
-						{
-							global.weapon_choice = array_length(global.weapon)-a;
-							flicker_weapon_swap = true;
-							break;
-						}
-					}
-					break;
-				}
-				else if global.weapon[global.weapon_choice-i].type != 0 //If previous spot is not vacant
-				{
-					global.weapon_choice = global.weapon_choice-i; //Swap to that weapon
-					flicker_weapon_swap = true;
-					break;
-				}
-			}
-		}
-	}
-		
-	
 	//Afterimages
 	if dash = true and global.animate%3 = 0
 	{
@@ -350,14 +472,39 @@ if global.death = false and animation_lock = false
 		afterimage.sprite_index = sprite_index;
 		afterimage.image_index = image_index;
 		afterimage.image_xscale = image_xscale;
-	}
-	
-	
+	}	
 }
 else
 {
 	shooting_charge_flicker = false;
 	shooting_charge = 0;
+	
+	event_user(5); //Air dash end
+}
+
+//Stop charging sounds
+if shooting_charge = 0
+	audio_stop_sound(snd_player_x_charge_fadeout);
+if machdash_hold = 0
+	audio_stop_sound(snd_player_x_machcharge_fadeout);
+
+if place_meeting(x,y+1,obj_solid_slope)
+	on_slope = true;
+else
+	on_slope = false;
+	
+//Sound for doing a victory pose	
+if sprite_index = spr_player_x_victory and image_index >= 4 and image_index < 5
+	scr_make_sound(snd_pose,1,1,false);
+	
+//Check if armour parts are equipped
+if global.x_armour_head != 0 or global.x_armour_chest != 0 or global.x_armour_arm != 0 or global.x_armour_leg != 0
+{
+	//Sound for doing a armour pose
+	if sprite_index = spr_player_x_armour_up and image_index >= 4 and image_index < 5
+		scr_make_sound(snd_pose,1,1,false);
+	if sprite_index = spr_player_x_warp_in and image_index >= 14 and image_index < 15
+		scr_make_sound(snd_pose,1,1,false);
 }
 
 /*

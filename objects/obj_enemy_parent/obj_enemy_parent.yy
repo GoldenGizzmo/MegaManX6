@@ -20,8 +20,8 @@
     "path":"folders/Objects/Hazards.yy",
   },
   "parentObjectId":{
-    "name":"obj_dynamic_parent",
-    "path":"objects/obj_dynamic_parent/obj_dynamic_parent.yy",
+    "name":"obj_dynamic",
+    "path":"objects/obj_dynamic/obj_dynamic.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

@@ -20,6 +20,9 @@ switch (global.weapon[global.weapon_choice].type)
 			bullet.image_xscale = image_xscale;
 			bullet.melee_damage = 4;
 			bullet.melee_frames = 6;
+			
+			scr_make_sound(snd_shoot_saber_x,1,1,false);
+			scr_player_voicelines("Weapon");
 
 			if wall_slide = true
 			{

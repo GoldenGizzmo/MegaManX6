@@ -20,3 +20,6 @@ animation_ended = false;
 aggro_range = 180;
 
 retreat = false;
+
+weight = 0;
+colliding = false;
