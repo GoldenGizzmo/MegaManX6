@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.7373242,
+  "duration":1.3026531,
   "name":"snd_pickup",
   "parent":{
     "name":"Miscellaneous",

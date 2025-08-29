@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_yammark_flyby",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.0992064,
+  "name":"snd_yammark_flyby",
+  "parent":{
+    "name":"Commander-Yammark",
+    "path":"folders/Sounds/Commander-Yammark.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_yammark_flyby.mp3",
+  "type":1,
+  "volume":1.0,
+}

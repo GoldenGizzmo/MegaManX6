@@ -14,7 +14,7 @@ if global.music != "Off" //If turned on
 		switch (room)
 		{
 			case rm_yammark: global.music = snd_music_yammark; break;
-		
+			default: global.music = "Off"; return;
 		}
 	}	
 	
