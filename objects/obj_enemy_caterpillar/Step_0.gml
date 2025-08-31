@@ -8,6 +8,11 @@ if life > 0
 {
 	if state = "Moving"
 	{
+		if turn_delay = false
+		{
+			event_user(1);
+			event_user(0);
+		}
 		
 		xspeed = 0.25*image_xscale;
 		

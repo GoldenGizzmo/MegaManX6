@@ -36,12 +36,14 @@ function scr_move(spd, axis, object = obj_solid){
 		
 		if(col.slope and (axis != AXIS_VERTICAL or spd < 0)){
 				
-				
 			var res = scr_collide_slope(spd, axis, col, _x, _y);
 			if res != 0 return res;
 			
 			//Run code for when the player lands or hits the ceiling
-			if(AXIS_VERTICAL){
+			if(axis == AXIS_HORIZONTAL){
+				scr_stop_wall(spd);
+			}
+			else{
 				if(spd > 0){
 					scr_stop_floor()
 				}
@@ -160,8 +162,6 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 				y = _y2;
 			}
 			
-			x = scr_snap_to_object(side, axis, col);
-			
 			return spd;
 		}
 		
@@ -196,8 +196,6 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 			else{
 				x = _x2;
 			}
-			
-			y = scr_snap_to_object(side, axis, col);
 			
 			return spd;
 		}
