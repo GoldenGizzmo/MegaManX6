@@ -2,7 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_move(spd, axis, object = obj_solid){
 
-	
+	if(spd == 0)return spd;
+
 	//Save original coordinates
 		var _x = x;
 		var _y = y;
@@ -18,14 +19,16 @@ function scr_move(spd, axis, object = obj_solid){
 		var y_offset = (axis == AXIS_VERTICAL) ? spd : 0;	
 	
 	ds_list_clear(collision_list)
-	var size = instance_place_list(_x + hsp, _y + vsp, object, collision_list, true)
+	var size = instance_place_list(_x + hsp, _y + vsp, obj_solid_slope, collision_list, true)
 	
 	for(var i = 0; i < size; i++){
 		
 		var col = collision_list[| i];
 		
-		if(col.slope and (axis != AXIS_VERTICAL or spd < 0)){
-				
+		if(axis != AXIS_VERTICAL or spd < 0){
+			
+			if(axis == AXIS_HORIZONTAL)show_debug_message($"slope {spd}")
+			
 			var res = scr_collide_slope(internal_spd, axis, col, _x, _y);
 			if res != 0 return res;
 			
@@ -45,6 +48,17 @@ function scr_move(spd, axis, object = obj_solid){
 				
 			return 0;
 		}
+	}
+	
+	ds_list_clear(collision_list)
+	size = instance_place_list(_x + hsp, _y + vsp, obj_solid, collision_list, true)
+	
+	for(var i = 0; i < size; i++){
+		
+		var col = collision_list[| i];
+		if(col.slope)continue;
+		
+		if(axis == AXIS_HORIZONTAL)show_debug_message($"not slope {spd}")
 		
 		if(axis == AXIS_HORIZONTAL){
 			x = scr_snap_to_object(spd, axis, col);
@@ -68,6 +82,7 @@ function scr_move(spd, axis, object = obj_solid){
 		
 		return 0;
 	}
+	
 	
 	x += x_offset;
 	y += y_offset;
