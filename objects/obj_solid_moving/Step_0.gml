@@ -19,27 +19,29 @@ if(!stop and obj){
 	alarm[0] = 60;
 }
 	
+var spd = move_speed * dir * !stop;
 	
-with(obj_dynamic){
+if(spd != 0){
+	with(obj_dynamic){
 	
-	obj = instance_place(x, y + 1, other);
-	if(object_index == obj_player)show_debug_message(obj)
+		obj = instance_place(x, y + 1, other);
 
-	if(obj and obj.axis == AXIS_HORIZONTAL){
+		if(obj and obj.axis == AXIS_HORIZONTAL){
 	
-		var res = scr_move(obj.move_speed * obj.dir * !obj.stop, AXIS_HORIZONTAL, obj)
-		if(res == 0)xspeed = 0;
+			var res = scr_move(obj.move_speed * obj.dir * !obj.stop, AXIS_HORIZONTAL, obj)
+			if(res == 0)xspeed = 0;
+		}
+	
 	}
-	
 }
 	
 
 if(axis == AXIS_HORIZONTAL){
-	x += move_speed * dir * !stop;
+	x += spd;
 }
 else
 {
-	y += move_speed * dir * !stop;
+	y += spd;
 }
 
 
