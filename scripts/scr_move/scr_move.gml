@@ -175,7 +175,12 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		_y = scr_snap_to_object(side, axis, col)
 		
 		for(var i = step; i > 0; i--){
-			_x1 = scr_snap_to_object(-1, new_axis, col, undefined, _y + side * i)
+			_y1 = _y + side * i
+			_x1 = scr_snap_to_object(-1, new_axis, col, undefined, _y1)
+			
+			if(place_meeting(_x1, _y1, obj_solid)){
+				continue;
+			}
 			
 			if(abs(_x1 - x) <= step){
 				res1 = abs(_x1 - x);
@@ -184,7 +189,12 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		
 		
 		for(var i = step; i > 0; i--){
-			_x2 = scr_snap_to_object(1, new_axis, col, undefined, _y + side * i)
+			_y2 = _y + side * i;
+			_x2 = scr_snap_to_object(1, new_axis, col, undefined, _y2)
+			
+			if(place_meeting(_x2, _y2, obj_solid)){
+				continue;
+			}
 			
 			if(abs(_x2 - x) <= step){
 				res2 = abs(_x2 - x);
