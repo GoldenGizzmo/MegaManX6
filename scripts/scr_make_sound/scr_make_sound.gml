@@ -18,9 +18,12 @@ function scr_make_sound(sound,volume,pitch,loop)
 		
 		case snd_worm: volume *= 0.5; break;
 		case snd_worm_shoot: volume *= 0.5; break;
-		case snd_yammark_reinforcement: volume *= 0.75; break;
 		case snd_firefly: volume *= 0.25; break;
 		case snd_grasshopper_spawn: volume *= 0.5; break;
+		
+		case snd_yammark_reinforcement: volume *= 0.75; break;
+		case snd_yammark_wings: volume *= 0.25; break;
+		case snd_yammark_wings_zip: volume *= 0.5; break;
 		
 		//Too quiet
 		case snd_soul_collect: volume *= 1.5; break;
@@ -32,6 +35,8 @@ function scr_make_sound(sound,volume,pitch,loop)
 		case snd_player_x_talk_weapon_2: volume *= 1.5; break;
 		
 		case snd_grasshopper_swipe: volume *= 1.25; break;
+		
+		case snd_yammark_talk_there: volume *= 1.5; break;
 		
 		
 		//Ambience Management

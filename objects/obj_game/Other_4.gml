@@ -9,7 +9,7 @@ if global.current_level != room
 	//Play cutscene
 	switch (room)
 	{
-		case rm_yammark: instance_create_depth(0,0,0,obj_cutscene_amazon_intro);	break;
+		case rm_yammark: instance_create_depth(0,0,0,obj_cutscene_amazon_intro); break;
 		default: instance_create_depth(0,0,0,obj_cutscene_level_start);	break
 	}
 }

@@ -9,8 +9,8 @@
   "name":"obj_actor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bosses",
-    "path":"folders/Objects/Bosses.yy",
+    "name":"Cutscenes",
+    "path":"folders/Objects/Cutscenes.yy",
   },
   "parentObjectId":null,
   "persistent":false,

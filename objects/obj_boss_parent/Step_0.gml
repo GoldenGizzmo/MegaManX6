@@ -25,6 +25,9 @@ if life <= 0
 	{
 		death--;
 		
+		with obj_bullet_default
+			alarm[9] = 1;
+		
 		with obj_player
 		{
 			movement = false;

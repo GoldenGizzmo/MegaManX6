@@ -92,7 +92,7 @@ switch (sprite_index)
 		break;
 	case spr_pickup_soul_large:
 		pickup_type = 7; //Nightmare Soul
-		pickup_power = 200;
+		pickup_power = 500;
 		animation_falling = 999;
 		animation_sitting = 0;
 		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once

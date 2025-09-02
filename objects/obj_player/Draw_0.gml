@@ -4,8 +4,8 @@
 draw_set_font(global.fnt_game);
 
 //draw_text(x,y-80,"On Slope?:   "+string(on_slope))
-draw_text(x,y-80,"airborne:   "+string(airborne))
-draw_text(x,y-70,"xspeed:   "+string(xspeed))
+//draw_text(x,y-80,"airborne:   "+string(airborne))
+//draw_text(x,y-70,"xspeed:   "+string(xspeed))
 
 if flicker = true or flicker_weapon_swap = true
 {

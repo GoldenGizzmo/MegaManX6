@@ -111,6 +111,9 @@ switch (bossfight_state)
 	case 8: //Being bossfight
 		bossfight_begin = true;
 		
+		with boss
+			alarm[1] = 1;
+		
 		with obj_player
 		{
 			movement = true;

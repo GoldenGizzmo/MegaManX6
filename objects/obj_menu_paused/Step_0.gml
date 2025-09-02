@@ -8,6 +8,7 @@ else
 event_user(2);
 scr_get_input();
 
+
 //If paused
 if global.pause = true
 {	
@@ -30,6 +31,9 @@ if global.pause = true
 			//Pause speed
 			if instance.speed != 0
 				add_speed(instance,instance.speed)
+			//Pause gravity
+			if instance.gravity != 0
+				add_gravity(instance,instance.gravity)
 			//Pause animation
 			if instance.image_speed != 0
 				add_animate(instance,instance.image_speed)
@@ -37,27 +41,75 @@ if global.pause = true
 	}
 	
 	unpause = true;
-	
-	//Pause for getting an item or somethin
-	if global.pause_delay > 0
+		
+	//Pausing into the pause menu
+	if global.pause_screen_state > 0
 	{
-		global.pause_delay--
-		if global.pause_delay = 0
-			global.pause = false
-	}
-	
-	//Healing
-	if global.pause_healing > 0
-	{
-		if global.life < global.pause_healing
+		//Fading into the screen
+		with obj_fade_out
 		{
-			global.life += 0.5; //Healing speed
-			scr_make_sound(snd_healing,0.5,1,false);
+			if alpha >= 1
+			{
+				if global.pause_screen = false //If pausing in
+				{
+					global.pause_screen = true;
+					global.pause_screen_state = 2;
+				}
+				else
+				{
+					global.pause_screen = false;
+					global.pause_screen_state = 4;
+				}
+				
+				fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_in)
+				fade.fade_speed = global.pause_screen_speed;
+			
+				instance_destroy();
+			}
 		}
-		else
+	
+		//Unpausing
+		if !instance_exists(obj_fade_in)
 		{
-			global.pause = false;
-			global.pause_healing = 0;
+			if global.input_start_pressed and global.pause_screen_state = 2
+			{
+				fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
+				fade.fade_speed = global.pause_screen_speed;
+		
+				global.pause_screen_state = 3;
+			}
+		
+			//Fully unpause
+			if global.pause_screen_state = 4
+			{
+				global.pause_screen_state = 0;
+				global.pause = false;
+			}
+		}
+	}
+	else
+	{
+		//Pause for getting an item or somethin
+		if global.pause_delay > 0
+		{
+			global.pause_delay--
+			if global.pause_delay = 0
+				global.pause = false
+		}
+	
+		//Healing
+		if global.pause_healing > 0
+		{
+			if global.life < global.pause_healing
+			{
+				global.life += 0.5; //Healing speed
+				scr_make_sound(snd_healing,0.5,1,false);
+			}
+			else
+			{
+				global.pause = false;
+				global.pause_healing = 0;
+			}
 		}
 	}
 }
@@ -107,6 +159,21 @@ else
 				var value = arr_animate[index].value;
 			
 				instance.image_speed = value;
+			}
+			catch(_exception) 
+			{
+				//Do nothing	
+			}
+		}
+		
+		for (var index = 0; index < array_length(arr_gravity); index++)
+		{
+			try
+			{
+				var instance = arr_gravity[index].instance;
+				var value = arr_gravity[index].value;
+			
+				instance.gravity = value;
 			}
 			catch(_exception) 
 			{

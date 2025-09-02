@@ -30,7 +30,7 @@ damage_taken = 999;
 set_knockback = 1.5;
 knockback = set_knockback;
 flicker = false;
-invul = true;
+invul = false;
 weight = 0.3;
 
 //Special attack

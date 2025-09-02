@@ -93,9 +93,14 @@ if global.death = false and animation_lock = false
 				scr_make_sound(snd_player_x_dash,1,1,false);
 			}
 			
+			//Checking if touching a wall that can't be climbed
+			var climbable = true
+			if place_meeting(x+image_xscale,y,obj_solid_noclimb)
+				climbable = false;
+			
 			//Holding the button into the wall while falling
-			if ((place_meeting(x+1,y,obj_solid) and global.input_right) or (place_meeting(x-1,y,obj_solid) and global.input_left)) and wall_jump = false and yspeed > 0 and airborne = true
-			{
+			if ((place_meeting(x+1,y,obj_solid) and global.input_right) or (place_meeting(x-1,y,obj_solid) and global.input_left)) and wall_jump = false and yspeed > 0 and airborne = true and climbable = true
+			{	
 				yspeed = 1; //Wall slide	
 				if wall_slide = false
 				{
@@ -446,6 +451,16 @@ if global.death = false and animation_lock = false
 						}
 					}
 				}
+			}
+		
+			//Pausing the game
+			if global.input_start_pressed
+			{
+				global.pause_screen_state = 1; //Fade out in to the pause menu				
+				global.pause = true;
+				
+				fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
+				fade.fade_speed = global.pause_screen_speed;
 			}
 		}
 	}
