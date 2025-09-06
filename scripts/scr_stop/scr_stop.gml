@@ -53,10 +53,8 @@ function scr_stop_wall(spd, slope = false){
 		
 			walled = true;
 		
-			if(!airborne) return;
-		
 			//Holding the button into the wall while falling
-			if (yspeed > 0)
+			if (airborne and yspeed > 0)
 			{
 				yspeed = 1; //Wall slide	
 				if wall_slide = false
