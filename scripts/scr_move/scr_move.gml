@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_move(spd, axis, object = obj_solid){
 
-	
 	//Save original coordinates
 		var _x = x;
 		var _y = y;
@@ -10,38 +9,31 @@ function scr_move(spd, axis, object = obj_solid){
 	//Get the position to check
 	//It needs to be a bit longer than just the coordinate + the speed
 		var internal_spd = ceil(abs(spd)) * sign(spd)
-		if(axis == AXIS_HORIZONTAL){
-			_x += internal_spd
-		}
-		else
-		{
-			_y += internal_spd
-		}
-	
+		var hsp = (axis == AXIS_HORIZONTAL) ? internal_spd : 0;
+		var vsp = (axis == AXIS_VERTICAL) ? internal_spd : 0;
 	
 	//Move the instance
 		var x_offset = (axis == AXIS_HORIZONTAL) ? spd : 0;
 		var y_offset = (axis == AXIS_VERTICAL) ? spd : 0;	
 	
-		x += x_offset;
-		y += y_offset;
-
-	
 	ds_list_clear(collision_list)
-	var size = instance_place_list(_x, _y, object, collision_list, true)
+	var size = instance_place_list(_x + hsp, _y + vsp, obj_solid_slope, collision_list, true)
 	
 	for(var i = 0; i < size; i++){
 		
 		var col = collision_list[| i];
+		if(!col.slope)continue;
 		
-		if(col.slope and (axis != AXIS_VERTICAL or spd < 0)){
-				
-				
+		if(axis != AXIS_VERTICAL or spd < 0){
+			
 			var res = scr_collide_slope(spd, axis, col, _x, _y);
 			if res != 0 return res;
 			
 			//Run code for when the player lands or hits the ceiling
-			if(AXIS_VERTICAL){
+			if(axis == AXIS_HORIZONTAL){
+				scr_stop_wall(spd);
+			}
+			else{
 				if(spd > 0){
 					scr_stop_floor()
 				}
@@ -54,28 +46,25 @@ function scr_move(spd, axis, object = obj_solid){
 			return 0;
 		}
 		
-		if(axis == AXIS_HORIZONTAL){
-			x = scr_snap_to_object(spd, axis, col);
-			scr_stop_wall(spd);
-		}
-		else
-		{
-			y = scr_snap_to_object(spd, axis, col);
-			
-			
-			//Run code for when the player lands or hits the ceiling
-			if(spd > 0){
-				scr_stop_floor()
-			}
-			else
-			{
-				scr_stop_ceiling()
-			}
-			
-		}
+		scr_basic_collide(spd, axis, col);
+	}
+	
+	ds_list_clear(collision_list)
+	size = instance_place_list(_x + hsp, _y + vsp, obj_solid, collision_list, true)
+	
+	for(var i = 0; i < size; i++){
+		
+		var col = collision_list[| i];
+		if(col.slope)continue;
+		
+		scr_basic_collide(spd, axis, col);
 		
 		return 0;
 	}
+	
+	
+	x += x_offset;
+	y += y_offset;
 	
 	//Attach to slopes when going down
 
@@ -108,18 +97,41 @@ function scr_move(spd, axis, object = obj_solid){
 	}
 
 	if(axis == AXIS_VERTICAL)airborne = true;
+	if(axis == AXIS_HORIZONTAL)wall_slide = false;
 	return spd;
+}
+
+function scr_basic_collide(spd, axis, col){
+	
+	if(axis == AXIS_HORIZONTAL){
+		x = scr_snap_to_object(spd, axis, col);
+		scr_stop_wall(spd);
+	}
+	else
+	{
+		y = scr_snap_to_object(spd, axis, col);
+			
+			
+		//Run code for when the player lands or hits the ceiling
+		if(spd > 0){
+			scr_stop_floor()
+		}
+		else
+		{
+			scr_stop_ceiling()
+		}
+	}
+	
 }
 
 function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 	
-	var step = ceil(abs(spd)/SLOPE_SPEED_FACTOR);
-	
+	var step = ceil(abs(spd));
 	var side = sign(spd)
 	var new_axis = axis == AXIS_HORIZONTAL ? AXIS_VERTICAL : AXIS_HORIZONTAL
 	
-	var res1 = 0;
-	var res2 = 0;
+	var res1 = -1;
+	var res2 = -1;
 	
 	var _x1 = 0;
 	var _x2 = 0;
@@ -132,8 +144,12 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		_x = scr_snap_to_object(side, axis, col)
 		
 		for(var i = step; i > 0; i--){
-			_y1 = scr_snap_to_object(-1, new_axis, col, _x + side * i)
+			_x1 = _x + side * i;
+			_y1 = scr_snap_to_object(-1, new_axis, col, _x1)
 			
+			if(place_meeting(_x2, _y2, obj_solid)){
+				continue;
+			}
 			
 			if(abs(_y1 - y) <= step){
 				res1 = abs(_y1 - y);
@@ -143,7 +159,13 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		
 		
 		for(var i = step; i > 0; i--){
-			_y2 = scr_snap_to_object(1, new_axis, col, _x + side * i)
+			_x2 = _x + side * i;
+			_y2 = scr_snap_to_object(1, new_axis, col, _x2)
+			
+			if(place_meeting(_x2, _y2, obj_solid)){
+				continue;
+			}
+			
 			
 			if(abs(_y2 - y) <= step){
 				res2 = abs(_y2 - y);
@@ -151,16 +173,16 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 			}
 		}
 		
-		if(res1 != 0 or res2 != 0){
+		if(res1 != -1 or res2 != -1){
 		
 			if(res1 > res2){
+				x = _x1
 				y = _y1;
 			}
 			else{
+				x = _x2
 				y = _y2;
 			}
-			
-			x = scr_snap_to_object(side, axis, col);
 			
 			return spd;
 		}
@@ -172,23 +194,35 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		_y = scr_snap_to_object(side, axis, col)
 		
 		for(var i = step; i > 0; i--){
-			_x1 = scr_snap_to_object(-1, new_axis, col, undefined, _y + side * i)
+			_y1 = _y + side * i
+			_x1 = scr_snap_to_object(-1, new_axis, col, undefined, _y1)
+			
+			if(place_meeting(_x1, _y1, obj_solid)){
+				continue;
+			}
 			
 			if(abs(_x1 - x) <= step){
 				res1 = abs(_x1 - x);
+				break;
 			}
 		}
 		
 		
 		for(var i = step; i > 0; i--){
-			_x2 = scr_snap_to_object(1, new_axis, col, undefined, _y + side * i)
+			_y2 = _y + side * i;
+			_x2 = scr_snap_to_object(1, new_axis, col, undefined, _y2)
+			
+			if(place_meeting(_x2, _y2, obj_solid)){
+				continue;
+			}
 			
 			if(abs(_x2 - x) <= step){
 				res2 = abs(_x2 - x);
+				break;
 			}
 		}
 		
-		if(res1 != 0 or res2 != 0){
+		if(res1 != -1 or res2 != -1){
 		
 			if(res1 > res2){
 				x = _x1;
@@ -196,8 +230,6 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 			else{
 				x = _x2;
 			}
-			
-			y = scr_snap_to_object(side, axis, col);
 			
 			return spd;
 		}

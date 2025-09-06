@@ -8,10 +8,8 @@ else
 image_speed = 0;
 
 if open_state = 1
-{
 	open_state++;
-	scr_make_sound(snd_door_move,1,1,false);
-}
+
 
 
 

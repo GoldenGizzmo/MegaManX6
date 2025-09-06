@@ -5,7 +5,6 @@
 arr_alarms = [];
 arr_speed = [];
 arr_animate = [];
-arr_gravity = [];
 
 add_alarm = function(instance,index,value)
 {
@@ -28,19 +27,8 @@ add_animate = function(instance,value)
 	instance.image_speed = 0;
 }
 
-add_gravity = function(instance,value)
-{
-	array_push(arr_gravity,{instance,value})
-	
-	instance.gravity = 0;
-}
-
 global.pause_healing = 0;
 global.pause_delay = 0;
-global.pause_screen = false;
-global.pause_screen_state = 0;
-global.pause_screen_speed = 0.1;
-pause_animate = 0;
 unpause = false;
 
 //Bindings

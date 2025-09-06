@@ -14,17 +14,13 @@ if open_state = 2
 		{
 			movement = true;
 			animation_lock = false;
-			movement_freeze = false;
-			colliding = true;
 			image_speed = 1;
 			
 			xspeed = 0;
 			yspeed = 0;
 			dash = false;
 		}
-		
 		image_speed = -1;
-		scr_make_sound(snd_door,1,1,false);
 		
 		with boundary
 		{
@@ -33,6 +29,9 @@ if open_state = 2
 		}
 	}
 }
+
+
+
 
 
 

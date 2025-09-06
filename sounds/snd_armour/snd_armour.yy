@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_armour",
   "audioGroupId":{
-    "name":"audiogroup_sfx",
-    "path":"audiogroups/audiogroup_sfx",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,
@@ -20,6 +20,6 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_armour.wav",
-  "type":1,
+  "type":0,
   "volume":1.0,
 }

@@ -11,6 +11,7 @@ state = 0;
 action = 0;
 death = -1;
 
+bossfight_activate = false;
 boss_flicker = false;
 boss_flicker_speed = 4;
 boss_iframes = 0;
@@ -22,4 +23,3 @@ despawn = false;
 damage = 0;
 
 exploding = 0;
-exploding_sound = 0;

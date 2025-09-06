@@ -12,8 +12,8 @@
   "duration":1.2241497,
   "name":"SE_COM_PG00_ID08_X5",
   "parent":{
-    "name":"Commander-Yammark",
-    "path":"folders/Sounds/Commander-Yammark.yy",
+    "name":"Miscellaneous",
+    "path":"folders/Sounds/Miscellaneous.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

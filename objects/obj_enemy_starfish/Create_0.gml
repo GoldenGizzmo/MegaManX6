@@ -16,4 +16,3 @@ yspeed = -move_speed;
 
 weight = 0;
 colliding = false;
-movement_freeze = true;
