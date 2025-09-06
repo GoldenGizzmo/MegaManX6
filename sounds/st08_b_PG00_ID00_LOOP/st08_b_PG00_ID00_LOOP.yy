@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st08_b_PG00_ID00_LOOP",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.1010431,
+  "exportDir":"",
   "name":"st08_b_PG00_ID00_LOOP",
   "parent":{
     "name":"Infinity-Mijinion",

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_shoot_metalanchor_charged",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.6046485,
+  "exportDir":"",
   "name":"snd_shoot_metalanchor_charged",
   "parent":{
     "name":"X",

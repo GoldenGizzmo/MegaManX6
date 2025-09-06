@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st07_b_PG00_ID07",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.73839,
+  "exportDir":"",
   "name":"st07_b_PG00_ID07",
   "parent":{
     "name":"Shield-Sheldon",

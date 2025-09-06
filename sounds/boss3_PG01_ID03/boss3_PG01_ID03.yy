@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"boss3_PG01_ID03",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.734898,
+  "exportDir":"",
   "name":"boss3_PG01_ID03",
   "parent":{
     "name":"Nightmare-Zero",

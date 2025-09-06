@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_shoot_rayarrow_charged",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.68938774,
+  "exportDir":"",
   "name":"snd_shoot_rayarrow_charged",
   "parent":{
     "name":"X",

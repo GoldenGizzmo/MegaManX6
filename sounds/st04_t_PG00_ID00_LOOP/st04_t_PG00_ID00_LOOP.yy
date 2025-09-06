@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st04_t_PG00_ID00_LOOP",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.8888209,
+  "exportDir":"",
   "name":"st04_t_PG00_ID00_LOOP",
   "parent":{
     "name":"Metal-Shark-Player-stage",

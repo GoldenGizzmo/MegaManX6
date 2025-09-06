@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_music_dr_light",
   "audioGroupId":{
     "name":"audiogroup_music",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":50.52188,
+  "exportDir":"",
   "name":"snd_music_dr_light",
   "parent":{
     "name":"Music",

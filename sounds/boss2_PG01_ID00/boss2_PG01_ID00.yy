@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"boss2_PG01_ID00",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.5773923,
+  "exportDir":"",
   "name":"boss2_PG01_ID00",
   "parent":{
     "name":"Dynamo",

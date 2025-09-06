@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st03_b_PG01_ID00",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.9868934,
+  "exportDir":"",
   "name":"st03_b_PG01_ID00",
   "parent":{
     "name":"Blaze-Heatnix",

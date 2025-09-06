@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st08_e_PG02_ID04",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.0285034,
+  "exportDir":"",
   "name":"st08_e_PG02_ID04",
   "parent":{
     "name":"Infinity-Mijinion-stage",

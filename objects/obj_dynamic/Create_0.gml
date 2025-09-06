@@ -5,6 +5,7 @@ movement_freeze = false;
 xspeed = 0;
 yspeed = 0;
 
+walled = false;
 airborne = false;
 colliding = true;
 fall_speed = 6;

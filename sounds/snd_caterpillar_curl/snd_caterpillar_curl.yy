@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_caterpillar_curl",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.3621315,
+  "exportDir":"",
   "name":"snd_caterpillar_curl",
   "parent":{
     "name":"Stage-Sounds",

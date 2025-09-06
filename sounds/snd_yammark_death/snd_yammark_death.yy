@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_yammark_death",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.2598413,
+  "exportDir":"",
   "name":"snd_yammark_death",
   "parent":{
     "name":"Commander-Yammark",

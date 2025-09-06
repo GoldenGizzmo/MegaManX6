@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st06_t_PG00_ID01_LOOP",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.6073697,
+  "exportDir":"",
   "name":"st06_t_PG00_ID01_LOOP",
   "parent":{
     "name":"Rainy-Turtloid-stage",

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st00_b_PG01_ID00",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.526644,
+  "exportDir":"",
   "name":"st00_b_PG01_ID00",
   "parent":{
     "name":"D1000-Intro-Stage-Boss",

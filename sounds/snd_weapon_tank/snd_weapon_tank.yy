@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_weapon_tank",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.19124717,
+  "exportDir":"",
   "name":"snd_weapon_tank",
   "parent":{
     "name":"Miscellaneous",

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_shoot_saber_shadow",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.6316326,
+  "exportDir":"",
   "name":"snd_shoot_saber_shadow",
   "parent":{
     "name":"X",

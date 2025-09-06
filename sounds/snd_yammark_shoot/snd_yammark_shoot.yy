@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_yammark_shoot",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.52485263,
+  "exportDir":"",
   "name":"snd_yammark_shoot",
   "parent":{
     "name":"Commander-Yammark",

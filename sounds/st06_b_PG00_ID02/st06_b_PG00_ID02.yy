@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st06_b_PG00_ID02",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.386644,
+  "exportDir":"",
   "name":"st06_b_PG00_ID02",
   "parent":{
     "name":"Rainy-Turtloid",

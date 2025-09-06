@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st02_b_PG00_ID06",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.8748753,
+  "exportDir":"",
   "name":"st02_b_PG00_ID06",
   "parent":{
     "name":"Blizzard-Wolfang",

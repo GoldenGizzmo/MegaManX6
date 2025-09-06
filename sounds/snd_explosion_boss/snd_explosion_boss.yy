@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_explosion_boss",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.7008843,
+  "exportDir":"",
   "name":"snd_explosion_boss",
   "parent":{
     "name":"Miscellaneous",

@@ -96,8 +96,8 @@ function scr_move(spd, axis, object = obj_solid){
 
 	}
 
-	if(axis == AXIS_VERTICAL)airborne = true;
-	if(axis == AXIS_HORIZONTAL)wall_slide = false;
+	if axis == AXIS_HORIZONTAL scr_not_stop_horizontal() else scr_not_stop_vertical()
+	
 	return spd;
 }
 

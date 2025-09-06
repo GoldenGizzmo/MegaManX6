@@ -84,7 +84,8 @@ if global.death = false and animation_lock = false
 			}
 	
 			//If not facing a wall and touching the ground
-			if global.input_dash_pressed = true and airborne = false and dash = false and !place_meeting(x+image_xscale,y,obj_solid)
+			
+			if global.input_dash_pressed = true and airborne = false and dash = false and !walled
 			{
 				dash = true;
 				dash_ground = true;

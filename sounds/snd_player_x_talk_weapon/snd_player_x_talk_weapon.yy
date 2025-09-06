@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_player_x_talk_weapon",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.38015872,
+  "exportDir":"",
   "name":"snd_player_x_talk_weapon",
   "parent":{
     "name":"X Voice",
