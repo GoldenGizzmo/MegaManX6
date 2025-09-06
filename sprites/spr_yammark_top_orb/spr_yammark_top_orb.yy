@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_yammark_top_orb",
   "bboxMode":0,
   "bbox_bottom":7,

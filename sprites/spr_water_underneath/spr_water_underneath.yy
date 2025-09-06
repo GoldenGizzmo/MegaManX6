@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_water_underneath",
   "bboxMode":2,
   "bbox_bottom":15,

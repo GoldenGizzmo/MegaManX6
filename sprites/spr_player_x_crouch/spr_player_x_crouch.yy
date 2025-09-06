@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_player_x_crouch",
   "bboxMode":2,
   "bbox_bottom":79,

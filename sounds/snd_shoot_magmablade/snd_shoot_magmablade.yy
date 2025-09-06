@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_shoot_magmablade",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.60537416,
+  "exportDir":"",
   "name":"snd_shoot_magmablade",
   "parent":{
     "name":"X",

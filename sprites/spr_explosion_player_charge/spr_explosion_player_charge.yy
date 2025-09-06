@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_explosion_player_charge",
   "bboxMode":0,
   "bbox_bottom":87,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_hud_souls",
   "bboxMode":0,
   "bbox_bottom":21,

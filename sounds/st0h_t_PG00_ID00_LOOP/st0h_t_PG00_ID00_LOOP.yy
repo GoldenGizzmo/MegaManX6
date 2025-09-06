@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st0h_t_PG00_ID00_LOOP",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.1772562,
+  "exportDir":"",
   "name":"st0h_t_PG00_ID00_LOOP",
   "parent":{
     "name":"Gate-stage",

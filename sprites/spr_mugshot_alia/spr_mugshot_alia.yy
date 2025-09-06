@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_mugshot_alia",
   "bboxMode":0,
   "bbox_bottom":63,

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_shoot_nightmare_longer",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.5913832,
+  "exportDir":"",
   "name":"snd_shoot_nightmare_longer",
   "parent":{
     "name":"Stage-Sounds",

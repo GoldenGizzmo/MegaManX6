@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_player_x_talk_hurt_2",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.47117913,
+  "exportDir":"",
   "name":"snd_player_x_talk_hurt_2",
   "parent":{
     "name":"X Voice",

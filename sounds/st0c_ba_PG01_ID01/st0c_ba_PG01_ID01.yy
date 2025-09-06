@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st0c_ba_PG01_ID01",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.81714284,
+  "exportDir":"",
   "name":"st0c_ba_PG01_ID01",
   "parent":{
     "name":"Sigma",

@@ -9,7 +9,7 @@ global.ui_scale = 5;
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_sfx);
 global.volume_master = 0.5; //50%
-global.volume_music = 1; //100%
+global.volume_music = 0; //100%
 global.volume_effect = 1; //100%
 audio_group_set_gain(audiogroup_sfx,global.volume_effect*global.volume_master,0);
 audio_group_set_gain(audiogroup_music,global.volume_music*global.volume_master,0);
@@ -64,4 +64,4 @@ global.x_armour_arm = 0;
 global.x_armour_leg = 0//"Blade Leg";
 
 global.seen_boss_cutscene = 0;
-global.current_level = rm_yammark;
+global.current_level = rm_yammark//noone;

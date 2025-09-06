@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_bullet_worm",
   "bboxMode":2,
   "bbox_bottom":12,

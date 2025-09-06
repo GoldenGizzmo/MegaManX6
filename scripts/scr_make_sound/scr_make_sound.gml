@@ -32,11 +32,6 @@ function scr_make_sound(sound,volume,pitch,loop)
 		case snd_player_x_talk_weapon_2: volume *= 1.5; break;
 		
 		case snd_grasshopper_swipe: volume *= 1.25; break;
-		
-		
-		//Ambience Management
-		case snd_ambience_rainforest: volume *= 0.5; break;
-		case snd_ambience_wilderness: volume *= 2; break;
 	}
 
 	audio_stop_sound(sound); //Reset dupilcate sounds

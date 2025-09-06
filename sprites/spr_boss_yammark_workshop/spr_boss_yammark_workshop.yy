@@ -1,10 +1,10 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_boss_yammark_workshop",
   "bboxMode":0,
   "bbox_bottom":969,
-  "bbox_left":8,
-  "bbox_right":377,
+  "bbox_left":3,
+  "bbox_right":372,
   "bbox_top":5,
   "collisionKind":1,
   "collisionTolerance":0,

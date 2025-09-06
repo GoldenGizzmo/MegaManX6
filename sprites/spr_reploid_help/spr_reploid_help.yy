@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_reploid_help",
   "bboxMode":0,
   "bbox_bottom":13,

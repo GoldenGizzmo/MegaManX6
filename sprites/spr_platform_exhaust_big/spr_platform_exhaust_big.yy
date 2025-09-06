@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_platform_exhaust_big",
   "bboxMode":0,
   "bbox_bottom":31,

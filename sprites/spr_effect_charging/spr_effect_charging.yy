@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_effect_charging",
   "bboxMode":0,
   "bbox_bottom":74,

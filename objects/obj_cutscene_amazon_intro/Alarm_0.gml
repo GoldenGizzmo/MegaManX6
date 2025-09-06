@@ -57,41 +57,7 @@ switch (action)
 		conversation.movement = false;
 		break;
 		
-	case 4:
-		if !instance_exists(obj_dialogue)
-		{
-			action++;
-			alarm[0] = 60;
-			
-			scr_make_sound(snd_yammark_flyby,1,1,false);
-		}
-		else
-			alarm[0] = 1;
-		break;
-		
-	case 5: //Yammark appears
-		action++;
-		alarm[0] = 180;
-	
-		actor.direction = 0;
-		actor.speed = 14;
-		
-		shake = instance_create_depth(0,0,0,obj_shake);
-		shake.intensity = 8;
-		shake.smooth = true;
-		shake.style = 1;
-		break;
-		
-	case 6: //Dialogue
-		action++;
-		alarm[0] = 10;
-		
-		conversation = instance_create_depth(0,0,0,obj_dialogue);
-		conversation.dialogue = "Amazon Ruins Intro: Yammark Appears";
-		conversation.movement = false;
-		break;
-		
-	case 7: //Do opening animation
+	case 4: //Do opening animation
 		if !instance_exists(obj_dialogue)
 		{
 			action++;
@@ -107,7 +73,7 @@ switch (action)
 		}
 		break;
 		
-	case 8: //Equip armour
+	case 5: //Equip armour
 		alarm[0] = 1;
 		if obj_ready.state = 4
 		{
@@ -123,7 +89,7 @@ switch (action)
 		}
 		break;
 		
-	case 9: //Player idle animation
+	case 6: //Player idle animation
 		if obj_player.image_index > obj_player.image_number-1
 		{
 			action++;
@@ -136,7 +102,7 @@ switch (action)
 			alarm[0] = 1;
 		break;
 		
-	case 10: //Play	
+	case 7: //Play	
 		with obj_player
 		{
 			movement = true;

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_yammark_reinforcement",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.1921768,
+  "exportDir":"",
   "name":"snd_yammark_reinforcement",
   "parent":{
     "name":"Commander-Yammark",

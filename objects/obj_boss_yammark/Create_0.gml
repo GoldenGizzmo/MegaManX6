@@ -6,5 +6,3 @@ event_inherited();
 
 life = 1;
 lifemax = life;
-
-weight = 0;

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st05_e_PG00_ID03_LOOP",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.91650796,
+  "exportDir":"",
   "name":"st05_e_PG00_ID03_LOOP",
   "parent":{
     "name":"Ground-Scaravich-stage",

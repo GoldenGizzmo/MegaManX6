@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_yammark_berries",
   "bboxMode":0,
   "bbox_bottom":29,

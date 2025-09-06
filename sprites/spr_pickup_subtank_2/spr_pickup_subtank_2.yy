@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_pickup_subtank_2",
   "bboxMode":2,
   "bbox_bottom":22,

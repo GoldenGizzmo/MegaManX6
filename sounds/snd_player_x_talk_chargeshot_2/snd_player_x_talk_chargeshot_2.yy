@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_player_x_talk_chargeshot_2",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.41517007,
+  "exportDir":"",
   "name":"snd_player_x_talk_chargeshot_2",
   "parent":{
     "name":"X Voice",

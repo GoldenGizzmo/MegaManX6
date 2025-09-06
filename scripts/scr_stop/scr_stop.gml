@@ -1,6 +1,16 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+function scr_not_stop_horizontal(){
+	
+	walled = false;
+	wall_slide = false;
+
+}
+
+function scr_not_stop_vertical(){
+	airborne = true;
+}
 
 //Code that should run when the player hits the floor
 function scr_stop_floor(){
@@ -41,6 +51,8 @@ function scr_stop_wall(spd, slope = false){
 		
 		case obj_player:
 		
+			walled = true;
+		
 			//Holding the button into the wall while falling
 			if (airborne and yspeed > 0)
 			{
@@ -74,9 +86,7 @@ function scr_stop_wall(spd, slope = false){
 				}
 			}
 			else
-			{
 				wall_slide = false;
-			}
 		
 		break;
 		

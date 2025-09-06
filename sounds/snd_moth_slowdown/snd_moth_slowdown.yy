@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_moth_slowdown",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.19,
+  "exportDir":"",
   "name":"snd_moth_slowdown",
   "parent":{
     "name":"Stage-Sounds",

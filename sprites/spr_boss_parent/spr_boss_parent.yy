@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_boss_parent",
   "bboxMode":2,
   "bbox_bottom":56,

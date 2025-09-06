@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_player_x_warp_no_armour",
   "bboxMode":2,
   "bbox_bottom":79,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_tileset_yammark_top",
   "bboxMode":0,
   "bbox_bottom":1999,

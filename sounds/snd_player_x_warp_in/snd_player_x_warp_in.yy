@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_player_x_warp_in",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.0008616,
+  "exportDir":"",
   "name":"snd_player_x_warp_in",
   "parent":{
     "name":"X",

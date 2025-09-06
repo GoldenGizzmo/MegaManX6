@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"st05_b_PG00_ID01",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.5388662,
+  "exportDir":"",
   "name":"st05_b_PG00_ID01",
   "parent":{
     "name":"Ground-Scaravich",

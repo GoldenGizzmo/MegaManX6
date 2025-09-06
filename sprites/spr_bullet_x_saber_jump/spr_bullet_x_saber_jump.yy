@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_bullet_x_saber_jump",
   "bboxMode":1,
   "bbox_bottom":107,

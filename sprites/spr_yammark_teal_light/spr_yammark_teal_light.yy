@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_yammark_teal_light",
   "bboxMode":0,
   "bbox_bottom":11,

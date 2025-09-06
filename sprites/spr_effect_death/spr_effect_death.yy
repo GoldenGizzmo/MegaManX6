@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_effect_death",
   "bboxMode":0,
   "bbox_bottom":25,

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_player_x_dash_ground",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.64387757,
+  "exportDir":"",
   "name":"snd_player_x_dash_ground",
   "parent":{
     "name":"X",

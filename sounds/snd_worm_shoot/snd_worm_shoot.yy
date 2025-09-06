@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_worm_shoot",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.4636281,
+  "exportDir":"",
   "name":"snd_worm_shoot",
   "parent":{
     "name":"Stage-Sounds",

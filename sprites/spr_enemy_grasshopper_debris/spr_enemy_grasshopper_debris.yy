@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_enemy_grasshopper_debris",
   "bboxMode":0,
   "bbox_bottom":28,

@@ -184,8 +184,9 @@ else
 				line.rotate = 1;
 				line.shrink = 0.05;
 			}
+			direction = 90;
 		}
-		else if large_soul_state = 2
+		else
 		{
 			//Pursue the player at increasing speeds
 			speed += 0.05;

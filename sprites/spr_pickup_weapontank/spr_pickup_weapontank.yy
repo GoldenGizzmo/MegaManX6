@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v1",
   "%Name":"spr_pickup_weapontank",
   "bboxMode":2,
   "bbox_bottom":24,

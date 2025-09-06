@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v1",
+  "%Name":"snd_door_close",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.7033333,
+  "exportDir":"",
+  "name":"snd_door_close",
+  "parent":{
+    "name":"Miscellaneous",
+    "path":"folders/Sounds/Miscellaneous.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_door_close.wav",
+  "type":1,
+  "volume":1.0,
+}
