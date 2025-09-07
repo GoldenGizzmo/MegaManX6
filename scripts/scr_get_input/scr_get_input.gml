@@ -1,13 +1,11 @@
 ///scr_get_input
 function scr_get_input() {
 
-jump_trigger = false
-var paused_controls = false;/*
-if global.in_pause_menu = true or global.in_menus = true
-	paused_controls = true;
-with obj_player
-	if movement = false
-		paused_controls = true;*/
+//jump_trigger = false
+var paused_controls = false;
+if global.pause = true
+	if global.pause_screen = true
+		paused_controls = true;
 
 #region Directions
 	global.input_up = keyboard_check(button_up) or keyboard_check(button_up_2) or gamepad_button_check(0,button_up_2) or (gamepad_axis_value(0,button_up)<-0.7);
@@ -38,7 +36,6 @@ with obj_player
 		
 			if (gamepad_axis_value(0,gp_axislv) > obj_menu_paused.controller_deadzone or gamepad_axis_value(0,gp_axislv) < -obj_menu_paused.controller_deadzone or gamepad_axis_value(0,gp_axislh) > obj_menu_paused.controller_deadzone or gamepad_axis_value(0,gp_axislh) < -obj_menu_paused.controller_deadzone)
 				jump_trigger = true; 
-		
 		}
 		else
 		{

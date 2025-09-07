@@ -5,6 +5,7 @@
 arr_alarms = [];
 arr_speed = [];
 arr_animate = [];
+arr_gravity = [];
 
 add_alarm = function(instance,index,value)
 {
@@ -27,9 +28,33 @@ add_animate = function(instance,value)
 	instance.image_speed = 0;
 }
 
+add_gravity = function(instance,value)
+{
+	array_push(arr_gravity,{instance,value})
+	
+	instance.gravity = 0;
+}
+
 global.pause_healing = 0;
 global.pause_delay = 0;
+global.pause_screen = false;
+global.pause_screen_state = 0;
+global.pause_screen_speed = 0.1;
+pause_animate = 0;
+tank_animate = 0;
+tank_filling = -1;
+tank_filling_full = false;
 unpause = false;
+menu_description = "Nothing";
+
+menu_state = "Weapons";
+menu_position = 0;
+menu_tank[0] = global.subtank_1;
+menu_tank[1] = global.subtank_2;
+menu_tank[2] = global.weapontank;
+
+blink = 0;
+alarm[0] = 1;
 
 //Bindings
 list = 0;
@@ -94,8 +119,6 @@ controller[19] = gp_face2;
 global.controller = true;
 event_user(2);
 jump_trigger = false;
-dpad_upwards = false;
-dpad_upwards_store = 0;
 key_select = false;
 controller_deadzone = 0.7;
 controller_toggle = true;

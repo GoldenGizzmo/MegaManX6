@@ -3,9 +3,7 @@
 
 draw_set_font(global.fnt_game);
 
-//draw_text(x,y-80,"On Slope?:   "+string(on_slope))
-draw_text(x,y-70,"dash button:   "+string(global.input_dash))
-draw_text(x,y-80,"dashing:   "+string(dash))
+//draw_text(x,y-80,"xspeed:   "+string(xspeed))
 
 if flicker = true or flicker_weapon_swap = true
 {

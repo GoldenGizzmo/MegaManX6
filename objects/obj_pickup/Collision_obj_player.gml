@@ -26,26 +26,24 @@ switch pickup_type
 		}
 		else //If at max, fill subtank instead
 		{		
-			//Subtank
-			var subtank_cap = 28;	
-				
+			//Subtank		
 			//Check sub tank #1 is aquired and not full
-			if global.subtank_1 > -1 and global.subtank_1 < subtank_cap
+			if global.subtank_1 > -1 and global.subtank_1 < global.tank_cap
 			{
 				scr_make_sound(snd_energy_tank,1,1,false);
-				if global.subtank_1+pickup_power < subtank_cap
+				if global.subtank_1+pickup_power < global.tank_cap
 					global.subtank_1 += pickup_power;
 				else
-					global.subtank_1 = subtank_cap;
+					global.subtank_1 = global.tank_cap;
 			}
 			//Check sub tank #2 is aquired and not full
-			else if global.subtank_2 > -1 and global.subtank_2 < subtank_cap
+			else if global.subtank_2 > -1 and global.subtank_2 < global.tank_cap
 			{
 				scr_make_sound(snd_energy_tank,1,1,false);
-				if global.subtank_2+pickup_power < subtank_cap
+				if global.subtank_2+pickup_power < global.tank_cap
 					global.subtank_2 += pickup_power;
 				else
-					global.subtank_2 = subtank_cap;
+					global.subtank_2 = global.tank_cap;
 			}
 		}
 		break;
@@ -78,15 +76,15 @@ switch pickup_type
 		else  //If all special weapons are at max, fill weapontank instead
 		{
 			//Weapontank
-			var weapontank_cap = 28;
-			
 			//Check weapon tank is aquired and not full
-			if global.weapontank > -1 and global.weapontank < weapontank_cap
+			if global.weapontank > -1 and global.weapontank < global.tank_cap
 			{
-				if global.weapontank+pickup_power < weapontank_cap
+				scr_make_sound(snd_weapon_tank,1,1,false);
+				
+				if global.weapontank+pickup_power < global.tank_cap
 					global.weapontank += pickup_power;
 				else
-					global.weapontank = weapontank_cap;
+					global.weapontank = global.tank_cap;
 			}
 		}
 		break;

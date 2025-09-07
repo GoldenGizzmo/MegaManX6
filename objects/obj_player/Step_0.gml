@@ -6,6 +6,9 @@ if global.pause = true
 	
 event_inherited();
 
+if shooting > 0
+	shooting--;
+
 //If alive
 if global.death = false and animation_lock = false
 {
@@ -84,7 +87,7 @@ if global.death = false and animation_lock = false
 			}
 	
 			//If not facing a wall and touching the ground
-			if global.input_dash_pressed = true and airborne = false and dash = false and !place_meeting(x+image_xscale,y,obj_solid)
+			if global.input_dash_pressed = true and airborne = false and dash = false and !walled
 			{
 				dash = true;
 				dash_ground = true;
@@ -395,7 +398,7 @@ if global.death = false and animation_lock = false
 								//Check backwards for a weapon to be equipped
 								if global.weapon[array_length(global.weapon)-a] != 0
 								{
-									global.weapon_choice = array_length(global.weapon)-a;
+									global.weapon_choice = array_length(global.weapon)-a-1; //Extra "-1" to skip past Giga Attacks;
 									flicker_weapon_swap = true;
 									scr_make_sound(snd_menu_move,1,1,false);
 									break;
@@ -412,6 +415,16 @@ if global.death = false and animation_lock = false
 						}
 					}
 				}
+			}
+			
+			//Pausing the game
+			if global.input_start_pressed
+			{
+				global.pause_screen_state = 1; //Fade out in to the pause menu				
+				global.pause = true;
+				
+				fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
+				fade.fade_speed = global.pause_screen_speed;
 			}
 		}
 	}

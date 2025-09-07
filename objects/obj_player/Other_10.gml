@@ -5,6 +5,7 @@ if animation_lock = true
 	exit;
 
 var loop = false;
+var reset = true;
 image_speed = 1;
 changing_sprite = sprite_index;
 
@@ -20,7 +21,11 @@ if hurt = false
 				loop = true;
 			}
 			else
-				sprite_index = spr_player_x_walljump_simple;
+				sprite_index = spr_player_x_walljump;
+		}
+		else if wall_jump = true
+		{
+			sprite_index = spr_player_x_walljump_kick;
 		}
 		else if climbing = true
 		{
@@ -41,7 +46,29 @@ if hurt = false
 				loop = true;
 			}
 			else
-				sprite_index = spr_player_x_jump;
+			{
+				if yspeed > 0
+				{
+					sprite_index = spr_player_x_jump;
+					if shooting > 0
+					{
+						sprite_index = spr_player_x_jump_shoot
+						reset = false;
+					}
+				}
+				else
+				{
+					if sprite_index != spr_player_x_walljump_kick
+					{
+						sprite_index = spr_player_x_jump_rise;
+						if shooting > 0
+						{
+							sprite_index = spr_player_x_jump_rise_shoot
+							reset = false;
+						}
+					}
+				}
+			}
 		}
 	}
 	else
@@ -58,12 +85,25 @@ if hurt = false
 			else
 			{
 				if crouch = true
+				{
 					sprite_index = spr_player_x_crouch;
+					if shooting > 0
+					{
+						sprite_index = spr_player_x_crouch_shoot
+						reset = false;
+						loop = true
+					}
+				}
 				else
 				{
 					if attack_action = "X-Saber Standing"
 					{
 						sprite_index = spr_player_x_idle_saber;
+						loop = true;
+					}
+					else if shooting > 0
+					{
+						sprite_index = spr_player_x_idle_shoot;
 						loop = true;
 					}
 					else
@@ -97,7 +137,7 @@ else
 	loop = true;
 }
 
-if changing_sprite != sprite_index
+if changing_sprite != sprite_index and reset = true
 	image_index = 0;
 
 if loop = false and image_index > image_number-1

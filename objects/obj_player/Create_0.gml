@@ -30,7 +30,7 @@ damage_taken = 999;
 set_knockback = 1.5;
 knockback = set_knockback;
 flicker = false;
-invul = true;
+invul = false;
 weight = 0.3;
 
 //Special attack
@@ -41,7 +41,7 @@ changing_sprite = noone;
 animation_lock = true; //Stop using gravity when openning a door
 camera_lasttouch = noone;
 
-shooting = false;
+shooting = 0;
 shooting_lock = false;
 shooting_charge = 0;
 shooting_charge_flicker = false;

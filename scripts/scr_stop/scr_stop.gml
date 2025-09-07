@@ -1,6 +1,16 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+function scr_not_stop_horizontal(){
+	
+	walled = false;
+	wall_slide = false;
+
+}
+
+function scr_not_stop_vertical(){
+	airborne = true;
+}
 
 //Code that should run when the player hits the floor
 function scr_stop_floor(){
@@ -31,9 +41,22 @@ function scr_stop_wall(spd, slope = false){
 	
 	switch(object_index){
 		
+		case obj_enemy_grasshopper_alt:
+			if state = "Roaming"
+			{
+				image_xscale *= -1;
+				xspeed *= -1;
+			}
+			break;
+			
+		case obj_enemy_larvae:
+			image_xscale *= -1;
+			xspeed *= -1;
+			break;
 		
 		case obj_enemy_caterpillar:
-			if(state != "Turn"){
+			if state = "Moving"
+			{
 				state = "Turn"
 				alarm[0] = 1;
 			}
@@ -41,8 +64,15 @@ function scr_stop_wall(spd, slope = false){
 		
 		case obj_player:
 		
+			walled = true;
+			
+			//Checking if touching a wall that can't be climbed
+			var climbable = true
+			if place_meeting(x+image_xscale,y,obj_solid_noclimb)
+				climbable = false;
+		
 			//Holding the button into the wall while falling
-			if (yspeed > 0)
+			if (airborne and yspeed > 0 and climbable = true)
 			{
 				yspeed = 1; //Wall slide	
 				if wall_slide = false

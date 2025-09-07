@@ -12,6 +12,8 @@ if flash_phase = 0
 	}
 	else
 	{
+		scr_make_sound(snd_warning,1,0.8-(flash_count/5),false);
+		
 		flash_phase++;
 		alarm[0] = 30;
 	}

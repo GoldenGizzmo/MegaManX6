@@ -21,7 +21,8 @@ obj_player.y = global.checkpointy;
 obj_camera.x = obj_player.x;
 obj_camera.y = obj_player.y;
 
-
+//Find out how many reploids are to be rescued in the room
+global.rescue_max = instance_number(obj_reploid);
 
 
 

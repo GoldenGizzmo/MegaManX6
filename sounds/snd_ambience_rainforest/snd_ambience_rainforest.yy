@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_ambience_rainforest",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":121.70057,
+  "name":"snd_ambience_rainforest",
+  "parent":{
+    "name":"Ambience",
+    "path":"folders/Sounds/Ambience.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_ambience_rainforest.mp3",
+  "type":1,
+  "volume":1.0,
+}
