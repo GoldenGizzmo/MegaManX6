@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"st0h_b_PG01_ID00",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.3481406,
-  "exportDir":"",
   "name":"st0h_b_PG01_ID00",
   "parent":{
     "name":"Gate",

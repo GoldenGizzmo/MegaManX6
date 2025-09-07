@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_player_x_workshop",
   "bboxMode":2,
   "bbox_bottom":70,

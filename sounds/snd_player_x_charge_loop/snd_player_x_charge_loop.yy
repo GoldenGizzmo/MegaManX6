@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_player_x_charge_loop",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.5652381,
-  "exportDir":"",
   "name":"snd_player_x_charge_loop",
   "parent":{
     "name":"X",

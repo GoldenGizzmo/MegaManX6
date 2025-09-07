@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_taking_damage",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.3020635,
-  "exportDir":"",
   "name":"snd_taking_damage",
   "parent":{
     "name":"Miscellaneous",

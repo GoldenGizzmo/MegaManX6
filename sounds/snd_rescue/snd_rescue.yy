@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_rescue",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.31764174,
-  "exportDir":"",
   "name":"snd_rescue",
   "parent":{
     "name":"Miscellaneous",

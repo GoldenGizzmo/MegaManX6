@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_player_x_talk_jump_2",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.25414965,
-  "exportDir":"",
   "name":"snd_player_x_talk_jump_2",
   "parent":{
     "name":"X Voice",

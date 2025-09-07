@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_pickup_health_small",
   "bboxMode":2,
   "bbox_bottom":7,

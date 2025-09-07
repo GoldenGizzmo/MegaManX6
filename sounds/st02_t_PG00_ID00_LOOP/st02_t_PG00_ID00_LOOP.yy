@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"st02_t_PG00_ID00_LOOP",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.9252154,
-  "exportDir":"",
   "name":"st02_t_PG00_ID00_LOOP",
   "parent":{
     "name":"Blizzard-Wolfang-stage",

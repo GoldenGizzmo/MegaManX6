@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_enemy_grasshopper_idle_alt",
   "bboxMode":2,
   "bbox_bottom":89,

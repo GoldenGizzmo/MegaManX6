@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_hud_player_extend",
   "bboxMode":0,
   "bbox_bottom":49,

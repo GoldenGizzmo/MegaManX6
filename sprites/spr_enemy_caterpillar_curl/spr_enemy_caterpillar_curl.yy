@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_enemy_caterpillar_curl",
   "bboxMode":2,
   "bbox_bottom":31,

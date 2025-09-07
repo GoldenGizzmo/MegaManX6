@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_actor_yammark",
   "bboxMode":2,
   "bbox_bottom":46,

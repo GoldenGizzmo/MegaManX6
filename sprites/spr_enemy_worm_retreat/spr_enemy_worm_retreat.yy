@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_enemy_worm_retreat",
   "bboxMode":2,
   "bbox_bottom":69,

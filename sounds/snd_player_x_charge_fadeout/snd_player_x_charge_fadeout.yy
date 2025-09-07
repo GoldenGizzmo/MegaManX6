@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_player_x_charge_fadeout",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":3.489796,
-  "exportDir":"",
   "name":"snd_player_x_charge_fadeout",
   "parent":{
     "name":"X",

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_effect_reinforcement_palette",
   "bboxMode":0,
   "bbox_bottom":7,

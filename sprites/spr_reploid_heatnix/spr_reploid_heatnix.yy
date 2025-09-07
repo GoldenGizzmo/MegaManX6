@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_reploid_heatnix",
   "bboxMode":2,
   "bbox_bottom":44,

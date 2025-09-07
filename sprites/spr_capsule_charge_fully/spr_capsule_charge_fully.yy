@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_capsule_charge_fully",
   "bboxMode":0,
   "bbox_bottom":60,

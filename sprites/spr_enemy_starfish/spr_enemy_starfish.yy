@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_enemy_starfish",
   "bboxMode":2,
   "bbox_bottom":30,

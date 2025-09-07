@@ -60,7 +60,7 @@ for(var i = 0; i < size; i++){
 		
 		with(obj){
 			var step = scr_snap_to_object(-spd, other.axis, other) - x;
-			scr_move(step, other.axis);
+			scr_move(step, other.axis, undefined, false);
 			scr_stop_wall(-spd)
 		}
 		
@@ -70,7 +70,7 @@ for(var i = 0; i < size; i++){
 		
 		with(obj){
 			var step = scr_snap_to_object(-spd, other.axis, other) - y;
-			scr_move(step, other.axis);
+			scr_move(step, other.axis, undefined, false);
 			
 			if(spd > 0){
 				scr_stop_ceiling()

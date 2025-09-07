@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_player_x_machdash_down",
   "bboxMode":2,
   "bbox_bottom":66,

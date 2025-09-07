@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_yammark_cavetree",
   "bboxMode":0,
   "bbox_bottom":72,

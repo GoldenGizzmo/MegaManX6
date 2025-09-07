@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_move(spd, axis, object = obj_solid){
+function scr_move(spd, axis, object = obj_solid, update_variables = true){
 
 	//Save original coordinates
 		var _x = x;
@@ -92,7 +92,7 @@ function scr_move(spd, axis, object = obj_solid){
 		}
 	}
 
-	if axis == AXIS_HORIZONTAL scr_not_stop_horizontal() else scr_not_stop_vertical()
+	if update_variables if axis == AXIS_HORIZONTAL scr_not_stop_horizontal() else scr_not_stop_vertical()
 	
 	return spd;
 }

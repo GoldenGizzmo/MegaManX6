@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_mugshot_yammark",
   "bboxMode":0,
   "bbox_bottom":63,

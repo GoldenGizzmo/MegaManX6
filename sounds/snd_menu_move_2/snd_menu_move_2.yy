@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_menu_move_2",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.64387757,
-  "exportDir":"",
   "name":"snd_menu_move_2",
   "parent":{
     "name":"Miscellaneous",

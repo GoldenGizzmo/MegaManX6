@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_effect_smoke",
   "bboxMode":0,
   "bbox_bottom":26,

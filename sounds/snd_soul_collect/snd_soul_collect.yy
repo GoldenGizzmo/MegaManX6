@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_soul_collect",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.52809525,
-  "exportDir":"",
   "name":"snd_soul_collect",
   "parent":{
     "name":"Miscellaneous",

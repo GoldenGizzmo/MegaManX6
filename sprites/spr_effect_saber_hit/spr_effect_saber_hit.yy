@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_effect_saber_hit",
   "bboxMode":0,
   "bbox_bottom":55,

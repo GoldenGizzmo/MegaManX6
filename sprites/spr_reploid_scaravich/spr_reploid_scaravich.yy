@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_reploid_scaravich",
   "bboxMode":2,
   "bbox_bottom":38,

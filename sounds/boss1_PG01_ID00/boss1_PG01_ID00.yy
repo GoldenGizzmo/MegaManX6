@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"boss1_PG01_ID00",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.3001361,
-  "exportDir":"",
   "name":"boss1_PG01_ID00",
   "parent":{
     "name":"Highmax",

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_yanma_option_giga",
   "bboxMode":2,
   "bbox_bottom":15,

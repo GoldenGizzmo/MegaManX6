@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_shoot_iceburst_charged",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.5161451,
-  "exportDir":"",
   "name":"snd_shoot_iceburst_charged",
   "parent":{
     "name":"X",

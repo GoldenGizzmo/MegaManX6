@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_shoot_grounddash",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.60714287,
-  "exportDir":"",
   "name":"snd_shoot_grounddash",
   "parent":{
     "name":"X",

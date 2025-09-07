@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_stage_stencil",
   "bboxMode":0,
   "bbox_bottom":1935,

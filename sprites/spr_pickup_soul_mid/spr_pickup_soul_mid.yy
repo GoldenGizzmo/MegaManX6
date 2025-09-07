@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_pickup_soul_mid",
   "bboxMode":0,
   "bbox_bottom":15,

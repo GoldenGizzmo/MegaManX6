@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_solid_slope",
   "bboxMode":0,
   "bbox_bottom":63,

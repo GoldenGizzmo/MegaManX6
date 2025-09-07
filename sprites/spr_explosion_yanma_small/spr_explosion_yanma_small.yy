@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_explosion_yanma_small",
   "bboxMode":0,
   "bbox_bottom":61,

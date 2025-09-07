@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_pickup_workshop",
   "bboxMode":0,
   "bbox_bottom":704,

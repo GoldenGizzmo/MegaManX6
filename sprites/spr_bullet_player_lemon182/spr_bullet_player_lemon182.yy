@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_bullet_player_lemon182",
   "bboxMode":0,
   "bbox_bottom":176,

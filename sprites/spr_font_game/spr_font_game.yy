@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_font_game",
   "bboxMode":0,
   "bbox_bottom":14,

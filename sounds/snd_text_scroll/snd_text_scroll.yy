@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_text_scroll",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.19285715,
-  "exportDir":"",
   "name":"snd_text_scroll",
   "parent":{
     "name":"Miscellaneous",

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_soul_large",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":2.4405215,
-  "exportDir":"",
   "name":"snd_soul_large",
   "parent":{
     "name":"Miscellaneous",

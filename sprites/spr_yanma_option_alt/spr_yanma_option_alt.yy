@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_yanma_option_alt",
   "bboxMode":2,
   "bbox_bottom":13,

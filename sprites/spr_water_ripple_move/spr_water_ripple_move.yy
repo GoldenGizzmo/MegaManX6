@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_water_ripple_move",
   "bboxMode":0,
   "bbox_bottom":18,

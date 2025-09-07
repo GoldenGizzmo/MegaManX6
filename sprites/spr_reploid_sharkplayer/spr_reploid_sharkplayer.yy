@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_reploid_sharkplayer",
   "bboxMode":2,
   "bbox_bottom":40,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_yammark_tubes",
   "bboxMode":0,
   "bbox_bottom":28,

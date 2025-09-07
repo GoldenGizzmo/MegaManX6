@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_yanma_option_reticle_workshop",
   "bboxMode":1,
   "bbox_bottom":199,

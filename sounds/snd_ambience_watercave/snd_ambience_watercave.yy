@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_ambience_watercave",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":-1.0,
-  "exportDir":"",
   "name":"snd_ambience_watercave",
   "parent":{
     "name":"Ambience",

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_explosion_death_line",
   "bboxMode":0,
   "bbox_bottom":189,

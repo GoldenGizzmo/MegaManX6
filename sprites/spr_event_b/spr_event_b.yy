@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_event_b",
   "bboxMode":0,
   "bbox_bottom":13,

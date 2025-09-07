@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_capsule_leg",
   "bboxMode":0,
   "bbox_bottom":11,

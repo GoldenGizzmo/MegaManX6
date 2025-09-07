@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_yammark_talk_formation",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.71385485,
-  "exportDir":"",
   "name":"snd_yammark_talk_formation",
   "parent":{
     "name":"Commander-Yammark",

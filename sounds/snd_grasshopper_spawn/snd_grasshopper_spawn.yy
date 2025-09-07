@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_grasshopper_spawn",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.3902721,
-  "exportDir":"",
   "name":"snd_grasshopper_spawn",
   "parent":{
     "name":"Stage-Sounds",

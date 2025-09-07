@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"se_pl01_PG02_ID06",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.40589568,
-  "exportDir":"",
   "name":"se_pl01_PG02_ID06",
   "parent":{
     "name":"Zero",

@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_caterpillar_uncurl",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.27464852,
-  "exportDir":"",
   "name":"snd_caterpillar_uncurl",
   "parent":{
     "name":"Stage-Sounds",

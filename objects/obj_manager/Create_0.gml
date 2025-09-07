@@ -8,9 +8,9 @@ global.ui_scale = 5;
 //Sound Variables
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_sfx);
-global.volume_master = 0.1; //50%
-global.volume_music = 0.1 //100%
-global.volume_effect = 0.1; //100%
+global.volume_master = 1; //50%
+global.volume_music = 1 //100%
+global.volume_effect = 1; //100%
 audio_group_set_gain(audiogroup_sfx,global.volume_effect*global.volume_master,0);
 audio_group_set_gain(audiogroup_music,global.volume_music*global.volume_master,0);
 

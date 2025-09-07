@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_bg_yammark_ruins",
   "bboxMode":0,
   "bbox_bottom":367,

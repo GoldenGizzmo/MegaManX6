@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_boss_yammark_move_upwards",
   "bboxMode":2,
   "bbox_bottom":55,

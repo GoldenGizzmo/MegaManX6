@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_bullet_slash_1",
   "bboxMode":2,
   "bbox_bottom":30,

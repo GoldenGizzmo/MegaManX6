@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"v1",
+  "$GMSprite":"",
   "%Name":"spr_reploid_palette_skin",
   "bboxMode":0,
   "bbox_bottom":7,

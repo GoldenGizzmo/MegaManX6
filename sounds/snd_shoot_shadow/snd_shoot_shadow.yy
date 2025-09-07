@@ -1,5 +1,5 @@
 {
-  "$GMSound":"v1",
+  "$GMSound":"",
   "%Name":"snd_shoot_shadow",
   "audioGroupId":{
     "name":"audiogroup_default",
@@ -10,7 +10,6 @@
   "compression":0,
   "conversionMode":0,
   "duration":0.39539683,
-  "exportDir":"",
   "name":"snd_shoot_shadow",
   "parent":{
     "name":"X",
