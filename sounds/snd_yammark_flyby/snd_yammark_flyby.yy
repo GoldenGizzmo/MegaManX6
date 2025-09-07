@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_yammark_flyby",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":3.0992064,
+  "exportDir":"",
   "name":"snd_yammark_flyby",
   "parent":{
     "name":"Commander-Yammark",

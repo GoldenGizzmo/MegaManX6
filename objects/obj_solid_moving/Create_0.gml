@@ -3,7 +3,7 @@
 
 event_inherited();
 
-move_speed = 1;
+move_speed = 0.5;
 stop = true;
 alarm[0] = 60;
 

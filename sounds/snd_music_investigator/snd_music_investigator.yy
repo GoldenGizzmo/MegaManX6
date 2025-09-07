@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_music_investigator",
   "audioGroupId":{
     "name":"audiogroup_music",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":100.36352,
+  "exportDir":"",
   "name":"snd_music_investigator",
   "parent":{
     "name":"Music",

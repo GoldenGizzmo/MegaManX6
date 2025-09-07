@@ -1,6 +1,6 @@
 {
   "$GMSound":"v1",
-  "%Name":"snd_door_close",
+  "%Name":"snd_door_move",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
@@ -11,7 +11,7 @@
   "conversionMode":0,
   "duration":0.7033333,
   "exportDir":"",
-  "name":"snd_door_close",
+  "name":"snd_door_move",
   "parent":{
     "name":"Miscellaneous",
     "path":"folders/Sounds/Miscellaneous.yy",
@@ -20,7 +20,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_door_close.wav",
+  "soundFile":"snd_door_move.wav",
   "type":1,
   "volume":1.0,
 }

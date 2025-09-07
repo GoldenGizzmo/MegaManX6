@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.6711338,
+  "duration":1.7008843,
   "exportDir":"",
   "name":"snd_explosion_boss_2",
   "parent":{

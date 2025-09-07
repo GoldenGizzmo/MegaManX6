@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_ambience_rainforest",
   "audioGroupId":{
     "name":"audiogroup_sfx",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":121.70057,
+  "exportDir":"",
   "name":"snd_ambience_rainforest",
   "parent":{
     "name":"Ambience",

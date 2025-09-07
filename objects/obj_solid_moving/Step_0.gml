@@ -20,6 +20,7 @@ if(!stop and obj){
 }
 	
 var spd = move_speed * dir * !stop;
+var internal_spd = ceil(abs(spd)) * sign(spd);
 	
 if(spd != 0){
 	with(obj_dynamic){
@@ -34,7 +35,10 @@ if(spd != 0){
 	
 	}
 }
-	
+
+var _x = x;
+var _y = y;
+
 
 if(axis == AXIS_HORIZONTAL){
 	x += spd;
@@ -45,9 +49,8 @@ else
 }
 
 
-
 ds_list_clear(coll_list)
-var size = instance_place_list(x, y, obj_dynamic, coll_list, false);
+var size = instance_place_list(x + (axis == AXIS_HORIZONTAL ? internal_spd : 0), y + (axis == AXIS_VERTICAL ? internal_spd : 0), obj_dynamic, coll_list, false);
 
 for(var i = 0; i < size; i++){
 	
@@ -56,8 +59,9 @@ for(var i = 0; i < size; i++){
 	if(axis == AXIS_HORIZONTAL){
 		
 		with(obj){
-			var step = scr_snap_to_object(-other.move_speed * other.dir, other.axis, other) - x;
+			var step = scr_snap_to_object(-spd, other.axis, other) - x;
 			scr_move(step, other.axis);
+			scr_stop_wall(-spd)
 		}
 		
 	}
@@ -65,13 +69,19 @@ for(var i = 0; i < size; i++){
 	{
 		
 		with(obj){
-			var step = scr_snap_to_object(-other.move_speed * other.dir, other.axis, other) - y;
+			var step = scr_snap_to_object(-spd, other.axis, other) - y;
 			scr_move(step, other.axis);
-			airborne = false;
-		}
-		
+			
+			if(spd > 0){
+				scr_stop_ceiling()
+			}
+			else
+			{
+				scr_stop_floor()
+			}
+			
+		}	
 	}
-	
 }
 
 

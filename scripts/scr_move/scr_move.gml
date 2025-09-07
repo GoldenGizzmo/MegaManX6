@@ -19,6 +19,8 @@ function scr_move(spd, axis, object = obj_solid){
 	ds_list_clear(collision_list)
 	var size = instance_place_list(_x + hsp, _y + vsp, obj_solid_slope, collision_list, true)
 	
+	var ret = 0;
+	
 	for(var i = 0; i < size; i++){
 		
 		var col = collision_list[| i];
@@ -31,22 +33,22 @@ function scr_move(spd, axis, object = obj_solid){
 			
 			//Run code for when the player lands or hits the ceiling
 			if(axis == AXIS_HORIZONTAL){
-				scr_stop_wall(spd);
+				ret = scr_stop_wall(spd);
 			}
 			else{
 				if(spd > 0){
-					scr_stop_floor()
+					ret = scr_stop_floor()
 				}
 				else
 				{
-					scr_stop_ceiling()
+					ret = scr_stop_ceiling()
 				}
 			}
 				
-			return 0;
+			return ret;
 		}
 		
-		scr_basic_collide(spd, axis, col);
+		return scr_basic_collide(spd, axis, col);
 	}
 	
 	ds_list_clear(collision_list)
@@ -57,17 +59,13 @@ function scr_move(spd, axis, object = obj_solid){
 		var col = collision_list[| i];
 		if(col.slope)continue;
 		
-		scr_basic_collide(spd, axis, col);
-		
-		return 0;
+		return scr_basic_collide(spd, axis, col, _x + hsp, _y + vsp);
 	}
-	
 	
 	x += x_offset;
 	y += y_offset;
 	
 	//Attach to slopes when going down
-
 	if(!airborne and axis == AXIS_VERTICAL and spd > 0){
 		
 		ds_list_clear(collision_list)
@@ -90,10 +88,8 @@ function scr_move(spd, axis, object = obj_solid){
 			x -= (xspeed - xspeed/SLOPE_SPEED_FACTOR)
 			y = scr_snap_to_object(1, AXIS_VERTICAL, slope ? slope : flr, x, y + SLOPE_CHECK_REACH);
 			
-			scr_stop_floor()
-			return 0;	
+			return scr_stop_floor();
 		}
-
 	}
 
 	if axis == AXIS_HORIZONTAL scr_not_stop_horizontal() else scr_not_stop_vertical()
@@ -101,24 +97,24 @@ function scr_move(spd, axis, object = obj_solid){
 	return spd;
 }
 
-function scr_basic_collide(spd, axis, col){
+function scr_basic_collide(spd, axis, col, _x = x, _y = y){
 	
 	if(axis == AXIS_HORIZONTAL){
-		x = scr_snap_to_object(spd, axis, col);
-		scr_stop_wall(spd);
+		x = scr_snap_to_object(spd, axis, col, _x, _y);
+		return scr_stop_wall(spd, col);
 	}
 	else
 	{
-		y = scr_snap_to_object(spd, axis, col);
+		y = scr_snap_to_object(spd, axis, col, _x, _y);
 			
 			
 		//Run code for when the player lands or hits the ceiling
 		if(spd > 0){
-			scr_stop_floor()
+			return scr_stop_floor()
 		}
 		else
 		{
-			scr_stop_ceiling()
+			return scr_stop_ceiling()
 		}
 	}
 	
@@ -244,26 +240,35 @@ function scr_snap_to_object(spd, axis, col, x_ = x, y_ = y){
 	var _x = x_;
 	var _y = y_;
 	
-	var move = 0;
-	
 	if(axis == AXIS_HORIZONTAL){
 		
 		if(spd == 0)return _x;
 		
-		_x = floor(abs(x_)) * sign(x_) + frac(col.x)	
-		while(place_meeting(_x - move, y_, col)){
-			move += sign(spd);
+		_x = scr_get_excess(spd, _x, col.x);
+		while(place_meeting(_x, y_, col)){
+			_x -= sign(spd);
 		}
 		
-		return _x - move;
+		return _x;
 	}
 
 	if(spd == 0)return _y;
 	
-	_y = floor(abs(y_)) * sign(y_) + frac(col.y)	
-	while(place_meeting(x_, _y - move, col)){
-		move += sign(spd);
+	_y = scr_get_excess(spd, _y, col.y);
+	while(place_meeting(x_, _y, col)){
+		_y -= sign(spd);
 	}
 	
-	return _y - move;
+	
+	return _y;
+}
+
+function scr_get_excess(spd, pos, col_pos){
+	
+	if(spd > 0){
+		return ceil(abs(pos)) * sign(pos) + frac(col_pos)
+	}
+
+	return floor(abs(pos)) * sign(pos) + frac(col_pos)
+	
 }

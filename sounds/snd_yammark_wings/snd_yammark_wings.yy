@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.1752381,
+  "duration":0.7801134,
   "exportDir":"",
   "name":"snd_yammark_wings",
   "parent":{

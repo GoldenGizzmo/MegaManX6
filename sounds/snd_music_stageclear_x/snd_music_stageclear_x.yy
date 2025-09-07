@@ -1,5 +1,5 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v1",
   "%Name":"snd_music_stageclear_x",
   "audioGroupId":{
     "name":"audiogroup_music",
@@ -10,6 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":-1.0,
+  "exportDir":"",
   "name":"snd_music_stageclear_x",
   "parent":{
     "name":"Music",
