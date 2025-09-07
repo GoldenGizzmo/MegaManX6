@@ -9,7 +9,7 @@ if life > 0
 			if airborne = false
 			{
 				action++;
-				alarm[0] = 240+random_range(-60,60);
+				//alarm[0] = 240+random_range(-60,60);
 			
 				xspeed = 1*image_xscale;
 			}

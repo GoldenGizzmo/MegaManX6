@@ -9,11 +9,15 @@ if open_state = 0 and ((image_xscale = 1 and obj_player.x < x) or (image_xscale 
 	{
 		movement = false;
 		animation_lock = true;
+		movement_freeze = true;
+		colliding = false;
 		
 		if sprite_index != spr_player_x_move_simple
 			image_speed = 0;
 	}
+	
 	image_speed = 1;
+	scr_make_sound(snd_door,1,1,false);
 	
 	with boundary
 	{

@@ -31,12 +31,12 @@ if animation_y = 1
 	
 	scr_get_character(left_character);
 	draw_sprite_ext(mugshot,left_blink,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
-	if mugshot_talk != 0 and left_talking > 0 //Talking
+	if mugshot_talk != 0 and left_talking > 1 //Talking
 		draw_sprite_ext(mugshot_talk,left_talking/3,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
 	
 	scr_get_character(right_character);
 	draw_sprite_ext(mugshot,right_blink,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);
-	if mugshot_talk != 0 and right_talking > 0 //Talking
+	if mugshot_talk != 0 and right_talking > 1 //Talking
 		draw_sprite_ext(mugshot_talk,right_talking/3,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);	
 }
 	
@@ -141,7 +141,7 @@ if animation_y = 1 and finish = false
 				delay = 0; //4; //Accurate to X series
 				
 				text_colour = character_colour;
-				draw_text_transformed_color(text_x+(space*char_width),text_y+(13*line),string_char_at(text[page],i),scale,scale,0,text_colour,text_colour,text_colour,text_colour,1);
+				draw_text_transformed_color(text_x+(space*char_width)+(6*global.ui_scale),text_y+(13*line),string_char_at(text[page],i),scale,scale,0,text_colour,text_colour,text_colour,text_colour,1);
 				/*
 				switch (modifier)
 				{

@@ -24,10 +24,7 @@ if life > 0
 			
 		if state = "Roaming"
 		{
-			event_user(1);
-			
 			//Animation match walking speed
-			
 			sprite_index = spr_enemy_grasshopper_idle_alt;
 			if xspeed > 0
 				image_speed = xspeed;

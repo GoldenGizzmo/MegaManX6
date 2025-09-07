@@ -7,6 +7,11 @@ if sprite_index = spr_player_x_idle_saber or sprite_index = spr_player_x_jump_sa
 	attack_action = 0;
 }
 
+if sprite_index = spr_player_x_idle_shoot
+	shooting = 0;
+if sprite_index = spr_player_x_crouch_shoot
+	shooting = 0;
+
 /*
 if sprite_index = spr_player_x_dash
 	sprite_index = spr_player_x_idle

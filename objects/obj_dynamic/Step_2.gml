@@ -6,13 +6,18 @@ if global.pause = true
 	return;
 
 //Current collision scripts
-if colliding = true
+if movement_freeze = false
 {
-	if movement_freeze = false
+	if colliding = true
 	{
 		xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
 		yspeed = scr_move(yspeed, AXIS_VERTICAL);
 	}
 	else
-		speed = 0;
+	{
+		x += xspeed;
+		y += yspeed;
+	}
 }
+else
+	speed = 0;

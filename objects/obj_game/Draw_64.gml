@@ -67,7 +67,7 @@ if global.hud_toggle = true
 		if global.weapon[global.weapon_choice].ammo > 0
 			draw_rectangle_color(x_pos+(9*global.ui_scale),bar_start_y,x_pos+(12*global.ui_scale)-1,bar_start_y+bar_height*bar_limit,weapon_bar_colour_1,weapon_bar_colour_1,weapon_bar_colour_2,weapon_bar_colour_2,0);
 
-		draw_sprite_ext(spr_hud_weapon,global.weapon_choice-1,x_pos+(5*global.ui_scale),y_pos+(7*global.ui_scale),global.ui_scale,global.ui_scale,0,c_white,1);
+		draw_sprite_ext(spr_hud_weapon,global.weapon_choice,x_pos+(5*global.ui_scale),y_pos+(7*global.ui_scale),global.ui_scale,global.ui_scale,0,c_white,1);
 
 	
 		draw_set_halign(fa_center);

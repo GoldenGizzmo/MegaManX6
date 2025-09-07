@@ -8,6 +8,11 @@ switch (bossfight_state)
 		{
 			bossfight_state++;
 			alarm[0] = 30;
+			
+			//Turn off music
+			audio_stop_sound(global.music);
+			global.music = "Off";
+			obj_background.ambience = "Off";
 		}
 		else
 			alarm[0] = 1;
@@ -52,6 +57,7 @@ switch (bossfight_state)
 		break;
 		
 	case 4: //Boss appears (Boss object has the openning code)
+		global.music = snd_music_investigator_intro;
 		with boss
 			state = "Appearance";
 		break;
@@ -79,12 +85,13 @@ switch (bossfight_state)
 				action = 0;
 				alarm[0] = 60;
 			}
+			
+			//Start music
+			audio_stop_sound(global.music);
+			global.music = snd_music_investigator;
 		}
 		else
-		{
 			alarm[0] = 1;
-			//Start music
-		}
 		break;
 		
 	case 7:	//Fill healthbar
@@ -92,6 +99,7 @@ switch (bossfight_state)
 		{
 			alarm[0] = 1;	
 			lifebar_intro -= boss.lifemax/100;
+			scr_make_sound(snd_healing,0.5,1,false);
 		}
 		else
 		{
@@ -102,6 +110,10 @@ switch (bossfight_state)
 		
 	case 8: //Being bossfight
 		bossfight_begin = true;
+		
+		with boss
+			alarm[1] = 1;
+		
 		with obj_player
 		{
 			movement = true;

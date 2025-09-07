@@ -6,10 +6,7 @@ event_inherited();
 if life > 0
 {
 	if airborne = false //Turn at wall and ledges
-	{
 		event_user(0);
-		event_user(1);
-	}
 	
 	//Check if the main grasshopper is alive
 	if owner != 0

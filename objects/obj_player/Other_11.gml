@@ -78,6 +78,10 @@ if shot_fired = true
 {
 	shooting_charge_flicker = false;
 	shooting_charge = 0;
+	
+	shooting = 30;
+	if sprite_index = spr_player_x_idle_shoot
+		image_index = 0;
 }
 
 

@@ -2,8 +2,8 @@
   "$GMSound":"v1",
   "%Name":"snd_rescue",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
   "bitRate":128,
@@ -21,6 +21,6 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_rescue.wav",
-  "type":0,
+  "type":1,
   "volume":1.0,
 }
