@@ -14,7 +14,7 @@ if(!stop and obj){
 		y = scr_snap_to_object(move_speed * dir, axis, obj)
 	}
 	
-	scr_change_direction(obj.direction_target);
+	scr_change_direction(directions_translator[$ obj.direction_target]);
 
 	stop = true;
 	alarm[0] = obj.delay;
