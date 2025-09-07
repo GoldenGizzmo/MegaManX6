@@ -30,7 +30,7 @@ if(spd != 0){
 
 		if(obj and obj.axis == AXIS_HORIZONTAL){
 	
-			var res = scr_move(obj.move_speed * obj.dir * !obj.stop, AXIS_HORIZONTAL, obj)
+			var res = scr_move(obj.move_speed * obj.dir * !obj.stop, AXIS_HORIZONTAL, undefined, obj, noone)
 			if(res == 0)xspeed = 0;
 		}
 	
@@ -61,7 +61,7 @@ for(var i = 0; i < size; i++){
 		
 		with(obj){
 			var step = scr_snap_to_object(-spd, other.axis, other) - x;
-			scr_move(step, other.axis, undefined, false);
+			scr_move(step, other.axis, false);
 			scr_stop_wall(-spd)
 		}
 		
@@ -71,7 +71,7 @@ for(var i = 0; i < size; i++){
 		
 		with(obj){
 			var step = scr_snap_to_object(-spd, other.axis, other) - y;
-			scr_move(step, other.axis, undefined, false);
+			scr_move(step, other.axis, false);
 			
 			if(spd > 0){
 				scr_stop_ceiling()
