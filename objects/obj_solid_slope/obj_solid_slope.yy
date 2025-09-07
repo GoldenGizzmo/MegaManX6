@@ -8,8 +8,8 @@
   "name":"obj_solid_slope",
   "overriddenProperties":[],
   "parent":{
-    "name":"Collisions",
-    "path":"folders/Objects/Collisions.yy",
+    "name":"Slopes",
+    "path":"folders/Objects/Collisions/Slopes.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_solid_slope",
-    "path":"sprites/spr_solid_slope/spr_solid_slope.yy",
+    "name":"spr_solid_slope_1",
+    "path":"sprites/spr_solid_slope_1/spr_solid_slope_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

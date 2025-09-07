@@ -99,22 +99,22 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 			ds_list_clear(collision_list)
 			size = instance_place_list(x, y + SLOPE_CHECK_REACH, object, collision_list, true)
 		
-			var slope = noone;
+			var slp = noone;
 			var flr = noone;
 		
 			for(var i = 0; i < size; i++){
 			
 				var col = collision_list[| i];
 				if(col.slope){
-					slope = col; 
+					slp = col; 
 					break;
 				}
 				flr = col;
 			}
 		
-			if(slope or flr){
+			if(slp or flr){
 				x -= (xspeed - xspeed/SLOPE_SPEED_FACTOR)
-				y = scr_snap_to_object(1, AXIS_VERTICAL, slope ? slope : flr, x, y + SLOPE_CHECK_REACH);
+				y = scr_snap_to_object(1, AXIS_VERTICAL, slp ? slp : flr, x, y + SLOPE_CHECK_REACH);
 			
 				return scr_stop_floor();
 			}
@@ -158,63 +158,52 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		var side = sign(spd)
 		var new_axis = axis == AXIS_HORIZONTAL ? AXIS_VERTICAL : AXIS_HORIZONTAL
 	
-		var res1 = -1;
-		var res2 = -1;
+		var res = 0;
 	
-		var _x1 = 0;
-		var _x2 = 0;
-	
-		var _y1 = 0;
-		var _y2 = 0;
+		var _x_res = 0;
+		var _y_res = 0;
 		
 	//Collision Check
 	
 	if(axis == AXIS_HORIZONTAL){
 		
 		_x = scr_snap_to_object(side, axis, col)
-		
-		for(var i = step; i > 0; i--){
-			_x1 = _x + side * i;
-			_y1 = scr_snap_to_object(-1, new_axis, col, _x1)
+
+		if(col.type % 2 == 0 and spd > 0)return 0;
+		if(col.type % 2 == 1 and spd < 0)return 0;
+
+		if(col.type > 2){
 			
-			if(place_meeting(_x2, _y2, obj_solid)){
-				continue;
-			}
+			for(var i = step; i > 0; i--){
+				_x_res = _x + side * i;
+				_y_res = scr_snap_to_object(-1, new_axis, col, _x_res)
 			
-			if(abs(_y1 - y) <= step){
-				res1 = abs(_y1 - y);
-				break;
-			}
-		}
-		
-		
-		for(var i = step; i > 0; i--){
-			_x2 = _x + side * i;
-			_y2 = scr_snap_to_object(1, new_axis, col, _x2)
+				if(place_meeting(_x_res, _y_res, obj_solid)){
+					continue;
+				}
 			
-			if(place_meeting(_x2, _y2, obj_solid)){
-				continue;
-			}
-			
-			
-			if(abs(_y2 - y) <= step){
-				res2 = abs(_y2 - y);
-				break;
+				x = _x_res;
+				y = _y_res;
+				
+				return spd;
 			}
 		}
-		
-		if(res1 != -1 or res2 != -1){
-		
-			if(res1 > res2){
-				x = _x1
-				y = _y1;
-			}
-			else{
-				x = _x2
-				y = _y2;
-			}
+		else{
 			
-			return spd;
+			for(var i = step; i > 0; i--){
+				_x_res = _x + side * i;
+				_y_res = scr_snap_to_object(1, new_axis, col, _x_res)
+			
+				if(place_meeting(_x_res, _y_res, obj_solid)){
+					continue;
+				}
+			
+			
+				x = _x_res;
+				y = _y_res;
+				
+				return spd;
+			}
 		}
 		
 	}
@@ -223,45 +212,40 @@ function scr_collide_slope(spd, axis, col, _x = x, _y = y){
 		
 		_y = scr_snap_to_object(side, axis, col)
 		
-		for(var i = step; i > 0; i--){
-			_y1 = _y + side * i
-			_x1 = scr_snap_to_object(-1, new_axis, col, undefined, _y1)
+		if(col.type % 2 == 0 and spd > 0)return 0;
+		if(col.type % 2 == 1 and spd < 0)return 0;
+		
+		if(col.type > 2){
 			
-			if(place_meeting(_x1, _y1, obj_solid)){
-				continue;
-			}
+			for(var i = step; i > 0; i--){
+				_y_res = _y + side * i
+				_x_res = scr_snap_to_object(-1, new_axis, col, undefined, _y_res)
 			
-			if(abs(_x1 - x) <= step){
-				res1 = abs(_x1 - x);
-				break;
+				if(place_meeting(_x_res, _y_res, obj_solid)){
+					continue;
+				}
+			
+				x = _x_res;
+				y = _y_res;
+				
+				return spd;
 			}
 		}
+		else{
 		
-		
-		for(var i = step; i > 0; i--){
-			_y2 = _y + side * i;
-			_x2 = scr_snap_to_object(1, new_axis, col, undefined, _y2)
+			for(var i = step; i > 0; i--){
+				_y_res = _y + side * i;
+				_x_res = scr_snap_to_object(1, new_axis, col, undefined, _y_res)
 			
-			if(place_meeting(_x2, _y2, obj_solid)){
-				continue;
-			}
+				if(place_meeting(_x_res, _y_res, obj_solid)){
+					continue;
+				}
 			
-			if(abs(_x2 - x) <= step){
-				res2 = abs(_x2 - x);
-				break;
+				x = _x_res;
+				y = _y_res;
+				
+				return spd;
 			}
-		}
-		
-		if(res1 != -1 or res2 != -1){
-		
-			if(res1 > res2){
-				x = _x1;
-			}
-			else{
-				x = _x2;
-			}
-			
-			return spd;
 		}
 	}
 	

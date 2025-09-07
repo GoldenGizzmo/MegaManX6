@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_solid_slope",
+  "%Name":"spr_solid_slope_4",
   "bboxMode":0,
   "bbox_bottom":63,
   "bbox_left":0,
@@ -21,19 +21,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"84337819-fe48-4e66-b428-d4f7cdf34f91","blendMode":0,"displayName":"default","isLocked":false,"name":"84337819-fe48-4e66-b428-d4f7cdf34f91","opacity":50.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_solid_slope",
+  "name":"spr_solid_slope_4",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Assets",
-    "path":"folders/Sprites/Assets.yy",
+    "name":"Slope",
+    "path":"folders/Sprites/Assets/Slope.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_solid_slope",
+    "%Name":"spr_solid_slope_1",
     "autoRecord":true,
     "backdropHeight":1080,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_solid_slope",
+    "name":"spr_solid_slope_1",
     "playback":1,
     "playbackSpeed":1.0,
     "playbackSpeedType":1,
@@ -70,7 +70,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d27d3786-ac47-4b98-89a2-219f1ed73eff","path":"sprites/spr_solid_slope/spr_solid_slope.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"95c4d321-cf78-4186-a185-774d07b2b227","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d27d3786-ac47-4b98-89a2-219f1ed73eff","path":"sprites/spr_solid_slope_4/spr_solid_slope_4.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"95c4d321-cf78-4186-a185-774d07b2b227","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

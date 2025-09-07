@@ -56,7 +56,7 @@ function scr_stop_wall(spd, col = obj_solid){
 		
 		case obj_enemy_caterpillar:
 			if state = "Moving"
-			{
+			{	
 				state = "Turn"
 				alarm[0] = 1;
 			}
