@@ -150,6 +150,7 @@
     {"name":"path_circle","order":6,"path":"paths/path_circle/path_circle.yy",},
     {"name":"rm_yammark","order":1,"path":"rooms/rm_yammark/rm_yammark.yy",},
     {"name":"better_scaling_draw_surface","order":1,"path":"scripts/better_scaling_draw_surface/better_scaling_draw_surface.yy",},
+    {"name":"scr_change_direction","order":15,"path":"scripts/scr_change_direction/scr_change_direction.yy",},
     {"name":"scr_get_character","order":3,"path":"scripts/scr_get_character/scr_get_character.yy",},
     {"name":"scr_get_dialogue","order":4,"path":"scripts/scr_get_dialogue/scr_get_dialogue.yy",},
     {"name":"scr_get_input","order":2,"path":"scripts/scr_get_input/scr_get_input.yy",},

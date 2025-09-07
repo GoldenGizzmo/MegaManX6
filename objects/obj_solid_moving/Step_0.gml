@@ -14,9 +14,10 @@ if(!stop and obj){
 		y = scr_snap_to_object(move_speed * dir, axis, obj)
 	}
 	
-	dir *= -1;
+	scr_change_direction(obj.direction_target);
+
 	stop = true;
-	alarm[0] = 60;
+	alarm[0] = obj.delay;
 }
 	
 var spd = move_speed * dir * !stop;

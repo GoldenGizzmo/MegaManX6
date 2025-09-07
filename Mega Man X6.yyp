@@ -188,6 +188,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"app_surface_draw_filtered","path":"scripts/app_surface_draw_filtered/app_surface_draw_filtered.yy",},},
     {"id":{"name":"better_scaling_draw_surface","path":"scripts/better_scaling_draw_surface/better_scaling_draw_surface.yy",},},
+    {"id":{"name":"scr_change_direction","path":"scripts/scr_change_direction/scr_change_direction.yy",},},
     {"id":{"name":"scr_get_character","path":"scripts/scr_get_character/scr_get_character.yy",},},
     {"id":{"name":"scr_get_dialogue","path":"scripts/scr_get_dialogue/scr_get_dialogue.yy",},},
     {"id":{"name":"scr_get_input","path":"scripts/scr_get_input/scr_get_input.yy",},},
