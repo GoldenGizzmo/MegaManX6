@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if bossfight_state = 7 or bossfight_state = 8
+if (bossfight_state = 7 or bossfight_state = 8) and global.hud_toggle = true
 {
 	var x_pos = display_get_gui_width()-30*global.ui_scale;
 	var y_pos = (display_get_gui_height()/2)+10*global.ui_scale;

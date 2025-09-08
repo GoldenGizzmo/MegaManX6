@@ -418,7 +418,7 @@ if global.death = false and animation_lock = false
 			}
 			
 			//Pausing the game
-			if global.input_start_pressed
+			if global.input_start_pressed and global.life > 0
 			{
 				global.pause_screen_state = 1; //Fade out in to the pause menu				
 				global.pause = true;

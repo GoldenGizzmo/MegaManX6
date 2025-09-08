@@ -6,9 +6,9 @@ bullet.direction = point_direction(x,y,obj_player.x,obj_player.y);
 bullet.speed = 8;
 bullet.damage = bullet_damage;
 bullet.sprite_index = spr_bullet_nightmare;
+bullet.explosion = spr_explosion_projectile;
 
 bullet.villainy = 2;
-bullet.piercing = true;
 bullet.phasing = true;
 
 scr_make_sound(snd_shoot_nightmare,1,1,false);

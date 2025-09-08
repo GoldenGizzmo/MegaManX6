@@ -3,3 +3,9 @@
 
 if global.pause = true
 	return;
+	
+if follow != 0
+{
+	x = follow.x;
+	y = follow.y;
+}

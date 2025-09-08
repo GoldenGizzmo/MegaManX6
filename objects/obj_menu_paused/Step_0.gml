@@ -93,7 +93,7 @@ if global.pause = true
 					{
 						global.weapon_choice = menu_position;
 						event_user(0);
-						scr_make_sound(snd_menu_equip,1,1,false);
+						scr_make_sound(snd_menu_select,1,1,false);
 					}
 				
 					//Moving to sub tanks

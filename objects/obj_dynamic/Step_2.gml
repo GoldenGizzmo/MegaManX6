@@ -10,6 +10,7 @@ if movement_freeze = false
 {
 	if colliding = true
 	{
+		
 		xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
 		yspeed = scr_move(yspeed, AXIS_VERTICAL);
 	}

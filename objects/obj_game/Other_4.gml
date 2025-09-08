@@ -21,10 +21,14 @@ else
 
 
 global.life = global.lifemax;
-
-if global.powertank > 0
-	for (i = 0; i < 9; i++)
+global.weapon_choice = 0;
+for (i = 0; i < 9; i++)
+{
+	if global.powertank > 0
 		global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 
+		
+	global.weapon[i].ammo = global.weapon[i].ammo_max;
+}
 
 
 

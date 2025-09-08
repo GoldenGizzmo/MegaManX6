@@ -30,9 +30,7 @@ if global.input_shoot_pressed
 		bullet.explosion_sound = snd_explosion_bullet;
 		scr_make_sound(snd_shoot_small,1,1,false);
 		
-		shot_fired = true;
-		shooting = true;
-		alarm[6] = 30; 
+		shot_fired = true; 
 	}
 }
 
@@ -82,6 +80,10 @@ if shot_fired = true
 	shooting = 30;
 	if sprite_index = spr_player_x_idle_shoot
 		image_index = 0;
+	
+	//Fire yanma option drones
+	with obj_player_yanma
+		event_user(10);
 }
 
 

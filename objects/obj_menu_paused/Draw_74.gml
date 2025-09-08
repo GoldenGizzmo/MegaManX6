@@ -71,19 +71,7 @@ if global.pause_screen = true
 			draw_set_alpha(1);
 			
 			//Colours for the ammo bars
-			var weapon_bar_colour_1 = c_yellow;
-			var weapon_bar_colour_2 = c_orange;
-			switch (global.weapon[i].type)
-			{
-				case "Meteor Rain":
-					weapon_bar_colour_1 = c_red;
-					weapon_bar_colour_2 = c_dkgray;
-					break;		
-				case "Ray Arrow":
-					weapon_bar_colour_1 = c_white;
-					weapon_bar_colour_2 = c_purple;
-					break;
-			}
+			scr_weapon_menus(global.weapon[i].type);
 			if global.weapon[i].ammo > 0
 				draw_rectangle_color((57*scale),(35*scale)+(17*scale*i),(62*scale)+(120*scale)*amount,(35*scale)+(17*scale*i)+(3*scale),weapon_bar_colour_2,weapon_bar_colour_1,weapon_bar_colour_1,weapon_bar_colour_2,0);
 		
@@ -168,7 +156,10 @@ if global.pause_screen = true
 	menu_description = "Nothing";
 	switch (menu_state)
 	{
-		case "Weapons": menu_description = global.weapon[menu_position].description; break;
+		case "Weapons":
+			scr_weapon_menus(global.weapon[menu_position]);
+			menu_description = weapon_description; 
+			break;
 		case "Tanks":
 			switch (menu_position)
 			{

@@ -29,15 +29,16 @@ function scr_stop_floor(){
 	}
 	
 	airborne = false;
+	return 0;
 	
 }
 
 //Code that should run when the player hits the ceiling
 function scr_stop_ceiling(){
-
+	return 0;
 }
 
-function scr_stop_wall(spd, slope = false){
+function scr_stop_wall(spd, col = obj_solid){
 	
 	switch(object_index){
 		
@@ -45,18 +46,17 @@ function scr_stop_wall(spd, slope = false){
 			if state = "Roaming"
 			{
 				image_xscale *= -1;
-				xspeed *= -1;
+				return xspeed * -1;
 			}
 			break;
 			
 		case obj_enemy_larvae:
 			image_xscale *= -1;
-			xspeed *= -1;
-			break;
+			return xspeed * -1;
 		
 		case obj_enemy_caterpillar:
 			if state = "Moving"
-			{
+			{	
 				state = "Turn"
 				alarm[0] = 1;
 			}
@@ -109,5 +109,7 @@ function scr_stop_wall(spd, slope = false){
 		break;
 		
 	}
+	
+	return 0;
 	
 }
