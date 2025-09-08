@@ -8,8 +8,8 @@
   "name":"obj_solid_slope",
   "overriddenProperties":[],
   "parent":{
-    "name":"Collisions",
-    "path":"folders/Objects/Collisions.yy",
+    "name":"Slopes",
+    "path":"folders/Objects/Collisions/Slopes.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",
