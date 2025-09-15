@@ -41,7 +41,7 @@ if life > 0
 		{
 			var count = 2;
 			instance_destroy(obj_boss_yanma_option,false);
-			for (a = 0; a < count; a++)
+			for (var a = 0; a < count; a++)
 			{
 				spawn = instance_create_depth(x,y,depth-1,obj_boss_yanma_option);
 				spawn.orbit_angle = 0+((360/count)*a);

@@ -41,7 +41,7 @@ else
 		instance_create_layer(x,y,"Explosions",obj_explosion);
 		scr_make_sound(snd_explosion,1,1,false);
 		
-		for (i = 4; i < 6; i++)
+		for (var i = 4; i < 6; i++)
 		{
 			debris = instance_create_layer(x,y,"Explosions",obj_particle_debris)
 			debris.sprite_index = spr_enemy_grasshopper_debris;

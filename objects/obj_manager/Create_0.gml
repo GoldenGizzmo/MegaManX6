@@ -4,6 +4,7 @@
 //This object is for items and mechanics that carry over from level to level
 
 global.ui_scale = 5;
+global.fps_display = false;
 
 //Sound Variables
 audio_group_load(audiogroup_music);
@@ -21,13 +22,14 @@ global.controller = false;
 event_user(2); //Key bindings
 scr_get_input();
 
-global.fnt_game = font_add_sprite_ext(spr_font_game,"!~#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPKRSTUVWXYZ[\]^_``abcdefghijklmnopqrstuvwxyz",true,1);
+global.fnt_game = font_add_sprite_ext(spr_font_game,"!~#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_``abcdefghijklmnopqrstuvwxyz",true,1);
 draw_set_font(global.fnt_game);
+global.fnt_larger = font_add_sprite_ext(spr_font_larger,"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",true,1);
 
 //Special Weapons
 global.weapon_choice = 0;
 //Set up special weapons
-for (i = 0; i < 10; i++)
+for (var i = 0; i < 10; i++)
 	global.weapon[i] = {type : 0, ammo_max : 0, ammo : 0, charge_cost : 1,}; 
 	
 global.weapon[0] = {type : "X-Saber", ammo_max : -1, ammo : -1, charge_cost : -1,}; 

@@ -89,7 +89,7 @@ else
 		
 		if respawn = true
 		{
-			for (a = 0; a < 500; a++) //Storing death locations for respawn
+			for (var a = 0; a < 500; a++) //Storing death locations for respawn
 			{
 				//Find a free spot
 				if obj_manager.store_respawn[a].store_object = -1

@@ -283,7 +283,7 @@ function scr_gamepad_check(button)
 {
 	button = argument[0];
 	/*var check = false;
-		for (i = 0; i < 11; i++)
+		for (var i = 0; i < 11; i++)
 			if controller[i] = button
 				check = true
 	
@@ -294,7 +294,7 @@ function scr_gamepad_check(button)
 	}
 	else
 	{*/
-		controller[menu_counter+4] = button;
+		controller[menu_position+4] = button;
 		key_select = false;
 	//}
 }

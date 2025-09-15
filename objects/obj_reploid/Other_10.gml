@@ -1,6 +1,6 @@
 /// @description Give Nightmare Souls
 
-for (i = 0; i < 4; i++)
+for (var i = 0; i < 4; i++)
 {
 	pickup = instance_create_layer(x,y-20,"Instances",obj_pickup);
 	pickup.pickup_expiry = 60*5;

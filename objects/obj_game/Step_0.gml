@@ -14,6 +14,7 @@ if global.music != "Off" //If turned on
 		switch (room)
 		{
 			case rm_yammark: global.music = snd_music_yammark; break;
+			case rm_weapon_get: global.music = snd_music_weapon_get; break;
 			default: global.music = "Off"; return;
 		}
 	}	
@@ -77,7 +78,7 @@ with obj_spawnzone
 	var despawn_threshold = global.view_width/4;
 	var array = obj_manager.store_respawn;
 	
-	for (a = 0; a < 500; a++) //Storing death locations for respawn
+	for (var a = 0; a < 500; a++) //Storing death locations for respawn
 	{
 		if array[a].store_object != -1
 		{

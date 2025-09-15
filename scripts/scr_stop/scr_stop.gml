@@ -53,6 +53,10 @@ function scr_stop_wall(spd, col = obj_solid){
 		case obj_enemy_larvae:
 			image_xscale *= -1;
 			return xspeed * -1;
+			
+		case obj_enemy_met:
+			image_xscale *= -1;
+			return xspeed * -1;
 		
 		case obj_enemy_caterpillar:
 			if state = "Moving"

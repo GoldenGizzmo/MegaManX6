@@ -57,7 +57,7 @@ switch pickup_type
 		else
 		{
 			//Check all the other special weapons and fill them instead
-			for (i = 1; i < array_length(global.weapon); i++)
+			for (var i = 1; i < array_length(global.weapon); i++)
 			{
 				if global.weapon[i].ammo < global.weapon[i].ammo_max
 					refilled_weapon = global.weapon[i];
@@ -131,7 +131,7 @@ switch pickup_type
 		scr_make_sound(snd_pickup,1,1,false);
 		
 		//Increase max ammo for all special weapons
-		for (i = 0; i < 9; i++)
+		for (var i = 0; i < 9; i++)
 			global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 
 		break;
 		

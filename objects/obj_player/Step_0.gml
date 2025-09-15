@@ -173,7 +173,7 @@ if global.death = false and animation_lock = false
 								xspeed = dash_speed*image_xscale;
 			
 								//Dash cancel when released
-								if global.input_dash_released
+								if !global.input_dash
 									alarm[4] = 1;
 								if global.input_left and image_xscale = 1
 									alarm[4] = 1;	
@@ -363,68 +363,72 @@ if global.death = false and animation_lock = false
 				}
 			}
 			
-			//Changing weapons
-			if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
+			//If not in the weapon get room (forces the player to use the assigned weapon and prevents switching)
+			if room != rm_weapon_get
 			{
-				if global.input_swap_right_pressed //Swapping next
+				//Changing weapons
+				if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
 				{
-					for (i = 1; i < 10; i++)
+					if global.input_swap_right_pressed //Swapping next
 					{
-						if global.weapon_choice+i > array_length(global.weapon)-1 //If reaching the end of the list
+						for (var i = 1; i < 10; i++)
 						{
-							global.weapon_choice = 0; //Go back to the start (X-Buster)
-							flicker_weapon_swap = true;
-							scr_make_sound(snd_menu_move,1,1,false);
-							break;
-						}
-						else if global.weapon[global.weapon_choice+i].type != 0 //If next spot is not vacant
-						{
-							global.weapon_choice = global.weapon_choice+i; //Swap to that weapon
-							flicker_weapon_swap = true;
-							scr_make_sound(snd_menu_move,1,1,false);
-							break;
-						}
-					}
-				}
-				else if global.input_swap_left_pressed //Swapping previous
-				{
-					for (i = 1; i < 10; i++)
-					{
-						if global.weapon_choice = 0 //If using the X-Buster
-						{
-							//Go to the end of the list
-							for (a = 1; a < 10; a++)
+							if global.weapon_choice+i > array_length(global.weapon)-1 //If reaching the end of the list
 							{
-								//Check backwards for a weapon to be equipped
-								if global.weapon[array_length(global.weapon)-a] != 0
-								{
-									global.weapon_choice = array_length(global.weapon)-a-1; //Extra "-1" to skip past Giga Attacks;
-									flicker_weapon_swap = true;
-									scr_make_sound(snd_menu_move,1,1,false);
-									break;
-								}
+								global.weapon_choice = 0; //Go back to the start (X-Buster)
+								flicker_weapon_swap = true;
+								scr_make_sound(snd_menu_move,1,1,false);
+								break;
 							}
-							break;
+							else if global.weapon[global.weapon_choice+i].type != 0 //If next spot is not vacant
+							{
+								global.weapon_choice = global.weapon_choice+i; //Swap to that weapon
+								flicker_weapon_swap = true;
+								scr_make_sound(snd_menu_move,1,1,false);
+								break;
+							}
 						}
-						else if global.weapon[global.weapon_choice-i].type != 0 //If previous spot is not vacant
+					}
+					else if global.input_swap_left_pressed //Swapping previous
+					{
+						for (var i = 1; i < 10; i++)
 						{
-							global.weapon_choice = global.weapon_choice-i; //Swap to that weapon
-							flicker_weapon_swap = true;
-							scr_make_sound(snd_menu_move,1,1,false);
-							break;
+							if global.weapon_choice = 0 //If using the X-Buster
+							{
+								//Go to the end of the list
+								for (var a = 1; a < 10; a++)
+								{
+									//Check backwards for a weapon to be equipped
+									if global.weapon[array_length(global.weapon)-a] != 0
+									{
+										global.weapon_choice = array_length(global.weapon)-a-1; //Extra "-1" to skip past Giga Attacks;
+										flicker_weapon_swap = true;
+										scr_make_sound(snd_menu_move,1,1,false);
+										break;
+									}
+								}
+								break;
+							}
+							else if global.weapon[global.weapon_choice-i].type != 0 //If previous spot is not vacant
+							{
+								global.weapon_choice = global.weapon_choice-i; //Swap to that weapon
+								flicker_weapon_swap = true;
+								scr_make_sound(snd_menu_move,1,1,false);
+								break;
+							}
 						}
 					}
 				}
-			}
 			
-			//Pausing the game
-			if global.input_start_pressed and global.life > 0
-			{
-				global.pause_screen_state = 1; //Fade out in to the pause menu				
-				global.pause = true;
+				//Pausing the game
+				if global.input_start_pressed and global.life > 0
+				{
+					global.pause_screen_state = 1; //Fade out in to the pause menu				
+					global.pause = true;
 				
-				fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
-				fade.fade_speed = global.pause_screen_speed;
+					fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
+					fade.fade_speed = global.pause_screen_speed;
+				}
 			}
 		}
 	}

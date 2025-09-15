@@ -15,7 +15,8 @@ if life > 0
 		{
 			sprite_index = spr_enemy_grasshopper_death_alt;
 			if variable_instance_exists(id,"afterimage")
-				afterimage.image_blend = make_color_rgb(123,57,0);
+				if instance_exists(afterimage)
+					afterimage.image_blend = make_color_rgb(123,57,0);
 		}
 	}
 	else

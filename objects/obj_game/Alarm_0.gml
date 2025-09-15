@@ -16,7 +16,7 @@ if death_animation < 3
 		particle_offset = 11;
 	}
 		
-	for (i = 0; i < particle_amount; i++)
+	for (var i = 0; i < particle_amount; i++)
 	{
 		particle = instance_create_layer(obj_player.x,obj_player.y,"Explosions",obj_particle_animated);
 		particle.sprite_index = spr_effect_death_ring;

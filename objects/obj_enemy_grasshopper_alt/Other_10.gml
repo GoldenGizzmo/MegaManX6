@@ -3,17 +3,21 @@
 
 if state = "Attacking"
 {
-	if (xspeed < 0)
+	//Fixing not being able to lunge down slopes
+	if !place_meeting(x,y+2,obj_solid_slope)
 	{
-		//Turn at ledges
-		if !collision_rectangle(bbox_left-3+xspeed,bbox_bottom-1,bbox_left,bbox_bottom+15,obj_solid,1,0)
-			xspeed = 0;
-	}
-	else
-	{
-		//Turn at ledges
-		if !collision_rectangle(bbox_right,bbox_bottom-1,bbox_right+3+xspeed,bbox_bottom+15,obj_solid,1,0)
-			xspeed = 0;
+		if (xspeed < 0)
+		{
+			//Turn at ledges
+			if !collision_rectangle(bbox_left-3+xspeed,bbox_bottom-1,bbox_left,bbox_bottom+15,obj_solid,1,0)
+				xspeed = 0;
+		}
+		else
+		{
+			//Turn at ledges
+			if !collision_rectangle(bbox_right,bbox_bottom-1,bbox_right+3+xspeed,bbox_bottom+15,obj_solid,1,0)
+				xspeed = 0;
+		}
 	}
 }
 else

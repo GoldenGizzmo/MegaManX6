@@ -3,10 +3,10 @@
 
 if slope = false
 {
-	for (i = 0; i < image_xscale; i++)
+	for (var i = 0; i < image_xscale; i++)
 	{
 		draw_sprite(spr_solid_block,0,x+(16*i),y);
-		for (a = 0; a < image_yscale; a++)
+		for (var a = 0; a < image_yscale; a++)
 			draw_sprite(spr_solid_block,0,x+(16*i),y+(16*a));
 	}
 }

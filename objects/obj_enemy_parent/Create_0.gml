@@ -28,6 +28,7 @@ drop_pickup = true;
 
 sprite_start = sprite_index;
 image_index = 0;
+animation_ended = false;
 
 event_user(3);
 

@@ -10,6 +10,7 @@ if global.current_level != room
 	switch (room)
 	{
 		case rm_yammark: instance_create_depth(0,0,0,obj_cutscene_amazon_intro); break;
+		case rm_weapon_get: instance_create_depth(0,0,0,obj_cutscene_weapon_get); break;
 		default: instance_create_depth(0,0,0,obj_cutscene_level_start);	break
 	}
 }
@@ -22,7 +23,7 @@ else
 
 global.life = global.lifemax;
 global.weapon_choice = 0;
-for (i = 0; i < 9; i++)
+for (var i = 0; i < 9; i++)
 {
 	if global.powertank > 0
 		global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 

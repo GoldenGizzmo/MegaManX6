@@ -82,7 +82,7 @@ else
 			var y_range = random_range(-range,range);
 			instance_create_layer(x+x_range,y+y_range,"Explosions",obj_explosion);
 		}
-		for (i = 0; i < 4; i++)
+		for (var i = 0; i < 4; i++)
 		{
 			debris = instance_create_layer(x,y,"Explosions",obj_particle_debris)
 			debris.sprite_index = spr_enemy_grasshopper_debris;

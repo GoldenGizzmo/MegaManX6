@@ -99,7 +99,7 @@ switch (state)
 		state++;
 		alarm[0] = 10;
 	
-		for (i = 0; i < 3; i++)
+		for (var i = 0; i < 3; i++)
 		{
 			var _direction, _x, _y;
 			var range = 600;

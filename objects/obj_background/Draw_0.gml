@@ -1,4 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_sprite_tiled_ext(background,0,lerp(0,camera_get_view_x(view_camera[0])-(global.view_width/2),0.8),camera_get_view_y(view_camera[0]),1,1,c_white,1);
+if room = rm_weapon_get
+{
+	var menu_colour = bg_colour;
+	
+	draw_sprite_ext(spr_white_space,0,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),room_width,room_height,0,menu_colour,bg_alpha)
+	draw_sprite_ext(spr_white_space,0,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),room_width,room_height,0,c_black,bg_alpha/2)
+	
+	draw_sprite_ext(spr_pause_gradient,0,camera_get_view_x(view_camera[0])+global.view_width/2,camera_get_view_y(view_camera[0])+global.view_height/2,2,1,0,c_white,bg_alpha);
+	draw_sprite_ext(spr_pause_gradient,0,camera_get_view_x(view_camera[0])+global.view_width/2,camera_get_view_y(view_camera[0])+global.view_height/2,2,-1,0,c_white,bg_alpha);
+	
+	gpu_set_blendmode(bm_add)
+	draw_sprite_tiled_ext(spr_pause_grid,0,global.animate/4,global.animate/4,0.5,0.5,menu_colour,bg_alpha/3);
+	gpu_set_blendmode(bm_normal)
+}
+else
+	draw_sprite_tiled_ext(background,0,lerp(0,camera_get_view_x(view_camera[0])-(global.view_width/2),0.8),camera_get_view_y(view_camera[0]),1,1,c_white,1);

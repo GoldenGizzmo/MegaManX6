@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.42648527,
+  "duration":0.29750568,
   "name":"snd_text_open",
   "parent":{
     "name":"Miscellaneous",

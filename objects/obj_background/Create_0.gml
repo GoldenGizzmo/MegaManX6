@@ -1,7 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-background = spr_bg_yammark_temples;
+background = 0;
+switch (room)
+{
+	case rm_yammark: background = spr_bg_yammark_temples; break;
+}
+
+bg_colour = c_grey;
+bg_alpha = 1;
+
 ambience = "Level";
 ambience_changed = false;
 

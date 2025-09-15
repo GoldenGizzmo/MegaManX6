@@ -6,7 +6,7 @@ var safe_zone = random_range(-zone_size,zone_size-safe_zone_size);
 
 //Number of bombs based on the amount of drones
 var count = instance_number(obj_boss_yanma_option);
-for (a = 0; a < count; a++)
+for (var a = 0; a < count; a++)
 {
 	//Has a safe zone where no bombs can drop
 	var bullet_x = safe_zone+1;

@@ -6,7 +6,7 @@ event_inherited();
 
 life = 2;
 bullet_damage = 2;
-expiry = 60*30; //Last for 30 seconds
+expiry = 60*20; //Last for 20 seconds
 
 target = obj_player;
 orbit = 30; // Orbit distance

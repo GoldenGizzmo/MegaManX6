@@ -13,3 +13,7 @@ if life > 0
 	draw_sprite_ext(wing_sprite,global.animate/2,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
 }
 event_inherited();
+/*
+draw_set_font(global.fnt_game)
+draw_text(x,y-40,"Alarm 0 : "+string(alarm[0]));
+draw_text(x,y-30,"Alarm 1 : "+string(alarm[1]));

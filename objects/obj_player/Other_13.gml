@@ -58,17 +58,19 @@ switch (global.weapon[global.weapon_choice].type)
 		break;
 		
 	case "Yanma Option":
-		if global.input_special_pressed
+		if global.input_special_pressed and global.weapon[global.weapon_choice].ammo > 0
 		{
-			var count = instance_number(obj_player_yanma)+2
+			var count = instance_number(obj_player_yanma)+1
 			if count > 6
 				count = 6;
+			if count < 3
+				count = 3;
 	
 			//Removes existing
 			instance_destroy(obj_player_yanma,false);
 		
 			//Spawn drones
-			for (a = 0; a < count; a++)
+			for (var a = 0; a < count; a++)
 			{
 				spawn = instance_create_depth(x,y,depth-1,obj_player_yanma);
 				spawn.orbit_angle = 0+((360/count)*a);
@@ -96,7 +98,7 @@ switch (global.weapon[global.weapon_choice].type)
 		break;
 	
 	case "Ray Arrow":
-		if global.input_special_pressed
+		if global.input_special_pressed and global.weapon[global.weapon_choice].ammo > 0
 		{
 			var bullet_limit = 2;
 			with obj_bullet_default

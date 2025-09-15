@@ -40,18 +40,24 @@ global.pause_delay = 0;
 global.pause_screen = false;
 global.pause_screen_state = 0;
 global.pause_screen_speed = 0.1;
+global.pause_menu = "Paused";
+global.pause_menu_sub = "Options";
 pause_animate = 0;
 tank_animate = 0;
 tank_filling = -1;
 tank_filling_full = false;
 unpause = false;
 menu_description = "Nothing";
+key_select = false;
 
 menu_state = "Weapons";
 menu_position = 0;
 menu_tank[0] = global.subtank_1;
 menu_tank[1] = global.subtank_2;
 menu_tank[2] = global.weapontank;
+
+text_scrolling = 0;
+text_change = 0;
 
 blink = 0;
 alarm[0] = 1;

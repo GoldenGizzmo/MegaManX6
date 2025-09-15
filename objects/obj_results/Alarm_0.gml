@@ -85,7 +85,15 @@ switch (state)
 		break;
 		
 	case 6:
+		state++;
+		alarm[0] = 1;
+	
 		fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
 		fade.fade_speed = 0.015;
+		break;
+		
+	case 7:
+		if fade.alpha >= 1
+			room_goto(rm_yammark);
 		break;
 }

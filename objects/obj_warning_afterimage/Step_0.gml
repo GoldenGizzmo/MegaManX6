@@ -6,7 +6,7 @@ if global.pause = true
 	return;
 
 image_alpha -= fade_speed;
-if image_alpha = 0
+if image_alpha <= 0
 	instance_destroy();
 
 

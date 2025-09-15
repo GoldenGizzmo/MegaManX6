@@ -9,7 +9,7 @@ actor.sprite_index = spr_actor_yammark;
 actor.image_angle = -30;
 
 var count = 3;
-for (a = 0; a < count; a++)
+for (var a = 0; a < count; a++)
 {
 	spawn = instance_create_depth(actor.x,actor.y,actor.depth-1,obj_boss_yanma_option);
 	spawn.orbit = 0;
