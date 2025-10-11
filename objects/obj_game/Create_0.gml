@@ -37,9 +37,9 @@ fade.fade_speed = 0.01;
 spawning_start = false; //Slight delay to mechanics to allow everything to load in
 alarm[1] = 30;
 
-
-/*
-
-C1 = layer_get_id("Water");
-layer_script_begin(C1,scr_water_start);
-layer_script_end(C1,scr_water_end);
+if room = rm_turtloid
+{
+	C1 = layer_get_id("Water");
+	layer_script_begin(C1,scr_water_start);
+	layer_script_end(C1,scr_water_end);
+}

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":-1.0,
+  "duration":105.14401,
   "name":"snd_ambience_watercave",
   "parent":{
     "name":"Ambience",

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":167.49821,
+  "duration":91.97134,
   "name":"snd_music_yammark",
   "parent":{
     "name":"Music",

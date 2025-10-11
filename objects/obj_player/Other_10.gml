@@ -1,8 +1,13 @@
-/// @description Insert description here
+/// @description Player sprites
 // You can write your code in this editor
 
 if animation_lock = true
 	exit;
+
+
+spr_manager.update();
+
+/*
 
 var loop = false;
 var reset = true;

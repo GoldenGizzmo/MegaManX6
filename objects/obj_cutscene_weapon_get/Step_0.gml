@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+weapon = global.give_weapon;
+
 if action > 0
 {
 	portrait_x += ((display_get_gui_width()/2+90*global.ui_scale)-portrait_x)*0.05;

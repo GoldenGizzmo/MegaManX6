@@ -18,8 +18,9 @@ melee_frames = 0;
 
 expiry = -1;
 breakable = false;
+armour = false; //Can block bullets
 
-
+despawn = true;
 
 
 

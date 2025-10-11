@@ -37,7 +37,16 @@ switch (action)
 					x_colour = 1; 
 					global.weapon_choice = 1;
 					break;
+					
+				case "Meteor Rain": 
+					x_colour = 2; 
+					global.weapon_choice = 6;
+					
+					obj_player.y += 500; //Move to a different testing room
+					
+					break;
 			}
+			obj_camera.y = obj_player.y;
 			
 			//Change background colour
 			particle_lines_colour = weapon_ammo_colour;

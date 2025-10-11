@@ -16,4 +16,11 @@ if room = rm_weapon_get
 	gpu_set_blendmode(bm_normal)
 }
 else
+{
 	draw_sprite_tiled_ext(background,0,lerp(0,camera_get_view_x(view_camera[0])-(global.view_width/2),0.8),camera_get_view_y(view_camera[0]),1,1,c_white,1);
+	
+	if instance_exists(obj_acid_rain)
+		draw_sprite_ext(spr_white_space,0,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),room_width,room_height,0,c_black,obj_acid_rain.rain_alpha)
+	if instance_exists(obj_bullet_meteor_rain_charged)
+		draw_sprite_ext(spr_white_space,0,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),room_width,room_height,0,c_black,obj_bullet_meteor_rain_charged.rain_alpha)
+}

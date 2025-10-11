@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Hazards/Enemies.yy",
+    "name":"Nightmare Virus",
+    "path":"folders/Sprites/Hazards/Enemies/Nightmare Virus.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

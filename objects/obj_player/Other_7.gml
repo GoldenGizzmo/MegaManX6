@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+spr_manager.animation_end();
+
+
+/*
+
 if sprite_index = spr_player_x_idle_saber or sprite_index = spr_player_x_jump_saber or sprite_index = spr_player_x_walljump_saber
 {
 	image_index = -1;

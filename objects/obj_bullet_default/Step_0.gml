@@ -13,7 +13,7 @@ if expiry != -1
 		alarm[9] = 1;
 }
 
-if !place_meeting(x,y,obj_spawnzone)
+if !place_meeting(x,y,obj_spawnzone) and despawn = true
 	alarm[9] = 1;
 
 

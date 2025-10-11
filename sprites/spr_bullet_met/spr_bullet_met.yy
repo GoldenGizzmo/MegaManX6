@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Bullet",
-    "path":"folders/Objects/Bullet.yy",
+    "path":"folders/Sprites/Bullet.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

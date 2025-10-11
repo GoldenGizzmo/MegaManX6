@@ -4,6 +4,7 @@
 event_inherited();
 
 life = 10;
+lifemax = life;
 damage = 30;
 resistance = 1;
 
@@ -28,6 +29,8 @@ drop_pickup = true;
 
 sprite_start = sprite_index;
 image_index = 0;
+image_angle = 0;
+image_speed = 1;
 animation_ended = false;
 
 event_user(3);

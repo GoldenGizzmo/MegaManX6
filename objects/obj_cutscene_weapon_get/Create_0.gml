@@ -33,7 +33,7 @@ ending = false;
 text_scrolling = 0;
 text_counting = 0;
 
-intro_bg = instance_create_layer(0,0,0,obj_background);
+intro_bg = instance_create_depth(0,0,0,obj_background);
 intro_bg.depth = layer_get_depth(layer_get_id("Explosions"));
 
 //QWERTYUIOPASDFGHJKLZXCVBNM

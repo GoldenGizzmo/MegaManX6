@@ -12,8 +12,8 @@
   "duration":0.45716554,
   "name":"snd_yammark_talk_shoot",
   "parent":{
-    "name":"Commander-Yammark",
-    "path":"folders/Sounds/Commander-Yammark.yy",
+    "name":"Voice Lines",
+    "path":"folders/Sounds/Commander-Yammark/Voice Lines.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

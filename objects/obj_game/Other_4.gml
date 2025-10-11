@@ -5,11 +5,12 @@
 if global.current_level != room
 {
 	global.current_level = room;
-	
+
 	//Play cutscene
 	switch (room)
 	{
 		case rm_yammark: instance_create_depth(0,0,0,obj_cutscene_amazon_intro); break;
+		case rm_turtloid: instance_create_depth(0,0,0,obj_cutscene_temple_intro); break;
 		case rm_weapon_get: instance_create_depth(0,0,0,obj_cutscene_weapon_get); break;
 		default: instance_create_depth(0,0,0,obj_cutscene_level_start);	break
 	}

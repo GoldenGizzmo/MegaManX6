@@ -17,6 +17,8 @@ auto_pickup = "Off";
 
 save_pickup = false;
 
+hover_point = ystart;
+hover_delay = irandom(500);
 
 
 

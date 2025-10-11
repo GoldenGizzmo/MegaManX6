@@ -14,7 +14,6 @@ if pickup_type >= 2 and pickup_type <= 6
 switch pickup_type
 {
 	case 0:
-		var subtank_fill = 0;	
 		if global.life < global.lifemax
 		{
 			global.pause = true;
@@ -68,6 +67,14 @@ switch pickup_type
 		if refilled_weapon != 0
 		{
 			scr_make_sound(snd_weapon_tank,1,1,false);
+			
+			//Fill a percentage amount of ammo
+			if sprite_index = spr_pickup_energy_small
+				pickup_power = ceil(refilled_weapon.ammo_max/5); //Refill 20%
+			else if sprite_index = spr_pickup_energy_mid
+				pickup_power = ceil(refilled_weapon.ammo_max/2); //Refill 50% 
+				
+			//Refill
 			if refilled_weapon.ammo+pickup_power < refilled_weapon.ammo_max
 				refilled_weapon.ammo += pickup_power;
 			else 

@@ -48,6 +48,56 @@ function scr_get_dialogue()
 			text[19] = "FORMATION: RETURN!"
 			break;
 			
+		case "X vs Turtloid": 
+			left_character = player;
+			right_character = "Turtloid";
+
+			if page = 0 {speaking_is_right = true;} //Switch speaker
+			text[0] = "I was one of the few reploids authorized to enter and explore restricted 'Level A' pollution zones"
+			text[1] = "My shell was designed to withstand even the harshest of acid rain"	
+			
+			if page = 2 {speaking_is_right = false;} //Switch speaker
+			text[2] = "We could use your help with the Eurasia Crashsite"
+			text[3] = "Your design is a gift"
+			text[4] = "And I would really appreciate it if you helped us repair the devistated land"
+			
+			if page = 5 {speaking_is_right = true;} //Switch speaker
+			text[5] = "A gift?"
+			text[6] = "If that's the case..."
+			text[7] = "Why was my creator punished when he refused to weaken my defensive capabilities?"
+			text[8] = "They were punished all because of me and my 'gift'"
+			text[9] = "I couldn't live with myself knowing how much shame I brought to everyone around me"
+			text[10] = "So I lived no more..."
+			
+			if page = 11 {speaking_is_right = false;} //Switch speaker
+			text[11] = "But now you're back"
+			text[12] = "Things can be different now."
+			text[13] = "You and I can stop this nightmare together"
+			
+			if page = 14 {speaking_is_right = true;} //Switch speaker
+			text[14] = "I..."
+			break;
+			
+		case "X vs Turtloid 2":
+			left_character = player;
+			right_character = "Turtloid";
+
+			if page = 0 {speaking_is_right = true;} //Switch speaker
+			text[0] = "No..."
+			text[1] = "I've heard so many stories about a maverick hunter whose compassion knew no bounds"	
+			text[2] = "I didn’t expect to finally meet him, not here"
+			text[3] = "Seems my respect was well placed"
+			text[4] = "But it is my duty to prove my loyalty to my creator who has rebuilt me despite everything"
+			text[5] = "He forgives me for my gift"
+			
+			scr_get_character(right_character);
+			if page = 6 {speaking_is_right = false;} //Switch speaker
+			text[6] = character_name+", I don’t want to fight you!"
+			
+			if page = 7 {speaking_is_right = true;} //Switch speaker
+			text[7] = "You have no choice but to surpass my gift"
+			break;
+			
 		case "Blade Armour Leg Part":
 			left_character = player;
 			right_character = "Dr. Light";
@@ -133,6 +183,51 @@ function scr_get_dialogue()
 			scr_get_character("Yammark");
 			text[0] = "I've spotted "+character_name+"!"
 			text[1] = "Engaging in pursuit"
+			break;
+			
+		case "Inami Temple Intro":
+			left_character = player;
+			right_character = "Alia";
+			
+			if page = 0 {speaking_is_right = true;} //Switch speaker
+			text[0] = "You should now be near the Inami Temple"
+			scr_get_character("Turtloid");
+			text[1] = "It's an important cultural asset that's been devastated by the Colony Crash" 
+			text[2] = "The investigation into this area is being led by "+character_name
+			
+			if page = 3 {speaking_is_right = false;} //Switch speaker
+			text[3] = "How tragic..."
+			text[4] = "This place is completely flooded with polluted water"
+			
+			if page = 5 {speaking_is_right = true;} //Switch speaker
+			text[5] = "After the Crash, a repair team attempted to set up Weather Analysis machines to keep the site protected from further harm"
+			break;	
+		case "Inami Temple Intro: Raining":
+			left_character = player;
+			right_character = "Alia";
+			
+			if page = 0 {speaking_is_right = false;} //Switch speaker
+			text[0] = "...?"
+			text[1] = "It just starting raining out of nowhere"
+			
+			if page = 2 {speaking_is_right = true;} //Switch speaker
+			text[2] = "looks like they had little luck with the machines..."
+			
+			if page = 3 {speaking_is_right = false;} //Switch speaker
+			text[3] = "...!"
+			text[4] = "Alia, this isn't normal rain!"
+			text[5] = "It's Acid Rain!"
+			
+			if page = 6 {speaking_is_right = true;} //Switch speaker
+			text[6] = "Acid Rain?"
+			text[7] = "But I'm not detecting any weather in that area?"
+			text[8] = "The nightmare must have caused the Weather Analysis machines to go berserk!"
+			text[9] = "I'll get you of there"
+			
+			if page = 10 {speaking_is_right = false;} //Switch speaker
+			text[10] = "No, it's okay!"
+			text[11] = "As long as I keep myself repaired-"
+			text[12] = "I'll be able to destroy those infected machines and clear the area of the nightmare"
 			break;
 	}
 }

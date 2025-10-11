@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_turtloid_thunder",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":15.000091,
+  "name":"snd_turtloid_thunder",
+  "parent":{
+    "name":"Rainy-Turtloid",
+    "path":"folders/Sounds/Rainy-Turtloid.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_turtloid_thunder.mp3",
+  "type":1,
+  "volume":1.0,
+}

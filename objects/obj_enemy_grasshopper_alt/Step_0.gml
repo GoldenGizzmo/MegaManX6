@@ -21,6 +21,7 @@ if life > 0
 	}
 	else
 	{
+		if airborne = false
 		event_user(0);
 			
 		if state = "Roaming"

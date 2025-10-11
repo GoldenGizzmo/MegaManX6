@@ -14,6 +14,7 @@ if global.music != "Off" //If turned on
 		switch (room)
 		{
 			case rm_yammark: global.music = snd_music_yammark; break;
+			case rm_turtloid: global.music = snd_music_turtloid; break;
 			case rm_weapon_get: global.music = snd_music_weapon_get; break;
 			default: global.music = "Off"; return;
 		}

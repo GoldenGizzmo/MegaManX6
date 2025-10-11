@@ -77,8 +77,6 @@ switch (sprite_index)
 		pickup_power = 2;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
-			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(140,8,26);
 		break;
 	case spr_pickup_soul_mid:
@@ -86,8 +84,6 @@ switch (sprite_index)
 		pickup_power = 5;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
-			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(8,8,140);
 		break;
 	case spr_pickup_soul_large:
@@ -95,8 +91,6 @@ switch (sprite_index)
 		pickup_power = 500;
 		animation_falling = 999;
 		animation_sitting = 0;
-		if afterimage_colour = c_white and auto_pickup = "Off" //Lock to happen once
-			vspeed = -1/8;
 		afterimage_colour = make_color_rgb(0,48,16);
 		pickup_expiry = -1; //Doesn't expire
 		if large_soul_state = 0
@@ -165,11 +159,19 @@ else
 	
 	if large_soul_state < 2
 	{
-		//Float up and down
-		if (y > ystart)
-			vspeed -= 0.0025;
-		else if (y < ystart)
-			vspeed += 0.0025;
+		//If moving, slow down before hovering
+		if speed > 0
+		{
+			speed -= 0.1;
+			//Set new hover point when stopping
+			if speed <= 0 
+			{
+				speed = 0;
+				hover_point = y;
+			}
+		}
+		else
+			y = hover_point+dsin((current_time+hover_delay)*0.2)*2;
 	}
 	
 	//Large soul

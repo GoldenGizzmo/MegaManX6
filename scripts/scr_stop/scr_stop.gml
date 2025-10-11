@@ -54,6 +54,10 @@ function scr_stop_wall(spd, col = obj_solid){
 			image_xscale *= -1;
 			return xspeed * -1;
 			
+		case obj_enemy_dozer:
+			image_xscale *= -1;
+			return xspeed * -1;
+			
 		case obj_enemy_met:
 			image_xscale *= -1;
 			return xspeed * -1;

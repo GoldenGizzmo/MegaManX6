@@ -15,6 +15,7 @@ function scr_make_sound(sound,volume,pitch,loop)
 		
 		case snd_player_x_charge_fadeout: volume *= 0.75; break;
 		case snd_player_x_landing: volume *= 0.75; break;
+		case snd_shoot_meteorrain: volume *= 0.75; break;
 		
 		case snd_worm: volume *= 0.5; break;
 		case snd_worm_shoot: volume *= 0.5; break;
@@ -37,6 +38,10 @@ function scr_make_sound(sound,volume,pitch,loop)
 		case snd_grasshopper_swipe: volume *= 1.25; break;
 		
 		case snd_yammark_talk_there: volume *= 1.5; break;
+		
+		case snd_turtloid_talk_heavenswrath: volume *= 2; break;
+		case snd_turtloid_talk_itsover: volume *= 2; break;
+		case snd_turtloid_talk_prepareyourself: volume *= 2; break;
 		
 		
 		//Ambience Management

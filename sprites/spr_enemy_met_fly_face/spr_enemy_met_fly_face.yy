@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Hazards/Enemies.yy",
+    "name":"Met",
+    "path":"folders/Sprites/Hazards/Enemies/Met.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

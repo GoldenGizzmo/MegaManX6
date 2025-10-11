@@ -25,3 +25,7 @@ audio_group_set_gain(audiogroup_music,global.volume_music*global.volume_master,0
 global.rescue_count = ds_list_size(global.rescue_list);
 
 global.playtime++;
+
+//Get out of title screen to set up manager object
+if room = rm_title
+	room_goto_next();

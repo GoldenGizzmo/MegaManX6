@@ -12,15 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"0f39ea8b-1bfa-4be4-b0ea-0394bd86b5ca","name":"0f39ea8b-1bfa-4be4-b0ea-0394bd86b5ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"78918ec0-f36e-4880-8261-de12ed1baea7","name":"78918ec0-f36e-4880-8261-de12ed1baea7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"8e74a738-34b2-4a32-9944-5c67a162517d","name":"8e74a738-34b2-4a32-9944-5c67a162517d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"777b73d0-3875-4da1-ba5b-240b72c059fa","name":"777b73d0-3875-4da1-ba5b-240b72c059fa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"b193d9d2-e9cc-40d3-b0df-96977744314a","name":"b193d9d2-e9cc-40d3-b0df-96977744314a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":847,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"eacb2862-5055-40d6-8c24-67ef7b54da80","blendMode":0,"displayName":"default","isLocked":false,"name":"eacb2862-5055-40d6-8c24-67ef7b54da80","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"18d10313-15c1-4d22-9c23-d4e856bbabac","blendMode":0,"displayName":"default","isLocked":false,"name":"18d10313-15c1-4d22-9c23-d4e856bbabac","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_portrait_x",
   "nineSlice":null,
@@ -50,7 +51,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":2.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -72,11 +73,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0f39ea8b-1bfa-4be4-b0ea-0394bd86b5ca","path":"sprites/spr_portrait_x/spr_portrait_x.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"25390fe5-0616-4075-a676-31406dfc2a33","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e74a738-34b2-4a32-9944-5c67a162517d","path":"sprites/spr_portrait_x/spr_portrait_x.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"feea6c80-b205-4a4b-ab2f-ae6674012319","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"78918ec0-f36e-4880-8261-de12ed1baea7","path":"sprites/spr_portrait_x/spr_portrait_x.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"19710c57-a1c1-4641-826c-139aba2c32b6","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"777b73d0-3875-4da1-ba5b-240b72c059fa","path":"sprites/spr_portrait_x/spr_portrait_x.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"dae5cc71-6f84-4683-9268-f90e3401042c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b193d9d2-e9cc-40d3-b0df-96977744314a","path":"sprites/spr_portrait_x/spr_portrait_x.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"22c32892-8411-492d-b5aa-a95f7ac06d66","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -4,6 +4,14 @@
 // Inherit the parent event
 event_inherited();
 
+if global.pause_screen = true
+	audio_stop_sound(snd_yammark_wings);
+
+if global.pause = true
+	return;
+
+
+
 //Being openning appearance
 if state = "Appearance" and action = 0
 {

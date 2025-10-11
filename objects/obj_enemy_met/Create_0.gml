@@ -11,7 +11,15 @@ bullet_damage = 2;
 
 state = "Moving";
 action = 0;
-alarm[0] = 1;
+weight = 0.1;
 
-animation_ended = false;
+//Only walk around in the weapon get screen
+if room != rm_weapon_get
+	alarm[0] = 1;
+
+aggro_range = 80;
 event_user(3); //Face player
+
+shielding = false;
+guard_break = false;
+

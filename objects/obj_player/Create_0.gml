@@ -69,3 +69,6 @@ depth -= 10; //Draw above other enemies
 
 
 
+spr_manager = new sprite_manager(id)
+
+scr_setup_player_sprites()

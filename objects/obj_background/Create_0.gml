@@ -4,7 +4,9 @@
 background = 0;
 switch (room)
 {
+	case rm_intro: background = spr_bg_intro_crash; break;
 	case rm_yammark: background = spr_bg_yammark_temples; break;
+	case rm_turtloid: background = spr_bg_turtloid; break;
 }
 
 bg_colour = c_grey;

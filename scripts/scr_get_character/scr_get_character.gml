@@ -22,6 +22,13 @@ function scr_get_character(character)
 			mugshot_talk = 0;
 			break;
 			
+		case "Turtloid":
+			character_colour = make_color_rgb(255,24,48);
+			character_name = "Rainy Turtloid"; //If I were to change the name
+			mugshot = spr_mugshot_turtloid;
+			mugshot_talk = spr_mugshot_turtloid_talk;
+			break;
+			
 		case "Dr. Light":
 			character_colour = make_color_rgb(171,232,255);
 			mugshot = spr_mugshot_drlight;

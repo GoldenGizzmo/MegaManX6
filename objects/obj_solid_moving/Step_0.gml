@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if global.pause = true
+	return
 	
 var obj = instance_place(x, y, obj_direction)
 	
@@ -41,12 +43,16 @@ var _x = x;
 var _y = y;
 
 
+exhaust = spr_platform_exhaust;
 if(axis == AXIS_HORIZONTAL){
 	x += spd;
 }
 else
 {
 	y += spd;
+	
+	if spd < 0
+		exhaust = spr_platform_exhaust_big;
 }
 
 

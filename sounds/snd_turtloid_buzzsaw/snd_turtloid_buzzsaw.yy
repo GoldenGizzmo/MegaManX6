@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_turtloid_buzzsaw",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.38759637,
+  "name":"snd_turtloid_buzzsaw",
+  "parent":{
+    "name":"Rainy-Turtloid",
+    "path":"folders/Sounds/Rainy-Turtloid.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_turtloid_buzzsaw.wav",
+  "type":1,
+  "volume":1.0,
+}

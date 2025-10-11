@@ -10,8 +10,21 @@
 #macro SLOPE_SPEED_FACTOR 1 //The factor the player speed should be multiplied by when going up a slope
 //Sqrt(2) works for 45º angles, as it reduces the diagonal speed to be the same as the hspd/vspd.
 
+#macro PLAYER_BASE_IMAGE_SPEED 0.5
+
 enum dynamic_type {
 	base,
 	player,
 	grasshopper_alt
+}
+
+enum animation_sync_type {
+	base,
+	match_image,
+	override
+}
+
+enum sprite_loop_type {
+	base,
+	no_loop
 }

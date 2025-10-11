@@ -4,7 +4,7 @@
 open_state = 0;
 image_speed = 0;
 
-boundary = instance_create_layer(x,y,"Collision",obj_solid)
+boundary = instance_create_layer(x+1,y,"Collision",obj_solid)
 boundary.image_xscale = 2; 
 boundary.image_yscale = 4;
 

@@ -46,16 +46,29 @@ if life > 0
 					break;
 					
 				case 1:
-					if shoot < shoot_max
+					if distance_to_object(obj_player) < aggro_range+60 //If still in aggro range
 					{
-						alarm[0] = 60;
-						shoot++;
+						if shoot < shoot_max 
+						{
+							alarm[0] = 60;
+							shoot++;
 						
-						event_user(10);
+							event_user(10);
+						}
+						else
+						{
+							alarm[0] = 120;
+							action = 0;
+							shoot = 0;
+							state = "Follow"
+						
+							sprite_index = spr_enemy_nightmare;
+						}
 					}
 					else
 					{
-						alarm[0] = 120;
+						//If out of range, pursue
+						alarm[0] = 30;
 						action = 0;
 						shoot = 0;
 						state = "Follow"

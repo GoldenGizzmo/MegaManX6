@@ -67,9 +67,17 @@ switch (bossfight_state)
 		alarm[0] = 10;
 	
 		if dialogue != 0 and global.seen_boss_cutscene != boss
-		{
-			conversation = instance_create_depth(0,0,0,obj_dialogue);
-			conversation.dialogue = dialogue;
+		{ 
+			if boss != obj_boss_turtloid
+			{
+				conversation = instance_create_depth(0,0,0,obj_dialogue);
+				conversation.dialogue = dialogue;
+			}
+			else
+			{
+				instance_create_depth(0,0,0,obj_cutscene_temple_boss);
+				alarm[0] = -1;
+			}
 			
 			//Only see this dialogue once
 			global.seen_boss_cutscene = boss;

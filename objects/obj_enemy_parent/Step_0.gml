@@ -38,6 +38,8 @@ if respawn = true
 		//Enemies that aren't killed and recreated are instead moved their original position and sprite
 		sprite_index = sprite_start;
 		speed = 0;
+		image_angle = 0;
+		direction = 0;
 		event_perform(ev_create,0); //Respawn
 	}
 }

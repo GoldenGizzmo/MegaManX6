@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_turtloid_grunt",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.57151926,
+  "name":"snd_turtloid_grunt",
+  "parent":{
+    "name":"Rainy-Turtloid",
+    "path":"folders/Sounds/Rainy-Turtloid.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_turtloid_grunt.ogg",
+  "type":1,
+  "volume":1.0,
+}

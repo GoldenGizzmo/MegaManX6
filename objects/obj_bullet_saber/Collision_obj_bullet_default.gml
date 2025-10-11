@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-if villainy != other.villainy and other.breakable = true
+if villainy != other.villainy and other.breakable = true and other.armour = false
 {
 	global.pause_delay = 5;
 	global.pause = true;

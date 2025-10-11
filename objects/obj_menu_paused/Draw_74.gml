@@ -207,14 +207,14 @@ if global.pause_screen = true
 			//Heading
 			draw_set_font(global.fnt_larger);
 				draw_set_halign(fa_center);
-					draw_text_transformed_color(display_get_gui_width()/2,0+(40*global.ui_scale),string_upper(global.pause_menu_sub),global.ui_scale,global.ui_scale,0,c_white,c_white,c_white,c_white,1);
+					draw_text_transformed_color(display_get_gui_width()/2,0+(20*global.ui_scale),string_upper(global.pause_menu_sub),global.ui_scale,global.ui_scale,0,c_white,c_white,c_white,c_white,1);
 				draw_set_halign(fa_left);
 			draw_set_font(global.fnt_game);
 			
 			if global.pause_menu_sub = "Options"
 			{
 				//Draw options
-				for (var i = 0; i < 7; i++)
+				for (var i = 0; i < 8; i++)
 				{
 					option_name = "Nothing";
 					option_choice = "Nothing";
@@ -243,11 +243,17 @@ if global.pause_screen = true
 							if global.fps_display = true
 								option_choice = "On";
 							break;
-						
 						case 5:
+							option_name = "Toggle Fullscreen";
+							option_choice = "Off";
+							if window_get_fullscreen() = true
+								option_choice = "On";
+							break;
+						
+						case 6:
 							option_name = "Restart Game";
 							break;
-						case 6:
+						case 7:
 							option_name = "Quit Game";
 							break;
 					}
@@ -257,10 +263,10 @@ if global.pause_screen = true
 				
 					//Draw option name
 					if option_name != "Nothing"
-						draw_text_transformed_color(display_get_gui_width()/2-(90*global.ui_scale),0+(70*global.ui_scale)+(18*global.ui_scale*i),option_name,global.ui_scale,global.ui_scale,0,option_select,option_select,option_select,option_select,1);
+						draw_text_transformed_color(display_get_gui_width()/2-(90*global.ui_scale),0+(50*global.ui_scale)+(18*global.ui_scale*i),option_name,global.ui_scale,global.ui_scale,0,option_select,option_select,option_select,option_select,1);
 					draw_set_halign(fa_right);
 						if option_choice != "Nothing" //Draw option setting
-							draw_text_transformed_color(display_get_gui_width()/2+(90*global.ui_scale),0+(70*global.ui_scale)+(18*global.ui_scale*i),option_choice,global.ui_scale,global.ui_scale,0,option_select,option_select,option_select,option_select,1);
+							draw_text_transformed_color(display_get_gui_width()/2+(90*global.ui_scale),0+(50*global.ui_scale)+(18*global.ui_scale*i),option_choice,global.ui_scale,global.ui_scale,0,option_select,option_select,option_select,option_select,1);
 					draw_set_halign(fa_left);
 				}
 			}

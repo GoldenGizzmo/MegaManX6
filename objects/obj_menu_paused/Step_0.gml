@@ -358,7 +358,7 @@ if global.pause = true
 				
 				case "Options":
 					#region
-					menu_length = 6;
+					menu_length = 7;
 					if global.pause_menu_sub = "Bindings"
 					{
 						if global.controller = true
@@ -449,12 +449,23 @@ if global.pause = true
 										scr_make_sound(snd_menu_select,1,1,false);
 									}
 									break;
+								case 5:
+									if global.input_jump_pressed
+									{
+										if window_get_fullscreen() = false
+											window_set_fullscreen(true);
+										else
+											window_set_fullscreen(false);		
+											
+										scr_make_sound(snd_menu_select,1,1,false);
+									}
+									break;
 						
-								case 5: //Restart game
+								case 6: //Restart game
 									if global.input_jump_pressed
 										game_restart();
 									break;
-								case 6: //Exit game
+								case 7: //Exit game
 									if global.input_jump_pressed
 										game_end();
 									break;

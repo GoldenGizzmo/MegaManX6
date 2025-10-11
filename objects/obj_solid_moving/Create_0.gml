@@ -3,9 +3,10 @@
 
 event_inherited();
 
-move_speed = 0.5;
+move_speed = 1;
 stop = true;
 alarm[0] = 60;
+exhaust = 0;
 
 speed = 0;
 

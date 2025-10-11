@@ -65,6 +65,7 @@ scr_get_character(speaking);
 
 if animation_y = 1 and finish = false
 {
+	/*
 	//Name of the speaker
 	draw_set_halign(fa_center);
 		draw_text_transformed_color(x_pos,y_pos+(8*scale),string_upper(character_name),scale,scale,0,c_white,c_white,c_white,c_white,1-animation_static);
@@ -72,8 +73,13 @@ if animation_y = 1 and finish = false
 	//Name underline
 	draw_sprite_ext(spr_dialogue_box_underline,0,x_pos-(scale*(string_width(character_name)-2)/2),y_pos+(26*scale),scale*(string_width(character_name)-3),scale,0,c_white,1-animation_static);
 	draw_sprite_ext(spr_dialogue_box_underline,1,x_pos-(scale*(string_width(character_name))/2),y_pos+(26*scale),scale,scale,0,c_white,1-animation_static);
+	draw_set_font(global.fnt_game);*/
+	//Name of the speaker
+	draw_text_transformed_color(x_pos-(120*scale),y_pos+(8*scale),string_upper(character_name),scale,scale,0,c_white,c_white,c_white,c_white,1-animation_static);
+	//Name underline
+	draw_sprite_ext(spr_dialogue_box_underline,0,x_pos-(scale*120),y_pos+(26*scale),scale*(string_width(character_name)-3),scale,0,c_white,1-animation_static);
+	draw_sprite_ext(spr_dialogue_box_underline,1,x_pos-(scale*120),y_pos+(26*scale),scale,scale,0,c_white,1-animation_static);
 	draw_set_font(global.fnt_game);
-	
 	
 	
 	if page_end > 0
@@ -108,7 +114,7 @@ if animation_y = 1 and finish = false
 			if string_length(text[page]) >= line_end
 				text_center = line_end*(9);
 				
-			var text_x = x_pos-text_center
+			var text_x = x_pos-(scale*120)
 			var text_y = y_pos+(33*scale);
 			
 			//Draw text

@@ -36,12 +36,16 @@ if other.villainy != 2 and life > 0 and other.damage > 0
 				event_user(2);
 				isHit = true;
 				alarm[9] = 5;
+				
+				scr_make_sound(snd_explosion_bullet,1,1,false);
 			} 
 			else if other.tick = true and isHit = false //Piercing or DoT projectiles
 			{
 				event_user(2);
 				isHit = true;
 				alarm[9] = 9;
+				
+				scr_make_sound(snd_explosion_bullet,1,1,false);
 			}
 		}
 		else

@@ -127,8 +127,8 @@ if shot_fired = true
 	shooting_charge = 0;
 	
 	shooting = 30;
-	if sprite_index = spr_player_x_idle_shoot
-		image_index = 0;
+	/*if sprite_index = spr_player_x_idle_shoot
+		image_index = 0;*/
 	
 	//Fire yanma option drones if not using yanma option
 	if global.weapon[global.weapon_choice].type != "Yanma Option"

@@ -9,14 +9,15 @@ global.fps_display = false;
 //Sound Variables
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_sfx);
-global.volume_master = 1; //50%
-global.volume_music = 0 //100%
-global.volume_effect = 0.1; //100%
+global.volume_master = 0.5; //50%
+global.volume_music = 1 //100%
+global.volume_effect = 1; //100%
 audio_group_set_gain(audiogroup_sfx,global.volume_effect*global.volume_master,0);
 audio_group_set_gain(audiogroup_music,global.volume_music*global.volume_master,0);
 
 current_area = noone;
 global.pause = false;
+global.pause_screen = false;
 
 global.controller = false;
 event_user(2); //Key bindings
@@ -32,10 +33,11 @@ global.weapon_choice = 0;
 for (var i = 0; i < 10; i++)
 	global.weapon[i] = {type : 0, ammo_max : 0, ammo : 0, charge_cost : 1,}; 
 	
-global.weapon[0] = {type : "X-Saber", ammo_max : -1, ammo : -1, charge_cost : -1,}; 
-global.weapon[1] = {type : "Yanma Option", ammo_max : 7, ammo : 0, charge_cost : 2,}; 
-global.weapon[6] = {type : "Meteor Rain", ammo_max : 20, ammo : 0, charge_cost : 3,}; 
-global.weapon[8] = {type : "Ray Arrow", ammo_max : 55, ammo : 0, charge_cost : 25,}; 	
+scr_weapon_get(0,"X-Saber");
+scr_weapon_get(1,"Yanma Option");
+scr_weapon_get(6,"Meteor Rain");
+
+//global.weapon[8] = {type : "Ray Arrow", ammo_max : 55, ammo : 0, charge_cost : 25,}; 	
 
 global.nightmare_souls = 0;
 global.rescue_count = 0;
@@ -69,7 +71,8 @@ global.x_armour_chest = 0;
 global.x_armour_arm = 0;
 global.x_armour_leg = 0//"Blade Leg";
 
-global.seen_boss_cutscene = 0;
-global.current_level = rm_yammark;//-1
+global.seen_boss_cutscene = -1;
+global.current_level = -1;
+global.give_weapon = "Nothing";
 
 global.playtime = 0;
