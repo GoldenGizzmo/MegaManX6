@@ -90,6 +90,11 @@ if global.death = false and animation_lock = false
 				dash_ground = true;
 				alarm[4] = dash_length;
 				
+				//Dash effect
+				effect = instance_create_layer(x-5*image_xscale,y+23,"Explosions",obj_explosion);
+				effect.sprite_index = spr_effect_dash_trail;
+				effect.image_xscale = image_xscale;
+				
 				scr_make_sound(snd_player_x_dash,1,1,false);
 			}
 			

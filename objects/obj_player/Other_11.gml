@@ -6,9 +6,9 @@ var wall_slide_reverse = 1;
 if wall_slide = true
 	wall_slide_reverse = -1;
 
-var shootpos_x = 10*image_xscale*wall_slide_reverse;
+var shootpos_x = 20*image_xscale*wall_slide_reverse;
 var shootpos_y = -7;
-if sprite_index = spr_player_x_dash_simple or sprite_index = spr_player_x_crouch
+if crouch = true
 	shootpos_y = 0;
 
 //Uncharged shots
@@ -31,6 +31,13 @@ if global.input_shoot_pressed
 		bullet.explosion_sound = snd_explosion_bullet;
 		scr_make_sound(snd_shoot_small,1,1,false);
 		
+		//Effect
+		effect = instance_create_layer(bullet.x,bullet.y,"Explosions",obj_particle_muzzle_player);
+		effect.sprite_index = spr_effect_muzzle_x;
+		effect.x_pos = shootpos_x;
+		effect.y_pos = shootpos_y;
+		effect.image_xscale = image_xscale*wall_slide_reverse;
+		
 		shot_fired = true; 
 	}
 }
@@ -52,6 +59,13 @@ if global.input_shoot_released
 		scr_make_sound(snd_shoot_large,1,1,false);
 		scr_player_voicelines("Charge Shot");
 		
+		//Effect
+		effect = instance_create_layer(bullet.x,bullet.y,"Explosions",obj_particle_muzzle_player);
+		effect.sprite_index = spr_effect_muzzle_x_charge_2;
+		effect.x_pos = shootpos_x;
+		effect.y_pos = shootpos_y;
+		effect.image_xscale = image_xscale*wall_slide_reverse;
+		
 		shot_fired = true;
 		shooting_charged = true;
 		shooting_lock = true;
@@ -67,6 +81,13 @@ if global.input_shoot_released
 		
 		bullet.explosion_sound = snd_explosion_bullet;
 		scr_make_sound(snd_shoot_mid,1,1,false);
+		
+		//Effect
+		effect = instance_create_layer(bullet.x,bullet.y,"Explosions",obj_particle_muzzle_player);
+		effect.sprite_index = spr_effect_muzzle_x_charge_1;
+		effect.x_pos = shootpos_x;
+		effect.y_pos = shootpos_y;
+		effect.image_xscale = image_xscale*wall_slide_reverse;
 		
 		shot_fired = true;
 		shooting_lock = true;

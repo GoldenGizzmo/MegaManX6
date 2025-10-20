@@ -22,6 +22,7 @@
   "height":108,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"b48fce3f-a801-45c3-b216-2836a58cc25f","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"b48fce3f-a801-45c3-b216-2836a58cc25f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"b6972f84-10e7-465c-a097-5253ec31e531","blendMode":0,"displayName":"default","isLocked":false,"name":"b6972f84-10e7-465c-a097-5253ec31e531","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_port_x_walljump",
