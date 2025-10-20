@@ -11,7 +11,6 @@ rise_turnspeed = 9;
 fall_speed = 4;
 fall_gravity = 0.1;
 
-
 phasing = true;
 piercing = true;
 tick = true;

@@ -212,7 +212,25 @@ if auto_pickup != "Off"
 	{
 		//Pursue the player at increasing speeds
 		speed += 0.1;	
-		direction = point_direction(x,y,obj_player.x,obj_player.y);
+		if soul_steal != 0 //Check if someone is stealing
+		{
+			//Fly toward them instead
+			direction = point_direction(x,y,soul_steal.x,soul_steal.y);
+			
+			//They collect
+			if place_meeting(x,y,soul_steal)
+			{
+				switch (sprite_index)
+				{
+					case spr_pickup_soul_small: scr_make_sound(snd_soul_collect,1,1.5,false); break;
+					case spr_pickup_soul_mid: scr_make_sound(snd_soul_collect,1,1,false); break;
+					case spr_pickup_soul_large: scr_make_sound(snd_soul_collect,1,0.5,false); break;
+				}
+				instance_destroy();
+			}
+		}
+		else
+			direction = point_direction(x,y,obj_player.x,obj_player.y);
 	}
 }
 

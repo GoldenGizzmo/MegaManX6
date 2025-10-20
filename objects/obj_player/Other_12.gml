@@ -33,7 +33,7 @@ if global.life > 0 and invul = false
 		dash = false;
 		hurt = true;
 		climbing = false;
-		attack_action = 0;
+		attack_action = attack_actions.none;
 		
 		//Knockback
 		yspeed = -3;

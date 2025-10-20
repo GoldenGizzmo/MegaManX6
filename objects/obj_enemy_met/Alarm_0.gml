@@ -220,6 +220,5 @@ if life > 0
 					break;
 			}
 			break;
-			break;
 	}
 }

@@ -59,6 +59,21 @@ menu_tank[2] = global.weapontank;
 text_scrolling = 0;
 text_change = 0;
 
+stageselect_state = 0;
+stageselect_entrance = 7;
+stageselect_bg_swap = 0;
+stageselect_bg_static = 0.05;
+if room = rm_stage_select
+	alarm[2] = 15; 
+stageselect[0] = {position : 0, alpha : 1.1};
+stageselect[1] = {position : 3, alpha : 1.1};
+stageselect[2] = {position : 1, alpha : 1.1};
+stageselect[3] = {position : 4, alpha : 1.1};
+stageselect[4] = {position : 6, alpha : 1.1};
+stageselect[5] = {position : 2, alpha : 1.1};
+stageselect[6] = {position : 7, alpha : 1.1};
+stageselect[7] = {position : 5, alpha : 1.1};
+
 blink = 0;
 alarm[0] = 1;
 
@@ -132,7 +147,14 @@ controller_toggle = true;
 
 
 
-
+//Pause for the stage select screen
+if room = rm_stage_select
+{
+	global.pause = true;
+	global.pause_screen = true
+	global.pause_menu = "Stage Select";
+	global.pause_screen_state = 1
+}
 
 
 

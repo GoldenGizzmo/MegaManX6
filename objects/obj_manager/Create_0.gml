@@ -10,7 +10,7 @@ global.fps_display = false;
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_sfx);
 global.volume_master = 0.5; //50%
-global.volume_music = 1 //100%
+global.volume_music = 0; //100%
 global.volume_effect = 1; //100%
 audio_group_set_gain(audiogroup_sfx,global.volume_effect*global.volume_master,0);
 audio_group_set_gain(audiogroup_music,global.volume_music*global.volume_master,0);
@@ -34,8 +34,6 @@ for (var i = 0; i < 10; i++)
 	global.weapon[i] = {type : 0, ammo_max : 0, ammo : 0, charge_cost : 1,}; 
 	
 scr_weapon_get(0,"X-Saber");
-scr_weapon_get(1,"Yanma Option");
-scr_weapon_get(6,"Meteor Rain");
 
 //global.weapon[8] = {type : "Ray Arrow", ammo_max : 55, ammo : 0, charge_cost : 25,}; 	
 
@@ -44,6 +42,7 @@ global.rescue_count = 0;
 global.rescue_max = 0;
 global.rescue_list = ds_list_create(); //Checks reploids rescued
 global.pickup_list = ds_list_create(); //Checks pickups like heart tanks and sub tanks are collected
+global.level_list = ds_list_create(); //List of levels in the game and if they're completed or not
 
 //Heart Tanks
 global.hearttank = 0;

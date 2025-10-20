@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+with obj_player
+	movement = false;
+
 switch (bossfight_state)
 {
 	case 1: //Check if the player is on the ground first
@@ -10,7 +13,8 @@ switch (bossfight_state)
 			alarm[0] = 30;
 			
 			//Turn off music
-			audio_stop_sound(global.music);
+			if global.music != "Off"
+				audio_stop_sound(global.music);
 			global.music = "Off";
 			obj_background.ambience = "Off";
 		}
@@ -27,7 +31,7 @@ switch (bossfight_state)
 		break;
 		
 	case 3: //Walk towards the boss intro
-		if !place_meeting(x,y,obj_player)
+		if (!place_meeting(x,y,obj_player) and walk = true) or walk = false
 		{
 			//Once the warning is over
 			if !instance_exists(obj_warning)
@@ -49,15 +53,22 @@ switch (bossfight_state)
 			var move_direction = run_direction;
 			with obj_player
 			{
-				animation_lock = true;
-				x += move_speed*move_direction;
-				sprite_index = spr_player_x_move_simple;
+				image_speed = 1;
+				if airborne = false
+				{
+					animation_lock = true;
+					x += move_speed*move_direction;
+					sprite_index = spr_player_x_move_simple;
+				}
+				else
+					animation_lock = false;
 			}
 		}
 		break;
 		
 	case 4: //Boss appears (Boss object has the openning code)
-		global.music = snd_music_investigator_intro;
+		if boss_theme = snd_music_investigator
+			global.music = snd_music_investigator_intro;
 		with boss
 			state = "Appearance";
 		break;
@@ -95,8 +106,9 @@ switch (bossfight_state)
 			}
 			
 			//Start music
-			audio_stop_sound(global.music);
-			global.music = snd_music_investigator;
+			if boss_theme = snd_music_investigator
+				audio_stop_sound(global.music);
+			global.music = boss_theme;
 		}
 		else
 			alarm[0] = 1;

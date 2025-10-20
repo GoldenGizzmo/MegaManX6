@@ -4,6 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
+if global.pause = true
+	return;
+
 if life > 0
 {
 	if xspeed > 0
@@ -13,10 +16,11 @@ if life > 0
 		
 	rotate -= xspeed*2;
 	
-	
-	/*
-	box.x = x-32;
-	box.y = y-32;*/
+	//If moving, deal damage
+	if xspeed < 0.1 and xspeed > -0.1 and airborne = false
+		damage = 0;
+	else
+		damage = 3;
 }
 else
 {

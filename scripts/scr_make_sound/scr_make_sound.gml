@@ -43,6 +43,9 @@ function scr_make_sound(sound,volume,pitch,loop)
 		case snd_turtloid_talk_itsover: volume *= 2; break;
 		case snd_turtloid_talk_prepareyourself: volume *= 2; break;
 		
+		case snd_highmax_talk_deathball: volume *= 2; break;
+		case snd_highmax_talk_die: volume *= 2; break;
+		case snd_highmax_talk_muda: volume *= 2; break;
 		
 		//Ambience Management
 		case snd_ambience_rainforest: volume *= 0.5; break;

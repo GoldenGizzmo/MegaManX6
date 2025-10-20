@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_polter_beam",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.62283444,
+  "name":"snd_polter_beam",
+  "parent":{
+    "name":"D1000-Intro-Stage-Boss",
+    "path":"folders/Sounds/D1000-Intro-Stage-Boss.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_polter_beam.wav",
+  "type":1,
+  "volume":1.0,
+}

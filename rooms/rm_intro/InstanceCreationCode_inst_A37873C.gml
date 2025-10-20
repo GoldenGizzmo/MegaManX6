@@ -1,0 +1,1 @@
+background = spr_bg_intro_night;

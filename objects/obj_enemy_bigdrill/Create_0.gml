@@ -6,7 +6,10 @@ event_inherited();
 
 invul = true;
 
-damage = 8;
+life = 30;
+lifemax = life;
+
+damage = 5;
 
 action = 0;
 alarm[0] = 1;
@@ -20,3 +23,4 @@ weight = 0;
 lights = "Down";
 thruster = true;
 jitter = false
+faster = false;

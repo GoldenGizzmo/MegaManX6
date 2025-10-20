@@ -14,6 +14,7 @@ if sprite_index = spr_player_x_dash_simple or sprite_index = spr_player_x_crouch
 //Uncharged shots
 if global.input_shoot_pressed
 {
+	
 	var bullet_limit = 3;
 	with obj_bullet_default
 		if sprite_index = spr_bullet_player_lemon
@@ -37,6 +38,7 @@ if global.input_shoot_pressed
 //Charge shots
 if global.input_shoot_released
 {
+	shooting_charged = false;
 	if shooting_charge > shooting_charge_lvl_2
 	{
 		bullet = instance_create_layer(x+shootpos_x+(5*image_xscale*wall_slide_reverse),y+shootpos_y,"Projectiles",obj_bullet_charged)
@@ -51,6 +53,7 @@ if global.input_shoot_released
 		scr_player_voicelines("Charge Shot");
 		
 		shot_fired = true;
+		shooting_charged = true;
 		shooting_lock = true;
 		alarm[0] = 15;
 	}

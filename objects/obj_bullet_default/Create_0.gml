@@ -22,6 +22,7 @@ armour = false; //Can block bullets
 
 despawn = true;
 
+special = false; //They are a special weapon (High Max)
 
 
 

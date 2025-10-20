@@ -45,6 +45,6 @@ if global.input_start_pressed and ending = false
 }
 if ending = true
 {
-	if fade_end.alpha >= 1
-		room_goto(rm_yammark);
+	if fade_end.alpha >= 2
+		room_goto(rm_stage_select);
 }

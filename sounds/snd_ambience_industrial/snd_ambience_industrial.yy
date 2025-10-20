@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_ambience_industrial",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":51.48,
+  "name":"snd_ambience_industrial",
+  "parent":{
+    "name":"Ambience",
+    "path":"folders/Sounds/Ambience.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_ambience_industrial.mp3",
+  "type":1,
+  "volume":1.0,
+}

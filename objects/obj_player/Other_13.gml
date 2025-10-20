@@ -14,7 +14,7 @@ if sprite_index = spr_player_x_dash_simple or sprite_index = spr_player_x_crouch
 switch (global.weapon[global.weapon_choice].type)
 {
 	case "X-Saber":
-		if global.input_special_pressed and sprite_index != spr_player_x_idle_saber and sprite_index != spr_player_x_jump_saber and sprite_index != spr_player_x_walljump_saber
+		if global.input_special_pressed and sprite_index != spr_port_x_saber and sprite_index != spr_port_x_saber_jump and sprite_index != spr_port_x_saber_walljump
 		{
 			bullet = instance_create_layer(x,y,"Projectiles",obj_bullet_saber)
 			bullet.image_xscale = image_xscale;
@@ -24,19 +24,15 @@ switch (global.weapon[global.weapon_choice].type)
 			scr_make_sound(snd_shoot_saber_x,1,1,false);
 			scr_player_voicelines("Weapon");
 
+			attack_action = attack_actions.x_saber
+
 			if wall_slide = true
 			{
-				attack_action = "X-Saber Wall";
-				
-				sprite_index = spr_player_x_walljump_saber;
 				bullet.sprite_index = spr_bullet_x_saber_wall;
 			}
 			else if airborne = false
 			{
-				attack_action = "X-Saber Standing";
 				attack_priority = 1; //Can be dash cancelled or damaged out of it
-				
-				sprite_index = spr_player_x_idle_saber;
 				bullet.sprite_index = spr_bullet_x_saber;
 				
 				xspeed = 0;
@@ -44,10 +40,7 @@ switch (global.weapon[global.weapon_choice].type)
 			}
 			else
 			{
-				attack_action = "X-Saber Jump";
 				wall_jump = false; //Funny X-Saber wall scaling tech
-				
-				sprite_index = spr_player_x_jump_saber;
 				bullet.sprite_index = spr_bullet_x_saber_jump;
 			}
 			

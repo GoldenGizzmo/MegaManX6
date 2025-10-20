@@ -13,7 +13,7 @@
   "name":"boss1_PG01_ID01",
   "parent":{
     "name":"Highmax",
-    "path":"folders/Sounds/Boss-Sounds/Highmax.yy",
+    "path":"folders/Sounds/Highmax.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

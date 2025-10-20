@@ -1,9 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if room = rm_weapon_get
+if room = rm_weapon_get or room = rm_highmax
 {
 	var menu_colour = bg_colour;
+	if room = rm_highmax
+	{
+		scr_get_character("High Max")
+		bg_colour = character_colour;
+	}
 	
 	draw_sprite_ext(spr_white_space,0,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),room_width,room_height,0,menu_colour,bg_alpha)
 	draw_sprite_ext(spr_white_space,0,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),room_width,room_height,0,c_black,bg_alpha/2)

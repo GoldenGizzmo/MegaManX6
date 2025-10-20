@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_nightmarezero_talk_thatsfarenough",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.7990476,
+  "name":"snd_nightmarezero_talk_thatsfarenough",
+  "parent":{
+    "name":"Nightmare-Zero",
+    "path":"folders/Sounds/Nightmare-Zero.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_nightmarezero_talk_thatsfarenough.ogg",
+  "type":1,
+  "volume":1.0,
+}

@@ -25,8 +25,9 @@ if open_state = 0 and ((image_xscale = 1 and obj_player.x < x) or (image_xscale 
 		image_yscale = 0;
 	}
 	
-	with obj_enemy_hostile
-		if boss = false //Bosses don't get removed
+	var check = x;
+	with obj_enemy_parent //Destroy all enemies to the left
+		if boss = false and x < check and life > 0 //Bosses don't get removed
 			instance_destroy(id,false);
 	with obj_bullet_default
 		instance_destroy(id,false);

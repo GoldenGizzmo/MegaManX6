@@ -7,6 +7,184 @@ function scr_get_dialogue()
 	
 	switch (dialogue) 
 	{
+		case "High Max Escape":
+			left_character = player;
+			right_character = "High Max";
+			
+			if page = 0 {speaking_is_right = true;} //Switch speaker
+			text[0] = "As expected...underwhelming"
+			
+			if page = 1 {speaking_is_right = false;} //Switch speaker
+			text[1] = "I didn't even inflict a dent on him"
+			text[2] = "His armor plating far exceeds anything I've ever fought before!"
+			
+			if page = 3 {speaking_is_right = true;} //Switch speaker
+			text[3] = "You're in over your head, X"
+			
+			if page = 4 {speaking_is_right = false;} //Switch speaker
+			text[4] = "You know who I am?"
+			
+			if page = 5 {speaking_is_right = true;} //Switch speaker
+			text[5] = "I'm not a fool"
+			text[6] = "You Maverick Hunters are now relics of the past"
+			text[7] = "We will clean up the mess you've made"
+			text[8] = "It is time for your long overdue retirement..."
+			
+			if page = 9 {speaking_is_right = false;} //Switch speaker
+			text[9] = "...!"
+			break;
+		case "High Max Escape 2":
+			left_character = player;
+			right_character = "Alia";
+			
+			text[0] = "Alia!"
+			text[1] = "Emergency evacuation!"
+			
+			if page = 2 {speaking_is_right = true;} //Switch speaker
+			text[2] = "On it!"
+			
+			if page = 3 {speaking_is_right = false;} //Switch speaker
+			text[3] = "Now, Alia!"
+			break;
+		case "High Max Escape 3":
+			left_character = "Nothing";
+			right_character = "High Max";
+			
+			if page = 0 {speaking_is_right = true;} //Switch speaker
+			text[0] = "The Nightmare Investigation will continue"
+			text[1] = "Those caught in the way:"
+			text[2] = "New reploids..."
+			text[3] = "Legendary reploids..."
+			text[4] = "Mavericks..."
+			text[5] = "Maverick Hunters..."
+			text[6] = "You are all beneath me...High Max"
+			break;
+
+		case "X vs High Max Intro":
+			left_character = player;
+			right_character = "High Max";
+				
+			if page = 0 {speaking_is_right = true;} //Switch speaker
+			text[0] = "Seems it has reached even here of all places..."
+			
+			if page = 1 {speaking_is_right = false;} //Switch speaker
+			text[1] = "Hold it!"
+			text[2] = "Who are you!?"
+			
+			if page = 3 {speaking_is_right = true;} //Switch speaker
+			text[3] = "Hm...?"
+			text[4] = "Did you say something to me, little robot?"
+			text[5] = "I am High Max"
+			text[6] = "And you are interfering with the investigation of the Zero Nightmare"
+			
+			if page = 7 {speaking_is_right = false;} //Switch speaker
+			text[7] = "Zero Nightmare?"
+			text[8] = "What are you talking about?"
+			text[9] = "Are you involved with that...that spectre?"
+			
+			if page = 10 {speaking_is_right = true;} //Switch speaker
+			text[10] = "Your endless questions are irritating..."
+			text[11] = "I won't give you a second warning"
+			text[12] = "Inferior bugs like yourself will be disposed of"
+			
+			//Hide High Max's name
+			if speaking_is_right = true and page < 5
+				name_hidden = true;
+			else
+				name_hidden = false;
+			break;
+		
+		case "High Max Intro":
+			left_character = player;
+			right_character = "Nothing";
+			
+			text[0] = "Damn it!"
+			text[1] = "It must've gotten away"
+			text[2] = "...?"
+			
+			if page >= 3 {right_character = "Alia";}
+			if page = 3 {speaking_is_right = true;} //Switch speaker
+			text[3] = "X!"
+			text[4] = "I've been having difficulty reaching you"
+			text[5] = "There's a massive energy signature approaching!"
+			text[6] = "Be careful!"
+			
+			if page = 7 {speaking_is_right = false;} //Switch speaker
+			text[7] = "Huh?"
+			text[8] = "Is it another mechaniloid or something like that?"
+			
+			if page = 9 {speaking_is_right = true;} //Switch speaker
+			text[9] = "The energy it's producing is huge!"
+			text[10] = "But...it's unlike anything I've ever seen"
+			text[11] = "It's..."
+			text[12] = "A reploid?"
+			break;
+		
+		case "X vs D1000":
+			left_character = player;
+			right_character = "Alia";
+			
+			text[0] = "Alia, I've located the D1000 Excavator"
+			text[1] = "It's moving around in a very strange way"
+			text[2] = "And there's this 'eye' that's been harrassing me ever since I've arrived here" 
+			
+			if page = 3 {speaking_is_right = true;} //Switch speaker
+			text[3] = "...?"
+			text[4] = "What do you mean, sorry?"
+			text[5] = "The D1000 isn't giving any energy signatures"
+			text[6] = "It's just sitting there, deactivated from what I can see"
+			text[7] = "Are you referring to something else?"
+			
+			if page = 8 {speaking_is_right = false;} //Switch speaker
+			text[8] = "W-what?"
+			text[9] = "I'll call you back when I've sorted this out"
+			if page >= 10 {right_character = "Nothing";}
+			text[10] = "..."
+			text[11] = "This 'eye' is too quick for me"
+			text[12] = "I need to destroy whatever it can use as weapon"
+			text[13] = "Though it seems the D1000 is too heavy for it's own good..."
+			break;	
+			
+		case "X vs D1000 Ending":
+			left_character = player;
+			right_character = "Nothing";
+			
+			text[0] = "You're kidding..."
+			text[1] = "At this point you'll use just about anything!"
+			break;	
+		case "X vs D1000 Ending 2":
+			left_character = player;
+			right_character = "Nothing";
+			
+			text[0] = "Z-Zero!?"
+			text[1] = "No..."
+			text[2] = "I-it can't be..."
+			text[3] = "Hey, come back!"
+			break;
+			
+		case "Intro Intro":
+			left_character = player;
+			right_character = "Alia";
+
+			if page = 0 {speaking_is_right = true;} //Switch speaker
+			text[0] = "Mechaniloids have started going maverick all around the Crash Site"
+			text[1] = "With a massive D1000 Excavator being the main threat to the clean up crew"
+			text[2] = "Once reutralized, the reparations can continue"
+			
+			if page = 3 {speaking_is_right = false;} //Switch speaker
+			text[3] = "Understood"
+			
+			if page = 4 {speaking_is_right = true;} //Switch speaker
+			text[4] = "I know you've been overworked as it's been case after case"
+			text[5] = "If you need to take a break, I can call in another team-"
+			
+			if page = 6 {speaking_is_right = false;} //Switch speaker
+			text[6] = "No, it's okay, Alia"
+			text[7] = "I had a feeling the effects of Sigma wouldn't just go away"
+			text[8] = "I've got to keep the peace, more now than ever"
+			text[9] = "Beginning mission"
+			break;
+		
 		case "X vs Yammark": 
 			left_character = player;
 			right_character = "Yammark";

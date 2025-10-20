@@ -30,6 +30,7 @@ timer = 0;
 cutoff = 0;
 text_delay = 0; //For appearance animation
 
+name_hidden = false;
 dialogue = 0;
 flash = 0;
 

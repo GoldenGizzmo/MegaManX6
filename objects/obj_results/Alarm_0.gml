@@ -89,7 +89,9 @@ switch (state)
 		alarm[0] = 1;
 		
 		//Give special weapon
-		event_user(0);		
+		event_user(0);	
+		if ds_list_find_index(global.level_list,room) = -1
+			ds_list_add(global.level_list,room);
 	
 		fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
 		fade.fade_speed = 0.015;

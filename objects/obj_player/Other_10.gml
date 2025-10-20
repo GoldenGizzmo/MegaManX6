@@ -20,7 +20,7 @@ if hurt = false
 	{
 		if wall_slide = true
 		{
-			if attack_action = "X-Saber Wall"
+			if attack_action = attack_actions.x_saber_idle
 			{
 				sprite_index = spr_player_x_walljump_saber;
 				loop = true;
@@ -45,7 +45,7 @@ if hurt = false
 		}
 		else
 		{
-			if attack_action = "X-Saber Jump"
+			if attack_action = attack_actions.x_saber_jump
 			{
 				sprite_index = spr_player_x_jump_saber;
 				loop = true;
@@ -101,7 +101,7 @@ if hurt = false
 				}
 				else
 				{
-					if attack_action = "X-Saber Standing"
+					if attack_action = attack_actions.x_saber_idle
 					{
 						sprite_index = spr_player_x_idle_saber;
 						loop = true;

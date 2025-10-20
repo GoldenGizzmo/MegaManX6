@@ -23,3 +23,5 @@ damage = 0;
 
 exploding = 0;
 exploding_sound = 0;
+
+faction = 0; //Boss icon

@@ -22,7 +22,7 @@ if life > 0
 		
 		//Play motor sound
 		if !audio_is_playing(snd_dozer)
-			scr_make_sound(snd_dozer,0.5,1,true);
+			scr_make_sound(snd_dozer,0.5,1,false);
 	}
 	else
 	{
@@ -59,7 +59,7 @@ if life > 0
 		//If moving fast
 		if image_speed > 0
 			if !audio_is_playing(snd_dozer_fast)
-				scr_make_sound(snd_dozer_fast,0.5,1,true);
+				scr_make_sound(snd_dozer_fast,0.5,1,false);
 	}
 }
 else

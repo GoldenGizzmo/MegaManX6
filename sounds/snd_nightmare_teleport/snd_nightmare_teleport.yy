@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_nightmare_teleport",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.93439907,
+  "name":"snd_nightmare_teleport",
+  "parent":{
+    "name":"Nightmare-Zero",
+    "path":"folders/Sounds/Nightmare-Zero.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_nightmare_teleport.wav",
+  "type":1,
+  "volume":1.0,
+}

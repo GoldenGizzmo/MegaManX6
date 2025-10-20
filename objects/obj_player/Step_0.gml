@@ -14,15 +14,12 @@ if global.death = false and animation_lock = false
 {
 	//Animations
 	//if attack_priority = 0
-	if attack_action = "X-Saber Jump" and sprite_index != spr_player_x_jump_saber
-		attack_action = 0;
-	if attack_action = "X-Saber Wall" and sprite_index != spr_player_x_walljump_saber
-		attack_action = 0;
-	if attack_action = "X-Saber Standing" and sprite_index != spr_player_x_idle_saber
-		attack_action = 0;
-	if attack_action = 0
+	if attack_action = attack_actions.x_saber
+		attack_action = attack_actions.none;
+
+
+	if attack_action = attack_actions.none
 		attack_priority = 0;
-	event_user(0);
 	
 	//If underwater
 	var water_check = false;
@@ -367,7 +364,7 @@ if global.death = false and animation_lock = false
 			if room != rm_weapon_get
 			{
 				//Changing weapons
-				if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
+				if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = attack_actions.none
 				{
 					if global.input_swap_right_pressed //Swapping next
 					{

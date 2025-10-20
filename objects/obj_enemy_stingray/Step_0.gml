@@ -4,6 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
+//Can be paused
+if global.pause = true
+	return;
+
 if life > 0
 {
 	if state = "Roaming"

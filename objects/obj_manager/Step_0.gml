@@ -9,6 +9,13 @@ if keyboard_check(vk_control)
 	if keyboard_check_pressed(ord("R"))
 		room_restart();
 		
+	if keyboard_check_pressed(ord("H"))
+	{
+		room_goto(rm_highmax);
+		scr_weapon_get(1,"Yanma Option");
+		scr_weapon_get(6,"Meteor Rain");
+	}
+		
 	if keyboard_check_pressed(ord("P"))
 	{
 		if global.pause = false

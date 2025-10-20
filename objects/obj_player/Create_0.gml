@@ -34,7 +34,7 @@ invul = false;
 weight = 0.3;
 
 //Special attack
-attack_action = 0;
+attack_action = attack_actions.none;
 attack_priority = 0; //Determines if it can be cancelled by moving or dash
 
 changing_sprite = noone;
@@ -42,6 +42,7 @@ animation_lock = true; //Stop using gravity when openning a door
 camera_lasttouch = noone;
 
 shooting = 0;
+shooting_charged = false;
 shooting_lock = false;
 shooting_charge = 0;
 shooting_charge_flicker = false;

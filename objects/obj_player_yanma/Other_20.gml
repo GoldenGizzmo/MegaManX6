@@ -3,8 +3,6 @@
 
 if shoot_delay = 0
 {
-	
-	
 	bullet = instance_create_layer(x,y,"Projectiles",obj_bullet_default);
 	bullet.damage = bullet_damage;
 	bullet.direction = image_angle;
@@ -13,6 +11,8 @@ if shoot_delay = 0
 
 	bullet.sprite_index = spr_bullet_yanma_boss;
 	bullet.explosion = spr_explosion_yanma_small;
+	
+	bullet.special = true;
 
 	scr_make_sound(snd_yammark_shoot,1,1,false);
 	

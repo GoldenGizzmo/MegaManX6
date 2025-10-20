@@ -4,6 +4,7 @@ if place_meeting(x,y+1,obj_solid)
 {
 	dash = false;
 	airdash_lock = false;
+	xspeed = 0;
 	//sprite_index = spr_player_x_dash_end;
 }
 else

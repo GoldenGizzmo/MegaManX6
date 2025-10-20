@@ -25,7 +25,7 @@ if global.pause_screen = true
 			draw_sprite_tiled_ext(spr_pause_grid,0,pause_animate,pause_animate,global.ui_scale/2,global.ui_scale/2,menu_colour,0.3);
 			gpu_set_blendmode(bm_normal)
 	
-			var scale = global.ui_scale/1.2; //Menu size
+			var scale = global.ui_scale/1.25; //Menu size
 	
 			//Menu Pieces
 			draw_sprite_ext(spr_pause_right,0,display_get_gui_width(),0,scale,scale,0,menu_colour,1);
@@ -202,6 +202,7 @@ if global.pause_screen = true
 			
 		case "Options":
 			#region 
+			var scale = global.ui_scale/1.25; //Menu size
 			draw_sprite_tiled_ext(spr_options_background,0,pause_animate,pause_animate,global.ui_scale,global.ui_scale,c_white,1);
 			
 			//Heading
@@ -369,24 +370,216 @@ if global.pause_screen = true
 			
 			}
 			
-			//Guide to exit menu
-			draw_set_halign(fa_center);
-				draw_text_transformed_color(display_get_gui_width()/2,display_get_gui_height()-(20*global.ui_scale),"Press [Start] to Exit",global.ui_scale,global.ui_scale,0,c_white,c_white,c_white,c_white,1);
-			draw_set_halign(fa_left);
+			if room != rm_stage_select
+			{
+				//Guide to exit menu
+				draw_set_halign(fa_center);
+					draw_text_transformed_color(display_get_gui_width()/2+(10*scale),display_get_gui_height()-(20*global.ui_scale),"Press [Start] to Exit",global.ui_scale,global.ui_scale,0,c_white,c_white,c_white,c_white,1);
+				draw_set_halign(fa_left);
+				
+			}
+			else
+			{		
+				if global.pause_menu_sub != "Options"
+				{
+					draw_set_halign(fa_center);
+						draw_text_transformed_color(display_get_gui_width()/2+(10*scale),display_get_gui_height()-(30*global.ui_scale),"Press [Start] to Exit",global.ui_scale,global.ui_scale,0,c_white,c_white,c_white,c_white,1);
+					draw_set_halign(fa_left);
+				}
+
+				//Selection at the bottom for next menus
+				draw_sprite_ext(spr_stageselect_words_frame,pause_animate/5,-(11*scale),display_get_gui_height(),scale,scale,0,c_white,1)
+				draw_sprite_ext(spr_stageselect_words_frame,pause_animate/5,display_get_gui_width()+(11*scale),display_get_gui_height(),-scale,scale,0,c_white,1)
+				//Bottom text
+				draw_sprite_ext(spr_stageselect_words_stages,pause_animate/5,(57*scale),display_get_gui_height()-(13*scale),scale,scale,0,c_white,1)
+				draw_sprite_ext(spr_stageselect_words_parts,pause_animate/5,display_get_gui_width()-(57*scale),display_get_gui_height()-(13*scale),scale,scale,0,c_white,1)
+			
+			}
 			#endregion
 			break;
-		/*
+		
 		case "Stage Select":
 			#region 
+			var scale = global.ui_scale/1.25; //Menu size
+			window_set_fullscreen(true)
+	
+			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,c_black,1)
+			scr_get_level(menu_position);
+			if level_background != "Nothing" and stageselect_state > 1
+			{
+				draw_sprite_tiled_ext(level_background,0,(pause_animate*2),0,global.ui_scale,global.ui_scale,c_white,1);
+				gpu_set_blendmode(bm_add)
+				draw_sprite_tiled_ext(level_background,0,(pause_animate*2),0,global.ui_scale,global.ui_scale,level_colour,1);
+				gpu_set_blendmode(bm_normal)
+			}
+			//Coloured borders
+			draw_sprite_ext(spr_stageselect_gradient,0,display_get_gui_width()/2,-35*global.ui_scale,global.ui_scale*2,global.ui_scale,0,level_colour,1);
+			draw_sprite_ext(spr_stageselect_gradient,0,display_get_gui_width()/2,display_get_gui_height()+35*global.ui_scale,global.ui_scale*2,-global.ui_scale,0,level_colour,1);
+	
+			gpu_set_blendmode(bm_add)
+			draw_sprite_tiled_ext(spr_pause_grid,0,pause_animate,pause_animate,global.ui_scale/2,global.ui_scale/2,level_colour,0.3);
+			gpu_set_blendmode(bm_normal)
 			
+			draw_sprite_tiled_ext(spr_stageselect_static,pause_animate,0,0,scale,scale,c_white,stageselect_bg_static);
+			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,c_white,stageselect_bg_swap);
+			
+			//Investigator boxes
+			var pos_x = display_get_gui_width()/2;
+			var pos_y = display_get_gui_height()/2+(8*scale)
+			draw_sprite_ext(spr_stageselect,0,pos_x,pos_y,scale,scale,0,c_white,1)
+
+			function scr_get_position(position)
+			{
+				select_x = 0;
+				select_y = 0;
+				switch (position)
+				{
+					//Top
+					case 0:
+						select_x = -137;
+						select_y = -58;
+						break;
+					case 1:
+						select_x = -76;
+						select_y = -92;
+						break;
+					case 2:
+						select_x = 76;
+						select_y = -92;
+						break;
+					case 3:
+						select_x = 137;
+						select_y = -58;
+						break;
+						
+					//Secret
+					case 2.5:
+						select_x = 0;
+						select_y = -107;
+						break;
+					
+					//Bottom
+					case 4:
+						select_x = -137;
+						select_y = 58;
+						break;
+					case 5:
+						select_x = -76;
+						select_y = 92;
+						break;
+					case 6:
+						select_x = 76;
+						select_y = 92;
+						break;
+					case 7:
+						select_x = 137;
+						select_y = 58;
+						break;
+				}
+			}
+			
+			//Draw portraits
+			for (var i = 0; i < 8; i++)
+			{
+				scr_get_position(i);
+				scr_get_level(i);
+				//If level is not already completed
+				if ds_list_find_index(global.level_list,level_destination) = -1
+					draw_sprite_ext(spr_stageselect_portrait,i,pos_x+(select_x*scale),pos_y+(select_y*scale),scale,scale,0,c_white,1)	
+				else
+					draw_sprite_ext(spr_stageselect_portrait_completed,i,pos_x+(select_x*scale),pos_y+(select_y*scale),scale,scale,0,c_white,1)	
+				
+				//If not selected, be slightly dim
+				scr_get_level(menu_position);
+				if menu_position != i
+				{
+					draw_sprite_ext(spr_stageselect_overlay,0,pos_x+(select_x*scale),pos_y+(select_y*scale),scale,scale,0,c_black,0.5)
+					//Static effect
+					draw_sprite_ext(spr_stageselect_portrait_static,pause_animate,pos_x+(select_x*scale),pos_y+(select_y*scale),scale,scale,0,c_white,0.075);
+				}
+			
+				if stageselect[i].alpha > 1
+					draw_sprite_ext(spr_stageselect_overlay,0,pos_x+(select_x*scale),pos_y+(select_y*scale),scale,scale,0,make_color_rgb(16,16,8),1)
+				else
+					draw_sprite_ext(spr_stageselect_overlay,0,pos_x+(select_x*scale),pos_y+(select_y*scale),scale,scale,0,c_white,stageselect[i].alpha)
+			}
+			
+		
+			
+			//Draw selection box afer opening animation
+			if stageselect_state > 1
+			{
+				scr_get_position(menu_position)
+				draw_sprite_ext(spr_stageselect_select,pause_animate/5,pos_x+(select_x*scale),pos_y+(select_y*scale),scale,scale,0,c_white,1);
+			
+				//Level text
+				draw_set_halign(fa_center);
+					draw_set_font(global.fnt_larger)
+					draw_text_ext_transformed_color(display_get_gui_width()/2+(116*scale),display_get_gui_height()/2-(2*scale),level_name,15,10*scale,scale/1.25,scale/1.25,0,c_white,c_white,c_white,c_white,1);
+			
+					draw_set_font(global.fnt_game)
+					//draw_text_ext_transformed_color(display_get_gui_width()/2-(113*scale),display_get_gui_height()/2-(10*scale),level_description,12,30*scale,scale/2,scale/2,0,c_white,c_white,c_white,c_white,1);
+				draw_set_halign(fa_left);
+				
+				//World map icon
+				if level_name != "Unknown"
+					draw_sprite_ext(spr_stageselect_map,pause_animate/5,display_get_gui_width()/2+(level_map_x*scale),display_get_gui_height()/2+(level_map_y*scale),scale,scale,0,c_white,1)
+			}
+			
+			//Selection at the bottom for next menus
+			draw_sprite_ext(spr_stageselect_words_frame,pause_animate/5,-(11*scale),display_get_gui_height(),scale,scale,0,c_white,1)
+			draw_sprite_ext(spr_stageselect_words_frame,pause_animate/5,display_get_gui_width()+(11*scale),display_get_gui_height(),-scale,scale,0,c_white,1)
+			//Bottom text
+			if stageselect_state > 1
+			{
+				draw_sprite_ext(spr_stageselect_words_parts,pause_animate/5,(57*scale),display_get_gui_height()-(13*scale),scale,scale,0,c_white,1)
+				draw_sprite_ext(spr_stageselect_words_options,pause_animate/5,display_get_gui_width()-(57*scale),display_get_gui_height()-(13*scale),scale,scale,0,c_white,1)
+			}
 			#endregion
 			break;
 			
 		case "Part Selection":
 			#region 
+			scr_get_character("X");
+			var menu_colour = character_colour;
+	
+			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,menu_colour,1)
+			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,c_black,0.5)
+	
+			draw_sprite_ext(spr_stageselect_gradient,1,display_get_gui_width()/2,display_get_gui_height()/2,global.ui_scale*2,global.ui_scale,0,c_white,1);
+			draw_sprite_ext(spr_stageselect_gradient,1,display_get_gui_width()/2,display_get_gui_height()/2,global.ui_scale*2,-global.ui_scale,0,c_white,1);
+	
+			gpu_set_blendmode(bm_add)
+			draw_sprite_tiled_ext(spr_pause_grid,0,pause_animate,pause_animate,global.ui_scale/2,global.ui_scale/2,menu_colour,0.3);
+			gpu_set_blendmode(bm_normal)
+	
+			var scale = global.ui_scale/1.25; //Menu size
 			
+			
+			//Weapon get HUD
+			draw_sprite_ext(spr_weapon_get,0,0,0,scale,scale,0,menu_colour,1);
+			draw_sprite_ext(spr_weapon_get,1,0,0,scale,scale,0,c_white,1);
+	
+			//Alia
+			draw_sprite_ext(spr_mugshot_alia,blink,(97*scale),(9*scale),-scale,scale,0,c_white,1)
+			
+			
+			
+			
+			
+			
+			
+			
+			//Selection at the bottom for next menus
+			draw_sprite_ext(spr_stageselect_words_frame,pause_animate/5,-(11*scale),display_get_gui_height(),scale,scale,0,c_white,1)
+			draw_sprite_ext(spr_stageselect_words_frame,pause_animate/5,display_get_gui_width()+(11*scale),display_get_gui_height(),-scale,scale,0,c_white,1)
+			//Bottom text
+			if stageselect_state > 1
+			{
+				draw_sprite_ext(spr_stageselect_words_options,pause_animate/5,(57*scale),display_get_gui_height()-(13*scale),scale,scale,0,c_white,1)
+				draw_sprite_ext(spr_stageselect_words_stages,pause_animate/5,display_get_gui_width()-(57*scale),display_get_gui_height()-(13*scale),scale,scale,0,c_white,1)
+			}
 			#endregion
 			break;
-		*/
 	}
 }

@@ -15,7 +15,7 @@ if life > 0
 		speed = 1;
 	
 	//Afterimages
-	if global.animate%10 = 0
+	if global.animate%10 = 0 and fade_in = 0
 	{
 		offset_x = 0;
 		offset_y = 0;

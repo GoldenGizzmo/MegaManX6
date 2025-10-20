@@ -27,9 +27,9 @@ switch sprite_index
 //Destroy if this animation is not playing
 switch sprite_index
 {
-	case spr_bullet_x_saber: if obj_player.sprite_index != spr_player_x_idle_saber {instance_destroy(id,false)} break;
-	case spr_bullet_x_saber_jump: if obj_player.sprite_index != spr_player_x_jump_saber {instance_destroy(id,false)} break;
-	case spr_bullet_x_saber_wall: if obj_player.sprite_index != spr_player_x_walljump_saber {instance_destroy(id,false)} break;
+	case spr_bullet_x_saber: if obj_player.sprite_index != spr_port_x_saber {instance_destroy(id,false)} break;
+	case spr_bullet_x_saber_jump: if obj_player.sprite_index != spr_port_x_saber_jump {instance_destroy(id,false)} break;
+	case spr_bullet_x_saber_wall: if obj_player.sprite_index != spr_port_x_saber_walljump {instance_destroy(id,false)} break;
 
 	case spr_bullet_x_machdash:
 	case spr_bullet_x_machdash_charged:

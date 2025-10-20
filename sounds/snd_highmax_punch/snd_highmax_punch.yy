@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_highmax_punch",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.9763719,
+  "name":"snd_highmax_punch",
+  "parent":{
+    "name":"Highmax",
+    "path":"folders/Sounds/Highmax.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_highmax_punch.wav",
+  "type":1,
+  "volume":1.0,
+}

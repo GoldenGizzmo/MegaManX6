@@ -12,6 +12,8 @@
 
 #macro PLAYER_BASE_IMAGE_SPEED 0.5
 
+#macro CROUCH_SPRITES [spr_port_x_crouch, spr_port_x_crouch_shooting, spr_port_x_crouch_shot]
+
 enum dynamic_type {
 	base,
 	player,
@@ -27,4 +29,9 @@ enum animation_sync_type {
 enum sprite_loop_type {
 	base,
 	no_loop
+}
+
+enum attack_actions {
+	none,
+	x_saber
 }

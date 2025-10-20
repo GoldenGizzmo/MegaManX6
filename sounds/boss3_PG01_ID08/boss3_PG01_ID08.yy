@@ -13,7 +13,7 @@
   "name":"boss3_PG01_ID08",
   "parent":{
     "name":"Nightmare-Zero",
-    "path":"folders/Sounds/Boss-Sounds/Nightmare-Zero.yy",
+    "path":"folders/Sounds/Nightmare-Zero.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

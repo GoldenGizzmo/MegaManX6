@@ -40,5 +40,11 @@ function scr_get_character(character)
 			mugshot = spr_mugshot_alia;
 			mugshot_talk = spr_mugshot_alia_talk;
 			break;
+			
+		case "High Max":
+			character_colour = make_color_rgb(255,242,0);
+			mugshot = spr_mugshot_highmax;
+			mugshot_talk = spr_mugshot_highmax_talk;
+			break;
 	}
 }

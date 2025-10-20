@@ -7,8 +7,7 @@ if (bossfight_state = 7 or bossfight_state = 8) and global.hud_toggle = true
 	var y_pos = (display_get_gui_height()/2)+10*global.ui_scale;
 
 	//HUD
-	var hud_type = 0;
-
+	var hud_type = boss.faction;
 	draw_sprite_ext(spr_hud_boss,hud_type,x_pos,y_pos,global.ui_scale,global.ui_scale,0,c_white,1);
 
 	//Health Bar

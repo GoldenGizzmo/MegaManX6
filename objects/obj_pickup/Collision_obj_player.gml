@@ -6,6 +6,8 @@ if (sprite_index = spr_pickup_soul_large and large_soul_state < 2)
 	exit;
 if auto_pickup = "Appear"
 	exit;
+if soul_steal != 0
+	exit;
 	
 //Heart Tanks, Sub Tanks, Weapon Tank, Power Tank
 if pickup_type >= 2 and pickup_type <= 6

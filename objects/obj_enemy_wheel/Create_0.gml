@@ -6,7 +6,7 @@ event_inherited();
 
 life = 16;
 lifemax = life;
-damage = 3;
+damage = 0;
 
 rotate = 0;
 armour = true;
@@ -18,6 +18,7 @@ weight = 0;
 colliding = false;
 
 box = noone;
+
 /*
 box = instance_create_layer(x-32,y-32,"Collision",obj_solid);
 box.image_xscale = 4;

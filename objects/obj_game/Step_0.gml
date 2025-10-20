@@ -13,6 +13,11 @@ if global.music != "Off" //If turned on
 	{
 		switch (room)
 		{
+			case rm_intro: 
+				global.music = snd_music_intro; 
+				if obj_player.x > 14832
+					global.music = snd_music_haunted; 
+				break;
 			case rm_yammark: global.music = snd_music_yammark; break;
 			case rm_turtloid: global.music = snd_music_turtloid; break;
 			case rm_weapon_get: global.music = snd_music_weapon_get; break;

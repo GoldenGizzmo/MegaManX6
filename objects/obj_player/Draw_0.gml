@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_user(0);
+
+
 draw_set_font(global.fnt_game);
 
 //draw_text(x,y-80,"xspeed:   "+string(xspeed))

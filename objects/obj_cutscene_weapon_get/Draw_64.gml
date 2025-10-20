@@ -4,7 +4,7 @@
 if action > 0
 {
 	scr_weapon_menus(weapon);
-	var scale = global.ui_scale/1.2; //Menu size
+	var scale = global.ui_scale/1.25; //Menu size
 	
 	draw_sprite_tiled_ext(spr_weapon_lines,0,(global.animate*20)+(50*global.ui_scale),0,global.ui_scale,-global.ui_scale,particle_lines_colour,particle_lines_alpha);
 	draw_sprite_tiled_ext(spr_weapon_lines,0,(global.animate*20)+(50*global.ui_scale),0,global.ui_scale,-global.ui_scale,c_black,particle_lines_alpha/2);

@@ -13,7 +13,7 @@
   "name":"st00_b_PG00_ID11",
   "parent":{
     "name":"D1000-Intro-Stage-Boss",
-    "path":"folders/Sounds/Boss-Sounds/D1000-Intro-Stage-Boss.yy",
+    "path":"folders/Sounds/D1000-Intro-Stage-Boss.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

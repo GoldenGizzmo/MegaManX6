@@ -10,7 +10,7 @@ spr_manager.animation_end();
 if sprite_index = spr_player_x_idle_saber or sprite_index = spr_player_x_jump_saber or sprite_index = spr_player_x_walljump_saber
 {
 	image_index = -1;
-	attack_action = 0;
+	attack_action = attack_actions.none;
 }
 
 if sprite_index = spr_player_x_idle_shoot

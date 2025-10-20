@@ -29,15 +29,25 @@ if animation_y = 1
 		right_alpha = 0.5;
 	}
 	
-	scr_get_character(left_character);
-	draw_sprite_ext(mugshot,left_blink,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
-	if mugshot_talk != 0 and left_talking > 1 //Talking
-		draw_sprite_ext(mugshot_talk,left_talking/3,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
+	if left_character != "Nothing"
+	{
+		scr_get_character(left_character);
+		draw_sprite_ext(mugshot,left_blink,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
+		if mugshot_talk != 0 and left_talking > 1 //Talking
+			draw_sprite_ext(mugshot_talk,left_talking/3,x_pos-(118*scale),y_pos-(75*scale),-scale,scale,0,c_white,1);
+	}
+	else
+		draw_sprite_ext(spr_mugshot_closing,global.animate,x_pos-(118*scale),y_pos,-scale,scale,0,c_white,right_alpha);
 	
 	scr_get_character(right_character);
-	draw_sprite_ext(mugshot,right_blink,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);
-	if mugshot_talk != 0 and right_talking > 1 //Talking
-		draw_sprite_ext(mugshot_talk,right_talking/3,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);	
+	if right_character != "Nothing"
+	{
+		draw_sprite_ext(mugshot,right_blink,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);
+		if mugshot_talk != 0 and right_talking > 1 //Talking
+			draw_sprite_ext(mugshot_talk,right_talking/3,x_pos+(118*scale),y_pos-(75*scale),scale,scale,0,c_white,right_alpha);	
+	}
+	else
+		draw_sprite_ext(spr_mugshot_closing,global.animate,x_pos+(118*scale),y_pos,scale,scale,0,c_white,right_alpha);
 }
 	
 draw_sprite_ext(spr_mugshot_closing,global.animate,x_pos-(118*scale),y_pos,-scale,scale*animation_y,0,c_white,animation_static);
@@ -75,6 +85,8 @@ if animation_y = 1 and finish = false
 	draw_sprite_ext(spr_dialogue_box_underline,1,x_pos-(scale*(string_width(character_name))/2),y_pos+(26*scale),scale,scale,0,c_white,1-animation_static);
 	draw_set_font(global.fnt_game);*/
 	//Name of the speaker
+	if name_hidden = true //Who is this guy?
+		character_name = "???"
 	draw_text_transformed_color(x_pos-(120*scale),y_pos+(8*scale),string_upper(character_name),scale,scale,0,c_white,c_white,c_white,c_white,1-animation_static);
 	//Name underline
 	draw_sprite_ext(spr_dialogue_box_underline,0,x_pos-(scale*120),y_pos+(26*scale),scale*(string_width(character_name)-3),scale,0,c_white,1-animation_static);

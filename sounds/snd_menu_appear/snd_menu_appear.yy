@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_menu_appear",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.32376418,
+  "name":"snd_menu_appear",
+  "parent":{
+    "name":"Miscellaneous",
+    "path":"folders/Sounds/Miscellaneous.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_menu_appear.wav",
+  "type":1,
+  "volume":1.0,
+}

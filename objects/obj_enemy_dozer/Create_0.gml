@@ -12,3 +12,4 @@ shield_life = 20;
 shield_death = false;
 
 event_user(3);
+

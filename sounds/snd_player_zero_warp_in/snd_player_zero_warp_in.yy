@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_player_zero_warp_in",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.87839,
+  "name":"snd_player_zero_warp_in",
+  "parent":{
+    "name":"Zero",
+    "path":"folders/Sounds/Player-Sounds/Zero.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_player_zero_warp_in.wav",
+  "type":1,
+  "volume":1.0,
+}

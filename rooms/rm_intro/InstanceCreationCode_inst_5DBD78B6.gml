@@ -1,0 +1,1 @@
+create_object = obj_cutscene_intro_highmax

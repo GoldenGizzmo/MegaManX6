@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_player_zero_dash",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.74539685,
+  "name":"snd_player_zero_dash",
+  "parent":{
+    "name":"Zero",
+    "path":"folders/Sounds/Player-Sounds/Zero.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_player_zero_dash.wav",
+  "type":1,
+  "volume":1.0,
+}

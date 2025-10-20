@@ -6,7 +6,7 @@ if life > 0
 	switch (action)
 	{
 		case 0: //Rev up when in range
-			if x < obj_player.x+aggro_range and x > obj_player.x-aggro_range and y < obj_player.y
+			if x < obj_player.x+aggro_range and x > obj_player.x-aggro_range and y < obj_player.y and !place_meeting(x,y,obj_solid)
 			{
 				action++;
 				alarm[0] = 60;
@@ -24,28 +24,39 @@ if life > 0
 			break;
 	
 		case 1: //Drop
-			action++;
-			alarm[0] = 1;
+			if !place_meeting(x,y,obj_solid)
+			{
+				action++;
+				alarm[0] = 1;
 			
-			thruster = false;
+				thruster = false;
 			
-			scr_make_sound(snd_jets_lift,1,1,false);
+				scr_make_sound(snd_jets_lift,1,1,false);
 		
-			weight = 0.5;
-			colliding = true;
-			yspeed = 1;
+				weight = 0.5;
+				colliding = true;
+				yspeed = 1;
+			}
+			else
+			{
+				action = 0;
+				alarm[0] = 1;
+				
+				image_speed = 0;
+				lights = "Nothing";
+			}
 			break;
 			
 		case 2: //Hit ground
 			alarm[0] = 1;
 			
-			//Destroy this platform
-			with instance_place(x,y+yspeed,obj_solid_crumble)
-				instance_destroy();		
-		
 			if airborne = false or place_meeting(x,y+yspeed,obj_pit)
 			{
 				action++;
+				
+				//Destroy this platform
+				with instance_place(x,y+1,obj_solid_crumble)
+					instance_destroy();	
 				
 				weight = 0;
 				colliding = false;
@@ -59,7 +70,7 @@ if life > 0
 				shake.length = 30;
 				
 				scr_make_sound(snd_monbando_slam,1,1.5,false);
-			}
+			}	
 			break;
 			
 		case 3: //Recoil
@@ -73,6 +84,8 @@ if life > 0
 			{
 				action++;
 				alarm[0] = 60;
+				if faster = true
+					alarm[0] = 10;
 				
 				yspeed = 0;
 				image_speed = 0;
@@ -84,7 +97,10 @@ if life > 0
 		case 4: //Rise back to start
 			if y > ystart
 			{
-				yspeed = -0.5;
+				yspeed = -1;
+				if faster = true
+					yspeed = -2;
+				
 				lights = "Up";
 				
 				if !audio_is_playing(snd_jets_hover) and place_meeting(x,y,obj_camera)

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_d1000_crash",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.996644,
+  "name":"snd_d1000_crash",
+  "parent":{
+    "name":"D1000-Intro-Stage-Boss",
+    "path":"folders/Sounds/D1000-Intro-Stage-Boss.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_d1000_crash.wav",
+  "type":1,
+  "volume":1.0,
+}

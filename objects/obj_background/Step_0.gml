@@ -7,9 +7,13 @@ if background != 0
 	{
 		switch (background)
 		{
+			case spr_bg_intro_crash: ambience = snd_ambience_desert; break;
+			case spr_bg_intro_inside: ambience = snd_ambience_industrial; break;
 			case spr_bg_yammark_temples: ambience = snd_ambience_rainforest; break;
 			case spr_bg_yammark_cave: ambience = snd_ambience_watercave; break;
-			case spr_bg_yammark_ruins: ambience = snd_ambience_wilderness; break;
+			case spr_bg_yammark_ruins: 
+			case spr_bg_intro_night:
+				ambience = snd_ambience_wilderness; break;
 			case spr_bg_turtloid: ambience = snd_ambience_temple; break;
 		}
 		if ambience != "Level"

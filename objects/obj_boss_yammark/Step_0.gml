@@ -51,6 +51,7 @@ if life > 0
 			afterimage.image_index = image_index;
 			afterimage.blank = false;
 			afterimage.image_alpha = image_alpha;
+			afterimage.image_xscale = image_xscale;
 			
 			//Flickering effect
 			if global.animate%2 = 0

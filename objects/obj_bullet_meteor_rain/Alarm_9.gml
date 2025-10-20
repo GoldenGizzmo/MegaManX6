@@ -10,6 +10,7 @@ for (var i = 0; i < 3; i++)
 			
 	bullet.damage = damage*2; //Double damage (Intended damage due to tick effect)
 	bullet.villainy = villainy;
+	bullet.special = special;
 	
 	scr_make_sound(snd_splash,1,1,false);
 }
