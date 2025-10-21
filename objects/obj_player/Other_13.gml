@@ -45,7 +45,7 @@ switch (global.weapon[global.weapon_choice].type)
 			}
 			
 			image_index = 0;
-			shot_fired = true;
+			//shot_fired = true;
 			crouch = false;
 		}
 		break;
