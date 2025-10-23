@@ -50,8 +50,16 @@ unpause = false;
 menu_description = "Nothing";
 key_select = false;
 
+//Used for part menu
+length = 0;
+length_limit = 10;
+scroll = 0;
+text_change = 0;
+text_scrolling = 0;
+
 menu_state = "Weapons";
 menu_position = 0;
+menu_position_sub = 0;
 menu_tank[0] = global.subtank_1;
 menu_tank[1] = global.subtank_2;
 menu_tank[2] = global.weapontank;

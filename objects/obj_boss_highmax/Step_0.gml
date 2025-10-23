@@ -28,7 +28,7 @@ if life > 0
 		afterimage.image_index = image_index;
 		afterimage.image_alpha = image_alpha;
 		afterimage.image_xscale = image_xscale;
-		afterimage.image_blend = make_color_rgb(255,242,0);
+		afterimage.image_blend = make_color_rgb(127,127,0);
 	}
 }
 else

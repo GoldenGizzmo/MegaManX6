@@ -92,7 +92,9 @@ switch (state)
 		event_user(0);	
 		if ds_list_find_index(global.level_list,room) = -1
 			ds_list_add(global.level_list,room);
-	
+		//Stock the store
+		scr_part_storestock();
+		
 		fade = instance_create_depth(obj_camera.x,obj_camera.y,0,obj_fade_out)
 		fade.fade_speed = 0.015;
 		break;

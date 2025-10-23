@@ -23,7 +23,14 @@ if keyboard_check(vk_control)
 		else
 			global.pause = false;
 	}
+	
+	if keyboard_check_pressed(ord("S"))
+	{
+		scr_part_storestock();
+		scr_make_sound(snd_menu_select,1,1,false);
+	}
 }
+
 
 //Music volume
 audio_group_set_gain(audiogroup_sfx,global.volume_effect*global.volume_master,0);

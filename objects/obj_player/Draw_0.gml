@@ -17,9 +17,11 @@ if flicker = true or flicker_weapon_swap = true
 }
 else
 {
-	palette = 1;
+	palette = 0;
 	if global.weapon_choice > 0 //Select right palette when using special weapons
 		palette = (4+global.weapon_choice)
+	else if shooting > 25
+		palette = 1;
 	
 	pal_swap_set(spr_player_x_palette,palette,false);
 	if shooting_charge_flicker = true

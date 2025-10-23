@@ -64,6 +64,7 @@ if life > 0
 				afterimage.sprite_index = sprite_index;
 				afterimage.image_xscale = image_xscale;
 				afterimage.image_blend = make_color_rgb(15,124,38);
+				afterimage.blendmode = bm_normal;
 			}
 		}
 	}

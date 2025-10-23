@@ -91,6 +91,21 @@ function scr_stop_wall(spd, col = obj_solid){
 					scr_make_sound(snd_player_x_wallslide,1,1,false);
 				}
 				airdash_lock = false;
+				
+				//Check if the animation is finished, create the smoke from sliding
+				if image_speed = 0
+				{
+					var check = false
+					with obj_particle_wallslide
+						if sprite_index != spr_effect_wallslide_end
+							check = true;
+					
+					if check = false
+					{
+						effect = instance_create_layer(x,y,"Projectiles",obj_particle_wallslide);
+						effect.image_xscale = image_xscale;
+					}
+				}
 			
 				//Wall Jump
 				if global.input_jump_pressed

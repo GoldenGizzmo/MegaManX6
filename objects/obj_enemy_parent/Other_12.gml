@@ -12,6 +12,9 @@ if global.damage_taken > 0
 		boss_iframes = 60;
 }
 
+if life <= 0
+	event_user(4);
+
 
 
 

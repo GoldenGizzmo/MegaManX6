@@ -11,7 +11,7 @@ if global.pause_screen = true
 	switch (global.pause_menu)
 	{
 		case "Paused":
-			#region pause menu
+			#region
 			scr_get_character("X");
 			var menu_colour = character_colour;
 	
@@ -39,7 +39,7 @@ if global.pause_screen = true
 			shader_reset();
 			draw_sprite_ext(spr_pause_bottom,1,0,display_get_gui_height(),scale,scale,0,c_white,1);
 			draw_sprite_ext(spr_pause_top,1,0,0,scale,scale,0,c_white,1);
-	
+			
 			//Player mugshot
 			draw_sprite_ext(mugshot,blink,display_get_gui_width()-(96*scale),(8*scale),scale,scale,0,c_white,1);
 			var amount = (global.life/global.lifemax);
@@ -47,6 +47,9 @@ if global.pause_screen = true
 				draw_rectangle_color(display_get_gui_width()-(171*scale),(82*scale),display_get_gui_width()-(171*scale)+(155*scale)*amount,(82*scale)+(6*scale),c_yellow,c_lime,c_lime,c_yellow,0);
 			draw_text_transformed_color(display_get_gui_width()-(163*scale),(69*scale),string_repeat("0",max(0,2-string_length(string(global.life))))+string(global.life)+"/"+string_repeat("0",max(0,2-string_length(string(global.lifemax))))+string(global.lifemax),scale,scale,0,c_white,c_white,c_white,c_white,1);
 	
+			//Rank
+			scr_get_rank();
+			draw_sprite_ext(spr_pause_rank,rank_letter,display_get_gui_width()-(113*scale),(60*scale),scale,scale,0,c_white,1);
 			//Heart Tanks collected
 			draw_text_transformed_color(display_get_gui_width()-(159*scale),(96*scale),global.hearttank,scale,scale,0,c_white,c_white,c_white,c_white,1);
 			//Nightmare Souls collected
@@ -100,6 +103,13 @@ if global.pause_screen = true
 				draw_sprite_ext(spr_pause_cursor,1,(25*scale),(31*scale)+(17*scale*menu_position),scale,scale,0,c_white,1);
 				shader_reset();
 			}
+			
+			//Equipped Parts
+			for (var i = 0; i < global.parts_amount-1; i++) //Background
+				draw_sprite_ext(spr_pause_parts,0,display_get_gui_width()-(171*scale)+(19*i*scale),(148*scale),scale,scale,0,menu_colour,1);
+			for (var i = 0; i < global.parts_amount; i++) //Equipped Parts
+				if !is_undefined(ds_list_find_value(global.parts_equipped,i))
+					draw_sprite_ext(spr_partselect_icon,ds_list_find_value(global.parts_equipped,i),display_get_gui_width()-(186*scale)+(19*i*scale),(149*scale),scale,scale,0,c_white,1);
 	
 			//Sub Tank 1
 			if global.subtank_1 >= 0
@@ -546,8 +556,8 @@ if global.pause_screen = true
 			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,menu_colour,1)
 			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,c_black,0.5)
 	
-			draw_sprite_ext(spr_stageselect_gradient,1,display_get_gui_width()/2,display_get_gui_height()/2,global.ui_scale*2,global.ui_scale,0,c_white,1);
-			draw_sprite_ext(spr_stageselect_gradient,1,display_get_gui_width()/2,display_get_gui_height()/2,global.ui_scale*2,-global.ui_scale,0,c_white,1);
+			draw_sprite_ext(spr_pause_gradient,1,display_get_gui_width()/2,display_get_gui_height()/2,global.ui_scale*2,global.ui_scale,0,c_white,1);
+			draw_sprite_ext(spr_pause_gradient,1,display_get_gui_width()/2,display_get_gui_height()/2,global.ui_scale*2,-global.ui_scale,0,c_white,1);
 	
 			gpu_set_blendmode(bm_add)
 			draw_sprite_tiled_ext(spr_pause_grid,0,pause_animate,pause_animate,global.ui_scale/2,global.ui_scale/2,menu_colour,0.3);
@@ -555,19 +565,208 @@ if global.pause_screen = true
 	
 			var scale = global.ui_scale/1.25; //Menu size
 			
+			#region Top Menu (Options)
+			var menu_pos_x = 25;
+			var menu_pos_y = 100;
 			
-			//Weapon get HUD
-			draw_sprite_ext(spr_weapon_get,0,0,0,scale,scale,0,menu_colour,1);
-			draw_sprite_ext(spr_weapon_get,1,0,0,scale,scale,0,c_white,1);
+			function scr_part_catagory(position,_x,_y,_string,_scale,_colour)
+			{
+				draw_sprite_ext(spr_partselect_catagory,0,_x*_scale,_y*_scale,_scale,_scale,0,_colour,1)
+				
+				var select_colour = _colour;
+				if menu_position = position
+					select_colour = c_white;
+				
+				draw_text_transformed_color((_x*_scale)+(10*_scale),(_y*_scale)-(2*_scale),_string,_scale,_scale,0,select_colour,select_colour,select_colour,select_colour,1)
+			}
+			
+			//Cursor
+			draw_sprite_ext(spr_pause_cursor,0,(menu_pos_x*scale)-(9*scale),(menu_pos_y*scale)+(17*scale*menu_position)+(6*scale),scale,scale,0,menu_colour,1);
+			shader_set(shd_hue);
+			shader_set_uniform_f(shader_get_uniform(shd_hue,"u_Position"),pause_hue);
+			draw_sprite_ext(spr_pause_cursor,1,(menu_pos_x*scale)-(9*scale),(menu_pos_y*scale)+(17*scale*menu_position)+(6*scale),scale,scale,0,c_white,1);
+			shader_reset();
+			
+			scr_part_catagory(0,menu_pos_x,menu_pos_y+(17*0),"Equip Parts",scale,menu_colour);
+			scr_part_catagory(1,menu_pos_x,menu_pos_y+(17*1),"Develop Parts",scale,menu_colour);
+			scr_part_catagory(2,menu_pos_x,menu_pos_y+(17*2),"Change Armor",scale,menu_colour);
+			
+			//Draw nightmare soul counter
+			var soul_x_pos = menu_pos_x*scale;
+			var soul_y_pos = (menu_pos_y*scale)+(17*scale*4)+(10*scale);
+			draw_sprite_ext(spr_hud_souls,pause_animate/7,soul_x_pos,soul_y_pos,global.ui_scale,global.ui_scale,0,c_white,1);
+			//Souls text
+			var soul_text = string_repeat("0",max(0,5-string_length(string(global.nightmare_souls))))+string(global.nightmare_souls);
+			var soul_text_colour = make_color_rgb(64,132,244);
+			draw_text_transformed_color(soul_x_pos+28*global.ui_scale,soul_y_pos-16*global.ui_scale,soul_text,global.ui_scale,global.ui_scale,0,soul_text_colour,soul_text_colour,soul_text_colour,soul_text_colour,1);
+			
+			#endregion
+			#region Sub Menu
+			if global.pause_menu_sub != "Options"
+			{
+				var menu_pos_x = 170;
+				var menu_pos_y = 60;
+				
+				function scr_part_item(position,_x,_y,_part,_scale,_colour)
+				{
+					scr_get_part(_part);
+					
+					var select_colour = _colour;
+					if menu_position_sub = position
+						select_colour = c_white;
+					
+					draw_sprite_ext(spr_partselect_icon,_part,(_x*_scale)+(1*_scale),(_y*_scale)+(2*_scale),_scale,_scale,0,c_white,1)
+					draw_sprite_ext(spr_partselect_item,0,_x*_scale,_y*_scale,_scale,_scale,0,_colour,1);
+					draw_sprite_ext(spr_partselect_item,1,_x*_scale,_y*_scale,_scale,_scale,0,c_white,1);
+				
+					draw_text_transformed_color((_x*_scale)+(28*_scale),(_y*_scale)+(0*_scale),part_name,_scale,_scale,0,select_colour,select_colour,select_colour,select_colour,1)
+				}
+			
+				switch (global.pause_menu_sub)
+				{
+					case "Equip":
+						//Draw owned parts to equip
+						for (var i = 0; i < length; i++)
+						{
+							if ds_list_size(global.parts_owned) > i //Check if there's a value
+							{	
+								scr_part_item(i,menu_pos_x,menu_pos_y+(19*i),ds_list_find_value(global.parts_owned,i+scroll),scale,menu_colour)
+							
+								//Check if equipped
+								var find = ds_list_find_value(global.parts_owned,i+scroll); //Find ID
+								if ds_list_find_index(global.parts_equipped,find) != -1
+									draw_sprite_ext(spr_partselect_item,2,menu_pos_x*scale,(menu_pos_y*scale)+(19*i*scale),scale,scale,0,c_white,1);
+							}
+						}
+
+						//Cursor
+						draw_sprite_ext(spr_pause_cursor,0,(menu_pos_x*scale)-(9*scale),(menu_pos_y*scale)+(19*scale*menu_position_sub)+(9*scale),scale,scale,0,menu_colour,1);
+						shader_set(shd_hue);
+						shader_set_uniform_f(shader_get_uniform(shd_hue,"u_Position"),pause_hue);
+						draw_sprite_ext(spr_pause_cursor,1,(menu_pos_x*scale)-(9*scale),(menu_pos_y*scale)+(19*scale*menu_position_sub)+(9*scale),scale,scale,0,c_white,1);
+
+						//Up and down scrolling arrow
+						y = ystart+dsin((current_time)*0.4)*4;
+						if scroll > 0
+							draw_sprite_ext(spr_partselect_scroll,1,(menu_pos_x*scale)+(60*scale),(menu_pos_y*scale)-(40*scale)+y,scale,scale,0,c_white,1);
+						if length_limit+scroll < ds_list_size(global.parts_owned)
+							draw_sprite_ext(spr_partselect_scroll,0,(menu_pos_x*scale)+(60*scale),(menu_pos_y*scale)+(19*scale*length_limit)+(40*scale)-y,scale,scale,0,c_white,1);
+						shader_reset();
+						
+						//Draw equipped part background
+						draw_sprite_ext(spr_partselect_equipped,0,(menu_pos_x*scale)+(140*scale),(menu_pos_y*scale)+(1*scale),scale,scale,0,menu_colour,1);
+						for (var i = 1; i < global.parts_amount; i++)
+						{
+							draw_sprite_ext(spr_partselect_equipped,1,(menu_pos_x*scale)+(140*scale),(menu_pos_y*scale)-(2*scale)+(24*scale*i),scale,scale,0,menu_colour,1);
+							shader_set(shd_hue);
+							shader_set_uniform_f(shader_get_uniform(shd_hue,"u_Position"),pause_hue);	
+							draw_sprite_ext(spr_partselect_equipped,2,(menu_pos_x*scale)+(140*scale),(menu_pos_y*scale)-(2*scale)+(24*scale*i),scale,scale,0,c_white,1);
+							shader_reset();
+						}
+						//Parts
+						for (var i = 0; i < global.parts_amount; i++)
+							if !is_undefined(ds_list_find_value(global.parts_equipped,i))
+								draw_sprite_ext(spr_partselect_icon,ds_list_find_value(global.parts_equipped,i),(menu_pos_x*scale)+(141*scale),(menu_pos_y*scale)+(2*scale)+(24*scale*i),scale,scale,0,c_white,1);
+						break;
+						
+					case "Develop":
+						//Draw owned parts to equip
+						for (var i = 0; i < length; i++)
+						{
+							if ds_list_size(global.parts_store) > i //Check if there's a value
+							{
+								scr_part_item(i,menu_pos_x,menu_pos_y+(19*i),ds_list_find_value(global.parts_store,i+scroll),scale,menu_colour)
+							
+								var select_colour = menu_colour;
+								if part_cost > global.nightmare_souls	
+									select_colour = c_maroon;
+							
+								if menu_position_sub = i
+								{
+									select_colour = c_white;
+									if part_cost > global.nightmare_souls	
+										select_colour = c_red;
+								}
+							
+								//Draw price for part
+								draw_sprite_ext(spr_partselect_cost,0,(menu_pos_x*scale)+(115*scale),(menu_pos_y*scale)+(19*i*scale),scale,scale,0,menu_colour,1);
+								draw_sprite_ext(spr_partselect_cost,1,(menu_pos_x*scale)+(115*scale),(menu_pos_y*scale)+(19*i*scale),scale,scale,0,select_colour,1);
+								draw_text_transformed_color((menu_pos_x*scale)+(115*scale)+(12*scale),(menu_pos_y*scale)+(19*i*scale),part_cost,scale,scale,0,select_colour,select_colour,select_colour,select_colour,1)
+							}
+						}
+
+						//Cursor
+						draw_sprite_ext(spr_pause_cursor,0,(menu_pos_x*scale)-(9*scale),(menu_pos_y*scale)+(19*scale*menu_position_sub)+(9*scale),scale,scale,0,menu_colour,1);
+						shader_set(shd_hue);
+						shader_set_uniform_f(shader_get_uniform(shd_hue,"u_Position"),pause_hue);
+						draw_sprite_ext(spr_pause_cursor,1,(menu_pos_x*scale)-(9*scale),(menu_pos_y*scale)+(19*scale*menu_position_sub)+(9*scale),scale,scale,0,c_white,1);
+						
+						//Up and down scrolling arrow
+						y = ystart+dsin((current_time)*0.4)*4;
+						if scroll > 0
+							draw_sprite_ext(spr_partselect_scroll,1,(menu_pos_x*scale)+(60*scale),(menu_pos_y*scale)-(40*scale)+y,scale,scale,0,c_white,1);
+						if length_limit+scroll < ds_list_size(global.parts_store)
+							draw_sprite_ext(spr_partselect_scroll,0,(menu_pos_x*scale)+(60*scale),(menu_pos_y*scale)+(19*scale*length_limit)+(40*scale)-y,scale,scale,0,c_white,1);
+						shader_reset();
+						break;
+						
+					case "Armour":
+					
+						break;
+				}
+			}
+			#endregion
+			
+			//Top hud
+			draw_sprite_ext(spr_partselect_top,0,0,0,scale,scale,0,menu_colour,1);
+			draw_sprite_ext(spr_partselect_top,1,0,0,scale,scale,0,c_white,1);
 	
+			//Draw text
+			if global.pause_menu_sub = "Options"
+			{
+				var text = "Hey X, it's your pal Douglas! Looking have to some Parts developed?";
+			}
+			else
+			{
+				//Get value of highlighted item
+				var find = ds_list_find_value(global.parts_owned,menu_position_sub+scroll);
+				if global.pause_menu_sub = "Develop"
+					find = ds_list_find_value(global.parts_store,menu_position_sub+scroll);
+				scr_get_part(find);
+				var text = part_description;
+			}
+			
 			//Alia
-			draw_sprite_ext(spr_mugshot_alia,blink,(97*scale),(9*scale),-scale,scale,0,c_white,1)
+			draw_sprite_ext(spr_mugshot_alia,blink,(96*scale),(8*scale),-scale,scale,0,c_white,1)
+			if text_scrolling < string_length(text)
+				draw_sprite_ext(spr_mugshot_alia_talk,text_scrolling/6,(96*scale),(8*scale),-scale,scale,0,c_white,1);
 			
 			
+			//Check if text has changed to reset typewriter effect
+			if text_change != text
+			{
+				text_change = text;
+				text_scrolling = 0;
+			}
+			else
+				text_scrolling++;
+			
+			//Typewriter effect
+			var typewriter = string_copy(text,0,text_scrolling)
+			draw_text_ext_transformed_color((112*scale),(9*scale),typewriter,14,60*scale,scale/1.5,scale/1.5,0,c_white,c_white,c_white,c_white,1);
 			
 			
-			
-			
+			//Display rank
+			draw_sprite_ext(spr_partselect_rank,0,display_get_gui_width(),0,scale,scale,0,menu_colour,1);
+			draw_sprite_ext(spr_partselect_rank,1,display_get_gui_width(),0,scale,scale,0,c_white,1);
+			shader_set(shd_hue);
+			shader_set_uniform_f(shader_get_uniform(shd_hue,"u_Position"),pause_hue);
+			draw_sprite_ext(spr_partselect_rank,2,display_get_gui_width(),0,scale,scale,0,c_white,1);
+			shader_reset();
+			//Draw rank and rescue count
+			scr_get_rank();
+			draw_sprite_ext(spr_pause_rank,rank_letter,display_get_gui_width()-(25*scale),(12*scale),scale,scale,0,c_white,1);
+			draw_text_ext_transformed_color(display_get_gui_width()-(74*scale),(25*scale),"Rescues: "+string(rank_size),14,60*scale,scale,scale,0,c_white,c_white,c_white,c_white,1);
 			
 			
 			//Selection at the bottom for next menus

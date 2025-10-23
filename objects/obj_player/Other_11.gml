@@ -8,17 +8,38 @@ if wall_slide = true
 
 var shootpos_x = 20*image_xscale*wall_slide_reverse;
 var shootpos_y = -7;
-if crouch = true
-	shootpos_y = 0;
+if airborne = true
+	shootpos_y = -9;
+else
+{
+	if crouch = true or dash = true
+	{
+		shootpos_y = 5;
+		shootpos_x = 25*image_xscale*wall_slide_reverse;
+		if dash = true
+			shootpos_x = 32*image_xscale*wall_slide_reverse;
+	}
+	else
+	{
+		if xspeed != 0
+		{
+			shootpos_y = -8;
+			shootpos_x = 27*image_xscale*wall_slide_reverse;
+		}
+	}
+}
 
 //Uncharged shots
 if global.input_shoot_pressed
 {
+	bullet_limit = 3;
 	
-	var bullet_limit = 3;
+	//Part: Rapid Fire
+	if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"X-Buster");}	
+	
 	with obj_bullet_default
 		if sprite_index = spr_bullet_player_lemon
-			bullet_limit--;
+			obj_player.bullet_limit--;
 
 	if bullet_limit > 0
 	{
@@ -27,6 +48,11 @@ if global.input_shoot_pressed
 		bullet.speed = 8*bullet.image_xscale;
 		bullet.sprite_index = spr_bullet_player_lemon;
 		bullet.damage = 3;
+		with bullet
+		{
+			//Part: Rapid Fire
+			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Set Colour");}
+		}
 		
 		bullet.explosion_sound = snd_explosion_bullet;
 		scr_make_sound(snd_shoot_small,1,1,false);
@@ -37,6 +63,14 @@ if global.input_shoot_pressed
 		effect.x_pos = shootpos_x;
 		effect.y_pos = shootpos_y;
 		effect.image_xscale = image_xscale*wall_slide_reverse;
+		with effect
+		{
+			//Part: Rapid Fire
+			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Set Colour");}
+		}
+		
+		//Part: V Shot
+		if ds_list_find_index(global.parts_equipped,4) != -1 {scr_get_part_effect(4,0);}	
 		
 		shot_fired = true; 
 	}
@@ -51,7 +85,7 @@ if global.input_shoot_released
 		bullet = instance_create_layer(x+shootpos_x+(5*image_xscale*wall_slide_reverse),y+shootpos_y,"Projectiles",obj_bullet_charged)
 		bullet.image_xscale = image_xscale*wall_slide_reverse;
 		bullet.speed = 10*bullet.image_xscale;
-		bullet.sprite_index = spr_bullet_player_charge_2
+		bullet.sprite_index = spr_bullet_player_charge_2_spawn
 		bullet.explosion = spr_explosion_player_charge;
 		bullet.damage = 15;
 		
@@ -60,11 +94,19 @@ if global.input_shoot_released
 		scr_player_voicelines("Charge Shot");
 		
 		//Effect
-		effect = instance_create_layer(bullet.x,bullet.y,"Explosions",obj_particle_muzzle_player);
-		effect.sprite_index = spr_effect_muzzle_x_charge_2;
-		effect.x_pos = shootpos_x;
-		effect.y_pos = shootpos_y;
-		effect.image_xscale = image_xscale*wall_slide_reverse;
+		for (var i = 0; i < 2; i++)
+		{
+			effect = instance_create_layer(bullet.x,bullet.y,"Explosions",obj_particle_muzzle_player);
+			effect.sprite_index = spr_effect_muzzle_x_charge_2;
+			if i = 0 //Behind the player
+			{
+				effect.sprite_index = spr_effect_muzzle_x_charge_2_back;
+				effect.depth = obj_player.depth+10;
+			}
+			effect.x_pos = shootpos_x;
+			effect.y_pos = shootpos_y;
+			effect.image_xscale = image_xscale*wall_slide_reverse;
+		}
 		
 		shot_fired = true;
 		shooting_charged = true;

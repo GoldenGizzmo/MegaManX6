@@ -21,6 +21,15 @@ switch (sprite_index)
 		pickup_type = 0; //Healing
 		pickup_power = 16;
 		break;
+	case spr_pickup_health_siphon:
+		animation_falling = 999;
+		animation_sitting = 0;
+		pickup_type = 0; //Healing
+		pickup_power = 1;
+		
+		afterimage_colour = make_color_rgb(58,127,4);		
+		siphon = true;
+		break
 
 	case spr_pickup_energy_small:
 		pickup_type = 1; //Ammo
@@ -34,6 +43,14 @@ switch (sprite_index)
 		animation_falling = 4;
 		animation_sitting = 5;
 		break;
+	case spr_pickup_energy_siphon:
+		pickup_type = 1; //Ammo
+		pickup_power = 1;
+		animation_falling = 999;
+		animation_sitting = 0;
+		afterimage_colour = make_color_rgb(153,63,20);		
+		siphon = true;
+		break
 		
 	case spr_pickup_hearttank:
 		pickup_type = 2; //Heart Tank
@@ -98,6 +115,9 @@ switch (sprite_index)
 		break;
 }
 
+//Part: Super Recover
+if ds_list_find_index(global.parts_equipped,0) != -1 {scr_get_part_effect(0,false);}
+
 if save_pickup = false
 {
 	save_pickup = true;
@@ -114,20 +134,91 @@ if save_pickup = false
 	}
 }
 
-//Not a nightmare soul
-if pickup_type != 7
+//Not spawned from a part
+if siphon = false
 {
-	if airborne = true
+	//Not a nightmare soul
+	if pickup_type != 7
 	{
-		//Don't start expiring until you've hit the ground
-		pickup_expiry++;
-		if image_index > animation_falling
-			image_index = 0;
+		if airborne = true
+		{
+			//Don't start expiring until you've hit the ground
+			pickup_expiry++;
+			if image_index > animation_falling
+				image_index = 0;
+		}
+		else
+		{
+			if pickup_type = 1 and image_index < animation_sitting
+				image_index = animation_sitting;
+		}
 	}
 	else
 	{
-		if pickup_type = 1 and image_index < animation_sitting
-			image_index = animation_sitting;
+		weight = 0;
+		colliding = false;
+	
+		//Afterimages
+		if global.animate%3 = 0
+		{
+			offset_x = 0;
+			offset_y = 0;
+			var offset_chance = irandom(3)
+			if offset_chance = 0
+			{
+				var offset_range = 4;
+				offset_x = random_range(-offset_range,offset_range);
+				offset_y = random_range(-offset_range,offset_range);
+			}
+		
+			afterimage = instance_create_depth(x+offset_x,y+offset_y,depth+10,obj_afterimage);
+			afterimage.image_blend = afterimage_colour;
+			afterimage.sprite_index = sprite_index;
+			afterimage.image_index = image_index;
+			afterimage.image_xscale = image_xscale;
+		}
+	
+		airborne = true;
+	
+		if large_soul_state < 2
+		{
+			//If moving, slow down before hovering
+			if speed > 0
+			{
+				speed -= 0.1;
+				//Set new hover point when stopping
+				if speed <= 0 
+				{
+					speed = 0;
+					hover_point = y;
+				}
+			}
+			else
+				y = hover_point+dsin((current_time+hover_delay)*0.2)*2;
+		}
+	
+		//Large soul
+		if sprite_index = spr_pickup_soul_large
+		{
+			if large_soul_state = 1
+			{
+				if global.animate%5 = 0
+				{
+					line = instance_create_depth(x,y,9,obj_explosion_death_line);
+					line.image_angle = irandom(359);	
+					line.rotate = 1;
+					line.shrink = 0.05;
+				}
+			}
+			else if large_soul_state = 2
+			{
+				//Pursue the player at increasing speeds
+				speed += 0.05;
+			
+				var a = point_direction(x,y,obj_player.x,obj_player.y);
+				direction += sign(dsin(a-direction))*(speed);
+			}
+		}
 	}
 }
 else
@@ -136,66 +227,17 @@ else
 	colliding = false;
 	
 	//Afterimages
-	if global.animate%3 = 0
-	{
-		offset_x = 0;
-		offset_y = 0;
-		var offset_chance = irandom(3)
-		if offset_chance = 0
-		{
-			var offset_range = 4;
-			offset_x = random_range(-offset_range,offset_range);
-			offset_y = random_range(-offset_range,offset_range);
-		}
-		
-		afterimage = instance_create_depth(x+offset_x,y+offset_y,depth+10,obj_afterimage);
-		afterimage.image_blend = afterimage_colour;
-		afterimage.sprite_index = sprite_index;
-		afterimage.image_index = image_index;
-		afterimage.image_xscale = image_xscale;
-	}
-	
-	airborne = true;
-	
-	if large_soul_state < 2
-	{
-		//If moving, slow down before hovering
-		if speed > 0
-		{
-			speed -= 0.1;
-			//Set new hover point when stopping
-			if speed <= 0 
-			{
-				speed = 0;
-				hover_point = y;
-			}
-		}
-		else
-			y = hover_point+dsin((current_time+hover_delay)*0.2)*2;
-	}
-	
-	//Large soul
-	if sprite_index = spr_pickup_soul_large
-	{
-		if large_soul_state = 1
-		{
-			if global.animate%5 = 0
-			{
-				line = instance_create_depth(x,y,9,obj_explosion_death_line);
-				line.image_angle = irandom(359);	
-				line.rotate = 1;
-				line.shrink = 0.05;
-			}
-		}
-		else if large_soul_state = 2
-		{
-			//Pursue the player at increasing speeds
-			speed += 0.05;
+	afterimage = instance_create_depth(x,y,depth+10,obj_afterimage);
+	afterimage.image_blend = afterimage_colour;
+	afterimage.sprite_index = sprite_index;
+	afterimage.image_index = image_index;
+	afterimage.image_xscale = image_xscale;
+
+	//Pursue the player at increasing speeds
+	speed += 0.05;
 			
-			var a = point_direction(x,y,obj_player.x,obj_player.y);
-			direction += sign(dsin(a-direction))*(speed);
-		}
-	}
+	var a = point_direction(x,y,obj_player.x,obj_player.y);
+	direction += sign(dsin(a-direction))*(speed);
 }
 
 //For Nightmare Souls that reploids give

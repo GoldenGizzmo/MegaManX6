@@ -71,6 +71,16 @@ if global.death = false and animation_lock = false
 		//If allowed to move
 		if movement = true
 		{
+			//Set movement variables
+			move_speed = 2;
+			jump_height = 6.5;
+			
+			dash_speed = 4.5;
+			dash_length = 30; 
+			
+			//Part: Hyper Dash
+			if ds_list_find_index(global.parts_equipped,2) != -1 {scr_get_part_effect(2,false);}	
+			
 			
 			if global.input_jump_pressed and airborne = false and attack_priority = 0
 			{
@@ -369,7 +379,7 @@ if global.death = false and animation_lock = false
 			if room != rm_weapon_get
 			{
 				//Changing weapons
-				if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = attack_actions.none
+				if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
 				{
 					if global.input_swap_right_pressed //Swapping next
 					{
@@ -398,12 +408,12 @@ if global.death = false and animation_lock = false
 							if global.weapon_choice = 0 //If using the X-Buster
 							{
 								//Go to the end of the list
-								for (var a = 1; a < 10; a++)
+								for (var a = 1; a < 9; a++) //a = 1 to skip Giga Attack
 								{
 									//Check backwards for a weapon to be equipped
-									if global.weapon[array_length(global.weapon)-a] != 0
+									if global.weapon[9-a].type != 0
 									{
-										global.weapon_choice = array_length(global.weapon)-a-1; //Extra "-1" to skip past Giga Attacks;
+										global.weapon_choice = 9-a;
 										flicker_weapon_swap = true;
 										scr_make_sound(snd_menu_move,1,1,false);
 										break;
