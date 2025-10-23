@@ -4,7 +4,6 @@
 if animation_lock = true
 	exit;
 
-
 spr_manager.update();
 
 /*

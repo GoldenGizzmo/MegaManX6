@@ -79,7 +79,7 @@ if global.input_shoot_pressed
 //Charge shots
 if global.input_shoot_released
 {
-	shooting_charged = false;
+	
 	if shooting_charge > shooting_charge_lvl_2
 	{
 		bullet = instance_create_layer(x+shootpos_x+(5*image_xscale*wall_slide_reverse),y+shootpos_y,"Projectiles",obj_bullet_charged)

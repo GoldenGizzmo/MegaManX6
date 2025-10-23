@@ -250,6 +250,10 @@ function change_sprite(spr_manager, new_sprite, sync_type = animation_sync_type.
 			case animation_sync_type.match_image:
 				image_index = image;
 			break;
+			
+			case animation_sync_type.last:
+				image_index = sprite_get_number(sprite_index) - 1;
+			break;
 		
 		}
 		
@@ -354,9 +358,12 @@ function scr_setup_player_sprites(){
 			if(!crouch)return false;
 		
 			if(shooting){
-			
-				if(global.input_shoot or scr_current_sprite_is(spr_port_x_crouch_shot)){
-					change_sprite(spr_manager, spr_port_x_crouch_shot, global.input_shoot ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop)
+				
+				if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_crouch_shot_charged)){
+					change_sprite(spr_manager, spr_port_x_crouch_shot_charged, !scr_current_sprite_is(spr_port_x_crouch_shot_charged) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
+				}
+				else if(shooting or scr_current_sprite_is(spr_port_x_crouch_shot)){
+					change_sprite(spr_manager, spr_port_x_crouch_shot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop)
 				}
 				else{
 					change_sprite(spr_manager, spr_port_x_crouch_shooting, sprite_index == spr_port_x_crouch ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
@@ -364,7 +371,7 @@ function scr_setup_player_sprites(){
 			}
 			else
 			{
-				change_sprite(spr_manager, spr_port_x_crouch, scr_current_sprite_is([spr_port_x_crouch_shot, spr_port_x_crouch_shooting]) ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
+				change_sprite(spr_manager, spr_port_x_crouch, scr_current_sprite_is([spr_port_x_crouch_shot, spr_port_x_crouch_shooting, spr_port_x_crouch_shot_charged]) ? animation_sync_type.last : animation_sync_type.base, sprite_loop_type.no_loop)
 			}
 		
 			return true;
@@ -412,10 +419,10 @@ function scr_setup_player_sprites(){
 			else
 			{
 			
-				if(sprite_index == spr_port_x_falling or sprite_index == spr_port_x_falling_shooting){
+				if(scr_current_sprite_is([FALLING_SPRITES])){
 					change_sprite(spr_manager, "land")
 				}
-				else if((struct and (c_sprite.name == "dash" or c_sprite.name == "shoot_dash")) or !scr_sprite_finished(spr_manager, spr_port_x_dash_end) or !scr_sprite_finished(spr_manager, spr_port_x_dash_shooting_end)){
+				/*else if((struct and (c_sprite.name == "dash" or c_sprite.name == "shoot_dash")) or !scr_sprite_finished(spr_manager, spr_port_x_dash_end) or !scr_sprite_finished(spr_manager, spr_port_x_dash_shooting_end)){
 				
 					if(shooting){
 						change_sprite(spr_manager, spr_port_x_dash_shooting_end, sprite_index == spr_port_x_dash_end ? animation_sync_type.match_image : animation_sync_type.base)
@@ -425,17 +432,19 @@ function scr_setup_player_sprites(){
 						change_sprite(spr_manager, spr_port_x_dash_end, sprite_index == spr_port_x_dash_shooting_loop ? animation_sync_type.match_image : animation_sync_type.base)
 					}
 				
-				}
+				}*/
 				else
 				{
-				
 
-					if(global.input_shoot or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
-						change_sprite(spr_manager, spr_port_x_idle_shoot, global.input_shoot ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
-					}
-				
-					else if(attack_action == attack_actions.x_saber or !scr_sprite_finished(spr_manager, spr_port_x_saber)){
+
+					if(attack_action == attack_actions.x_saber or !scr_sprite_finished(spr_manager, spr_port_x_saber)){
 						change_sprite(spr_manager, spr_port_x_saber, animation_sync_type.base, sprite_loop_type.no_loop);
+					}
+					else if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot_charge)){
+						change_sprite(spr_manager, spr_port_x_idle_shoot_charge, !scr_current_sprite_is(spr_port_x_idle_shoot_charge) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
+					}
+					else if(shooting or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+						change_sprite(spr_manager, spr_port_x_idle_shoot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 					}
 				
 					else if((scr_current_sprite_is(CROUCH_SPRITES) and !scr_sprite_is_reversed(spr_manager)) or !scr_sprite_finished(spr_manager, CROUCH_SPRITES)){
