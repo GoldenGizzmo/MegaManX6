@@ -389,11 +389,11 @@ function scr_setup_player_sprites(){
 			else{
 		
 				if(shooting){
-					change_sprite(spr_manager, spr_port_x_walljump_shooting, sprite_index == spr_port_x_walljump ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
+					change_sprite(spr_manager, spr_port_x_walljump_shooting, scr_current_sprite_is(spr_port_x_saber_walljump) ? animation_sync_type.last : (sprite_index == spr_port_x_walljump ? animation_sync_type.match_image : animation_sync_type.base), sprite_loop_type.no_loop)
 				}
 				else
 				{
-					change_sprite(spr_manager, spr_port_x_walljump, sprite_index == spr_port_x_walljump_shooting ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
+					change_sprite(spr_manager, spr_port_x_walljump, scr_current_sprite_is(spr_port_x_saber_walljump) ? animation_sync_type.last : (sprite_index == spr_port_x_walljump_shooting ? animation_sync_type.match_image : animation_sync_type.base), sprite_loop_type.no_loop)
 				}
 			}
 		
