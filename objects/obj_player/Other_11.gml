@@ -32,11 +32,14 @@ else
 //Uncharged shots
 if global.input_shoot_pressed
 {
+	bullet_limit = 3;
 	
-	var bullet_limit = 3;
+	//Part: Rapid Fire
+	if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"X-Buster");}	
+	
 	with obj_bullet_default
 		if sprite_index = spr_bullet_player_lemon
-			bullet_limit--;
+			obj_player.bullet_limit--;
 
 	if bullet_limit > 0
 	{
@@ -45,6 +48,11 @@ if global.input_shoot_pressed
 		bullet.speed = 8*bullet.image_xscale;
 		bullet.sprite_index = spr_bullet_player_lemon;
 		bullet.damage = 3;
+		with bullet
+		{
+			//Part: Rapid Fire
+			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Set Colour");}
+		}
 		
 		bullet.explosion_sound = snd_explosion_bullet;
 		scr_make_sound(snd_shoot_small,1,1,false);
@@ -55,6 +63,14 @@ if global.input_shoot_pressed
 		effect.x_pos = shootpos_x;
 		effect.y_pos = shootpos_y;
 		effect.image_xscale = image_xscale*wall_slide_reverse;
+		with effect
+		{
+			//Part: Rapid Fire
+			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Set Colour");}
+		}
+		
+		//Part: V Shot
+		if ds_list_find_index(global.parts_equipped,4) != -1 {scr_get_part_effect(4,0);}	
 		
 		shot_fired = true; 
 	}

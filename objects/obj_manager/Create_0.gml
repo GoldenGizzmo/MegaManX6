@@ -75,3 +75,9 @@ global.current_level = -1;
 global.give_weapon = "Nothing";
 
 global.playtime = 0;
+
+
+global.parts_amount = 2; 
+global.parts_equipped = ds_list_create();
+global.parts_owned = ds_list_create();
+global.parts_store = ds_list_create();

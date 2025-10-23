@@ -5,7 +5,7 @@ fade_speed = 0.075;
 image_speed = 0;
 
 blank = true;
-
+blendmode = bm_add;
 
 
 

@@ -18,12 +18,25 @@ switch pickup_type
 	case 0:
 		if global.life < global.lifemax
 		{
-			global.pause = true;
+			if siphon = false
+			{
+				global.pause = true;
 				
-			if global.life+pickup_power < global.lifemax
-				global.pause_healing = global.life+pickup_power;
-			else 
-				global.pause_healing = global.lifemax;
+				if global.life+pickup_power < global.lifemax
+					global.pause_healing = global.life+pickup_power;
+				else 
+					global.pause_healing = global.lifemax;
+			}
+			else
+			{
+				//Siphon part doesn't pause the game (would get annoying)
+				if global.life+pickup_power < global.lifemax
+					global.life = global.life+pickup_power;
+				else 
+					global.life = global.lifemax;		
+					
+				scr_make_sound(snd_energy_tank,0.5,1.5,false);
+			}
 		}
 		else //If at max, fill subtank instead
 		{		
@@ -75,6 +88,8 @@ switch pickup_type
 				pickup_power = ceil(refilled_weapon.ammo_max/5); //Refill 20%
 			else if sprite_index = spr_pickup_energy_mid
 				pickup_power = ceil(refilled_weapon.ammo_max/2); //Refill 50% 
+			else if sprite_index = spr_pickup_energy_siphon
+				pickup_power = ceil(refilled_weapon.ammo_max/5); //Refill 5% 
 				
 			//Refill
 			if refilled_weapon.ammo+pickup_power < refilled_weapon.ammo_max

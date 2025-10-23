@@ -525,12 +525,14 @@ if global.pause = true
 							menu_position = 0;
 							scr_make_sound(snd_menu_move,1,1,false);
 							global.pause_menu = "Part Selection";
+							global.pause_menu_sub = "Options";
 						}
 						else if global.input_swap_left_pressed
 						{
 							menu_position = 0;
 							scr_make_sound(snd_menu_move,1,1,false);
 							global.pause_menu = "Stage Select";
+							global.pause_menu_sub = "Options";
 						}
 					}
 					#endregion
@@ -660,6 +662,7 @@ if global.pause = true
 				case "Part Selection":
 					#region
 					
+					//Change music
 					if global.music != snd_music_shop
 					{
 						if global.music != "Off"
@@ -667,17 +670,197 @@ if global.pause = true
 						global.music = snd_music_shop;
 					}
 					
+					function scr_menu_move(position_variable)
+					{
+						if global.input_up_pressed and position_variable > 0
+						{
+							scr_make_sound(snd_menu_move,1,1,false);
+							if global.pause_menu_sub = "Options"
+								menu_position--;
+							else
+								menu_position_sub--;
+						}
+						else if global.input_down_pressed and position_variable < length-1
+						{
+							scr_make_sound(snd_menu_move,1,1,false);
+							if global.pause_menu_sub = "Options"
+								menu_position++;
+							else
+								menu_position_sub++;
+						}
+					}
+					
+					function scr_menu_scroll(_list,position_variable)
+					{
+						if global.input_up_pressed and position_variable = 0 and scroll > 0
+						{
+							scr_make_sound(snd_menu_move,1,1,false);
+							scroll--;
+						}
+						else if global.input_down_pressed and position_variable = length-1 and ds_list_size(_list) > length+scroll
+						{
+							scr_make_sound(snd_menu_move,1,1,false);
+							scroll++;
+						}
+					}
+					
+					switch (global.pause_menu_sub)
+					{
+						case "Options": //Top menu
+							length = 3;
+							scr_menu_move(menu_position);
+							
+							if global.input_jump_pressed
+							{	
+								switch (menu_position)
+								{
+									case 0: 
+										if ds_list_size(global.parts_owned) > 0 //Check if list is empty
+										{
+											global.pause_menu_sub = "Equip"; 
+											scr_make_sound(snd_menu_select,1,1,false);
+											ds_list_sort(global.parts_owned,true);
+										}
+										else
+											scr_make_sound(snd_menu_denied,1,1,false);
+										break;
+										
+									case 1: 
+										if ds_list_size(global.parts_store) > 0 //Check if list is empty
+										{
+											global.pause_menu_sub = "Develop"; 
+											scr_make_sound(snd_menu_select,1,1,false);
+										}
+										else
+											scr_make_sound(snd_menu_denied,1,1,false);
+										break;
+										
+									case 2: 
+										//global.pause_menu_sub = "Armour"; 
+										scr_make_sound(snd_menu_denied,1,1,false);
+										break;
+								}
+								menu_position_sub = 0;
+								scroll = 0;
+							}
+							break;
+					
+						case "Equip":
+							length = ds_list_size(global.parts_owned);
+							if length > length_limit //Limit
+								length = length_limit;
+							scr_menu_scroll(global.parts_owned,menu_position_sub); //Enable scrolling
+							scr_menu_move(menu_position_sub);
+							
+							if global.input_jump_pressed
+							{
+								//Finds the ID at this position in the menus
+								var find = ds_list_find_value(global.parts_owned,menu_position_sub+scroll);
+								
+								//Check if part is not equipped
+								if ds_list_find_index(global.parts_equipped,find) = -1
+								{
+									//Check if not at max capacity
+									if ds_list_size(global.parts_equipped) < global.parts_amount
+									{	
+										//Add as equipped
+										ds_list_add(global.parts_equipped,find);
+										scr_make_sound(snd_menu_equip,1,1,false);
+									}
+									else
+										scr_make_sound(snd_menu_denied,1,1,false);
+								}
+								else //Unequip part
+								{
+									//Find the position of the matching ID in the equipped list
+									var remove = ds_list_find_index(global.parts_equipped,find);
+									ds_list_delete(global.parts_equipped,remove);
+									scr_make_sound(snd_menu_move,1,1,false);
+								}
+							}
+							
+							
+							//Return
+							else if global.input_start_pressed
+							{
+								scr_make_sound(snd_menu_move,1,1,false);
+								menu_position_sub = 0;
+								scroll = 0;
+								global.pause_menu_sub = "Options";
+							}
+							break;
+							
+						case "Develop":
+							length = ds_list_size(global.parts_store);
+							if length > length_limit //Limit
+								length = length_limit;
+							scr_menu_scroll(global.parts_store,menu_position_sub); //Enable scrolling
+							scr_menu_move(menu_position_sub);
+
+							if global.input_jump_pressed
+							{
+								//Get value of highlighted item
+								var find = ds_list_find_value(global.parts_store,menu_position_sub+scroll);
+								scr_get_part(find);
+								
+								//Check if can be afforded
+								if global.nightmare_souls >= part_cost
+								{	
+									//Add to player list of parts
+									ds_list_add(global.parts_owned,find);
+									
+									global.nightmare_souls -= part_cost;
+									scr_make_sound(snd_menu_equip,1,1,false); //get a special sound
+									
+									//Remove bought part
+									remove = ds_list_find_index(global.parts_store,find);
+									ds_list_delete(global.parts_store,remove);
+									
+									//Adjust the list to prevent highlighting out of bounds
+									if scroll > 0
+										scroll--;
+									else
+									{
+										//If at the bottom of the list
+										if menu_position_sub = length-1 and length > 1
+											menu_position_sub--;
+									}
+								}
+								else
+									scr_make_sound(snd_menu_denied,1,1,false);
+							}
+							
+							//Return
+							else if global.input_start_pressed
+							{
+								scr_make_sound(snd_menu_move,1,1,false);
+								menu_position_sub = 0;
+								scroll = 0;
+								global.pause_menu_sub = "Options";
+							}
+							break;
+					}
+					
+					
+					
+					
+					
+					//Swap to the other screens
 					if global.input_swap_right_pressed
 					{
 						menu_position = 0;
+						scroll = 0;
 						scr_make_sound(snd_menu_move,1,1,false);
 						global.pause_menu = "Stage Select";
+						global.pause_menu_sub = "Options";
 					}
 					else if global.input_swap_left_pressed
 					{
 						menu_position = 0;
+						scroll = 0;
 						scr_make_sound(snd_menu_move,1,1,false);
 						global.pause_menu = "Options";
+						global.pause_menu_sub = "Options";
 					}
 					#endregion
 					break;

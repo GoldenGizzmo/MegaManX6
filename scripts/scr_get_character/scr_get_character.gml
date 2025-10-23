@@ -39,6 +39,7 @@ function scr_get_character(character)
 			character_colour = make_color_rgb(255,102,102);
 			mugshot = spr_mugshot_alia;
 			mugshot_talk = spr_mugshot_alia_talk;
+			pause_hue = 10;
 			break;
 			
 		case "High Max":

@@ -21,3 +21,4 @@ hover_point = ystart;
 hover_delay = irandom(500);
 
 soul_steal = 0; //For npcs/bosses that steal souls from the player
+siphon = false;

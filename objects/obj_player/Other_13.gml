@@ -20,6 +20,11 @@ switch (global.weapon[global.weapon_choice].type)
 			bullet.image_xscale = image_xscale;
 			bullet.melee_damage = 4;
 			bullet.melee_frames = 6;
+			with bullet
+			{
+				//Part: Saber Plus
+				if ds_list_find_index(global.parts_equipped,3) != -1 {scr_get_part_effect(3,false);}	
+			}
 			
 			scr_make_sound(snd_shoot_saber_x,1,1,false);
 			scr_player_voicelines("Weapon");
@@ -87,18 +92,45 @@ switch (global.weapon[global.weapon_choice].type)
 		break;
 	
 	case "Meteor Rain":
-	
+		if global.input_special_pressed and global.weapon[global.weapon_choice].ammo > 0
+		{
+			bullet_limit_special = 1;
+			//Part: Rapid Fire
+			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Meteor Rain");}	
+			with obj_bullet_meteor_rain
+				if villainy = 0
+					obj_player.bullet_limit_special--;
+
+			if bullet_limit_special > 0
+			{
+				bullet = instance_create_layer(x+shootpos_x,y+shootpos_y,"Projectiles",obj_bullet_meteor_rain)
+				bullet.damage = 3;
+				bullet.direction = 90-(90*image_xscale*wall_slide_reverse);
+				if global.input_up
+					bullet.direction = 90;
+				else if global.input_down
+					bullet.rise_turnspeed = 3;
+				
+				scr_make_sound(snd_shoot_meteorrain,1,1,false);
+				bullet.special = true;
+						
+				shot_fired = true;
+				global.weapon[global.weapon_choice].ammo--;
+			}
+		}
 		break;
 	
 	case "Ray Arrow":
 		if global.input_special_pressed and global.weapon[global.weapon_choice].ammo > 0
 		{
-			var bullet_limit = 2;
+			bullet_limit_special = 2;
+			//Part: Rapid Fire
+			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Ray Arrow");}
 			with obj_bullet_default
 				if sprite_index = spr_bullet_rayarrow
-					bullet_limit--;
+					obj_player.bullet_limit_special--;
 
-			if bullet_limit > 0
+			if bullet_limit_special > 0
 			{
 				bullet = instance_create_layer(x+shootpos_x,y+shootpos_y,"Projectiles",obj_bullet_default)
 				bullet.image_xscale = image_xscale*wall_slide_reverse;

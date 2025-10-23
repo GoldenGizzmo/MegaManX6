@@ -24,6 +24,8 @@ despawn = true;
 
 special = false; //They are a special weapon (High Max)
 
+palette_type = 0;
+palette = 0;
 
 
 
