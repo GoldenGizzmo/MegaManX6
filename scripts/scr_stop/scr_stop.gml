@@ -75,6 +75,10 @@ function scr_stop_wall(spd, col = obj_solid){
 		
 		case obj_player:
 		
+			if(!walled){
+				attack_action = attack_actions.none;
+			}
+		
 			walled = true;
 			
 			//Checking if touching a wall that can't be climbed
