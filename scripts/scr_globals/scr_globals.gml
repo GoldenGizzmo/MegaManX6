@@ -13,7 +13,9 @@
 #macro PLAYER_BASE_IMAGE_SPEED 0.5
 
 #macro CROUCH_SPRITES [spr_port_x_crouch, spr_port_x_crouch_shooting, spr_port_x_crouch_shot]
-#macro FALLING_SPRITES [spr_port_x_falling, spr_port_x_falling_shooting]
+#macro FALLING_SPRITES [spr_port_x_falling, spr_port_x_falling_shooting, spr_port_x_saber_jump]
+#macro X_SABER_SPRITES [spr_port_x_saber, spr_port_x_saber_jump, spr_port_x_saber_walljump]
+
 
 
 enum dynamic_type {

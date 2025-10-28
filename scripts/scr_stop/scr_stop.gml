@@ -21,7 +21,10 @@ function scr_stop_floor(){
 		
 		case obj_player:
 			
-			if airborne = true scr_make_sound(snd_player_x_landing,1,1,false);	
+			if airborne = true{
+				scr_make_sound(snd_player_x_landing,1,1,false);	
+				attack_action = attack_actions.none;
+			}
 			airborne = false;
 			
 		break;

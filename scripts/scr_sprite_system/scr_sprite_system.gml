@@ -360,9 +360,9 @@ function scr_setup_player_sprites(){
 				if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_crouch_shot_charged)){
 					change_sprite(spr_manager, spr_port_x_crouch_shot_charged, !scr_current_sprite_is(spr_port_x_crouch_shot_charged) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 				}
-				/*else if(shooting or scr_current_sprite_is(spr_port_x_crouch_shot)){
+				else if(shooting or scr_current_sprite_is(spr_port_x_crouch_shot)){
 					change_sprite(spr_manager, spr_port_x_crouch_shot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop)
-				}*/
+				}
 				else{
 					change_sprite(spr_manager, spr_port_x_crouch_shooting, sprite_index == spr_port_x_crouch ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
 				}

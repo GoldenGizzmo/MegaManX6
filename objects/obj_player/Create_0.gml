@@ -68,6 +68,7 @@ on_slope = false;
 depth -= 10; //Draw above other enemies
 
 
+stop_player = false;
 
 
 spr_manager = new sprite_manager(id)
