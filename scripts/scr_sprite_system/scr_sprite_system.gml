@@ -60,8 +60,6 @@ function sprite_manager(_id) constructor{
 	
 	animation_end = function(){
 		
-		show_debug_message($"animation ended")
-		
 		finished = true;
 		
 		if(typeof(current_sprite) == "struct"){
@@ -289,8 +287,8 @@ function scr_setup_player_sprites(){
 		spr_manager.add_custom_sprite("move", spr_port_x_move_start, spr_port_x_move_loop, undefined, undefined, [sprite_sister("shoot_move")])
 		spr_manager.add_custom_sprite("shoot_move", spr_port_x_move_start_shooting, spr_port_x_move_loop_shooting, undefined, undefined, [sprite_sister("move")])
 		
-		spr_manager.add_custom_sprite("land", spr_port_x_landing, spr_port_x_idle, undefined, undefined, [sprite_sister("shoot_land")])
-		spr_manager.add_custom_sprite("shoot_land", spr_port_x_landing, spr_port_x_idle, undefined, undefined, [sprite_sister("land")])
+		//spr_manager.add_custom_sprite("land", spr_port_x_landing, spr_port_x_idle, undefined, undefined, [sprite_sister("shoot_land")])
+		//spr_manager.add_custom_sprite("shoot_land", spr_port_x_landing, spr_port_x_idle, undefined, undefined, [sprite_sister("land")])
 	
 		spr_manager.add_custom_sprite("dash", spr_port_x_dash, spr_port_x_dash_loop, undefined, undefined, [sprite_sister("shoot_dash")])
 		spr_manager.add_custom_sprite("shoot_dash", spr_port_x_dash_shooting, spr_port_x_dash_shooting_loop, undefined, undefined, [sprite_sister("dash")])
@@ -315,11 +313,11 @@ function scr_setup_player_sprites(){
 				if(yspeed >= 0){
 			
 
-						change_sprite(spr_manager, shooting ? spr_port_x_falling_shooting  : spr_port_x_falling, animation_sync_type.base, sprite_loop_type.no_loop)
+						change_sprite(spr_manager, shooting ? spr_port_x_falling_shooting : spr_port_x_falling, scr_current_sprite_is([spr_port_x_falling, spr_port_x_falling_shooting]) ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
 				}
 				else
 				{
-					change_sprite(spr_manager, shooting ? spr_port_x_jump_shooting : spr_port_x_jump, animation_sync_type.base, sprite_loop_type.no_loop)
+					change_sprite(spr_manager, shooting ? spr_port_x_jump_shooting : spr_port_x_jump, scr_current_sprite_is([spr_port_x_falling, spr_port_x_falling_shooting]) ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
 				}
 			}
 		
@@ -357,14 +355,14 @@ function scr_setup_player_sprites(){
 		
 			if(!crouch)return false;
 		
-			if(shooting){
+			if((global.input_shoot_pressed or shooting_charged) or !scr_sprite_finished(spr_manager, [spr_port_x_crouch_shot_charged, spr_port_x_crouch_shot, spr_port_x_crouch_shooting])){
 				
 				if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_crouch_shot_charged)){
 					change_sprite(spr_manager, spr_port_x_crouch_shot_charged, !scr_current_sprite_is(spr_port_x_crouch_shot_charged) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 				}
-				else if(shooting or scr_current_sprite_is(spr_port_x_crouch_shot)){
+				/*else if(shooting or scr_current_sprite_is(spr_port_x_crouch_shot)){
 					change_sprite(spr_manager, spr_port_x_crouch_shot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop)
-				}
+				}*/
 				else{
 					change_sprite(spr_manager, spr_port_x_crouch_shooting, sprite_index == spr_port_x_crouch ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
 				}
@@ -418,9 +416,9 @@ function scr_setup_player_sprites(){
 			}
 			else
 			{
-			
-				if(scr_current_sprite_is([FALLING_SPRITES])){
-					change_sprite(spr_manager, "land")
+				
+				if(scr_current_sprite_is(FALLING_SPRITES) or !scr_sprite_finished(spr_manager, spr_port_x_landing)){
+					change_sprite(spr_manager, spr_port_x_landing)
 				}
 				/*else if((struct and (c_sprite.name == "dash" or c_sprite.name == "shoot_dash")) or !scr_sprite_finished(spr_manager, spr_port_x_dash_end) or !scr_sprite_finished(spr_manager, spr_port_x_dash_shooting_end)){
 				
@@ -443,7 +441,7 @@ function scr_setup_player_sprites(){
 					else if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot_charge)){
 						change_sprite(spr_manager, spr_port_x_idle_shoot_charge, !scr_current_sprite_is(spr_port_x_idle_shoot_charge) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 					}
-					else if(shooting or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+					else if(global.input_shoot_pressed or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
 						change_sprite(spr_manager, spr_port_x_idle_shoot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 					}
 				
@@ -526,6 +524,8 @@ function scr_sprite_is_reversed(spr_manager){
 //Check if the current sprite is equal to any of the sprites given.
 //You can give an array of sprites to check.
 function scr_current_sprite_is(sprite){
+	
+	show_debug_message(sprite)
 	
 	if(typeof(sprite) == "array"){
 		
