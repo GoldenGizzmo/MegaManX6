@@ -355,7 +355,7 @@ function scr_setup_player_sprites(){
 		
 			if(!crouch)return false;
 		
-			if((global.input_shoot_pressed or shooting_charged) or !scr_sprite_finished(spr_manager, [spr_port_x_crouch_shot_charged, spr_port_x_crouch_shot, spr_port_x_crouch_shooting])){
+			if((shooting) or !scr_sprite_finished(spr_manager, [spr_port_x_crouch_shot_charged, spr_port_x_crouch_shot, spr_port_x_crouch_shooting])){
 				
 				if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_crouch_shot_charged)){
 					change_sprite(spr_manager, spr_port_x_crouch_shot_charged, !scr_current_sprite_is(spr_port_x_crouch_shot_charged) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
