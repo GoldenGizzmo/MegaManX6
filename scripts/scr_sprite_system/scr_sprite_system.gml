@@ -165,6 +165,7 @@ function change_sprite(spr_manager, new_sprite, sync_type = animation_sync_type.
 		if(!override){
 			
 			if(!loop and spr_manager.current_sprite == new_sprite){
+				
 				return;
 			}
 		
@@ -417,6 +418,8 @@ function scr_setup_player_sprites(){
 			else
 			{
 				
+				show_debug_message($"sprite {sprite_index}")
+				
 				if(scr_current_sprite_is(FALLING_SPRITES) or !scr_sprite_finished(spr_manager, spr_port_x_landing)){
 					change_sprite(spr_manager, spr_port_x_landing)
 				}
@@ -525,7 +528,6 @@ function scr_sprite_is_reversed(spr_manager){
 //You can give an array of sprites to check.
 function scr_current_sprite_is(sprite){
 	
-	show_debug_message(sprite)
 	
 	if(typeof(sprite) == "array"){
 		

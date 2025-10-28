@@ -48,8 +48,7 @@ switch (global.weapon[global.weapon_choice].type)
 				wall_jump = false; //Funny X-Saber wall scaling tech
 				bullet.sprite_index = spr_bullet_x_saber_jump;
 			}
-			
-			image_index = 0;
+
 			//shot_fired = true;
 			crouch = false;
 		}
