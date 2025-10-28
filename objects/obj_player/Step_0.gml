@@ -88,6 +88,7 @@ if global.death = false and animation_lock = false
 				if global.input_dash
 					dash = true;
 				
+				attack_action = attack_actions.none;
 				audio_stop_sound(snd_player_x_dash);
 				scr_make_sound(snd_player_x_jump,1,1,false);
 				scr_player_voicelines("Jump");
