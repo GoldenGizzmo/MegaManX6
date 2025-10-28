@@ -116,6 +116,8 @@ function scr_stop_wall(spd, col = obj_solid){
 					yspeed = -jump_height;
 					wall_jump = true;
 					
+					attack_action = attack_actions.none;
+					
 					//Wall kick effect
 					effect = instance_create_layer(x+14*image_xscale,y+18,"Explosions",obj_explosion); //y+23
 					effect.sprite_index = spr_explosion_projectile;
