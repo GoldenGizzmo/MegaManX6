@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_boss_turtloid_idle_jewel_bottom",
   "bboxMode":0,
   "bbox_bottom":103,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"76f79243-9d54-4033-9640-714ff6956a0d","name":"76f79243-9d54-4033-9640-714ff6956a0d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3ae5f345-da21-457b-ace5-3fb44520d5a5","name":"3ae5f345-da21-457b-ace5-3fb44520d5a5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"9ab3e79f-9bb1-4fa1-8996-59594e59f116","name":"9ab3e79f-9bb1-4fa1-8996-59594e59f116","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"76f79243-9d54-4033-9640-714ff6956a0d","name":"76f79243-9d54-4033-9640-714ff6956a0d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3ae5f345-da21-457b-ace5-3fb44520d5a5","name":"3ae5f345-da21-457b-ace5-3fb44520d5a5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9ab3e79f-9bb1-4fa1-8996-59594e59f116","name":"9ab3e79f-9bb1-4fa1-8996-59594e59f116","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -78,21 +78,11 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"203667b3-b108-41c8-bebe-2c20817da6e1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1703b66b-8d15-4216-a5f5-4caa3dfcfbc0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76f79243-9d54-4033-9640-714ff6956a0d","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"17d8b3b3-4780-4b96-98db-9dfd6a0583ff","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3ae5f345-da21-457b-ace5-3fb44520d5a5","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9298c986-7ce8-43b7-a3be-b3c4939a3155","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9ab3e79f-9bb1-4fa1-8996-59594e59f116","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"49f3da7c-66bb-4132-a66b-7012941b3f3a","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"203667b3-b108-41c8-bebe-2c20817da6e1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1703b66b-8d15-4216-a5f5-4caa3dfcfbc0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"76f79243-9d54-4033-9640-714ff6956a0d","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"17d8b3b3-4780-4b96-98db-9dfd6a0583ff","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3ae5f345-da21-457b-ace5-3fb44520d5a5","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9298c986-7ce8-43b7-a3be-b3c4939a3155","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9ab3e79f-9bb1-4fa1-8996-59594e59f116","path":"sprites/spr_boss_turtloid_idle_jewel_bottom/spr_boss_turtloid_idle_jewel_bottom.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"49f3da7c-66bb-4132-a66b-7012941b3f3a","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

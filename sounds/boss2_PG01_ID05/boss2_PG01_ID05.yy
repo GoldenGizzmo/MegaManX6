@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"boss2_PG01_ID05",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.7628798,
+  "exportDir":"",
   "name":"boss2_PG01_ID05",
   "parent":{
     "name":"Dynamo",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"boss2_PG01_ID05.wav",
-  "type":0,
   "volume":1.0,
 }

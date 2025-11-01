@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_dozer_debris",
   "bboxMode":0,
   "bbox_bottom":25,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"23d7794f-d7a4-4f88-9fb0-4fc431afe824","name":"23d7794f-d7a4-4f88-9fb0-4fc431afe824","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8e151e59-9b02-4707-b4e1-cabcfe337120","name":"8e151e59-9b02-4707-b4e1-cabcfe337120","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6b92d58b-8540-4ec1-b6b0-cf039a58d73e","name":"6b92d58b-8540-4ec1-b6b0-cf039a58d73e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5ab677ab-2f0b-472f-aaaf-b4d59c0f3b70","name":"5ab677ab-2f0b-472f-aaaf-b4d59c0f3b70","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"81ded9ed-fda2-432b-a3e6-f3dce2c6d653","name":"81ded9ed-fda2-432b-a3e6-f3dce2c6d653","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a9dd636a-0376-4b37-84bc-4323d8295558","name":"a9dd636a-0376-4b37-84bc-4323d8295558","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"23d7794f-d7a4-4f88-9fb0-4fc431afe824","name":"23d7794f-d7a4-4f88-9fb0-4fc431afe824","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8e151e59-9b02-4707-b4e1-cabcfe337120","name":"8e151e59-9b02-4707-b4e1-cabcfe337120","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6b92d58b-8540-4ec1-b6b0-cf039a58d73e","name":"6b92d58b-8540-4ec1-b6b0-cf039a58d73e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5ab677ab-2f0b-472f-aaaf-b4d59c0f3b70","name":"5ab677ab-2f0b-472f-aaaf-b4d59c0f3b70","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"81ded9ed-fda2-432b-a3e6-f3dce2c6d653","name":"81ded9ed-fda2-432b-a3e6-f3dce2c6d653","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a9dd636a-0376-4b37-84bc-4323d8295558","name":"a9dd636a-0376-4b37-84bc-4323d8295558","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -75,24 +75,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23d7794f-d7a4-4f88-9fb0-4fc431afe824","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"aa02a2cf-0728-47d4-84d3-114011060cc9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e151e59-9b02-4707-b4e1-cabcfe337120","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9eac0650-8f58-4adb-9588-3b71e0a2c272","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b92d58b-8540-4ec1-b6b0-cf039a58d73e","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cc04a852-34bb-4ee1-bfda-eff1dfa0e1a2","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5ab677ab-2f0b-472f-aaaf-b4d59c0f3b70","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3193fe63-e03f-412d-835e-dff7a99569c4","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"81ded9ed-fda2-432b-a3e6-f3dce2c6d653","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"77beef00-53b2-4ab9-ac4d-a35a3c256b03","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a9dd636a-0376-4b37-84bc-4323d8295558","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2c9c7c94-38f7-479f-addd-2292d8f72e59","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"23d7794f-d7a4-4f88-9fb0-4fc431afe824","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"aa02a2cf-0728-47d4-84d3-114011060cc9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e151e59-9b02-4707-b4e1-cabcfe337120","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9eac0650-8f58-4adb-9588-3b71e0a2c272","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b92d58b-8540-4ec1-b6b0-cf039a58d73e","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cc04a852-34bb-4ee1-bfda-eff1dfa0e1a2","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5ab677ab-2f0b-472f-aaaf-b4d59c0f3b70","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3193fe63-e03f-412d-835e-dff7a99569c4","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"81ded9ed-fda2-432b-a3e6-f3dce2c6d653","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"77beef00-53b2-4ab9-ac4d-a35a3c256b03","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a9dd636a-0376-4b37-84bc-4323d8295558","path":"sprites/spr_enemy_dozer_debris/spr_enemy_dozer_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2c9c7c94-38f7-479f-addd-2292d8f72e59","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -109,7 +109,7 @@ if global.input_shoot_released
 		}
 		
 		shot_fired = true;
-		shooting_charged = true;
+		shooting_charged = shooting_charge_level.two;
 		shooting_lock = true;
 		alarm[0] = 15;
 	}
@@ -130,6 +130,8 @@ if global.input_shoot_released
 		effect.x_pos = shootpos_x;
 		effect.y_pos = shootpos_y;
 		effect.image_xscale = image_xscale*wall_slide_reverse;
+		
+		shooting_charged = shooting_charge_level.one;
 		
 		shot_fired = true;
 		shooting_lock = true;

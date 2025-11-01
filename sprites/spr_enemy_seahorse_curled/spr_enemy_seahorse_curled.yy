@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_seahorse_curled",
   "bboxMode":2,
   "bbox_bottom":35,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"cf83af09-ca69-48b4-ac35-f96347002de5","name":"cf83af09-ca69-48b4-ac35-f96347002de5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b01687f3-eacf-4084-866f-b4615c5c59fe","name":"b01687f3-eacf-4084-866f-b4615c5c59fe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0301bba9-d2b6-4968-ba1c-eacec956ece6","name":"0301bba9-d2b6-4968-ba1c-eacec956ece6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"cf83af09-ca69-48b4-ac35-f96347002de5","name":"cf83af09-ca69-48b4-ac35-f96347002de5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b01687f3-eacf-4084-866f-b4615c5c59fe","name":"b01687f3-eacf-4084-866f-b4615c5c59fe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0301bba9-d2b6-4968-ba1c-eacec956ece6","name":"0301bba9-d2b6-4968-ba1c-eacec956ece6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,18 +73,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3bf18d61-fccb-49ec-bcd1-9e69bd004c32","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cf83af09-ca69-48b4-ac35-f96347002de5","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"df7e4d9c-2b29-4eb4-ae69-9008bcb4f892","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b01687f3-eacf-4084-866f-b4615c5c59fe","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"94970a12-dbec-4af4-9e79-832767f880a8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0301bba9-d2b6-4968-ba1c-eacec956ece6","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"458f6c56-c091-4515-a57a-00a2d73c1ce4","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3bf18d61-fccb-49ec-bcd1-9e69bd004c32","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cf83af09-ca69-48b4-ac35-f96347002de5","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"df7e4d9c-2b29-4eb4-ae69-9008bcb4f892","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b01687f3-eacf-4084-866f-b4615c5c59fe","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"94970a12-dbec-4af4-9e79-832767f880a8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0301bba9-d2b6-4968-ba1c-eacec956ece6","path":"sprites/spr_enemy_seahorse_curled/spr_enemy_seahorse_curled.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"458f6c56-c091-4515-a57a-00a2d73c1ce4","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_seahorse_debris_alt",
   "bboxMode":2,
   "bbox_bottom":34,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d82f9791-afb2-4f81-a9ec-faa36fff1883","name":"d82f9791-afb2-4f81-a9ec-faa36fff1883","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c356137e-22f0-4604-ae81-b4ab75381b78","name":"c356137e-22f0-4604-ae81-b4ab75381b78","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f3ce9a69-351e-4fc5-9069-587ed95348ba","name":"f3ce9a69-351e-4fc5-9069-587ed95348ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"42fc15d9-d5a0-4f4c-b786-99e1cd15dc5f","name":"42fc15d9-d5a0-4f4c-b786-99e1cd15dc5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d82f9791-afb2-4f81-a9ec-faa36fff1883","name":"d82f9791-afb2-4f81-a9ec-faa36fff1883","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c356137e-22f0-4604-ae81-b4ab75381b78","name":"c356137e-22f0-4604-ae81-b4ab75381b78","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f3ce9a69-351e-4fc5-9069-587ed95348ba","name":"f3ce9a69-351e-4fc5-9069-587ed95348ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"42fc15d9-d5a0-4f4c-b786-99e1cd15dc5f","name":"42fc15d9-d5a0-4f4c-b786-99e1cd15dc5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,18 +73,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d82f9791-afb2-4f81-a9ec-faa36fff1883","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7e24f37f-9e33-4763-853c-ba3fa6e659af","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c356137e-22f0-4604-ae81-b4ab75381b78","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"31f9bf13-d404-43f6-90f3-394be6ed78fc","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f3ce9a69-351e-4fc5-9069-587ed95348ba","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"303a0910-f9be-4bd6-963e-4b927ead0841","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"42fc15d9-d5a0-4f4c-b786-99e1cd15dc5f","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8fa757e9-1b11-47bb-b391-4da7cc86c4be","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d82f9791-afb2-4f81-a9ec-faa36fff1883","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7e24f37f-9e33-4763-853c-ba3fa6e659af","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c356137e-22f0-4604-ae81-b4ab75381b78","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"31f9bf13-d404-43f6-90f3-394be6ed78fc","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f3ce9a69-351e-4fc5-9069-587ed95348ba","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"303a0910-f9be-4bd6-963e-4b927ead0841","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"42fc15d9-d5a0-4f4c-b786-99e1cd15dc5f","path":"sprites/spr_enemy_seahorse_debris_alt/spr_enemy_seahorse_debris_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8fa757e9-1b11-47bb-b391-4da7cc86c4be","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

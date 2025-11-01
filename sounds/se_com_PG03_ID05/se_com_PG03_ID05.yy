@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"se_com_PG03_ID05",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.11526077,
+  "exportDir":"",
   "name":"se_com_PG03_ID05",
   "parent":{
     "name":"Miscellaneous",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"se_com_PG03_ID05.wav",
-  "type":1,
   "volume":1.0,
 }

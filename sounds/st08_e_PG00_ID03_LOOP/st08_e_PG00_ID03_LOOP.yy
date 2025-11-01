@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"st08_e_PG00_ID03_LOOP",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.3845805,
+  "exportDir":"",
   "name":"st08_e_PG00_ID03_LOOP",
   "parent":{
     "name":"Infinity-Mijinion-stage",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"st08_e_PG00_ID03_LOOP.wav",
-  "type":0,
   "volume":1.0,
 }

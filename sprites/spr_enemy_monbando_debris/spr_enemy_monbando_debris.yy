@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_monbando_debris",
   "bboxMode":2,
   "bbox_bottom":63,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"5551f4e7-fbbc-440d-b23a-8f191c5e989b","name":"5551f4e7-fbbc-440d-b23a-8f191c5e989b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2501a6c4-123c-45c7-9dee-9613a7e167c2","name":"2501a6c4-123c-45c7-9dee-9613a7e167c2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8e368260-97c2-4a59-96dc-5dbfc860bdd7","name":"8e368260-97c2-4a59-96dc-5dbfc860bdd7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6a1efd95-5530-4e6f-84c1-4b94939ce377","name":"6a1efd95-5530-4e6f-84c1-4b94939ce377","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5551f4e7-fbbc-440d-b23a-8f191c5e989b","name":"5551f4e7-fbbc-440d-b23a-8f191c5e989b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2501a6c4-123c-45c7-9dee-9613a7e167c2","name":"2501a6c4-123c-45c7-9dee-9613a7e167c2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8e368260-97c2-4a59-96dc-5dbfc860bdd7","name":"8e368260-97c2-4a59-96dc-5dbfc860bdd7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6a1efd95-5530-4e6f-84c1-4b94939ce377","name":"6a1efd95-5530-4e6f-84c1-4b94939ce377","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,18 +73,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5551f4e7-fbbc-440d-b23a-8f191c5e989b","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3203d9b7-765d-4c64-ab1d-5e8b6d686284","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2501a6c4-123c-45c7-9dee-9613a7e167c2","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"280eabc5-e9da-40cb-a6c8-acc3aee1ef7c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e368260-97c2-4a59-96dc-5dbfc860bdd7","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5e4fa18d-7bd4-4ea6-8d9e-00b57d1d029b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6a1efd95-5530-4e6f-84c1-4b94939ce377","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fe1dc398-da54-417d-a618-165158f82595","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5551f4e7-fbbc-440d-b23a-8f191c5e989b","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3203d9b7-765d-4c64-ab1d-5e8b6d686284","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2501a6c4-123c-45c7-9dee-9613a7e167c2","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"280eabc5-e9da-40cb-a6c8-acc3aee1ef7c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e368260-97c2-4a59-96dc-5dbfc860bdd7","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5e4fa18d-7bd4-4ea6-8d9e-00b57d1d029b","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6a1efd95-5530-4e6f-84c1-4b94939ce377","path":"sprites/spr_enemy_monbando_debris/spr_enemy_monbando_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fe1dc398-da54-417d-a618-165158f82595","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -358,7 +358,7 @@ function scr_setup_player_sprites(){
 		
 			if((shooting) or !scr_sprite_finished(spr_manager, [spr_port_x_crouch_shot_charged, spr_port_x_crouch_shot, spr_port_x_crouch_shooting])){
 				
-				if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_crouch_shot_charged)){
+				if(shooting_charged == shooting_charge_level.two or !scr_sprite_finished(spr_manager, spr_port_x_crouch_shot_charged)){
 					change_sprite(spr_manager, spr_port_x_crouch_shot_charged, !scr_current_sprite_is(spr_port_x_crouch_shot_charged) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 				}
 				/*else if(shooting or scr_current_sprite_is(spr_port_x_crouch_shot)){
@@ -418,7 +418,6 @@ function scr_setup_player_sprites(){
 			else
 			{
 				
-				show_debug_message($"sprite {sprite_index}")
 				
 				if(scr_current_sprite_is(FALLING_SPRITES) or !scr_sprite_finished(spr_manager, spr_port_x_landing)){
 					change_sprite(spr_manager, spr_port_x_landing)
@@ -441,10 +440,10 @@ function scr_setup_player_sprites(){
 					if(attack_action == attack_actions.x_saber or !scr_sprite_finished(spr_manager, spr_port_x_saber)){
 						change_sprite(spr_manager, spr_port_x_saber, animation_sync_type.base, sprite_loop_type.no_loop);
 					}
-					else if(shooting_charged or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot_charge)){
+					else if(shooting_charged == shooting_charge_level.two or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot_charge)){
 						change_sprite(spr_manager, spr_port_x_idle_shoot_charge, !scr_current_sprite_is(spr_port_x_idle_shoot_charge) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 					}
-					else if(global.input_shoot_pressed or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+					else if(global.input_shoot_pressed or shooting_charged == shooting_charge_level.one or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
 						change_sprite(spr_manager, spr_port_x_idle_shoot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 					}
 				

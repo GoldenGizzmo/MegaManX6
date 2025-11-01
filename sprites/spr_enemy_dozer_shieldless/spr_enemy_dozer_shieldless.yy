@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_dozer_shieldless",
   "bboxMode":2,
   "bbox_bottom":96,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"556b9b6f-c87d-47ad-b9a7-bfc40a1e5645","name":"556b9b6f-c87d-47ad-b9a7-bfc40a1e5645","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"10ae8e05-4c67-4034-b906-d5522c732ea8","name":"10ae8e05-4c67-4034-b906-d5522c732ea8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b18ecfd5-6c87-4cd7-a2f0-e3734fb77015","name":"b18ecfd5-6c87-4cd7-a2f0-e3734fb77015","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d0d8dc51-325d-409b-8437-f6e8fb7907ba","name":"d0d8dc51-325d-409b-8437-f6e8fb7907ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"099c6cab-4c1a-47bc-8efa-3ae6fdc7fcdd","name":"099c6cab-4c1a-47bc-8efa-3ae6fdc7fcdd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2a9370d0-9124-4188-a8a0-5495071c2cc0","name":"2a9370d0-9124-4188-a8a0-5495071c2cc0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e8f3b2fc-5a25-4e67-83c1-3f112688cdfa","name":"e8f3b2fc-5a25-4e67-83c1-3f112688cdfa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"823f6a5d-c131-46e7-9be9-54cd927195f8","name":"823f6a5d-c131-46e7-9be9-54cd927195f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"556b9b6f-c87d-47ad-b9a7-bfc40a1e5645","name":"556b9b6f-c87d-47ad-b9a7-bfc40a1e5645","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"10ae8e05-4c67-4034-b906-d5522c732ea8","name":"10ae8e05-4c67-4034-b906-d5522c732ea8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b18ecfd5-6c87-4cd7-a2f0-e3734fb77015","name":"b18ecfd5-6c87-4cd7-a2f0-e3734fb77015","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d0d8dc51-325d-409b-8437-f6e8fb7907ba","name":"d0d8dc51-325d-409b-8437-f6e8fb7907ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"099c6cab-4c1a-47bc-8efa-3ae6fdc7fcdd","name":"099c6cab-4c1a-47bc-8efa-3ae6fdc7fcdd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2a9370d0-9124-4188-a8a0-5495071c2cc0","name":"2a9370d0-9124-4188-a8a0-5495071c2cc0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e8f3b2fc-5a25-4e67-83c1-3f112688cdfa","name":"e8f3b2fc-5a25-4e67-83c1-3f112688cdfa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"823f6a5d-c131-46e7-9be9-54cd927195f8","name":"823f6a5d-c131-46e7-9be9-54cd927195f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -78,30 +78,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"556b9b6f-c87d-47ad-b9a7-bfc40a1e5645","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1744ea9a-6e9a-4a81-a14e-4ba0a7906848","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"10ae8e05-4c67-4034-b906-d5522c732ea8","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f700ad27-87b1-4b45-b46b-e7bf778323d9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b18ecfd5-6c87-4cd7-a2f0-e3734fb77015","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"edd817d9-4592-4e44-b622-4400fb91d91d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0d8dc51-325d-409b-8437-f6e8fb7907ba","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8f8f1dd8-ce8b-4d67-bd47-7b593142fabe","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"099c6cab-4c1a-47bc-8efa-3ae6fdc7fcdd","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"04e9f6cc-65d1-47b8-b24f-6517d79f9ab1","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2a9370d0-9124-4188-a8a0-5495071c2cc0","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9eabc9f1-5df8-4207-a1d4-b63ef6329087","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8f3b2fc-5a25-4e67-83c1-3f112688cdfa","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fa54d6b1-5d5a-437e-98ce-13c5c9774597","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"823f6a5d-c131-46e7-9be9-54cd927195f8","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"63ca02b4-d6e4-4cdd-8462-8ceb5d9e04e1","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"556b9b6f-c87d-47ad-b9a7-bfc40a1e5645","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1744ea9a-6e9a-4a81-a14e-4ba0a7906848","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"10ae8e05-4c67-4034-b906-d5522c732ea8","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f700ad27-87b1-4b45-b46b-e7bf778323d9","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b18ecfd5-6c87-4cd7-a2f0-e3734fb77015","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"edd817d9-4592-4e44-b622-4400fb91d91d","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0d8dc51-325d-409b-8437-f6e8fb7907ba","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8f8f1dd8-ce8b-4d67-bd47-7b593142fabe","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"099c6cab-4c1a-47bc-8efa-3ae6fdc7fcdd","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"04e9f6cc-65d1-47b8-b24f-6517d79f9ab1","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2a9370d0-9124-4188-a8a0-5495071c2cc0","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9eabc9f1-5df8-4207-a1d4-b63ef6329087","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e8f3b2fc-5a25-4e67-83c1-3f112688cdfa","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fa54d6b1-5d5a-437e-98ce-13c5c9774597","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"823f6a5d-c131-46e7-9be9-54cd927195f8","path":"sprites/spr_enemy_dozer_shieldless/spr_enemy_dozer_shieldless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"63ca02b4-d6e4-4cdd-8462-8ceb5d9e04e1","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -17,6 +17,11 @@
 #macro X_SABER_SPRITES [spr_port_x_saber, spr_port_x_saber_jump, spr_port_x_saber_walljump]
 
 
+enum shooting_charge_level {
+	none,
+	one,
+	two
+}
 
 enum dynamic_type {
 	base,

@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_nightmarezero_talk_laugh",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":1.9785033,
+  "exportDir":"",
   "name":"snd_nightmarezero_talk_laugh",
   "parent":{
     "name":"Nightmare-Zero",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_nightmarezero_talk_laugh.ogg",
-  "type":1,
   "volume":1.0,
 }

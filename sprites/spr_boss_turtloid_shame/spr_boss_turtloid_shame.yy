@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_boss_turtloid_shame",
   "bboxMode":2,
   "bbox_bottom":139,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"72c31fbd-9c37-4364-9789-c67dc5a4e320","name":"72c31fbd-9c37-4364-9789-c67dc5a4e320","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"72c31fbd-9c37-4364-9789-c67dc5a4e320","name":"72c31fbd-9c37-4364-9789-c67dc5a4e320","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,15 +74,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","path":"sprites/spr_boss_turtloid_shame/spr_boss_turtloid_shame.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"203667b3-b108-41c8-bebe-2c20817da6e1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","path":"sprites/spr_boss_turtloid_shame/spr_boss_turtloid_shame.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1703b66b-8d15-4216-a5f5-4caa3dfcfbc0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"72c31fbd-9c37-4364-9789-c67dc5a4e320","path":"sprites/spr_boss_turtloid_shame/spr_boss_turtloid_shame.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"31cc4063-28c7-480d-842a-74b7378e8969","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f01fb50-bb0b-4f0a-9878-0ebbecb9dc9e","path":"sprites/spr_boss_turtloid_shame/spr_boss_turtloid_shame.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"203667b3-b108-41c8-bebe-2c20817da6e1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e835f63a-62a9-45ff-a9e1-2215da4bb19d","path":"sprites/spr_boss_turtloid_shame/spr_boss_turtloid_shame.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1703b66b-8d15-4216-a5f5-4caa3dfcfbc0","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"72c31fbd-9c37-4364-9789-c67dc5a4e320","path":"sprites/spr_boss_turtloid_shame/spr_boss_turtloid_shame.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"31cc4063-28c7-480d-842a-74b7378e8969","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

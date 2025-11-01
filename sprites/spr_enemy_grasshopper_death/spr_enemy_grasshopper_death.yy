@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_grasshopper_death",
   "bboxMode":2,
   "bbox_bottom":89,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7e5fb957-983e-4a5b-8ada-18d850b72ce2","name":"7e5fb957-983e-4a5b-8ada-18d850b72ce2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7a75501d-79d8-4475-a3eb-2cc5dd3e5036","name":"7a75501d-79d8-4475-a3eb-2cc5dd3e5036","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"626c3471-a3e8-4566-aa2c-cab2af1a4415","name":"626c3471-a3e8-4566-aa2c-cab2af1a4415","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"21fe3e58-50ad-416d-8956-e6b38dd16c0d","name":"21fe3e58-50ad-416d-8956-e6b38dd16c0d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7e5fb957-983e-4a5b-8ada-18d850b72ce2","name":"7e5fb957-983e-4a5b-8ada-18d850b72ce2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7a75501d-79d8-4475-a3eb-2cc5dd3e5036","name":"7a75501d-79d8-4475-a3eb-2cc5dd3e5036","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"626c3471-a3e8-4566-aa2c-cab2af1a4415","name":"626c3471-a3e8-4566-aa2c-cab2af1a4415","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"21fe3e58-50ad-416d-8956-e6b38dd16c0d","name":"21fe3e58-50ad-416d-8956-e6b38dd16c0d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,18 +73,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e5fb957-983e-4a5b-8ada-18d850b72ce2","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"00843a3a-ae43-4c79-8e8c-1926f72514eb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7a75501d-79d8-4475-a3eb-2cc5dd3e5036","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5a5ba2b0-1fc1-487d-b661-2154e9982ccc","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"626c3471-a3e8-4566-aa2c-cab2af1a4415","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a3309c9e-e9a2-4e37-950f-5580dafe26c6","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"21fe3e58-50ad-416d-8956-e6b38dd16c0d","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4088f36d-20c6-459b-bfeb-688135cc3663","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e5fb957-983e-4a5b-8ada-18d850b72ce2","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"00843a3a-ae43-4c79-8e8c-1926f72514eb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7a75501d-79d8-4475-a3eb-2cc5dd3e5036","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5a5ba2b0-1fc1-487d-b661-2154e9982ccc","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"626c3471-a3e8-4566-aa2c-cab2af1a4415","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a3309c9e-e9a2-4e37-950f-5580dafe26c6","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"21fe3e58-50ad-416d-8956-e6b38dd16c0d","path":"sprites/spr_enemy_grasshopper_death/spr_enemy_grasshopper_death.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4088f36d-20c6-459b-bfeb-688135cc3663","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

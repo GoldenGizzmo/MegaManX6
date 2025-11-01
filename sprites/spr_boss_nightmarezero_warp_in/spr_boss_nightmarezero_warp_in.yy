@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_boss_nightmarezero_warp_in",
   "bboxMode":0,
   "bbox_bottom":79,
@@ -12,21 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d4266413-f615-4b6a-8391-d4492dab34ab","name":"d4266413-f615-4b6a-8391-d4492dab34ab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"98859da4-9a03-4d69-9379-1df0ad0a9bb2","name":"98859da4-9a03-4d69-9379-1df0ad0a9bb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"47e3635e-0a70-455f-9d1e-0aa16b1285c3","name":"47e3635e-0a70-455f-9d1e-0aa16b1285c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"733c3dcd-bda7-4cc1-bdc5-48895598e470","name":"733c3dcd-bda7-4cc1-bdc5-48895598e470","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fda29cf7-e9b4-49e8-8d5a-533ae57a167a","name":"fda29cf7-e9b4-49e8-8d5a-533ae57a167a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"111b26cc-6758-4d88-8c27-1d5210a60baa","name":"111b26cc-6758-4d88-8c27-1d5210a60baa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8006aa1e-bfa0-4065-b68f-aa932c8becb2","name":"8006aa1e-bfa0-4065-b68f-aa932c8becb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8f0e138b-35cf-4222-a60b-81b45bb2e77a","name":"8f0e138b-35cf-4222-a60b-81b45bb2e77a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4f56e44f-f626-4479-a4ba-4f46f61ef4b2","name":"4f56e44f-f626-4479-a4ba-4f46f61ef4b2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f4cea62a-d4a9-4061-8b80-b3915b995e5a","name":"f4cea62a-d4a9-4061-8b80-b3915b995e5a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2176057b-3914-417a-8ed6-ee00149398e6","name":"2176057b-3914-417a-8ed6-ee00149398e6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3e5a3c62-5cfb-40e5-8c6c-454c647bc2e1","name":"3e5a3c62-5cfb-40e5-8c6c-454c647bc2e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"6127fee1-bfa5-4764-af56-4c6022059b1e","name":"6127fee1-bfa5-4764-af56-4c6022059b1e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"2e9e08d8-60e2-4218-bea2-1ad71ad8f88a","name":"2e9e08d8-60e2-4218-bea2-1ad71ad8f88a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"13947d3f-9ba7-4c02-97db-d5949c88597b","name":"13947d3f-9ba7-4c02-97db-d5949c88597b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d4266413-f615-4b6a-8391-d4492dab34ab","name":"d4266413-f615-4b6a-8391-d4492dab34ab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"98859da4-9a03-4d69-9379-1df0ad0a9bb2","name":"98859da4-9a03-4d69-9379-1df0ad0a9bb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"47e3635e-0a70-455f-9d1e-0aa16b1285c3","name":"47e3635e-0a70-455f-9d1e-0aa16b1285c3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"733c3dcd-bda7-4cc1-bdc5-48895598e470","name":"733c3dcd-bda7-4cc1-bdc5-48895598e470","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fda29cf7-e9b4-49e8-8d5a-533ae57a167a","name":"fda29cf7-e9b4-49e8-8d5a-533ae57a167a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"111b26cc-6758-4d88-8c27-1d5210a60baa","name":"111b26cc-6758-4d88-8c27-1d5210a60baa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8006aa1e-bfa0-4065-b68f-aa932c8becb2","name":"8006aa1e-bfa0-4065-b68f-aa932c8becb2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8f0e138b-35cf-4222-a60b-81b45bb2e77a","name":"8f0e138b-35cf-4222-a60b-81b45bb2e77a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4f56e44f-f626-4479-a4ba-4f46f61ef4b2","name":"4f56e44f-f626-4479-a4ba-4f46f61ef4b2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f4cea62a-d4a9-4061-8b80-b3915b995e5a","name":"f4cea62a-d4a9-4061-8b80-b3915b995e5a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2176057b-3914-417a-8ed6-ee00149398e6","name":"2176057b-3914-417a-8ed6-ee00149398e6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3e5a3c62-5cfb-40e5-8c6c-454c647bc2e1","name":"3e5a3c62-5cfb-40e5-8c6c-454c647bc2e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6127fee1-bfa5-4764-af56-4c6022059b1e","name":"6127fee1-bfa5-4764-af56-4c6022059b1e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2e9e08d8-60e2-4218-bea2-1ad71ad8f88a","name":"2e9e08d8-60e2-4218-bea2-1ad71ad8f88a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"13947d3f-9ba7-4c02-97db-d5949c88597b","name":"13947d3f-9ba7-4c02-97db-d5949c88597b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -84,51 +84,21 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d4266413-f615-4b6a-8391-d4492dab34ab","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"14acda64-d0d7-4ed7-89d1-d05de8f0ed50","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"98859da4-9a03-4d69-9379-1df0ad0a9bb2","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d786a52f-ef0d-4a3c-9e05-6b6428de2c83","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"47e3635e-0a70-455f-9d1e-0aa16b1285c3","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"19b36a14-9749-4d81-a737-d62c7959dfe4","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"733c3dcd-bda7-4cc1-bdc5-48895598e470","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"903ac472-6eb1-4339-b141-1debefb1db00","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fda29cf7-e9b4-49e8-8d5a-533ae57a167a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cd9bc8b3-b3c2-4348-87b4-05683db0df33","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"111b26cc-6758-4d88-8c27-1d5210a60baa","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2f8a7ef3-d198-488d-ab67-bed628f3c9c8","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8006aa1e-bfa0-4065-b68f-aa932c8becb2","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7776e39d-41dd-4786-8f52-098be183d70b","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8f0e138b-35cf-4222-a60b-81b45bb2e77a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c2dac86c-e61e-40be-ad16-03d35df28ff2","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4f56e44f-f626-4479-a4ba-4f46f61ef4b2","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"395612b0-040d-4be2-92f8-496e307f9b12","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4cea62a-d4a9-4061-8b80-b3915b995e5a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cff9aa0f-fa93-49e4-b3a0-b29e926ac946","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2176057b-3914-417a-8ed6-ee00149398e6","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4b3bfa15-61c1-434a-8c1e-79e008f0c432","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3e5a3c62-5cfb-40e5-8c6c-454c647bc2e1","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f76d73bb-fab4-47fa-849b-1007f5a20066","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6127fee1-bfa5-4764-af56-4c6022059b1e","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"46cfd1ba-58d8-4e58-8514-e8c5736b0ec2","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e9e08d8-60e2-4218-bea2-1ad71ad8f88a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bbfe1007-8311-4d48-bf25-6857cd024e1b","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"13947d3f-9ba7-4c02-97db-d5949c88597b","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"649e57f0-701c-4ce2-ac54-97ddd5172945","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d4266413-f615-4b6a-8391-d4492dab34ab","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"14acda64-d0d7-4ed7-89d1-d05de8f0ed50","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"98859da4-9a03-4d69-9379-1df0ad0a9bb2","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d786a52f-ef0d-4a3c-9e05-6b6428de2c83","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"47e3635e-0a70-455f-9d1e-0aa16b1285c3","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"19b36a14-9749-4d81-a737-d62c7959dfe4","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"733c3dcd-bda7-4cc1-bdc5-48895598e470","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"903ac472-6eb1-4339-b141-1debefb1db00","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fda29cf7-e9b4-49e8-8d5a-533ae57a167a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cd9bc8b3-b3c2-4348-87b4-05683db0df33","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"111b26cc-6758-4d88-8c27-1d5210a60baa","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2f8a7ef3-d198-488d-ab67-bed628f3c9c8","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8006aa1e-bfa0-4065-b68f-aa932c8becb2","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7776e39d-41dd-4786-8f52-098be183d70b","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8f0e138b-35cf-4222-a60b-81b45bb2e77a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c2dac86c-e61e-40be-ad16-03d35df28ff2","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4f56e44f-f626-4479-a4ba-4f46f61ef4b2","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"395612b0-040d-4be2-92f8-496e307f9b12","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4cea62a-d4a9-4061-8b80-b3915b995e5a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cff9aa0f-fa93-49e4-b3a0-b29e926ac946","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2176057b-3914-417a-8ed6-ee00149398e6","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4b3bfa15-61c1-434a-8c1e-79e008f0c432","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3e5a3c62-5cfb-40e5-8c6c-454c647bc2e1","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f76d73bb-fab4-47fa-849b-1007f5a20066","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"6127fee1-bfa5-4764-af56-4c6022059b1e","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"46cfd1ba-58d8-4e58-8514-e8c5736b0ec2","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e9e08d8-60e2-4218-bea2-1ad71ad8f88a","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bbfe1007-8311-4d48-bf25-6857cd024e1b","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"13947d3f-9ba7-4c02-97db-d5949c88597b","path":"sprites/spr_boss_nightmarezero_warp_in/spr_boss_nightmarezero_warp_in.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"649e57f0-701c-4ce2-ac54-97ddd5172945","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

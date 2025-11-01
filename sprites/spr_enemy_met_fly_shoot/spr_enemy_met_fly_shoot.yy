@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_met_fly_shoot",
   "bboxMode":2,
   "bbox_bottom":33,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3a734221-57f7-492f-a885-fd07556d7ac7","name":"3a734221-57f7-492f-a885-fd07556d7ac7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"54e4e160-0ab4-42d2-9d1c-eea3a313b6ae","name":"54e4e160-0ab4-42d2-9d1c-eea3a313b6ae","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"10b77065-8fe5-464d-a309-9410e45dd7fc","name":"10b77065-8fe5-464d-a309-9410e45dd7fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d37f9fc7-482d-493e-8a2e-809eeb173d04","name":"d37f9fc7-482d-493e-8a2e-809eeb173d04","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b82686dc-4fff-4958-bb8a-ba9cb7148eb3","name":"b82686dc-4fff-4958-bb8a-ba9cb7148eb3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f38e8ac1-d6ea-4dea-a720-bba3caa77b11","name":"f38e8ac1-d6ea-4dea-a720-bba3caa77b11","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a619e645-9b2c-4c9b-9288-28885d8d61e1","name":"a619e645-9b2c-4c9b-9288-28885d8d61e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5a553b23-eeb0-490d-842c-074f9f7641ca","name":"5a553b23-eeb0-490d-842c-074f9f7641ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3a734221-57f7-492f-a885-fd07556d7ac7","name":"3a734221-57f7-492f-a885-fd07556d7ac7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"54e4e160-0ab4-42d2-9d1c-eea3a313b6ae","name":"54e4e160-0ab4-42d2-9d1c-eea3a313b6ae","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"10b77065-8fe5-464d-a309-9410e45dd7fc","name":"10b77065-8fe5-464d-a309-9410e45dd7fc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d37f9fc7-482d-493e-8a2e-809eeb173d04","name":"d37f9fc7-482d-493e-8a2e-809eeb173d04","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b82686dc-4fff-4958-bb8a-ba9cb7148eb3","name":"b82686dc-4fff-4958-bb8a-ba9cb7148eb3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f38e8ac1-d6ea-4dea-a720-bba3caa77b11","name":"f38e8ac1-d6ea-4dea-a720-bba3caa77b11","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a619e645-9b2c-4c9b-9288-28885d8d61e1","name":"a619e645-9b2c-4c9b-9288-28885d8d61e1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5a553b23-eeb0-490d-842c-074f9f7641ca","name":"5a553b23-eeb0-490d-842c-074f9f7641ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -78,30 +78,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a734221-57f7-492f-a885-fd07556d7ac7","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5136f58e-7c71-465f-8402-a7ed33fb0ef2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"54e4e160-0ab4-42d2-9d1c-eea3a313b6ae","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"610b4696-33c4-45b9-a216-d1cc10adf37a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"10b77065-8fe5-464d-a309-9410e45dd7fc","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0265c8a8-999c-4b6e-a702-0cd18a512379","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d37f9fc7-482d-493e-8a2e-809eeb173d04","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1fabc0ad-5ecf-4707-822e-62f4319b6e79","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b82686dc-4fff-4958-bb8a-ba9cb7148eb3","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4be6bc55-46d2-4a74-be6a-ef39a37aab44","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f38e8ac1-d6ea-4dea-a720-bba3caa77b11","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"db4661a3-57f3-4fd3-a8a0-e077c1f75130","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a619e645-9b2c-4c9b-9288-28885d8d61e1","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3ff55e45-e026-4d07-86d5-11c56fe67b93","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5a553b23-eeb0-490d-842c-074f9f7641ca","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8c158eef-7a7e-414e-a386-f88a3a9c0fde","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a734221-57f7-492f-a885-fd07556d7ac7","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5136f58e-7c71-465f-8402-a7ed33fb0ef2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"54e4e160-0ab4-42d2-9d1c-eea3a313b6ae","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"610b4696-33c4-45b9-a216-d1cc10adf37a","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"10b77065-8fe5-464d-a309-9410e45dd7fc","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0265c8a8-999c-4b6e-a702-0cd18a512379","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d37f9fc7-482d-493e-8a2e-809eeb173d04","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1fabc0ad-5ecf-4707-822e-62f4319b6e79","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b82686dc-4fff-4958-bb8a-ba9cb7148eb3","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4be6bc55-46d2-4a74-be6a-ef39a37aab44","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"f38e8ac1-d6ea-4dea-a720-bba3caa77b11","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"db4661a3-57f3-4fd3-a8a0-e077c1f75130","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a619e645-9b2c-4c9b-9288-28885d8d61e1","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3ff55e45-e026-4d07-86d5-11c56fe67b93","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5a553b23-eeb0-490d-842c-074f9f7641ca","path":"sprites/spr_enemy_met_fly_shoot/spr_enemy_met_fly_shoot.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8c158eef-7a7e-414e-a386-f88a3a9c0fde","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

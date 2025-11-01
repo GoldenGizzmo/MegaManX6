@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_fish_debris",
   "bboxMode":0,
   "bbox_bottom":20,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2cc14631-84b2-4f72-bfe2-0da7fe95ad53","name":"2cc14631-84b2-4f72-bfe2-0da7fe95ad53","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d249afbd-88c2-47c5-9c19-50fc5a79db09","name":"d249afbd-88c2-47c5-9c19-50fc5a79db09","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0c8e95e5-e026-407b-93a8-d6dd3fc80803","name":"0c8e95e5-e026-407b-93a8-d6dd3fc80803","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"97354bff-e94a-43d7-a753-374036bc9b41","name":"97354bff-e94a-43d7-a753-374036bc9b41","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ae032ad1-192d-49b6-a580-3d0a1a10cd6c","name":"ae032ad1-192d-49b6-a580-3d0a1a10cd6c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2cc14631-84b2-4f72-bfe2-0da7fe95ad53","name":"2cc14631-84b2-4f72-bfe2-0da7fe95ad53","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d249afbd-88c2-47c5-9c19-50fc5a79db09","name":"d249afbd-88c2-47c5-9c19-50fc5a79db09","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0c8e95e5-e026-407b-93a8-d6dd3fc80803","name":"0c8e95e5-e026-407b-93a8-d6dd3fc80803","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"97354bff-e94a-43d7-a753-374036bc9b41","name":"97354bff-e94a-43d7-a753-374036bc9b41","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ae032ad1-192d-49b6-a580-3d0a1a10cd6c","name":"ae032ad1-192d-49b6-a580-3d0a1a10cd6c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,21 +74,11 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2cc14631-84b2-4f72-bfe2-0da7fe95ad53","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bc034633-5346-40c5-b0a9-25d1edcdbf25","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d249afbd-88c2-47c5-9c19-50fc5a79db09","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d29d6967-a51f-4d9f-a756-62c85167d4a8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0c8e95e5-e026-407b-93a8-d6dd3fc80803","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"56796374-ec7a-409b-a116-5ea7e1c85775","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"97354bff-e94a-43d7-a753-374036bc9b41","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"91771fa1-f79b-4677-8cd0-54a50f71ad62","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae032ad1-192d-49b6-a580-3d0a1a10cd6c","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"53e89bd9-993b-4439-8cb2-fabbb00163aa","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2cc14631-84b2-4f72-bfe2-0da7fe95ad53","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bc034633-5346-40c5-b0a9-25d1edcdbf25","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d249afbd-88c2-47c5-9c19-50fc5a79db09","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d29d6967-a51f-4d9f-a756-62c85167d4a8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0c8e95e5-e026-407b-93a8-d6dd3fc80803","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"56796374-ec7a-409b-a116-5ea7e1c85775","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"97354bff-e94a-43d7-a753-374036bc9b41","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"91771fa1-f79b-4677-8cd0-54a50f71ad62","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae032ad1-192d-49b6-a580-3d0a1a10cd6c","path":"sprites/spr_enemy_fish_debris/spr_enemy_fish_debris.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"53e89bd9-993b-4439-8cb2-fabbb00163aa","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

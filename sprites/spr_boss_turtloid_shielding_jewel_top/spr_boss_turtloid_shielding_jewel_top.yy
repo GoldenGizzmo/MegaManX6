@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_boss_turtloid_shielding_jewel_top",
   "bboxMode":2,
   "bbox_bottom":92,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4a3fbb3e-e930-4814-abd4-62ef653b0d1e","name":"4a3fbb3e-e930-4814-abd4-62ef653b0d1e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"57d993f0-e9b2-4fda-b6af-117e2e2cd260","name":"57d993f0-e9b2-4fda-b6af-117e2e2cd260","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a0788758-87b9-48f8-a830-516290e60226","name":"a0788758-87b9-48f8-a830-516290e60226","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c6920277-9a47-4cc4-9610-91f2fb07a9ab","name":"c6920277-9a47-4cc4-9610-91f2fb07a9ab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3d1847c4-3982-473e-a494-8c24d789e58c","name":"3d1847c4-3982-473e-a494-8c24d789e58c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4a3fbb3e-e930-4814-abd4-62ef653b0d1e","name":"4a3fbb3e-e930-4814-abd4-62ef653b0d1e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"57d993f0-e9b2-4fda-b6af-117e2e2cd260","name":"57d993f0-e9b2-4fda-b6af-117e2e2cd260","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a0788758-87b9-48f8-a830-516290e60226","name":"a0788758-87b9-48f8-a830-516290e60226","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c6920277-9a47-4cc4-9610-91f2fb07a9ab","name":"c6920277-9a47-4cc4-9610-91f2fb07a9ab","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3d1847c4-3982-473e-a494-8c24d789e58c","name":"3d1847c4-3982-473e-a494-8c24d789e58c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -78,21 +78,11 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a3fbb3e-e930-4814-abd4-62ef653b0d1e","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"497bcf94-1b76-4b97-81b3-cc82c59720d0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"57d993f0-e9b2-4fda-b6af-117e2e2cd260","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"19be9000-b066-4690-b07b-492982979a8e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a0788758-87b9-48f8-a830-516290e60226","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"88978eea-fadf-4b4c-b7c3-c8d73671df46","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c6920277-9a47-4cc4-9610-91f2fb07a9ab","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"af0c07c1-0535-49c2-8e9a-06457e345985","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d1847c4-3982-473e-a494-8c24d789e58c","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a0df58cf-d7d4-4295-bf5e-1c622305b1d1","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a3fbb3e-e930-4814-abd4-62ef653b0d1e","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"497bcf94-1b76-4b97-81b3-cc82c59720d0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"57d993f0-e9b2-4fda-b6af-117e2e2cd260","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"19be9000-b066-4690-b07b-492982979a8e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a0788758-87b9-48f8-a830-516290e60226","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"88978eea-fadf-4b4c-b7c3-c8d73671df46","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c6920277-9a47-4cc4-9610-91f2fb07a9ab","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"af0c07c1-0535-49c2-8e9a-06457e345985","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d1847c4-3982-473e-a494-8c24d789e58c","path":"sprites/spr_boss_turtloid_shielding_jewel_top/spr_boss_turtloid_shielding_jewel_top.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a0df58cf-d7d4-4295-bf5e-1c622305b1d1","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

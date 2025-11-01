@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_bigdrill_jets_up",
   "bboxMode":2,
   "bbox_bottom":197,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"74e75e68-a8b3-4412-acdb-72d2390ec323","name":"74e75e68-a8b3-4412-acdb-72d2390ec323","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b2792068-d8cf-4148-8ad8-d4e1c7570e4d","name":"b2792068-d8cf-4148-8ad8-d4e1c7570e4d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a481521e-8da8-4baa-bd6a-99ea2bf02edb","name":"a481521e-8da8-4baa-bd6a-99ea2bf02edb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bbc74c45-5d77-45df-8940-38539878a068","name":"bbc74c45-5d77-45df-8940-38539878a068","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"0863659c-8f74-49c7-949f-24ea5c4085aa","name":"0863659c-8f74-49c7-949f-24ea5c4085aa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e5400f9a-c2ed-440b-9c66-a8b8256121f9","name":"e5400f9a-c2ed-440b-9c66-a8b8256121f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"74e75e68-a8b3-4412-acdb-72d2390ec323","name":"74e75e68-a8b3-4412-acdb-72d2390ec323","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b2792068-d8cf-4148-8ad8-d4e1c7570e4d","name":"b2792068-d8cf-4148-8ad8-d4e1c7570e4d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a481521e-8da8-4baa-bd6a-99ea2bf02edb","name":"a481521e-8da8-4baa-bd6a-99ea2bf02edb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bbc74c45-5d77-45df-8940-38539878a068","name":"bbc74c45-5d77-45df-8940-38539878a068","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"0863659c-8f74-49c7-949f-24ea5c4085aa","name":"0863659c-8f74-49c7-949f-24ea5c4085aa","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e5400f9a-c2ed-440b-9c66-a8b8256121f9","name":"e5400f9a-c2ed-440b-9c66-a8b8256121f9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -77,24 +77,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"74e75e68-a8b3-4412-acdb-72d2390ec323","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e9276b65-5319-4d3e-a128-6d0754e6730f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b2792068-d8cf-4148-8ad8-d4e1c7570e4d","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"220f0e91-2290-4079-838f-1f6b82a312ae","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a481521e-8da8-4baa-bd6a-99ea2bf02edb","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2eaf46c1-5ea0-4e3d-9d19-c511d3ea6f65","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bbc74c45-5d77-45df-8940-38539878a068","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fce0cc0d-4a5d-4f83-95a2-e86439ce8821","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0863659c-8f74-49c7-949f-24ea5c4085aa","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fa52f034-b377-4cd7-aca6-6551261e307f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e5400f9a-c2ed-440b-9c66-a8b8256121f9","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4d7580e8-9186-4a4a-9c34-be511b7e2d4f","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"74e75e68-a8b3-4412-acdb-72d2390ec323","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e9276b65-5319-4d3e-a128-6d0754e6730f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b2792068-d8cf-4148-8ad8-d4e1c7570e4d","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"220f0e91-2290-4079-838f-1f6b82a312ae","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a481521e-8da8-4baa-bd6a-99ea2bf02edb","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2eaf46c1-5ea0-4e3d-9d19-c511d3ea6f65","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bbc74c45-5d77-45df-8940-38539878a068","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fce0cc0d-4a5d-4f83-95a2-e86439ce8821","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0863659c-8f74-49c7-949f-24ea5c4085aa","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fa52f034-b377-4cd7-aca6-6551261e307f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e5400f9a-c2ed-440b-9c66-a8b8256121f9","path":"sprites/spr_enemy_bigdrill_jets_up/spr_enemy_bigdrill_jets_up.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4d7580e8-9186-4a4a-9c34-be511b7e2d4f","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_bigdrill_light_down",
   "bboxMode":2,
   "bbox_bottom":197,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"fe22702c-1e35-4f80-94b5-0fbd5415a8fb","name":"fe22702c-1e35-4f80-94b5-0fbd5415a8fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1c342620-4cff-43b2-8adf-ee1d64bb9a18","name":"1c342620-4cff-43b2-8adf-ee1d64bb9a18","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5e2b65a4-5e47-4ef6-b187-7a35dd4e1aa4","name":"5e2b65a4-5e47-4ef6-b187-7a35dd4e1aa4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"047e55e6-e440-4a4c-a0a0-105e7c841f0f","name":"047e55e6-e440-4a4c-a0a0-105e7c841f0f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c7207ebf-e9fb-4dac-9534-e5e3374441ca","name":"c7207ebf-e9fb-4dac-9534-e5e3374441ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ef07a19e-5808-41f4-b067-f40f3ae57c65","name":"ef07a19e-5808-41f4-b067-f40f3ae57c65","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"fe22702c-1e35-4f80-94b5-0fbd5415a8fb","name":"fe22702c-1e35-4f80-94b5-0fbd5415a8fb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1c342620-4cff-43b2-8adf-ee1d64bb9a18","name":"1c342620-4cff-43b2-8adf-ee1d64bb9a18","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5e2b65a4-5e47-4ef6-b187-7a35dd4e1aa4","name":"5e2b65a4-5e47-4ef6-b187-7a35dd4e1aa4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"047e55e6-e440-4a4c-a0a0-105e7c841f0f","name":"047e55e6-e440-4a4c-a0a0-105e7c841f0f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c7207ebf-e9fb-4dac-9534-e5e3374441ca","name":"c7207ebf-e9fb-4dac-9534-e5e3374441ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ef07a19e-5808-41f4-b067-f40f3ae57c65","name":"ef07a19e-5808-41f4-b067-f40f3ae57c65","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -77,24 +77,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fe22702c-1e35-4f80-94b5-0fbd5415a8fb","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"71cf8073-02cb-47b9-8ec2-1e8da8b15e4c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1c342620-4cff-43b2-8adf-ee1d64bb9a18","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ac2a0081-4f9e-4eea-b4cc-517db6ec35c8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e2b65a4-5e47-4ef6-b187-7a35dd4e1aa4","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cebd8426-2624-4347-8cdf-025c31a3a7f1","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"047e55e6-e440-4a4c-a0a0-105e7c841f0f","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cc54b1fb-b4fd-44df-aec7-9731d530040d","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c7207ebf-e9fb-4dac-9534-e5e3374441ca","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e9705c3d-ecb9-4075-8b21-b2a20137fc73","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ef07a19e-5808-41f4-b067-f40f3ae57c65","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c66c6e04-8e88-4718-bf73-35d938ed06f0","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fe22702c-1e35-4f80-94b5-0fbd5415a8fb","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"71cf8073-02cb-47b9-8ec2-1e8da8b15e4c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1c342620-4cff-43b2-8adf-ee1d64bb9a18","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ac2a0081-4f9e-4eea-b4cc-517db6ec35c8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5e2b65a4-5e47-4ef6-b187-7a35dd4e1aa4","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cebd8426-2624-4347-8cdf-025c31a3a7f1","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"047e55e6-e440-4a4c-a0a0-105e7c841f0f","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"cc54b1fb-b4fd-44df-aec7-9731d530040d","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c7207ebf-e9fb-4dac-9534-e5e3374441ca","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e9705c3d-ecb9-4075-8b21-b2a20137fc73","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ef07a19e-5808-41f4-b067-f40f3ae57c65","path":"sprites/spr_enemy_bigdrill_light_down/spr_enemy_bigdrill_light_down.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c66c6e04-8e88-4718-bf73-35d938ed06f0","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

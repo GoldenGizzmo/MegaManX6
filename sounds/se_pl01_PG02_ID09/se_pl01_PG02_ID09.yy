@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"se_pl01_PG02_ID09",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":2.2153742,
+  "exportDir":"",
   "name":"se_pl01_PG02_ID09",
   "parent":{
     "name":"Zero",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"se_pl01_PG02_ID09.wav",
-  "type":0,
   "volume":1.0,
 }

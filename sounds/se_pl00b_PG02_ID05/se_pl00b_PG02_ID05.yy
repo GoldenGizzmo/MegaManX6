@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"se_pl00b_PG02_ID05",
   "audioGroupId":{
     "name":"audiogroup_sfx",
     "path":"audiogroups/audiogroup_sfx",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.8381406,
+  "exportDir":"",
   "name":"se_pl00b_PG02_ID05",
   "parent":{
     "name":"X",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"se_pl00b_PG02_ID05.wav",
-  "type":1,
   "volume":1.0,
 }

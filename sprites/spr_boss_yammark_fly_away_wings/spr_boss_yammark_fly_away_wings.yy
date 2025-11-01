@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_boss_yammark_fly_away_wings",
   "bboxMode":2,
   "bbox_bottom":56,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d9f608a3-3f4e-4a17-bf1e-56a06774ffe3","name":"d9f608a3-3f4e-4a17-bf1e-56a06774ffe3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b6dfb87b-1777-4e07-aa86-8d9ffacfecd6","name":"b6dfb87b-1777-4e07-aa86-8d9ffacfecd6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"047cb302-c993-4e3c-ae89-8a14091e214b","name":"047cb302-c993-4e3c-ae89-8a14091e214b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d9f608a3-3f4e-4a17-bf1e-56a06774ffe3","name":"d9f608a3-3f4e-4a17-bf1e-56a06774ffe3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b6dfb87b-1777-4e07-aa86-8d9ffacfecd6","name":"b6dfb87b-1777-4e07-aa86-8d9ffacfecd6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"047cb302-c993-4e3c-ae89-8a14091e214b","name":"047cb302-c993-4e3c-ae89-8a14091e214b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,15 +73,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d9f608a3-3f4e-4a17-bf1e-56a06774ffe3","path":"sprites/spr_boss_yammark_fly_away_wings/spr_boss_yammark_fly_away_wings.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"336e56ba-fa19-426c-bbeb-d4752ded7cad","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b6dfb87b-1777-4e07-aa86-8d9ffacfecd6","path":"sprites/spr_boss_yammark_fly_away_wings/spr_boss_yammark_fly_away_wings.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"286f8fcb-873c-4332-8693-40ce4a282c8c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"047cb302-c993-4e3c-ae89-8a14091e214b","path":"sprites/spr_boss_yammark_fly_away_wings/spr_boss_yammark_fly_away_wings.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"04fde231-2648-4176-8cf9-819dd7113c42","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d9f608a3-3f4e-4a17-bf1e-56a06774ffe3","path":"sprites/spr_boss_yammark_fly_away_wings/spr_boss_yammark_fly_away_wings.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"336e56ba-fa19-426c-bbeb-d4752ded7cad","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b6dfb87b-1777-4e07-aa86-8d9ffacfecd6","path":"sprites/spr_boss_yammark_fly_away_wings/spr_boss_yammark_fly_away_wings.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"286f8fcb-873c-4332-8693-40ce4a282c8c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"047cb302-c993-4e3c-ae89-8a14091e214b","path":"sprites/spr_boss_yammark_fly_away_wings/spr_boss_yammark_fly_away_wings.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"04fde231-2648-4176-8cf9-819dd7113c42","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

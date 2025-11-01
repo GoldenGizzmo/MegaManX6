@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_nightmare_weather",
   "bboxMode":2,
   "bbox_bottom":35,
@@ -12,10 +12,10 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8c6901c4-c83f-4174-9e6f-4b6cc76fcc93","name":"8c6901c4-c83f-4174-9e6f-4b6cc76fcc93","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7d8d7edc-ff9d-4d48-9920-1c3ae5d371af","name":"7d8d7edc-ff9d-4d48-9920-1c3ae5d371af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"620912c5-fe89-4e47-9d72-595555692a66","name":"620912c5-fe89-4e47-9d72-595555692a66","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"8569c5d4-979b-4b3d-b2ef-60cb99ca4c86","name":"8569c5d4-979b-4b3d-b2ef-60cb99ca4c86","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8c6901c4-c83f-4174-9e6f-4b6cc76fcc93","name":"8c6901c4-c83f-4174-9e6f-4b6cc76fcc93","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7d8d7edc-ff9d-4d48-9920-1c3ae5d371af","name":"7d8d7edc-ff9d-4d48-9920-1c3ae5d371af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"620912c5-fe89-4e47-9d72-595555692a66","name":"620912c5-fe89-4e47-9d72-595555692a66","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8569c5d4-979b-4b3d-b2ef-60cb99ca4c86","name":"8569c5d4-979b-4b3d-b2ef-60cb99ca4c86","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -74,18 +74,10 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8c6901c4-c83f-4174-9e6f-4b6cc76fcc93","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6873b3c4-8968-4c23-97fa-b668e07892a8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7d8d7edc-ff9d-4d48-9920-1c3ae5d371af","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e654281c-6756-49c4-b521-933649d96c8b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"620912c5-fe89-4e47-9d72-595555692a66","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c8ad68a0-1420-46c2-b5e6-373a5c8b806e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8569c5d4-979b-4b3d-b2ef-60cb99ca4c86","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a6391898-aa49-45d6-ab2f-3b41cd2550a3","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8c6901c4-c83f-4174-9e6f-4b6cc76fcc93","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"6873b3c4-8968-4c23-97fa-b668e07892a8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7d8d7edc-ff9d-4d48-9920-1c3ae5d371af","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e654281c-6756-49c4-b521-933649d96c8b","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"620912c5-fe89-4e47-9d72-595555692a66","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c8ad68a0-1420-46c2-b5e6-373a5c8b806e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8569c5d4-979b-4b3d-b2ef-60cb99ca4c86","path":"sprites/spr_enemy_nightmare_weather/spr_enemy_nightmare_weather.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a6391898-aa49-45d6-ab2f-3b41cd2550a3","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

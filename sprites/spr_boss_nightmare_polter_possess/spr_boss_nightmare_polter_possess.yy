@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_boss_nightmare_polter_possess",
   "bboxMode":0,
   "bbox_bottom":14,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4324cc65-774a-4cf0-812c-bb3a95fd785e","name":"4324cc65-774a-4cf0-812c-bb3a95fd785e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"a27b5226-90a4-4f43-94af-38f4dd1e4f6d","name":"a27b5226-90a4-4f43-94af-38f4dd1e4f6d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bfa20b02-5d3c-4e82-92f2-50e35e9fcf46","name":"bfa20b02-5d3c-4e82-92f2-50e35e9fcf46","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"43615300-c9d6-4dbc-8567-aee16eb437ca","name":"43615300-c9d6-4dbc-8567-aee16eb437ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c06fe09b-0ac5-4713-a7cf-b786c5526fa2","name":"c06fe09b-0ac5-4713-a7cf-b786c5526fa2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7f9f45aa-f691-4b90-8ff0-a00a3975e97c","name":"7f9f45aa-f691-4b90-8ff0-a00a3975e97c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"5352360e-0b55-4bea-a61e-2417c6224f12","name":"5352360e-0b55-4bea-a61e-2417c6224f12","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"164e3bf2-f21b-4681-81b8-998543726585","name":"164e3bf2-f21b-4681-81b8-998543726585","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4324cc65-774a-4cf0-812c-bb3a95fd785e","name":"4324cc65-774a-4cf0-812c-bb3a95fd785e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a27b5226-90a4-4f43-94af-38f4dd1e4f6d","name":"a27b5226-90a4-4f43-94af-38f4dd1e4f6d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bfa20b02-5d3c-4e82-92f2-50e35e9fcf46","name":"bfa20b02-5d3c-4e82-92f2-50e35e9fcf46","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"43615300-c9d6-4dbc-8567-aee16eb437ca","name":"43615300-c9d6-4dbc-8567-aee16eb437ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c06fe09b-0ac5-4713-a7cf-b786c5526fa2","name":"c06fe09b-0ac5-4713-a7cf-b786c5526fa2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7f9f45aa-f691-4b90-8ff0-a00a3975e97c","name":"7f9f45aa-f691-4b90-8ff0-a00a3975e97c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5352360e-0b55-4bea-a61e-2417c6224f12","name":"5352360e-0b55-4bea-a61e-2417c6224f12","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"164e3bf2-f21b-4681-81b8-998543726585","name":"164e3bf2-f21b-4681-81b8-998543726585","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -77,30 +77,14 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4324cc65-774a-4cf0-812c-bb3a95fd785e","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f374aa14-f5d2-4776-9a39-f2469017c676","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a27b5226-90a4-4f43-94af-38f4dd1e4f6d","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"df57c902-a783-467b-8131-0a1917a8c5a2","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bfa20b02-5d3c-4e82-92f2-50e35e9fcf46","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5d571672-a23f-423e-9e27-a8dac74da525","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"43615300-c9d6-4dbc-8567-aee16eb437ca","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3549a988-3b25-47c2-826c-d189a07adf94","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c06fe09b-0ac5-4713-a7cf-b786c5526fa2","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e65c2ea5-9b6b-4c08-9599-db04af6b6bcb","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7f9f45aa-f691-4b90-8ff0-a00a3975e97c","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1a78aeb4-70a6-49c2-a29d-8b050346d454","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5352360e-0b55-4bea-a61e-2417c6224f12","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e3aed197-374b-461a-87b9-bdedb88335a1","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"164e3bf2-f21b-4681-81b8-998543726585","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c9c7aa9f-a910-42a6-b4b2-e08d514c57bc","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4324cc65-774a-4cf0-812c-bb3a95fd785e","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f374aa14-f5d2-4776-9a39-f2469017c676","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"a27b5226-90a4-4f43-94af-38f4dd1e4f6d","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"df57c902-a783-467b-8131-0a1917a8c5a2","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bfa20b02-5d3c-4e82-92f2-50e35e9fcf46","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5d571672-a23f-423e-9e27-a8dac74da525","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"43615300-c9d6-4dbc-8567-aee16eb437ca","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3549a988-3b25-47c2-826c-d189a07adf94","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c06fe09b-0ac5-4713-a7cf-b786c5526fa2","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e65c2ea5-9b6b-4c08-9599-db04af6b6bcb","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7f9f45aa-f691-4b90-8ff0-a00a3975e97c","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1a78aeb4-70a6-49c2-a29d-8b050346d454","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"5352360e-0b55-4bea-a61e-2417c6224f12","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e3aed197-374b-461a-87b9-bdedb88335a1","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"164e3bf2-f21b-4681-81b8-998543726585","path":"sprites/spr_boss_nightmare_polter_possess/spr_boss_nightmare_polter_possess.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c9c7aa9f-a910-42a6-b4b2-e08d514c57bc","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

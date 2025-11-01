@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_enemy_seahorse_alt",
   "bboxMode":2,
   "bbox_bottom":43,
@@ -12,9 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -72,15 +72,9 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3bf18d61-fccb-49ec-bcd1-9e69bd004c32","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9960d764-f77d-4f2d-815e-42f5880f90c1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8cdb9ade-5588-4ad8-ab78-236546a45d08","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3bf18d61-fccb-49ec-bcd1-9e69bd004c32","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9960d764-f77d-4f2d-815e-42f5880f90c1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8cdb9ade-5588-4ad8-ab78-236546a45d08","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
