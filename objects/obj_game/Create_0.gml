@@ -5,6 +5,7 @@
 instance_create_layer(x,y,"Collision",obj_spawnzone);
 instance_create_layer(x,y,"Collision",obj_camera);
 
+
 global.animate = 0;
 global.hud_toggle = false;
 pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface);

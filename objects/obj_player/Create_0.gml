@@ -49,6 +49,8 @@ shooting_charge_flicker = false;
 shooting_charge_lvl_1 = 30;
 shooting_charge_lvl_2 = 90;
 
+shot_fired = false;
+
 palette = 0;
 flicker_weapon_swap = false;
 

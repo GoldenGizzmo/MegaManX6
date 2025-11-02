@@ -43,5 +43,6 @@ enum sprite_loop_type {
 
 enum attack_actions {
 	none,
-	x_saber
+	x_saber,
+	rain
 }

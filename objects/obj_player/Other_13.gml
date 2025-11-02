@@ -1,6 +1,6 @@
 /// @description Special Weapons / X-Saber
 
-var shot_fired = false;
+var attack_fired = false;
 
 var wall_slide_reverse = 1;
 if wall_slide = true
@@ -49,7 +49,7 @@ switch (global.weapon[global.weapon_choice].type)
 				bullet.sprite_index = spr_bullet_x_saber_jump;
 			}
 
-			//shot_fired = true;
+			//attack_fired = true;
 			crouch = false;
 		}
 		break;
@@ -81,7 +81,7 @@ switch (global.weapon[global.weapon_choice].type)
 				spawn.bullet_damage = 4;
 			}
 			
-			shot_fired = true;
+			attack_fired = true;
 			global.weapon[global.weapon_choice].ammo--;
 
 			scr_make_sound(snd_yammark_reinforcement,1,1,false);
@@ -104,7 +104,7 @@ switch (global.weapon[global.weapon_choice].type)
 			{
 				bullet = instance_create_layer(x+shootpos_x,y+shootpos_y,"Projectiles",obj_bullet_meteor_rain)
 				bullet.damage = 3;
-				bullet.direction = 90-(90*image_xscale*wall_slide_reverse);
+				bullet.direction = 90 - (90*image_xscale*wall_slide_reverse);
 				if global.input_up
 					bullet.direction = 90;
 				else if global.input_down
@@ -113,7 +113,8 @@ switch (global.weapon[global.weapon_choice].type)
 				scr_make_sound(snd_shoot_meteorrain,1,1,false);
 				bullet.special = true;
 						
-				shot_fired = true;
+				attack_fired = true;
+				attack_action = attack_actions.rain;
 				global.weapon[global.weapon_choice].ammo--;
 			}
 		}
@@ -137,7 +138,7 @@ switch (global.weapon[global.weapon_choice].type)
 				bullet.sprite_index = spr_bullet_rayarrow
 				bullet.damage = 6;
 						
-				shot_fired = true;
+				attack_fired = true;
 				global.weapon[global.weapon_choice].ammo--;
 			}
 		}
@@ -145,7 +146,7 @@ switch (global.weapon[global.weapon_choice].type)
 }
 
 //Shooting will interrupt charging
-if shot_fired = true
+if attack_fired = true
 {
 	shooting_charge_flicker = false;
 	shooting_charge = 0;

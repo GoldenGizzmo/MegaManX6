@@ -6,6 +6,8 @@
 global.ui_scale = 5;
 global.fps_display = false;
 
+
+
 //Sound Variables
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_sfx);

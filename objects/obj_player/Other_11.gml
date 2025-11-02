@@ -1,7 +1,5 @@
 /// @description X-Buster Shooting
 
-var shot_fired = false;
-
 var wall_slide_reverse = 1;
 if wall_slide = true
 	wall_slide_reverse = -1;
@@ -111,7 +109,7 @@ if global.input_shoot_released
 		shot_fired = true;
 		shooting_charged = shooting_charge_level.two;
 		shooting_lock = true;
-		alarm[0] = 15;
+		alarm[0] = 30;
 	}
 	else if shooting_charge > shooting_charge_lvl_1
 	{
@@ -135,7 +133,7 @@ if global.input_shoot_released
 		
 		shot_fired = true;
 		shooting_lock = true;
-		alarm[0] = 15;
+		alarm[0] = 30;
 	}
 }
 

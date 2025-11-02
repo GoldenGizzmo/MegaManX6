@@ -16,6 +16,9 @@ if global.death = false and animation_lock = false
 	//if attack_priority = 0
 	if(attack_action = attack_actions.x_saber and scr_sprite_finished(spr_manager, X_SABER_SPRITES))
 		attack_action = attack_actions.none;
+		
+	if(attack_action = attack_actions.rain and scr_sprite_finished(spr_manager, spr_port_x_idle_shoot))
+		attack_action = attack_actions.none;
 
 
 	if attack_action = attack_actions.none

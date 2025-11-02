@@ -318,10 +318,9 @@ function scr_setup_player_sprites(){
 				}
 				else
 				{
-					change_sprite(spr_manager, shooting ? spr_port_x_jump_shooting : spr_port_x_jump, scr_current_sprite_is([spr_port_x_falling, spr_port_x_falling_shooting]) ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
+					change_sprite(spr_manager, shooting ? spr_port_x_jump_shooting : spr_port_x_jump, scr_current_sprite_is([spr_port_x_jump, spr_port_x_jump_shooting]) ? animation_sync_type.match_image : animation_sync_type.base, sprite_loop_type.no_loop)
 				}
 			}
-		
 		
 			return true;
 		}
@@ -341,7 +340,7 @@ function scr_setup_player_sprites(){
 			if(!dash)return false;
 		
 		
-			if(shooting){
+			if(shot_fired){
 				change_sprite(spr_manager, "shoot_dash")
 			}
 			else
@@ -356,7 +355,7 @@ function scr_setup_player_sprites(){
 		
 			if(!crouch)return false;
 		
-			if((shooting) or !scr_sprite_finished(spr_manager, [spr_port_x_crouch_shot_charged, spr_port_x_crouch_shot, spr_port_x_crouch_shooting])){
+			if(shooting or !scr_sprite_finished(spr_manager, [spr_port_x_crouch_shot_charged, spr_port_x_crouch_shot, spr_port_x_crouch_shooting])){
 				
 				if(shooting_charged == shooting_charge_level.two or !scr_sprite_finished(spr_manager, spr_port_x_crouch_shot_charged)){
 					change_sprite(spr_manager, spr_port_x_crouch_shot_charged, !scr_current_sprite_is(spr_port_x_crouch_shot_charged) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
@@ -419,8 +418,11 @@ function scr_setup_player_sprites(){
 			{
 				
 				
-				if(scr_current_sprite_is(FALLING_SPRITES) or !scr_sprite_finished(spr_manager, spr_port_x_landing)){
-					change_sprite(spr_manager, spr_port_x_landing)
+				if(attack_action == attack_actions.x_saber or !scr_sprite_finished(spr_manager, spr_port_x_saber)){
+					change_sprite(spr_manager, spr_port_x_saber, animation_sync_type.base, sprite_loop_type.no_loop);
+				}
+				else if(attack_action == attack_actions.rain or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+					change_sprite(spr_manager, spr_port_x_idle_shoot)
 				}
 				/*else if((struct and (c_sprite.name == "dash" or c_sprite.name == "shoot_dash")) or !scr_sprite_finished(spr_manager, spr_port_x_dash_end) or !scr_sprite_finished(spr_manager, spr_port_x_dash_shooting_end)){
 				
@@ -433,34 +435,28 @@ function scr_setup_player_sprites(){
 					}
 				
 				}*/
+				else if(shooting_charged == shooting_charge_level.two or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot_charge)){
+					change_sprite(spr_manager, spr_port_x_idle_shoot_charge, !scr_current_sprite_is(spr_port_x_idle_shoot_charge) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
+				}
+				else if(shot_fired or shooting_charged == shooting_charge_level.one or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+					change_sprite(spr_manager, spr_port_x_idle_shoot, shot_fired ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
+				}
+				else if((scr_current_sprite_is(CROUCH_SPRITES) and !scr_sprite_is_reversed(spr_manager)) or !scr_sprite_finished(spr_manager, CROUCH_SPRITES)){
+					
+					if(scr_current_sprite_is(spr_port_x_crouch_shot)){
+						change_sprite(spr_manager, spr_port_x_crouch_shooting, animation_sync_type.match_image, sprite_loop_type.no_loop)
+					}
+					
+					scr_sprite_reverse(spr_manager);
+				}
+				else if(scr_current_sprite_is(FALLING_SPRITES) or !scr_sprite_finished(spr_manager, spr_port_x_landing)){
+					change_sprite(spr_manager, spr_port_x_landing)
+				}
 				else
 				{
-
-
-					if(attack_action == attack_actions.x_saber or !scr_sprite_finished(spr_manager, spr_port_x_saber)){
-						change_sprite(spr_manager, spr_port_x_saber, animation_sync_type.base, sprite_loop_type.no_loop);
-					}
-					else if(shooting_charged == shooting_charge_level.two or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot_charge)){
-						change_sprite(spr_manager, spr_port_x_idle_shoot_charge, !scr_current_sprite_is(spr_port_x_idle_shoot_charge) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
-					}
-					else if(global.input_shoot_pressed or shooting_charged == shooting_charge_level.one or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
-						change_sprite(spr_manager, spr_port_x_idle_shoot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
-					}
-				
-					else if((scr_current_sprite_is(CROUCH_SPRITES) and !scr_sprite_is_reversed(spr_manager)) or !scr_sprite_finished(spr_manager, CROUCH_SPRITES)){
-					
-						if(scr_current_sprite_is(spr_port_x_crouch_shot)){
-							change_sprite(spr_manager, spr_port_x_crouch_shooting, animation_sync_type.match_image, sprite_loop_type.no_loop)
-						}
-					
-						scr_sprite_reverse(spr_manager);
-					}
-				
-					else
-					{
-						change_sprite(spr_manager, spr_port_x_idle);
-					}
+					change_sprite(spr_manager, spr_port_x_idle);
 				}
+				
 			}
 		
 		
