@@ -147,7 +147,7 @@ function change_sprite(spr_manager, new_sprite, sync_type = animation_sync_type.
 	
 	var override = sync_type == animation_sync_type.override;
 	
-	if(spr_manager.sprite_cooldown > 0 and !override)return;
+	//if(spr_manager.sprite_cooldown > 0 and !override)return;
 	
 	#region Get the struct if the new sprite is given as a string
 	
@@ -165,7 +165,6 @@ function change_sprite(spr_manager, new_sprite, sync_type = animation_sync_type.
 		if(!override){
 			
 			if(!loop and spr_manager.current_sprite == new_sprite){
-				
 				return;
 			}
 		
@@ -340,7 +339,7 @@ function scr_setup_player_sprites(){
 			if(!dash)return false;
 		
 		
-			if(shot_fired){
+			if(shooting){
 				change_sprite(spr_manager, "shoot_dash")
 			}
 			else
@@ -404,6 +403,7 @@ function scr_setup_player_sprites(){
 			var c_sprite = spr_manager.current_sprite;
 			var struct = typeof(c_sprite) == "struct"
 
+
 			if(xspeed != 0){
 			
 				if(shooting){
@@ -421,26 +421,24 @@ function scr_setup_player_sprites(){
 				if(attack_action == attack_actions.x_saber or !scr_sprite_finished(spr_manager, spr_port_x_saber)){
 					change_sprite(spr_manager, spr_port_x_saber, animation_sync_type.base, sprite_loop_type.no_loop);
 				}
-				else if(attack_action == attack_actions.rain or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
-					change_sprite(spr_manager, spr_port_x_idle_shoot)
-				}
-				/*else if((struct and (c_sprite.name == "dash" or c_sprite.name == "shoot_dash")) or !scr_sprite_finished(spr_manager, spr_port_x_dash_end) or !scr_sprite_finished(spr_manager, spr_port_x_dash_shooting_end)){
-				
-					if(shooting){
-						change_sprite(spr_manager, spr_port_x_dash_shooting_end, sprite_index == spr_port_x_dash_end ? animation_sync_type.match_image : animation_sync_type.base)
-					}
-					else
-					{
-						change_sprite(spr_manager, spr_port_x_dash_end, sprite_index == spr_port_x_dash_shooting_loop ? animation_sync_type.match_image : animation_sync_type.base)
-					}
-				
-				}*/
+
+
 				else if(shooting_charged == shooting_charge_level.two or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot_charge)){
 					change_sprite(spr_manager, spr_port_x_idle_shoot_charge, !scr_current_sprite_is(spr_port_x_idle_shoot_charge) ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 				}
-				else if(shot_fired or shooting_charged == shooting_charge_level.one or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
-					change_sprite(spr_manager, spr_port_x_idle_shoot, shot_fired ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
-				}
+				
+				#region shooting
+				
+					else if((shooting or shooting_charged == shooting_charge_level.one) or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+						change_sprite(spr_manager, spr_port_x_idle_shoot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
+					}
+				
+					else if(attack_action == attack_actions.rain or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+						change_sprite(spr_manager, spr_port_x_idle_shoot)
+					}
+					
+				#endregion
+				
 				else if((scr_current_sprite_is(CROUCH_SPRITES) and !scr_sprite_is_reversed(spr_manager)) or !scr_sprite_finished(spr_manager, CROUCH_SPRITES)){
 					
 					if(scr_current_sprite_is(spr_port_x_crouch_shot)){
