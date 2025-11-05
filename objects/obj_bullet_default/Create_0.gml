@@ -27,6 +27,11 @@ special = false; //They are a special weapon (High Max)
 palette_type = 0;
 palette = 0;
 
+afterimage_toggle = false;
+afterimage_blend = c_white;
+afterimage_fade = 0.075;
+
+animation_loop = true;
 
 
 

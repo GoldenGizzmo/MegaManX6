@@ -14,10 +14,7 @@ if global.death = false and animation_lock = false
 {
 	//Animations
 	//if attack_priority = 0
-	if(attack_action = attack_actions.x_saber and scr_sprite_finished(spr_manager, X_SABER_SPRITES))
-		attack_action = attack_actions.none;
-		
-	if(attack_action = attack_actions.rain and scr_sprite_finished(spr_manager, spr_port_x_idle_shoot))
+	if attack_action = attack_actions.x_saber
 		attack_action = attack_actions.none;
 
 
@@ -83,7 +80,12 @@ if global.death = false and animation_lock = false
 			
 			//Part: Hyper Dash
 			if ds_list_find_index(global.parts_equipped,2) != -1 {scr_get_part_effect(2,false);}	
-			
+			//Ride Chaser dash and jump boost
+			if bike = true
+			{
+				dash_speed = dash_speed*1.25; //25% faster
+				jump_height = jump_height*1.10 //10% higher
+			}
 			
 			if global.input_jump_pressed and airborne = false and attack_priority = 0
 			{
@@ -91,7 +93,6 @@ if global.death = false and animation_lock = false
 				if global.input_dash
 					dash = true;
 				
-				attack_action = attack_actions.none;
 				audio_stop_sound(snd_player_x_dash);
 				scr_make_sound(snd_player_x_jump,1,1,false);
 				scr_player_voicelines("Jump");
@@ -336,7 +337,24 @@ if global.death = false and animation_lock = false
 						break;
 				}
 			}
-			
+			//Bike double jump
+			if airborne = true and global.input_jump_pressed and airdash_lock = false and bike = true
+			{
+				yspeed = -jump_height;
+				if global.input_dash
+				{
+					dash = true;
+					scr_make_sound(snd_player_x_dash,1,1,false);	
+				}
+				
+				scr_make_sound(snd_bike_jump,1,1,false);
+				
+				effect = instance_create_depth(x,y,depth+1,obj_explosion);
+				effect.sprite_index = spr_effect_bike_jump;
+				
+				alarm[4] = 1;
+				airdash_lock = true;
+			}
 		
 			//Shooting
 			if shooting_lock = false and attack_priority = 0
@@ -349,7 +367,7 @@ if global.death = false and animation_lock = false
 					
 				}
 				//Special Weapons
-				if global.input_special or global.input_special_released
+				if (global.input_special or global.input_special_released) and bike = false
 				{
 					event_user(3);
 					
@@ -382,8 +400,8 @@ if global.death = false and animation_lock = false
 			//If not in the weapon get room (forces the player to use the assigned weapon and prevents switching)
 			if room != rm_weapon_get
 			{
-				//Changing weapons
-				if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0
+				//Changing weapons (can't do it on a ride chaser)
+				if (global.input_swap_left_pressed or global.input_swap_right_pressed) and attack_action = 0 and bike = false
 				{
 					if global.input_swap_right_pressed //Swapping next
 					{
@@ -462,16 +480,6 @@ if global.death = false and animation_lock = false
 		slowed--;
 		xspeed /= 2;
 	}
-	
-	//Afterimages
-	if dash = true and global.animate%3 = 0
-	{
-		afterimage = instance_create_depth(x,y,depth+10,obj_afterimage);
-		afterimage.image_blend = make_color_rgb(0,89,255);
-		afterimage.sprite_index = sprite_index;
-		afterimage.image_index = image_index;
-		afterimage.image_xscale = image_xscale;
-	}	
 }
 else
 {
@@ -480,6 +488,18 @@ else
 	
 	event_user(5); //Air dash end
 }
+
+//Afterimages
+if dash = true and global.animate%3 = 0 and global.death = false
+{
+	afterimage = instance_create_depth(x,y,depth+10,obj_afterimage);
+	afterimage.image_blend = make_color_rgb(0,89,255);
+	afterimage.sprite_index = sprite_index;
+	afterimage.image_index = image_index;
+	afterimage.image_xscale = image_xscale;
+	if bike = true
+		afterimage.image_xscale = 1;
+}	
 
 //Stop charging sounds
 if shooting_charge = 0

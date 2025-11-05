@@ -5,6 +5,7 @@ if global.hud_toggle = true
 {
 	var x_pos = 20*global.ui_scale;
 	var y_pos = (display_get_gui_height()/2)-10*global.ui_scale;
+	var extend = global.lifemax-base_life; //Increase the healthbar by this amount
 
 	ammo_font = font_add_sprite_ext(spr_hud_weapon_count,"0123456789",true,0);
 	draw_set_font(ammo_font);
@@ -14,7 +15,7 @@ if global.hud_toggle = true
 	if global.weapon_choice > 0
 		hud_type = 1;
 	draw_sprite_ext(spr_hud_player,hud_type,x_pos,y_pos,global.ui_scale,global.ui_scale,0,c_white,1);
-	draw_sprite_ext(spr_hud_player_extend,0,x_pos,y_pos-(global.hearttank*2)*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,1);
+	draw_sprite_ext(spr_hud_player_extend,0,x_pos,y_pos-(extend)*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,1);
 	if hud_type = 1
 		draw_sprite_ext(spr_hud_player_extend,1,x_pos,y_pos-(global.powertank*12)*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,1);
 

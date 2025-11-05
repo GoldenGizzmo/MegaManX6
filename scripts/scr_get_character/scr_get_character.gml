@@ -29,6 +29,20 @@ function scr_get_character(character)
 			mugshot_talk = spr_mugshot_turtloid_talk;
 			break;
 			
+		case "Heatnix":
+			character_colour = make_color_rgb(255,130,0);
+			character_name = "Blaze Heatnix"; //If I were to change the name
+			mugshot = spr_mugshot_heatnix;
+			mugshot_talk = spr_mugshot_heatnix;
+			break;
+			
+		case "Mijinion":
+			character_colour = make_color_rgb(102,45,145);
+			character_name = "Infinity Mijinion"; //If I were to change the name
+			mugshot = spr_mugshot_mijinion;
+			mugshot_talk = spr_mugshot_mijinion;
+			break;
+			
 		case "Dr. Light":
 			character_colour = make_color_rgb(171,232,255);
 			mugshot = spr_mugshot_drlight;

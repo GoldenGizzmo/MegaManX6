@@ -23,3 +23,5 @@ retreat = false;
 
 weight = 0;
 colliding = false;
+
+palette = 0;

@@ -42,6 +42,24 @@ function scr_get_part(_id)
 			part_description = "Absorb life energy from destroyed \nenemies";
 			part_cost = 100;
 			break;
+			
+		case 6:
+			part_name = "Life Up";
+			part_description = "Increase your maximum life by 4 \npoints";
+			part_cost = 100;
+			break;
+			
+		case 7:
+			part_name = "Phase Shot";
+			part_description = "Your buster shots can pass through \nwalls";
+			part_cost = 100;
+			break;
+			
+		case 8:
+			part_name = "Death Blocker";
+			part_description = "Prevents death from non-instant kill \nhazards. Refreshes when at maximum \nlife";
+			part_cost = 100;
+			break;
 		
 		/*	
 		case 0:
@@ -200,6 +218,41 @@ function scr_get_part_effect(_id,tweak)
 				pickup.sprite_index = spr_pickup_energy_siphon;
 			}*/
 			break;
+			
+		case 6: //Part: Life Up
+			life_extend += 4;
+			break;
+			
+		case 7: //Part: Phase Shot
+			phasing = true;
+			image_alpha = 0.75;
+			break;
+			
+		case 8: //Part: Death Blocker
+			with obj_part_manager
+				var active = db_active;
+			
+			if active = true and global.life = 0
+			{
+				global.life = 1;
+				scr_make_sound(snd_death_blocker,1.5,1,false);
+			
+				effect = instance_create_layer(x,y,"Explosions",obj_explosion);
+				effect.sprite_index = spr_death_blocked_explosion;
+				
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.length = 30;
+			
+				with obj_part_manager
+				{
+					db_active = false;
+					db_alpha = 2;
+				}
+			
+				alarm[3] = 30; //Recovery time
+				recovery_time = base_recovery_time;
+			}
+			break;
 	}
 }
 
@@ -208,6 +261,15 @@ function scr_part_storestock()
 	//Go through ever level in the list thats completed
 	ds_list_sort(global.level_list,true);
 	ds_list_clear(global.parts_store); //Start from scratch 
+	
+	//Life Up
+	if ds_list_find_value(global.parts_owned,6) != -1 {ds_list_add(global.parts_store,6)}
+	//Phase Shot
+	if ds_list_find_value(global.parts_owned,7) != -1 {ds_list_add(global.parts_store,7)}
+	//Death Blocker
+	if ds_list_find_value(global.parts_owned,8) != -1 {ds_list_add(global.parts_store,8)}
+	
+	//Parts that require a level beaten
 	for (var i = 0; i < ds_list_size(global.level_list); i++)
 	{	
 		switch (ds_list_find_value(global.level_list,i))

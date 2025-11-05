@@ -21,10 +21,7 @@ function scr_stop_floor(){
 		
 		case obj_player:
 			
-			if airborne = true{
-				scr_make_sound(snd_player_x_landing,1,1,false);	
-				attack_action = attack_actions.none;
-			}
+			if airborne = true scr_make_sound(snd_player_x_landing,1,1,false);	
 			airborne = false;
 			
 		break;
@@ -75,19 +72,15 @@ function scr_stop_wall(spd, col = obj_solid){
 		
 		case obj_player:
 		
-			if(!walled){
-				attack_action = attack_actions.none;
-			}
-		
 			walled = true;
 			
 			//Checking if touching a wall that can't be climbed
-			var climbable = true
-			if place_meeting(x+image_xscale,y,obj_solid_noclimb)
-				climbable = false;
+			var can_climb = false
+			with instance_place(x+image_xscale,y,obj_solid)
+				can_climb = climbable;
 		
 			//Holding the button into the wall while falling
-			if (airborne and yspeed > 0 and climbable = true)
+			if (airborne and yspeed > 0 and can_climb = true)
 			{
 				yspeed = 1; //Wall slide	
 				if wall_slide = false
@@ -119,8 +112,6 @@ function scr_stop_wall(spd, col = obj_solid){
 				{
 					yspeed = -jump_height;
 					wall_jump = true;
-					
-					attack_action = attack_actions.none;
 					
 					//Wall kick effect
 					effect = instance_create_layer(x+14*image_xscale,y+18,"Explosions",obj_explosion); //y+23

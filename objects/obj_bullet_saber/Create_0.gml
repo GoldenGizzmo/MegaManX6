@@ -12,3 +12,4 @@ offset_x = 0;
 offset_y = 0;
 turning = true;
 melee_slash = true;
+

@@ -6,12 +6,10 @@
 global.ui_scale = 5;
 global.fps_display = false;
 
-
-
 //Sound Variables
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_sfx);
-global.volume_master = 0.5; //50%
+global.volume_master = 0.1; //50%
 global.volume_music = 0; //100%
 global.volume_effect = 1; //100%
 audio_group_set_gain(audiogroup_sfx,global.volume_effect*global.volume_master,0);
@@ -44,6 +42,7 @@ global.rescue_count = 0;
 global.rescue_max = 0;
 global.rescue_list = ds_list_create(); //Checks reploids rescued
 global.pickup_list = ds_list_create(); //Checks pickups like heart tanks and sub tanks are collected
+global.level_completed = false; //Triggered when re-entering a completed level
 global.level_list = ds_list_create(); //List of levels in the game and if they're completed or not
 
 //Heart Tanks
@@ -79,7 +78,9 @@ global.give_weapon = "Nothing";
 global.playtime = 0;
 
 
-global.parts_amount = 2; 
+global.parts_amount = 1; 
 global.parts_equipped = ds_list_create();
 global.parts_owned = ds_list_create();
 global.parts_store = ds_list_create();
+
+//ds_list_add(global.parts_equipped,1);

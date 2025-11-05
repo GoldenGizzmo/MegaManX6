@@ -102,6 +102,11 @@ switch (state)
 	case 7:
 		alarm[0] = 1;
 		if fade.alpha >= 1
-			room_goto(rm_weapon_get);
+		{
+			if global.level_completed = false
+				room_goto(rm_weapon_get);
+			else
+				room_goto(rm_stage_select);
+		}
 		break;
 }

@@ -1,12 +1,19 @@
 /// @description X-Buster Shooting
 
+var shot_fired = false;
+
 var wall_slide_reverse = 1;
 if wall_slide = true
 	wall_slide_reverse = -1;
 
 var shootpos_x = 20*image_xscale*wall_slide_reverse;
 var shootpos_y = -7;
-if airborne = true
+if bike = true
+{
+	shootpos_x = 32;
+	shootpos_y = 8;
+}
+else if airborne = true
 	shootpos_y = -9;
 else
 {
@@ -36,7 +43,7 @@ if global.input_shoot_pressed
 	if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"X-Buster");}	
 	
 	with obj_bullet_default
-		if sprite_index = spr_bullet_player_lemon
+		if sprite_index = spr_bullet_player_lemon or sprite_index = spr_bullet_bike
 			obj_player.bullet_limit--;
 
 	if bullet_limit > 0
@@ -50,6 +57,8 @@ if global.input_shoot_pressed
 		{
 			//Part: Rapid Fire
 			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Set Colour");}
+			//Part: Phase Shot
+			if ds_list_find_index(global.parts_equipped,7) != -1 {scr_get_part_effect(7,false);}
 		}
 		
 		bullet.explosion_sound = snd_explosion_bullet;
@@ -61,10 +70,24 @@ if global.input_shoot_pressed
 		effect.x_pos = shootpos_x;
 		effect.y_pos = shootpos_y;
 		effect.image_xscale = image_xscale*wall_slide_reverse;
+		effect.image_alpha = bullet.image_alpha;
 		with effect
 		{
 			//Part: Rapid Fire
 			if ds_list_find_index(global.parts_equipped,1) != -1 {scr_get_part_effect(1,"Set Colour");}
+		}
+		
+		//Ride Chaser version
+		if bike = true
+		{
+			bullet.phasing = true;
+			bullet.image_xscale = 1;
+			bullet.sprite_index = spr_bullet_bike;
+			if image_xscale = -1
+				bullet.speed *= -1;
+			
+			effect.image_xscale = 1;
+			effect.sprite_index = spr_effect_muzzle_bike;
 		}
 		
 		//Part: V Shot
@@ -77,7 +100,7 @@ if global.input_shoot_pressed
 //Charge shots
 if global.input_shoot_released
 {
-	
+	shooting_charged = false;
 	if shooting_charge > shooting_charge_lvl_2
 	{
 		bullet = instance_create_layer(x+shootpos_x+(5*image_xscale*wall_slide_reverse),y+shootpos_y,"Projectiles",obj_bullet_charged)
@@ -90,6 +113,12 @@ if global.input_shoot_released
 		bullet.explosion_sound = snd_explosion_bullet;
 		scr_make_sound(snd_shoot_large,1,1,false);
 		scr_player_voicelines("Charge Shot");
+		
+		with bullet
+		{
+			//Part: Phase Shot
+			if ds_list_find_index(global.parts_equipped,7) != -1 {scr_get_part_effect(7,false);}
+		}
 		
 		//Effect
 		for (var i = 0; i < 2; i++)
@@ -104,14 +133,27 @@ if global.input_shoot_released
 			effect.x_pos = shootpos_x;
 			effect.y_pos = shootpos_y;
 			effect.image_xscale = image_xscale*wall_slide_reverse;
+			effect.image_alpha = bullet.image_alpha;
 		}
 		
 		shot_fired = true;
-		shooting_charged = shooting_charge_level.two;
+		shooting_charged = true;
 		shooting_lock = true;
-		alarm[0] = 30;
+		alarm[0] = 15;
+		
+		//Ride Chaser version
+		if bike = true
+		{
+			bullet.phasing = true;
+			bullet.image_xscale = 1;
+			bullet.sprite_index = spr_bullet_bike_charge_spawn;
+			if image_xscale = -1
+				bullet.speed *= -1;
+			
+			effect.image_xscale = 1;
+		}
 	}
-	else if shooting_charge > shooting_charge_lvl_1
+	else if shooting_charge > shooting_charge_lvl_1 and bike = false
 	{
 		bullet = instance_create_layer(x+shootpos_x,y+shootpos_y,"Projectiles",obj_bullet_charged)
 		bullet.image_xscale = image_xscale*wall_slide_reverse;
@@ -122,18 +164,23 @@ if global.input_shoot_released
 		bullet.explosion_sound = snd_explosion_bullet;
 		scr_make_sound(snd_shoot_mid,1,1,false);
 		
+		with bullet
+		{
+			//Part: Phase Shot
+			if ds_list_find_index(global.parts_equipped,7) != -1 {scr_get_part_effect(7,false);}
+		}
+		
 		//Effect
 		effect = instance_create_layer(bullet.x,bullet.y,"Explosions",obj_particle_muzzle_player);
 		effect.sprite_index = spr_effect_muzzle_x_charge_1;
 		effect.x_pos = shootpos_x;
 		effect.y_pos = shootpos_y;
 		effect.image_xscale = image_xscale*wall_slide_reverse;
-		
-		shooting_charged = shooting_charge_level.one;
+		effect.image_alpha = bullet.image_alpha;
 		
 		shot_fired = true;
 		shooting_lock = true;
-		alarm[0] = 30;
+		alarm[0] = 15;
 	}
 }
 

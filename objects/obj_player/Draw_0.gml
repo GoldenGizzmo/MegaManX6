@@ -3,14 +3,18 @@
 
 event_user(0);
 
+
 draw_set_font(global.fnt_game);
 
-//draw_text(x,y-80,"xspeed:   "+string(xspeed))
+//draw_text(x,y-80,animation_lock)
 
 if flicker = true or flicker_weapon_swap = true
 {
 	gpu_set_fog(true,make_color_rgb(211,232,248),0,0);
-	draw_self();
+	if bike = true //On a bike, only faces to the left
+		draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,image_blend,image_alpha);
+	else
+		draw_self();
 	gpu_set_fog(false,make_color_rgb(211,232,248),0,0);
 	
 	flicker_weapon_swap = false;
@@ -31,7 +35,14 @@ else
 		else if shooting_charge >= shooting_charge_lvl_1
 			pal_swap_set(spr_player_x_palette,2,false);
 	}	
-	draw_self();
+	if bike = true //On a bike, only faces to the left
+		draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,image_blend,image_alpha);
+	else
+	{
+		draw_self();
+		//var legs = sprite_get_name(spr_port_x_idle)+"_bladelegs"
+		//draw_sprite_ext(legs,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
+	}
 	pal_swap_reset();
 	
 	image_blend = c_white;
@@ -72,7 +83,6 @@ pal_swap_reset();
 
 
 
-draw_text(x, y - 32, image_index)
 
 
 

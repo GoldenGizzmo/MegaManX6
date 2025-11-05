@@ -50,7 +50,7 @@ function scr_weapon_menus(weapon_name)
 	switch (weapon_name)
 	{
 		case "X-Saber":
-			weapon_description = "Can be charged to fire powerful projectiles. \nX-Saber can also be used to slash through multiple enemies.";
+			weapon_description = "Can be charged to fire powerful projectiles. \nX-Saber can also be used to slash through \nmultiple enemies.";
 			break;
 			
 		case "Yanma Option":

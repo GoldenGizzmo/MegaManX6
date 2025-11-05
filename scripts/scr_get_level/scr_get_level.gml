@@ -24,6 +24,9 @@ function scr_get_level(level)
 			level_colour = character_colour;
 			
 			level_description = "Investigator:\n"+character_name+"\n\nNightmare:\nRegenerating Mechaniloids";
+			
+			//For intro screen
+			boss_sprite = spr_boss_yammark_complete;
 			break;
 	
 		case 1:
@@ -37,6 +40,37 @@ function scr_get_level(level)
 			level_colour = character_colour;
 			
 			level_description = "Investigator:\n"+character_name+"\n\nNightmare:\nAcid Rain";
+			
+			//For intro screen
+			boss_sprite = spr_boss_turtloid_idle;
+			break;
+			
+		case 4:
+			level_name = "Magma Furnace";
+			level_background = spr_bg_heatnix;
+			level_destination = rm_heatnix;
+			//level_map_x = 47;
+			//level_map_y = 12;
+			
+			scr_get_character("Heatnix");
+			level_colour = character_colour;
+			
+			//For intro screen
+			boss_sprite = spr_boss_yammark_complete;
+			break;
+			
+		case 5:
+			level_name = "Weapon Center";
+			//level_background = spr_bg_heatnix;
+			//level_destination = rm_heatnix;
+			//level_map_x = 47;
+			//level_map_y = 12;
+			
+			scr_get_character("Mijinion");
+			level_colour = character_colour;
+			
+			//For intro screen
+			boss_sprite = spr_boss_yammark_complete;
 			break;
 	}
 }

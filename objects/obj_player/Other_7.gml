@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-spr_manager.animation_end();
+if animation_lock = false
+	spr_manager.animation_end();
 
 
 /*

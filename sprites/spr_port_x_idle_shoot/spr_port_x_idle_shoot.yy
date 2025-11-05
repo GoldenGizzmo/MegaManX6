@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"X Everything Ported Over",
-    "path":"folders/Sprites/X Everything Ported Over.yy",
+    "name":"Changed",
+    "path":"folders/Sprites/X Everything Ported Over/Changed.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

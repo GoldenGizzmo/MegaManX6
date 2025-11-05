@@ -37,3 +37,12 @@ switch sprite_index
 			instance_destroy(id,false);
 		break;
 }
+
+/*
+afterimage = instance_create_depth(x,y,depth+1,obj_afterimage);
+afterimage.image_index = image_index;
+afterimage.sprite_index = sprite_index;
+afterimage.image_xscale = image_xscale;
+//afterimage.blendmode = bm_normal;
+afterimage.blank = false;
+afterimage.fade_speed = 0.12;

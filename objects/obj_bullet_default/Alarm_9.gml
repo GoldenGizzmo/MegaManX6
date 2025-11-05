@@ -17,6 +17,7 @@ else
 		end_sprite.sprite_index = explosion;
 		end_sprite.image_xscale = image_xscale;
 		end_sprite.image_angle = explosion_angle;
+		end_sprite.image_alpha = image_alpha;
 	
 		if place_meeting(x,y,obj_spawnzone) and explosion_sound != 0
 			scr_make_sound(explosion_sound,1,1,false);

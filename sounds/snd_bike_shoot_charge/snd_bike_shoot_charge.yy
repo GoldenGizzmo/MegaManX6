@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_bike_shoot_charge",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.6247619,
+  "exportDir":"",
+  "name":"snd_bike_shoot_charge",
+  "parent":{
+    "name":"Bike",
+    "path":"folders/Sounds/Player-Sounds/Bike.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bike_shoot_charge.wav",
+  "volume":1.0,
+}

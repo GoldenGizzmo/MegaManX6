@@ -20,6 +20,7 @@ if global.music != "Off" //If turned on
 				break;
 			case rm_yammark: global.music = snd_music_yammark; break;
 			case rm_turtloid: global.music = snd_music_turtloid; break;
+			case rm_heatnix: global.music = snd_music_heatnix; break;
 			case rm_weapon_get: global.music = snd_music_weapon_get; break;
 			default: global.music = "Off"; return;
 		}
@@ -122,7 +123,7 @@ with obj_spawnzone
 #endregion
 
 
-global.lifemax = base_life+(global.hearttank*2);
+event_user(0);
 
 //Nightmare Souls Counter
 if souls_timer > 0 //Counter appears

@@ -49,12 +49,12 @@ shooting_charge_flicker = false;
 shooting_charge_lvl_1 = 30;
 shooting_charge_lvl_2 = 90;
 
-shot_fired = false;
-
 palette = 0;
 flicker_weapon_swap = false;
 
 slowed = 0;
+
+bike = false; //In ride chaser
 
 //Air Dash
 airdash_lock = false; //Prevent being used twice in mid-air
@@ -70,7 +70,6 @@ on_slope = false;
 depth -= 10; //Draw above other enemies
 
 
-stop_player = false;
 
 
 spr_manager = new sprite_manager(id)
