@@ -7,7 +7,13 @@ if obj_player.bike = false
 	if obj_player.wall_slide = true
 		wall_slide_reverse = -1;
 	if image_xscale != obj_player.image_xscale*wall_slide_reverse
-		instance_destroy();
+		track_player = false;
+}
+
+if track_player = true
+{
+	x_pos = obj_player.shootpos_x;
+	y_pos = obj_player.shootpos_y;
 }
 	
 	

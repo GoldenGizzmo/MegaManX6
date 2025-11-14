@@ -55,5 +55,12 @@ with obj_spawnzone
 	if !place_meeting(x,y,obj_enemy_hostile)
 		skip = true;
 		
-if skip = true and ridechaser_break = false
+if skip = true //If all enemies are killed
+{
 	alarm[0] = 1;
+	if ridechaser_break = true //Add a delay when moving to the next section
+	{
+		alarm[0] = 120;
+		ridechaser_break = false;
+	}
+}

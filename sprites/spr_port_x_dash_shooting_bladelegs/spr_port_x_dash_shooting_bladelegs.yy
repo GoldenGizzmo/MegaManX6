@@ -29,8 +29,9 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"02e2f319-4dd5-48da-8814-1e51a08afcaf","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"02e2f319-4dd5-48da-8814-1e51a08afcaf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"585d3865-d86c-4dc4-ba55-b926ed41bb20","blendMode":0,"displayName":"Layer 4","isLocked":false,"name":"585d3865-d86c-4dc4-ba55-b926ed41bb20","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"66a53ec7-165f-4802-9950-b094155c5bf3","blendMode":0,"displayName":"Layer 3","isLocked":false,"name":"66a53ec7-165f-4802-9950-b094155c5bf3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"a80de5bf-c0e0-4196-8559-a59fca174456","blendMode":0,"displayName":"default","isLocked":false,"name":"a80de5bf-c0e0-4196-8559-a59fca174456","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1d7f4f95-3724-44be-bbf4-6607d36e8aab","blendMode":0,"displayName":"Layer 3 (2)","isLocked":false,"name":"1d7f4f95-3724-44be-bbf4-6607d36e8aab","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"66a53ec7-165f-4802-9950-b094155c5bf3","blendMode":0,"displayName":"Layer 3","isLocked":false,"name":"66a53ec7-165f-4802-9950-b094155c5bf3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
+    {"$GMImageLayer":"","%Name":"a80de5bf-c0e0-4196-8559-a59fca174456","blendMode":0,"displayName":"default","isLocked":false,"name":"a80de5bf-c0e0-4196-8559-a59fca174456","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"c1f9d8cc-fcf4-4083-b5a5-17f7902d7138","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"c1f9d8cc-fcf4-4083-b5a5-17f7902d7138","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_port_x_dash_shooting_bladelegs",

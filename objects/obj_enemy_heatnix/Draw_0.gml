@@ -8,3 +8,4 @@ gpu_set_blendmode(bm_normal);
 // Inherit the parent event
 event_inherited();
 
+//draw_text(obj_camera.x,obj_camera.y,life);

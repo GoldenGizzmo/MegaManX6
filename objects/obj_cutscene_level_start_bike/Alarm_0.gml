@@ -16,7 +16,7 @@ switch (action_player)
 		
 	case 1: //Reel back to player position	
 		alarm[0] = 1;
-		if obj_player.x > obj_player.xstart
+		if obj_player.x > 1120
 		{
 			if xspeed > -8
 				xspeed -= 0.2
@@ -54,5 +54,6 @@ switch (action_player)
 		
 	case 4: //READY
 		obj_player.movement = true;
+		instance_destroy();
 		break;
 }

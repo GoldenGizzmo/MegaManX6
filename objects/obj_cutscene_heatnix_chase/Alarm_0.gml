@@ -60,14 +60,15 @@ switch (action)
 		if obj_player.image_index < 1
 		{
 			action++;
-			alarm[0] = 60;
-			
-			fade = instance_create_depth(0,0,0,obj_fade_swipe);
-						
+			alarm[0] = 10;
+		
 			with obj_player
 			{
 				image_index = 2;
+				image_speed = 1;
 				sprite_index = spr_port_x_bike_reel;
+				dash = false;
+				invul = false;
 			}
 		}
 		else
@@ -76,18 +77,29 @@ switch (action)
 		
 	case 3:
 		action++;
+		alarm[0] = 60;
+		
+		fade = instance_create_depth(0,0,0,obj_fade_swipe);
+		break;
+		
+	case 4:
+		action++;
 		alarm[0] = 1;
 		
 		with obj_player
 		{
 			x = 1120;
-			y = 1626;
+			y = 1630;
+			
+			xspeed = 0;
 		}
 		
 		instance_create_depth(0,0,0,obj_cutscene_level_start_bike);
+		with obj_fire
+			instance_destroy();
 		break;
 		
-	case 4:
+	case 5:
 		action++;
 		alarm[0] = 1;
 	
@@ -97,9 +109,11 @@ switch (action)
 		fade.image_xscale = -1;
 		//fade.swipe_speed *= -1;
 		//fade.swipe = 0;
-	
-		//with obj_cutscene_level_start_bike
-		//	alarm[1] = -1;
+		
+		with obj_ridechaser
+			ridechaser_type = 1;
+		with obj_cutscene_level_start_bike
+			alarm[1] = -1;
 		
 		instance_destroy();
 		break;

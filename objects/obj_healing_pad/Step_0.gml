@@ -18,7 +18,7 @@ switch (state)
 			obj_player.xspeed = 0;
 			obj_player.movement = false;
 			obj_player.animation_lock = true;
-			obj_player.sprite_index = spr_player_x_idle;
+			obj_player.sprite_index = spr_port_x_idle;
 			
 			//Draw upgrading effect
 			effect = instance_create_layer(x,y,"Explosions",obj_capsule_effect);
@@ -64,6 +64,7 @@ switch (state)
 				{
 					movement = true;
 					animation_lock = false;
+					sprite_index = spr_port_x_idle;
 				}
 			}
 		}

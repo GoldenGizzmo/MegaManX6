@@ -25,8 +25,9 @@
   "height":108,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"153efcdb-2473-463e-a13d-a33efcd1c44b","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"153efcdb-2473-463e-a13d-a33efcd1c44b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"bcd587ec-acc3-40ca-ab38-9b963e08be0e","blendMode":0,"displayName":"default","isLocked":false,"name":"bcd587ec-acc3-40ca-ab38-9b963e08be0e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"5ebc49ad-da17-43e0-ad3c-36a2adfa6992","blendMode":0,"displayName":"Layer 1 (2)","isLocked":false,"name":"5ebc49ad-da17-43e0-ad3c-36a2adfa6992","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"153efcdb-2473-463e-a13d-a33efcd1c44b","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"153efcdb-2473-463e-a13d-a33efcd1c44b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
+    {"$GMImageLayer":"","%Name":"bcd587ec-acc3-40ca-ab38-9b963e08be0e","blendMode":0,"displayName":"default","isLocked":false,"name":"bcd587ec-acc3-40ca-ab38-9b963e08be0e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_port_x_idle_shoot_charge_bladelegs",
   "nineSlice":null,

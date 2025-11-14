@@ -69,7 +69,7 @@ global.shadow_leg_get = false;
 global.x_armour_head = 0;
 global.x_armour_chest = 0;
 global.x_armour_arm = 0;
-global.x_armour_leg = 0//"Blade Leg";
+global.x_armour_leg = "Blade Leg";
 
 global.seen_boss_cutscene = -1;
 global.current_level = -1;
@@ -83,4 +83,9 @@ global.parts_equipped = ds_list_create();
 global.parts_owned = ds_list_create();
 global.parts_store = ds_list_create();
 
-//ds_list_add(global.parts_equipped,1);
+
+ds_list_add(global.parts_store,6);
+ds_list_add(global.parts_store,7);
+ds_list_add(global.parts_store,8);
+
+//ds_list_add(global.parts_equipped,3);

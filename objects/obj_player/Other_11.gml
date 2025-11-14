@@ -1,38 +1,10 @@
 /// @description X-Buster Shooting
 
-var shot_fired = false;
+shot_fired = false;
 
-var wall_slide_reverse = 1;
-if wall_slide = true
-	wall_slide_reverse = -1;
+	
+event_user(6); //Shooting pos
 
-var shootpos_x = 20*image_xscale*wall_slide_reverse;
-var shootpos_y = -7;
-if bike = true
-{
-	shootpos_x = 32;
-	shootpos_y = 8;
-}
-else if airborne = true
-	shootpos_y = -9;
-else
-{
-	if crouch = true or dash = true
-	{
-		shootpos_y = 5;
-		shootpos_x = 25*image_xscale*wall_slide_reverse;
-		if dash = true
-			shootpos_x = 32*image_xscale*wall_slide_reverse;
-	}
-	else
-	{
-		if xspeed != 0
-		{
-			shootpos_y = -8;
-			shootpos_x = 27*image_xscale*wall_slide_reverse;
-		}
-	}
-}
 
 //Uncharged shots
 if global.input_shoot_pressed
@@ -138,6 +110,7 @@ if global.input_shoot_released
 		
 		shot_fired = true;
 		shooting_charged = true;
+		shooting_charged = shooting_charge_level.two;
 		shooting_lock = true;
 		alarm[0] = 15;
 		
@@ -179,6 +152,7 @@ if global.input_shoot_released
 		effect.image_alpha = bullet.image_alpha;
 		
 		shot_fired = true;
+		shooting_charged = shooting_charge_level.one;
 		shooting_lock = true;
 		alarm[0] = 15;
 	}
@@ -190,7 +164,7 @@ if shot_fired = true
 	shooting_charge_flicker = false;
 	shooting_charge = 0;
 	
-	shooting = 30;
+	shooting = 15;
 	/*
 	if sprite_index = spr_player_x_idle_shoot
 		image_index = 0;

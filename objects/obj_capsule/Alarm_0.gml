@@ -199,7 +199,7 @@ switch (state)
 		with obj_player
 		{
 			image_index = 0;
-			sprite_index = spr_player_x_victory;
+			sprite_index = spr_port_x_victory;
 			animation_lock = true;
 		}
 	
@@ -231,6 +231,7 @@ switch (state)
 			movement = true;
 			animation_lock = false;
 			image_speed = 1;
+			sprite_index = spr_port_x_idle;
 		}
 		break;
 }

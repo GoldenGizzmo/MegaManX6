@@ -8,3 +8,5 @@ damage = 14
 
 rise = 0;
 rise_speed = 1;
+
+side = false;

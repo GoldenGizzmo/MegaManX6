@@ -93,7 +93,7 @@ switch (action)
 			with obj_player
 			{
 				image_alpha = 1;
-				sprite_index = spr_player_x_warp_in;
+				sprite_index = spr_port_x_warp_in;
 				image_index = 0;
 				image_xscale = 1;
 			}

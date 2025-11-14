@@ -32,6 +32,7 @@ afterimage_blend = c_white;
 afterimage_fade = 0.075;
 
 animation_loop = true;
+animation_next = 0;
 
 
 

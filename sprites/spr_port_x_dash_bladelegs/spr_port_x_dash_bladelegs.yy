@@ -29,8 +29,9 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"02e2f319-4dd5-48da-8814-1e51a08afcaf","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"02e2f319-4dd5-48da-8814-1e51a08afcaf","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"52719521-1835-481a-9d76-e6d403f8b4da","blendMode":0,"displayName":"Layer 4","isLocked":false,"name":"52719521-1835-481a-9d76-e6d403f8b4da","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"d4f5db53-9421-4c2d-a369-5420318c5a62","blendMode":0,"displayName":"Layer 3","isLocked":false,"name":"d4f5db53-9421-4c2d-a369-5420318c5a62","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"a80de5bf-c0e0-4196-8559-a59fca174456","blendMode":0,"displayName":"default","isLocked":false,"name":"a80de5bf-c0e0-4196-8559-a59fca174456","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"cda3cb7e-5186-42a5-b3cc-46df6b4d46d0","blendMode":0,"displayName":"Layer 3 (2)","isLocked":false,"name":"cda3cb7e-5186-42a5-b3cc-46df6b4d46d0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d4f5db53-9421-4c2d-a369-5420318c5a62","blendMode":0,"displayName":"Layer 3","isLocked":false,"name":"d4f5db53-9421-4c2d-a369-5420318c5a62","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
+    {"$GMImageLayer":"","%Name":"a80de5bf-c0e0-4196-8559-a59fca174456","blendMode":0,"displayName":"default","isLocked":false,"name":"a80de5bf-c0e0-4196-8559-a59fca174456","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"c1f9d8cc-fcf4-4083-b5a5-17f7902d7138","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"c1f9d8cc-fcf4-4083-b5a5-17f7902d7138","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_port_x_dash_bladelegs",

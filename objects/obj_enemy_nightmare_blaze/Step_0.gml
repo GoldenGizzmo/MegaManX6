@@ -22,6 +22,11 @@ if life > 0
 			return;
 		}
 		
+		
+		//For ride bikes
+		x = pickup.x;
+		y = pickup.y;
+		
 		//Revive
 		if revive_countdown = 0
 		{

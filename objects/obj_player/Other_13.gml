@@ -1,15 +1,9 @@
 /// @description Special Weapons / X-Saber
 
-var shot_fired = false;
+shot_fired = false;
 
-var wall_slide_reverse = 1;
-if wall_slide = true
-	wall_slide_reverse = -1;
 
-var shootpos_x = 10*image_xscale*wall_slide_reverse;
-var shootpos_y = -7;
-if sprite_index = spr_player_x_dash_simple or sprite_index = spr_player_x_crouch
-	shootpos_y = 0;
+event_user(6); //Shooting pos
 
 switch (global.weapon[global.weapon_choice].type)
 {
@@ -49,9 +43,9 @@ switch (global.weapon[global.weapon_choice].type)
 				bullet.sprite_index = spr_bullet_x_saber_jump;
 			}
 			
-			image_index = 0;
-			//shot_fired = true;
-			crouch = false;
+			//image_index = 0;
+			shot_fired = true;
+			//crouch = false;
 		}
 		break;
 		
@@ -83,6 +77,7 @@ switch (global.weapon[global.weapon_choice].type)
 			}
 			
 			shot_fired = true;
+			attack_action = attack_actions.yanma;
 			global.weapon[global.weapon_choice].ammo--;
 
 			scr_make_sound(snd_yammark_reinforcement,1,1,false);
@@ -115,6 +110,7 @@ switch (global.weapon[global.weapon_choice].type)
 				bullet.special = true;
 						
 				shot_fired = true;
+				attack_action = attack_actions.rain;
 				global.weapon[global.weapon_choice].ammo--;
 			}
 		}
@@ -151,7 +147,7 @@ if shot_fired = true
 	shooting_charge_flicker = false;
 	shooting_charge = 0;
 	
-	shooting = 30;
+	shooting = 15;
 	/*if sprite_index = spr_player_x_idle_shoot
 		image_index = 0;*/
 	

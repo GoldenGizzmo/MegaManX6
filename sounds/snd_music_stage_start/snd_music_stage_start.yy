@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":11.054195,
+  "duration":100.699524,
   "exportDir":"",
   "name":"snd_music_stage_start",
   "parent":{

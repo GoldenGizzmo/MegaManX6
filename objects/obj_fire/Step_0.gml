@@ -22,9 +22,9 @@ if !instance_exists(obj_trigger)
 			rise_speed += 0.005;
 		
 		image_speed = 2;
-		
+		image_yscale += 1;
 		
 		if !audio_is_playing(snd_heatnix_rumble)
-			scr_make_sound(snd_heatnix_rumble,1,1,false);
+			scr_make_sound(snd_heatnix_rumble,1,1,true);
 	}
 }

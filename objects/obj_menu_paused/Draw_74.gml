@@ -411,7 +411,6 @@ if global.pause_screen = true
 		case "Stage Select":
 			#region 
 			var scale = global.ui_scale/1.25; //Menu size
-			window_set_fullscreen(true)
 	
 			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,c_black,1)
 			scr_get_level(menu_position);

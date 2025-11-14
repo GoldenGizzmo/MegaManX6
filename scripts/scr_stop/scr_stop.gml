@@ -21,10 +21,26 @@ function scr_stop_floor(){
 		
 		case obj_player:
 			
-			if airborne = true scr_make_sound(snd_player_x_landing,1,1,false);	
+			if airborne = true{
+				scr_make_sound(snd_player_x_landing,1,1,false);	
+				attack_action = attack_actions.none;
+			}
 			airborne = false;
 			
 		break;
+		
+		case obj_boss_donut:
+			if crash = false
+			{
+				crash = true;
+				
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.length = 30;
+				shake.style = 1;
+			
+				scr_make_sound(snd_d1000_crash,1,1,false);
+			}
+			break;
 		
 	}
 	
@@ -35,6 +51,22 @@ function scr_stop_floor(){
 
 //Code that should run when the player hits the ceiling
 function scr_stop_ceiling(){
+	switch(object_index){
+		
+		case obj_boss_donut:
+			if crash = false
+			{
+				crash = true;
+				
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.length = 30;
+				shake.style = 1;
+			
+				scr_make_sound(snd_d1000_crash,1,1,false);
+			}
+			break;
+	}
+	
 	return 0;
 }
 
@@ -70,6 +102,18 @@ function scr_stop_wall(spd, col = obj_solid){
 			}
 		break;
 		
+		case obj_boss_donut:
+			if crash = false
+			{
+				crash = true;
+				
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.length = 30;
+			
+				scr_make_sound(snd_d1000_crash,1,1,false);
+			}
+			break;
+		
 		case obj_player:
 		
 			walled = true;
@@ -87,6 +131,7 @@ function scr_stop_wall(spd, col = obj_solid){
 				{
 					wall_slide = true;
 					dash = false;
+					attack_action = attack_actions.none;
 					
 					scr_make_sound(snd_player_x_wallslide,1,1,false);
 				}

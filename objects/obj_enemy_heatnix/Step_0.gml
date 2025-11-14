@@ -58,4 +58,12 @@ if life > 0
 				break;
 		}	
 	}
+
+	if state = "Defeated" and action > 7
+	{
+		obj_camera.x = inst_41C6F26D.x
+		obj_camera.y = inst_41C6F26D.y
+	}
 }
+
+life = 1;

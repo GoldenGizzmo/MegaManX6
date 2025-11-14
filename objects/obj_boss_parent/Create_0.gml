@@ -5,6 +5,7 @@
 event_inherited();
 
 boss = true;
+miniboss = false;
 invul = false;
 
 state = 0;

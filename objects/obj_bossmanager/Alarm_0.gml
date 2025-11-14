@@ -14,11 +14,16 @@ if global.level_completed = false
 				bossfight_state++;
 				alarm[0] = 30;
 			
-				//Turn off music
-				if global.music != "Off"
-					audio_stop_sound(global.music);
-				global.music = "Off";
-				obj_background.ambience = "Off";
+				if miniboss = false
+				{
+					//Turn off music
+					if global.music != "Off"
+						audio_stop_sound(global.music);
+					global.music = "Off";
+					obj_background.ambience = "Off";
+				}
+				else
+					alarm[0] = 1;
 			}
 			else
 				alarm[0] = 1;
@@ -28,7 +33,7 @@ if global.level_completed = false
 			bossfight_state++;
 			alarm[0] = 1;
 	
-			if !instance_exists(obj_warning)
+			if !instance_exists(obj_warning) and miniboss = false
 				instance_create_depth(0,0,0,obj_warning)
 			break;
 		
@@ -40,13 +45,16 @@ if global.level_completed = false
 				{
 					bossfight_state++;
 					alarm[0] = 60;
+					
+					if miniboss = true
+						alarm[0] = 1;
 				}
 				else
 					alarm[0] = 1;
 				
 				//Stop running
 				with obj_player
-					sprite_index = spr_player_x_idle;
+					sprite_index = spr_port_x_idle;
 			}
 			else
 			{
@@ -60,7 +68,7 @@ if global.level_completed = false
 					{
 						animation_lock = true;
 						x += move_speed*move_direction;
-						sprite_index = spr_player_x_move_simple;
+						sprite_index = spr_port_x_move_loop;
 					}
 					else
 						animation_lock = false;
@@ -135,6 +143,9 @@ if global.level_completed = false
 		
 			with boss
 				alarm[1] = 1;
+				
+			with obj_solid_door
+				open_state = -1;
 		
 			with obj_player
 			{

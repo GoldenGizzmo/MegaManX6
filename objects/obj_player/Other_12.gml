@@ -2,7 +2,7 @@
 
 knockback = set_knockback;
 
-if global.life > 0 and invul = false
+if global.life > 0 and invul = false and movement = true
 {
 	if recovery = 0 and other.damage > 0
 	{

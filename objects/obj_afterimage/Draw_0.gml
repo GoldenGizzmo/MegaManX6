@@ -6,6 +6,7 @@ if blank = true
 {
 	gpu_set_fog(true,image_blend,0,0);
 	draw_self();
+	scr_draw_armour();
 	gpu_set_fog(false,image_blend,0,0);
 }
 else

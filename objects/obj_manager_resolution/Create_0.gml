@@ -6,13 +6,14 @@ aspect_ratio = 0;
 zoom_scale = 4.5;
 window_scale = 3;
 
-global.view_width = 424; //360
-global.view_height = 240; //240
+global.view_width = 424;
+global.view_height = 240; 
 
 resolution_width = 1920;
 resolution_height = 1080;
 
-window_set_fullscreen(false);
+//window_set_fullscreen(true);
+//window_enable_borderless_fullscreen(true);
 
 window_set_size(global.view_width*window_scale,global.view_height*window_scale);
 surface_resize(application_surface,global.view_width*window_scale,global.view_height*window_scale);

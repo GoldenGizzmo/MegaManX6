@@ -1,0 +1,11 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Inherit the parent event
+event_inherited();
+
+phasing = true;
+state = 0;
+
+moving_vertical = true 
+pursue = 4;

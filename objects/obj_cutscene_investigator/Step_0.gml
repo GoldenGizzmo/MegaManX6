@@ -10,12 +10,12 @@ if strand_move < 120
 	strand_2.x -= 13;
 }
 
-if global.input_start_pressed and action < 7
+if global.input_start_pressed// and action < 7
 {
 	instance_create_depth(0,0,0,obj_fade_out);
 	action_ending = 1;
 
-	action = 7;
+	//action = 7;
 	alarm[0] = 1;
 }
 

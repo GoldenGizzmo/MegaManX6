@@ -7,7 +7,7 @@ if global.pause = false
 	
 //Music
 if global.music != "Off" //If turned on
-{
+{	
 	//Select track based on room
 	if global.music = "Level"
 	{
@@ -24,11 +24,20 @@ if global.music != "Off" //If turned on
 			case rm_weapon_get: global.music = snd_music_weapon_get; break;
 			default: global.music = "Off"; return;
 		}
-	}	
+		
+		scr_make_sound(global.music,1,1,false);
+	}
 	
-	//Play music
 	if !audio_is_playing(global.music) //Loop when finished
+	{/*
+		if global.music = snd_music_yammark
+			global.music = snd_music_yammark_full;
+		if global.music = snd_music_investigator
+			global.music = snd_music_investigator_full;
+		*/
 		scr_make_sound(global.music,1,1,true);
+		
+	}
 }
 
 if global.death = false and global.life <= 0
@@ -42,7 +51,7 @@ if global.death = false and global.life <= 0
 	//var in_pit = false;
 	with obj_player
 	{
-		sprite_index = spr_player_x_hurt
+		sprite_index = spr_port_x_hurt
 		image_speed = 0;
 		image_index = 0;
 		

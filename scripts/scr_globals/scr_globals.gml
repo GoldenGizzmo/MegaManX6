@@ -13,6 +13,15 @@
 #macro PLAYER_BASE_IMAGE_SPEED 0.5
 
 #macro CROUCH_SPRITES [spr_port_x_crouch, spr_port_x_crouch_shooting, spr_port_x_crouch_shot]
+#macro FALLING_SPRITES [spr_port_x_falling, spr_port_x_falling_shooting, spr_port_x_saber_jump]
+#macro X_SABER_SPRITES [spr_port_x_saber, spr_port_x_saber_jump, spr_port_x_saber_walljump]
+
+
+enum shooting_charge_level {
+	none,
+	one,
+	two
+}
 
 enum dynamic_type {
 	base,
@@ -23,7 +32,8 @@ enum dynamic_type {
 enum animation_sync_type {
 	base,
 	match_image,
-	override
+	override,
+	last,
 }
 
 enum sprite_loop_type {
@@ -33,5 +43,7 @@ enum sprite_loop_type {
 
 enum attack_actions {
 	none,
-	x_saber
+	x_saber,
+	rain,
+	yanma
 }

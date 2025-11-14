@@ -23,7 +23,7 @@ weight = 0;
 colliding = false;
 
 shoot = 0;
-shoot_amount = 240;
+shoot_amount = 210;
 
 aggro_range = 240;
 revive_countdown = 0;

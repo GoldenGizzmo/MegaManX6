@@ -31,13 +31,14 @@ set_knockback = 1.5;
 knockback = set_knockback;
 flicker = false;
 invul = false;
+invul_bullet = false;
+invul_contact = false;
 weight = 0.3;
 
 //Special attack
 attack_action = attack_actions.none;
 attack_priority = 0; //Determines if it can be cancelled by moving or dash
 
-changing_sprite = noone;
 animation_lock = true; //Stop using gravity when openning a door
 camera_lasttouch = noone;
 
@@ -48,7 +49,13 @@ shooting_charge = 0;
 shooting_charge_flicker = false;
 shooting_charge_lvl_1 = 30;
 shooting_charge_lvl_2 = 90;
+shot_fired = false;
 
+wall_slide_reverse = 1;
+shootpos_x = 0;
+shootpos_y = 0;
+
+armour_down = false;
 palette = 0;
 flicker_weapon_swap = false;
 
@@ -64,6 +71,8 @@ machdash_hold = 0;
 machdash_holdmax = 30;
 machdash_direction = 0;
 machdash_damage = 2;
+machdash_invul = 0;
+machdash_charged = false;
 
 on_slope = false;
 

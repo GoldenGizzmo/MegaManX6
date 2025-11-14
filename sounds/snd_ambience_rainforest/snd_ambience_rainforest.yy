@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":121.70057,
+  "duration":0.0,
   "exportDir":"",
   "name":"snd_ambience_rainforest",
   "parent":{

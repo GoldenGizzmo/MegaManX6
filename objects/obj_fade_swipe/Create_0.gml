@@ -3,7 +3,7 @@
 
 //Initial fading out 
 swipe = display_get_width();
-swipe_speed = -20;
+swipe_speed = -30;
 
 fade_type = 0;
 

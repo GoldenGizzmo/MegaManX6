@@ -10,55 +10,55 @@ function scr_get_part(_id)
 		case 0:
 			part_name = "Super Recover";
 			part_description = "Increases health gained from life \npickups by 50%";
-			part_cost = 100;
+			part_cost = 350;
 			break;	
 			
 		case 1:
 			part_name = "Rapid Fire";
 			part_description = "Increases the maximum amount of \nprojectiles that can appear at once";
-			part_cost = 50;
+			part_cost = 200;
 			break;	
 			
 		case 2:
 			part_name = "Hyper Dash";
 			part_description = "Inceases the speed and length of your dash by 20%";
-			part_cost = 200;
+			part_cost = 450;
 			break;	
 			
 		case 3:
 			part_name = "Saber Plus";
 			part_description = "Increases the damage of your saber \nslashes by 25%";
-			part_cost = 300;
+			part_cost = 900;
 			break;
 			
 		case 4:
 			part_name = "V Shot";
 			part_description = "Your buster instead fires two \nprojectiles in an outward spread";
-			part_cost = 100;
+			part_cost = 200;
 			break;
 			
 		case 5:
 			part_name = "Life Siphon";
 			part_description = "Absorb life energy from destroyed \nenemies";
-			part_cost = 100;
+			part_cost = 250;
 			break;
 			
 		case 6:
 			part_name = "Life Up";
 			part_description = "Increase your maximum life by 4 \npoints";
-			part_cost = 100;
+			part_cost = 50;
 			break;
 			
 		case 7:
 			part_name = "Phase Shot";
 			part_description = "Your buster shots can pass through \nwalls";
-			part_cost = 100;
+			part_cost = 200;
 			break;
 			
 		case 8:
 			part_name = "Death Blocker";
 			part_description = "Prevents death from non-instant kill \nhazards. Refreshes when at maximum \nlife";
-			part_cost = 100;
+			part_cost = 500;
 			break;
 		
 		/*	

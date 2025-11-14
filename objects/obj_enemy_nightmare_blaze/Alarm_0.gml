@@ -15,7 +15,7 @@ if life > 0
 				sprite_index = spr_enemy_nightmare_blaze_move;
 				
 				//Move out of walls
-				if place_meeting(x,y,obj_solid)
+				if place_meeting(x,y,obj_solid) or instance_exists(obj_ridechaser) //Prevent flying offscreen during chase
 				{
 					direction = point_direction(x,y,obj_camera.x,obj_camera.y);
 					event_user(3);
@@ -48,6 +48,11 @@ if life > 0
 						animation_ended = false;
 				
 						scr_make_sound(snd_fire,1,1,false);
+					}
+					else if instance_exists(obj_ridechaser) //Prevent getting stuck in bike sections
+					{
+						action = 0;
+						state = "Follow"
 					}
 					break;
 	

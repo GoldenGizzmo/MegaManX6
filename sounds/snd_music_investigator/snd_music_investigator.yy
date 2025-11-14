@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":1,
-  "compression":0,
+  "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":100.36352,
+  "duration":1390.0262,
   "exportDir":"",
   "name":"snd_music_investigator",
   "parent":{

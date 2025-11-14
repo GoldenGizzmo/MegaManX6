@@ -33,7 +33,7 @@ switch sprite_index
 
 	case spr_bullet_x_machdash:
 	case spr_bullet_x_machdash_charged:
-		if !(obj_player.sprite_index = spr_player_x_machdash or obj_player.sprite_index = spr_player_x_machdash_up or obj_player.sprite_index = spr_player_x_machdash_down)
+		if !(obj_player.sprite_index = spr_port_x_machdash or obj_player.sprite_index = spr_port_x_machdash_up or obj_player.sprite_index = spr_port_x_machdash_down)
 			instance_destroy(id,false);
 		break;
 }
