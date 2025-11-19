@@ -51,7 +51,7 @@ function scr_move_along_with_platform(internal_spd){
 
 			if(obj and obj.axis == AXIS_HORIZONTAL){
 	
-				var res = scr_move(internal_spd, AXIS_HORIZONTAL, undefined, obj, noone)
+				var res = scr_move(internal_spd, AXIS_HORIZONTAL, undefined, obj_solid, noone)
 				if(res == 0)xspeed = 0;
 			}
 	
