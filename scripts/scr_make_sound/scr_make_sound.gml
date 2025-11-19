@@ -55,6 +55,7 @@ function scr_make_sound(sound,volume,pitch,loop)
 		//Ambience Management
 		case snd_ambience_rainforest: volume *= 0.5; break;
 		case snd_ambience_wilderness: volume *= 2; break;
+		case snd_ambience_industrial: volume *= 2; break;
 	}
 
 	audio_stop_sound(sound); //Reset dupilcate sounds

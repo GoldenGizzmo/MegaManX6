@@ -14,5 +14,12 @@ function scr_draw_armour()
 			if armour_legs != -1
 				draw_sprite_ext(armour_legs,image_index,x,y,xscale,image_yscale,image_angle,image_blend,image_alpha);
 		}
+		
+		if global.x_armour_arm = "Blade Arm"
+		{
+			var armour_arms = asset_get_index(sprite_get_name(sprite_index)+"_bladearms")
+			if armour_arms != -1
+				draw_sprite_ext(armour_arms,image_index,x,y,xscale,image_yscale,image_angle,image_blend,image_alpha);
+		}
 	}
 }

@@ -41,7 +41,7 @@ if villainy != 0
 	if turtloid = true
 	{
 		if rain_active = true
-			tick_rate = global.animate%10;	
+			tick_rate = global.animate%15;	
 		
 		//if collision_line(obj_player.x,obj_player.y,obj_player.x,obj_player.y-500,obj_boss_turtloid,true,false)
 		if (obj_player.x < obj_boss_turtloid.x+45) and (obj_player.x > obj_boss_turtloid.x-45) and obj_player.y > obj_boss_turtloid.y

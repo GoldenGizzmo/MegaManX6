@@ -45,8 +45,7 @@ if global.death = false and global.life <= 0
 	global.death = true;
 	alarm[0] = 15;
 	
-	scr_make_sound(snd_player_death,1,1,false);
-	scr_player_voicelines("Death");
+	
 	
 	//var in_pit = false;
 	with obj_player

@@ -7,7 +7,7 @@ tick = false; //used for continuous damage
 villainy = 0;
 explosion = spr_explosion_player;
 explosion_sound = 0;
-explosion_angle = 0;
+explosion_angle = false;
 explosive = false;
 
 piercing = false; //Goes through enemies

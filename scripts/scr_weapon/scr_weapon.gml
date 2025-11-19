@@ -9,7 +9,7 @@ function scr_weapon_get(position,name)
 			global.weapon[position] = 
 			{
 				type : "X-Saber", 
-				ammo_max : -1, 
+				ammo_usage : -1, 
 				ammo : -1, 
 				charge_cost : -1,
 			}
@@ -19,9 +19,9 @@ function scr_weapon_get(position,name)
 			global.weapon[position] = 
 			{
 				type : name, 
-				ammo_max : 10, 
+				ammo_usage : 6, 
 				ammo : 0, 
-				charge_cost : 2,
+				charge_cost : 12,
 			}
 			break;	
 			
@@ -29,9 +29,19 @@ function scr_weapon_get(position,name)
 			global.weapon[position] = 
 			{
 				type : "Meteor Rain", 
-				ammo_max : 20, 
+				ammo_usage : 2, 
 				ammo : 0, 
-				charge_cost : 3,
+				charge_cost : 12,
+			}
+			break;
+			
+		case "Magma Blade":
+			global.weapon[position] = 
+			{
+				type : "Magma Blade", 
+				ammo_usage : 2, 
+				ammo : 0, 
+				charge_cost : 6,
 			}
 			break;
 	}
@@ -57,8 +67,8 @@ function scr_weapon_menus(weapon_name)
 			weapon_description = "Summons orbiting dragonflies which fire forward in \ntandem with the X-Buster.";
 			weapon_description_long = "Summons orbiting dragonflies which fire forward in tandem with the X-Buster.\n\n^ Can block multiple projectiles before being destroyed\n^ Will decay over time\n^ Can be stacked numerous times which also resets decay";
 		
-			weapon_bar_colour_1 = c_orange;
-			weapon_bar_colour_2 = c_lime;
+			weapon_bar_colour_1 = c_lime
+			weapon_bar_colour_2 = make_colour_rgb(255,97,0);;
 			weapon_ammo_colour = c_lime;
 			break;
 		
@@ -69,8 +79,15 @@ function scr_weapon_menus(weapon_name)
 			weapon_bar_colour_1 = c_red;
 			weapon_bar_colour_2 = c_dkgray;
 			weapon_ammo_colour = c_red;
+			break;	
+			
+		case "Magma Blade":
+			weapon_description = "Slash with a blade of flame which create additional waves of fire.";
+			 
+			weapon_bar_colour_1 = make_colour_rgb(248,232,144);
+			weapon_bar_colour_2 = make_colour_rgb(255,97,0);
+			weapon_ammo_colour = make_colour_rgb(255,97,0);
 			break;		
-				
 				
 		case "Ray Arrow":
 			weapon_description = "Fires a quick laser which penetrates through enemies and can even damage those protected by armour.";

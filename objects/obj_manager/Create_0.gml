@@ -6,6 +6,9 @@
 global.ui_scale = 5;
 global.fps_display = false;
 
+//window_enable_borderless_fullscreen(true);
+//window_set_fullscreen(true)
+
 //Sound Variables
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_sfx);
@@ -29,13 +32,13 @@ global.fnt_larger = font_add_sprite_ext(spr_font_larger,"ABCDEFGHIJKLMNOPQRSTUVW
 
 //Special Weapons
 global.weapon_choice = 0;
+global.weapon_ammo_max = 48;
 //Set up special weapons
 for (var i = 0; i < 10; i++)
-	global.weapon[i] = {type : 0, ammo_max : 0, ammo : 0, charge_cost : 1,}; 
+	global.weapon[i] = {type : 0, ammo_usage : 0, ammo : 0, charge_cost : 1,}; 
 	
 scr_weapon_get(0,"X-Saber");
-
-//global.weapon[8] = {type : "Ray Arrow", ammo_max : 55, ammo : 0, charge_cost : 25,}; 	
+scr_weapon_get(1,"Yanma Option");
 
 global.nightmare_souls = 0;
 global.rescue_count = 0;
@@ -68,8 +71,8 @@ global.shadow_leg_get = false;
 //Armour parts equipped right now
 global.x_armour_head = 0;
 global.x_armour_chest = 0;
-global.x_armour_arm = 0;
-global.x_armour_leg = "Blade Leg";
+global.x_armour_arm = 0//"Blade Arm";
+global.x_armour_leg = 0//"Blade Leg";
 
 global.seen_boss_cutscene = -1;
 global.current_level = -1;
@@ -88,4 +91,4 @@ ds_list_add(global.parts_store,6);
 ds_list_add(global.parts_store,7);
 ds_list_add(global.parts_store,8);
 
-//ds_list_add(global.parts_equipped,3);
+//ds_list_add(global.parts_equipped,4);

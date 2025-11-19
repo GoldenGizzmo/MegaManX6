@@ -144,6 +144,10 @@ function scr_get_part_effect(_id,tweak)
 					bullet_limit_special = 2;
 					break;
 					
+				case "Magma Blade":
+					bullet_limit_special = 3;
+					break;
+					
 				case "Ray Arrow":
 					bullet_limit_special = 3;
 					break;
@@ -325,11 +329,12 @@ function scr_part_storestock()
 			Progression:
 				Starting
 					Wall Dash
-					
-					
+					Life Up
+						
 				4 Investigators
 					Spare Dash
 					Death Blocker
+					Weapon Siphon
 					
 				Gate's Lab
 					

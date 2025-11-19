@@ -44,7 +44,7 @@ if global.level_completed = false
 				if !instance_exists(obj_warning)
 				{
 					bossfight_state++;
-					alarm[0] = 60;
+					alarm[0] = 30;
 					
 					if miniboss = true
 						alarm[0] = 1;
@@ -112,7 +112,7 @@ if global.level_completed = false
 				{
 					state = "Openning";
 					action = 0;
-					alarm[0] = 60;
+					alarm[0] = 1;
 				}
 			
 				//Start music

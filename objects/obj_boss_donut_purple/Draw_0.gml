@@ -1,11 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if isHit = true or (boss_flicker = true and life <= 0)
+if boss_flicker = true
 {
-	gpu_set_fog(true,c_ltgrey,0,0);
+	//gpu_set_fog(true,c_ltgrey,0,0);
 	draw_sprite_ext(sprite_index,image_index,x,y,1,image_yscale,0,image_blend,image_alpha);
-	gpu_set_fog(false,c_ltgrey,0,0);
+	gpu_set_blendmode(bm_add)
+	draw_sprite_ext(sprite_index,image_index,x,y,1,image_yscale,0,image_blend,image_alpha);
+	gpu_set_blendmode(bm_normal)
+	//gpu_set_fog(false,c_ltgrey,0,0);
 }
 else
 	draw_sprite_ext(sprite_index,image_index,x,y,1,image_yscale,0,image_blend,image_alpha);

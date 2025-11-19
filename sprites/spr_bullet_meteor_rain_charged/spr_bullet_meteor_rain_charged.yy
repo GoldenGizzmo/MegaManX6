@@ -12,18 +12,28 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"48adf6e2-19bd-4e12-b6e3-c22a363f6110","name":"48adf6e2-19bd-4e12-b6e3-c22a363f6110","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"5710843e-1025-48f9-a789-fb8b3e6fb585","name":"5710843e-1025-48f9-a789-fb8b3e6fb585","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"966e6433-ffb6-4289-9a19-d7f6f42f0ffe","name":"966e6433-ffb6-4289-9a19-d7f6f42f0ffe","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"78c873b3-a5ce-4155-a120-5be2ed146582","name":"78c873b3-a5ce-4155-a120-5be2ed146582","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"f8a070d1-f8c5-4620-9db2-710ea5c02c33","name":"f8a070d1-f8c5-4620-9db2-710ea5c02c33","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"30c229c4-7629-45bd-a13b-731e605ba60f","name":"30c229c4-7629-45bd-a13b-731e605ba60f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3f493d58-285b-453a-b0a7-21588bf96219","name":"3f493d58-285b-453a-b0a7-21588bf96219","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"4b8c032d-a281-46a9-9ab7-76cee76abb0d","name":"4b8c032d-a281-46a9-9ab7-76cee76abb0d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"3bc183e8-8426-4777-b73c-97bccdb7b189","name":"3bc183e8-8426-4777-b73c-97bccdb7b189","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6242fe98-b205-40c7-9788-0842c5656283","name":"6242fe98-b205-40c7-9788-0842c5656283","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7c6ac7d6-c407-4685-ba87-cc4db1159a27","name":"7c6ac7d6-c407-4685-ba87-cc4db1159a27","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"751d265d-740f-44ea-a337-effcbf98e759","name":"751d265d-740f-44ea-a337-effcbf98e759","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a256b76d-17b5-4c26-a5e1-c7098c3aa5a7","name":"a256b76d-17b5-4c26-a5e1-c7098c3aa5a7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"64e2c467-2a9b-491a-b0ab-914c30bbf368","name":"64e2c467-2a9b-491a-b0ab-914c30bbf368","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"660c0bf7-e0b8-455d-8779-83d12315c25b","name":"660c0bf7-e0b8-455d-8779-83d12315c25b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b58ea28e-4cb0-4042-ad75-f8d0fe13b0ad","name":"b58ea28e-4cb0-4042-ad75-f8d0fe13b0ad","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"60a163c0-8091-4a44-b946-01e3735e52bc","name":"60a163c0-8091-4a44-b946-01e3735e52bc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"e42f5c45-64da-4b78-a8d0-1cd108131833","name":"e42f5c45-64da-4b78-a8d0-1cd108131833","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a1759dbb-289f-4d63-a2ab-f9c73d3df3a3","name":"a1759dbb-289f-4d63-a2ab-f9c73d3df3a3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"25a46c69-27e8-4bf0-ae63-dce793015b7c","name":"25a46c69-27e8-4bf0-ae63-dce793015b7c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":240,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"274e5bb8-2d19-45fc-ac3f-23b1f34db455","blendMode":0,"displayName":"default","isLocked":false,"name":"274e5bb8-2d19-45fc-ac3f-23b1f34db455","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"5b37c8b2-d679-43c1-87dd-388f80fa152d","blendMode":0,"displayName":"default","isLocked":false,"name":"5b37c8b2-d679-43c1-87dd-388f80fa152d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_bullet_meteor_rain_charged",
   "nineSlice":null,
@@ -53,7 +63,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":5.0,
+    "length":15.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -63,7 +73,7 @@
     },
     "name":"spr_bullet_meteor_rain_charged",
     "playback":1,
-    "playbackSpeed":15.0,
+    "playbackSpeed":25.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -75,20 +85,50 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"48adf6e2-19bd-4e12-b6e3-c22a363f6110","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a8061714-89e6-4b71-b67d-570eaa982543","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"30c229c4-7629-45bd-a13b-731e605ba60f","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ab5d9596-9c5b-48aa-8d72-dce0b54df60c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5710843e-1025-48f9-a789-fb8b3e6fb585","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b524f325-be5f-4c2c-95c7-1ae5f4d2614d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3f493d58-285b-453a-b0a7-21588bf96219","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5f8db29d-8f0f-44ff-9743-0e6c3b6946ab","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"966e6433-ffb6-4289-9a19-d7f6f42f0ffe","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"941bc1f2-a41e-4f49-a37f-a909e20d6e8c","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4b8c032d-a281-46a9-9ab7-76cee76abb0d","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"33970929-2379-4140-96c8-fec78df4c8ab","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"78c873b3-a5ce-4155-a120-5be2ed146582","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"65616105-130c-4bac-bffe-b654e35fec8c","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3bc183e8-8426-4777-b73c-97bccdb7b189","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ded49e53-16c6-4652-8a0b-ac048331acd7","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f8a070d1-f8c5-4620-9db2-710ea5c02c33","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"26e6218f-c70e-4b0c-86a1-b0e74141d0d2","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6242fe98-b205-40c7-9788-0842c5656283","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"3e49e581-0b73-4a6b-a567-134bb8e73d90","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7c6ac7d6-c407-4685-ba87-cc4db1159a27","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7c2743f6-0bc0-4f4e-bea4-cf228545f95e","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"751d265d-740f-44ea-a337-effcbf98e759","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e6392845-46fe-47bb-8cde-aa1a4d667a33","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a256b76d-17b5-4c26-a5e1-c7098c3aa5a7","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"104ec5ce-a968-4fed-91cc-0828eea0a459","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"64e2c467-2a9b-491a-b0ab-914c30bbf368","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"52b30ffc-a161-408e-9021-02b7a6f49f2e","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"660c0bf7-e0b8-455d-8779-83d12315c25b","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"088cf056-a157-4724-9f30-00b17e5b9899","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b58ea28e-4cb0-4042-ad75-f8d0fe13b0ad","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1ad0508b-afb3-43cf-8cba-220a444644e3","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"60a163c0-8091-4a44-b946-01e3735e52bc","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7038f5b7-4723-45cb-acfe-d40645c46620","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e42f5c45-64da-4b78-a8d0-1cd108131833","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"306c297f-ff14-49e6-a86b-70817cf32992","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a1759dbb-289f-4d63-a2ab-f9c73d3df3a3","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"f980fd2a-7757-41f3-a270-23fe838875a9","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25a46c69-27e8-4bf0-ae63-dce793015b7c","path":"sprites/spr_bullet_meteor_rain_charged/spr_bullet_meteor_rain_charged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b7e39b69-9505-483f-81ed-8604f337f5cf","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

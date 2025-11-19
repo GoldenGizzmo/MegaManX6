@@ -347,7 +347,7 @@ if global.pause = true
 									{
 										if global.weapon[i] != 0
 										{
-											if global.weapon[i].ammo < global.weapon[i].ammo_max
+											if global.weapon[i].ammo < global.weapon_ammo_max
 											{
 												global.weapon[i].ammo++;
 												check_full = false;

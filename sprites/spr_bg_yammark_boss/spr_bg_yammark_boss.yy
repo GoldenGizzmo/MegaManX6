@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_bg_yammark_boss",
   "bboxMode":0,
-  "bbox_bottom":180,
+  "bbox_bottom":195,
   "bbox_left":0,
-  "bbox_right":623,
+  "bbox_right":479,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":181,
+  "height":196,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"4a0b94f3-b098-4737-a51c-ac71693dba30","blendMode":0,"displayName":"default","isLocked":false,"name":"4a0b94f3-b098-4737-a51c-ac71693dba30","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -88,5 +88,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":624,
+  "width":480,
 }

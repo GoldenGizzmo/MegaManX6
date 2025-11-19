@@ -72,7 +72,8 @@ if global.pause_screen = true
 					draw_sprite_ext(spr_hud_weapon,i,(42*scale),(31*scale)+(17*scale*i),scale,scale,0,c_white,1);	
 			
 					//Ammo bar
-					var amount = (global.weapon[i].ammo/global.weapon[i].ammo_max);
+					//var amount = (global.weapon[i].ammo/global.weapon[i].ammo_max);
+					var amount = global.weapon[i].ammo/global.weapon_ammo_max
 					draw_rectangle_color((57*scale),(35*scale)+(17*scale*i),(62*scale)+(120*scale),(35*scale)+(17*scale*i)+(3*scale),menu_colour,menu_colour,menu_colour,menu_colour,0);
 					draw_set_alpha(0.7);
 					draw_rectangle_color((57*scale),(35*scale)+(17*scale*i),(62*scale)+(120*scale),(35*scale)+(17*scale*i)+(3*scale),c_black,c_black,c_black,c_black,0);

@@ -1,1 +1,1 @@
-sprite_index = spr_pickup_health_mid;
+sprite_index = spr_pickup_energy_mid;

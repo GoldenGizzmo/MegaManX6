@@ -44,8 +44,8 @@ if global.hud_toggle = true
 		var bar_start_y = y_pos;
 
 		//Ammo bar
-		var bar_limit = (global.weapon[global.weapon_choice].ammo/global.weapon[global.weapon_choice].ammo_max)
-		if global.weapon[global.weapon_choice].ammo > global.weapon[global.weapon_choice].ammo_max //If breaching the limit
+		var bar_limit = (global.weapon[global.weapon_choice].ammo/global.weapon_ammo_max)
+		if global.weapon[global.weapon_choice].ammo > global.weapon_ammo_max //If breaching the limit
 			bar_limit = 1;
 	
 		//Colours for the ammo bars
@@ -58,7 +58,7 @@ if global.hud_toggle = true
 
 	
 		draw_set_halign(fa_center);
-			draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),global.weapon[global.weapon_choice].ammo,10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,c_white,weapon_ammo_colour,weapon_ammo_colour,1);
+			draw_text_ext_transformed_color(x_pos+(8*global.ui_scale),y_pos+(16*global.ui_scale),floor(global.weapon[global.weapon_choice].ammo/global.weapon[global.weapon_choice].ammo_usage),10,11*global.ui_scale,global.ui_scale,global.ui_scale,0,c_white,c_white,weapon_ammo_colour,weapon_ammo_colour,1);
 		draw_set_halign(fa_left);
 	}
 	else

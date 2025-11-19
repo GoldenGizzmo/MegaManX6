@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-life = 1//150;
+life = 150;
 lifemax = life;
 damage = 4;
 damage_store = damage

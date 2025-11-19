@@ -6,7 +6,7 @@ event_user(0);
 
 draw_set_font(global.fnt_game);
 
-//draw_text(x,y-80,invul)
+//draw_text(x,y-80,global.damage_taken)
 
 if flicker = true or flicker_weapon_swap = true
 {
@@ -26,7 +26,7 @@ else
 	palette = 4;
 	if global.weapon_choice > 0 //Select right palette when using special weapons
 		palette = (5+global.weapon_choice)
-	else if shooting > 25
+	else if shooting > 10
 		palette = 1;
 	
 	pal_swap_set(spr_player_x_palette,palette,false);

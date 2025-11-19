@@ -37,9 +37,9 @@ global.weapon_choice = 0;
 for (var i = 0; i < 9; i++)
 {
 	if global.powertank > 0
-		global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 
-		
-	global.weapon[i].ammo = global.weapon[i].ammo_max;
+		global.weapon_ammo_max = ceil(global.weapon_ammo_max*1.25); 
+
+	global.weapon[i].ammo = global.weapon_ammo_max;
 }
 
 

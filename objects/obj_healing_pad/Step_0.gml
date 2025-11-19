@@ -64,7 +64,6 @@ switch (state)
 				{
 					movement = true;
 					animation_lock = false;
-					sprite_index = spr_port_x_idle;
 				}
 			}
 		}
@@ -86,3 +85,4 @@ if state > 0 and state < 4
 
 if state > 1
 	healing_animation++;
+	

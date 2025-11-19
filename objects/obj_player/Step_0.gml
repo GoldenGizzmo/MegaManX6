@@ -16,7 +16,7 @@ if global.death = false and animation_lock = false
     //if attack_priority = 0
     if(attack_action = attack_actions.x_saber and scr_sprite_finished(spr_manager, X_SABER_SPRITES))
         attack_action = attack_actions.none;
-        
+		
     if((attack_action = attack_actions.rain or attack_action = attack_actions.yanma) and scr_sprite_finished(spr_manager, spr_port_x_idle_shoot))
         attack_action = attack_actions.none;
 
@@ -24,6 +24,14 @@ if global.death = false and animation_lock = false
     if attack_action = attack_actions.none
         attack_priority = 0;
 	
+	//Testing out swing speed
+
+	image_speed = 1;	
+	if attack_action = attack_actions.x_saber and global.weapon[global.weapon_choice].type = "Magma Blade"
+		image_speed = 0.75;
+	else if attack_action = attack_actions.x_saber and global.weapon[global.weapon_choice].type = "X-Saber" and global.x_armour_arm = "Blade Arm"
+		image_speed = 1.25;
+		
 	//If underwater
 	var water_check = false;
 	with instance_place(x,y,obj_water) //Check if fully submerged
@@ -69,6 +77,11 @@ if global.death = false and animation_lock = false
 		weight = 0;
 
 	//If not hurt (when hurt you can't move and don't fall with gravity)
+	if attack_priority >= 3
+		movement_freeze = true
+	else
+		movement_freeze = false;
+	
 	if hurt = false and attack_priority < 2
 	{	
 		//If allowed to move
@@ -78,14 +91,14 @@ if global.death = false and animation_lock = false
 			if shooting_lock = false and attack_priority = 0
 			{
 				//X-Buster
-				if global.input_shoot or global.input_shoot_released
+				if (global.input_shoot or global.input_shoot_released) and attack_action = attack_actions.none //Can't shoot while doing a special action
 				{
 					event_user(1);
 					shooting_charge++;
 					
 				}
 				//Special Weapons
-				if (global.input_special or global.input_special_released) and bike = false
+				else if (global.input_special or global.input_special_released) and bike = false
 				{
 					event_user(3);
 					
@@ -305,6 +318,7 @@ if global.death = false and animation_lock = false
 								airdash_lock = true;
 								shooting_lock = true;
 								airdash_state = 1;
+								shooting_charge_flicker = false //Annoying effect
 							}
 							break;
 					
@@ -372,14 +386,6 @@ if global.death = false and animation_lock = false
 							}
 							else
 								invul_contact = false;
-								
-							if global.animate%3 = 0 and machdash_charged = true
-							{
-								effect = instance_create_depth(x,y+random_range(-10,10),depth+1,obj_explosion);
-								effect.sprite_index = spr_effect_charged_trail;
-								effect.speed = xspeed/4;
-								effect.image_alpha = image_alpha;
-							}
 							
 							//Dash in direction
 							var mach_dash_speed = dash_speed*2;
@@ -399,6 +405,24 @@ if global.death = false and animation_lock = false
 								case 90: if !global.input_up {alarm[4] =  1;} break;
 								case 270: if !global.input_down {alarm[4] =  1;} break;
 							}	
+							
+							if global.animate%3 = 0 and machdash_charged = true
+							{
+								effect = instance_create_depth(x,y+random_range(-10,10),depth+1,obj_explosion);
+								effect.sprite_index = spr_effect_trail_charged;
+								effect.image_alpha = image_alpha;
+								effect.speed = xspeed/4;
+								
+								//Vertical effect
+								if machdash_direction = 90 or machdash_direction = 270
+								{
+									effect.x = x+random_range(-10,10);
+									effect.y = y;
+									effect.image_angle = 270;
+									effect.direction = 270;
+									effect.speed = yspeed/4;
+								}
+							}
 					
 							//Stopping at walls
 							if place_meeting(x+xspeed,y+yspeed,obj_solid)

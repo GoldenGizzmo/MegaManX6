@@ -121,6 +121,7 @@ if life > 0
 					{
 						animation_ended = false
 						sprite_index = spr_boss_heatnix_idle;
+						event_user(3);
 						
 						if shoot < shoot_amount
 						{

@@ -16,6 +16,16 @@ if open_state = 2
 			animation_lock = false;
 			movement_freeze = false;
 			colliding = true;
+			
+			//Weird bug
+			if place_meeting(x,y+1,obj_solid)
+			{
+				airborne = false;
+				y += 1
+				sprite_index = spr_port_x_move_loop;
+			}
+			
+			
 			image_speed = 1;
 			
 			xspeed = 0;

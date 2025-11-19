@@ -15,6 +15,7 @@ for (var i = 0; i < 2; i++)
 
 	bullet.villainy = 2;
 	bullet.target = obj_player
+	bullet.explosion_sound = snd_explosion;
 }
 
 scr_make_sound(snd_turtloid_rocket,1,1,false);

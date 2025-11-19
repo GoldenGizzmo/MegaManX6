@@ -15,7 +15,7 @@
   "name":"snd_heatnix_talk_magmastream",
   "parent":{
     "name":"Talk",
-    "path":"folders/Sounds/Boss-Sounds/Blaze-Heatnix/Talk.yy",
+    "path":"folders/Sounds/Blaze-Heatnix/Talk.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

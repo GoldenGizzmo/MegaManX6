@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_bladeshot_wave",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.9996371,
+  "exportDir":"",
+  "name":"snd_bladeshot_wave",
+  "parent":{
+    "name":"X",
+    "path":"folders/Sounds/Player-Sounds/X.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bladeshot_wave.wav",
+  "volume":1.0,
+}

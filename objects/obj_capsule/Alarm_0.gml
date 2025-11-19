@@ -49,6 +49,9 @@ switch (state)
 		
 		conversation = instance_create_depth(0,0,0,obj_dialogue);
 		conversation.dialogue = dialogue;
+		//Check if any parts are collected
+		if !global.blade_head_get and !global.blade_chest_get and !global.blade_arm_get and !global.blade_leg_get and !global.shadow_head_get and !global.shadow_chest_get and !global.shadow_arm_get and !global.shadow_leg_get 
+			conversation.dialogue = "Dr.Light Intro";
 		break;
 		
 	case 4: //Do opening animation

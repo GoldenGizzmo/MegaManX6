@@ -1,10 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if death_animation = 0
+{
+	scr_make_sound(snd_player_death,1,1,false);
+	scr_player_voicelines("Death");
+}
+
 if death_animation < 3
 {
 	death_animation++
-	alarm[0] = 15;
+	alarm[0] = 15;	
 
 	var particle_offset = 0;
 	var particle_amount = 8;

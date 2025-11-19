@@ -35,6 +35,8 @@ if life <= 0
 				movement = false;
 				xspeed = 0;
 				dash = false;
+				
+				event_user(5);
 			}
 		}
 		

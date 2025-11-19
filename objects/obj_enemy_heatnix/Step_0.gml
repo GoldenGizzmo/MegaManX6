@@ -38,7 +38,7 @@ if life > 0
 		switch (sprite_index)
 		{
 			case spr_boss_heatnix_idle:
-				if image_index = 3
+				if image_index >= 3
 				{
 					wing_flapped = true;
 					scr_make_sound(snd_heatnix_flap,1,1,false);
@@ -48,7 +48,7 @@ if life > 0
 				break;
 	
 			case spr_boss_heatnix_appear:
-				if image_index = 2
+				if image_index >= 2
 				{
 					wing_flapped = true;
 					scr_make_sound(snd_heatnix_flap,1,1,false);
@@ -65,5 +65,3 @@ if life > 0
 		obj_camera.y = inst_41C6F26D.y
 	}
 }
-
-life = 1;

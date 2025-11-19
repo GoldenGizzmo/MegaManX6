@@ -15,7 +15,7 @@
   "name":"snd_heatnix_retreat",
   "parent":{
     "name":"Blaze-Heatnix",
-    "path":"folders/Sounds/Boss-Sounds/Blaze-Heatnix.yy",
+    "path":"folders/Sounds/Blaze-Heatnix.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

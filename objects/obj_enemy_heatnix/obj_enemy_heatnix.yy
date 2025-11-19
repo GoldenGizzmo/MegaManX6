@@ -15,8 +15,8 @@
   "name":"obj_enemy_heatnix",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bosses",
-    "path":"folders/Objects/Bosses.yy",
+    "name":"Special",
+    "path":"folders/Objects/Special.yy",
   },
   "parentObjectId":{
     "name":"obj_boss_parent",
