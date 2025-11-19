@@ -16,3 +16,6 @@ animation_ended = false;
 
 turn_delay = false;
 weight = 0.15;
+
+coll_list = ds_list_create();
+axis = AXIS_HORIZONTAL

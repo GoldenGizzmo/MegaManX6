@@ -12,7 +12,9 @@
   ],
   "managed":true,
   "name":"obj_enemy_caterpillar",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"propertyId":{"name":"collide_vertical","path":"objects/obj_solid/obj_solid.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
   "parent":{
     "name":"Enemies",
     "path":"folders/Objects/Hazards/Enemies.yy",
