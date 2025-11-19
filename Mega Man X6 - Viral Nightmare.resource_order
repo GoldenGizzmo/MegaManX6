@@ -17,6 +17,7 @@
     {"name":"ScalingShader","order":16,"path":"folders/ScalingShader.yy",},
     {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
     {"name":"Collision","order":16,"path":"folders/Scripts/Collision.yy",},
+    {"name":"Moving_platforms","order":24,"path":"folders/Scripts/Moving_platforms.yy",},
     {"name":"Palette Swap","order":1,"path":"folders/Scripts/Shader/Palette Swap.yy",},
     {"name":"Sprite System","order":20,"path":"folders/Scripts/Sprite System.yy",},
     {"name":"Shaders","order":5,"path":"folders/Shaders.yy",},

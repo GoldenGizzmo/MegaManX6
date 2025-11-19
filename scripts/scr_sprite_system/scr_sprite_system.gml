@@ -430,7 +430,7 @@ function scr_setup_player_sprites(){
 				#region shooting
 				
 					else if((shooting or shooting_charged == shooting_charge_level.one) or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
-						change_sprite(spr_manager, spr_port_x_idle_shoot, global.input_shoot_pressed ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
+						change_sprite(spr_manager, spr_port_x_idle_shoot, shot_fired ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 					}
 				
 					else if(attack_action == attack_actions.rain or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){

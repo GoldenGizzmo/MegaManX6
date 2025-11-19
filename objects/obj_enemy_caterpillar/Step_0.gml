@@ -34,3 +34,5 @@ else
 		death = 1;
 	}
 }
+
+scr_move_along_with_platform(xspeed);
