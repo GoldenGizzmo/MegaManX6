@@ -32,7 +32,7 @@ switch (action)
 			with obj_player
 			{
 				image_alpha = 1;
-				sprite_index = spr_port_x_warp_in;
+				change_sprite(spr_manager, spr_port_x_warp_in, undefined, sprite_loop_type.no_loop)
 				image_index = 0;
 				image_xscale = 1;
 			}

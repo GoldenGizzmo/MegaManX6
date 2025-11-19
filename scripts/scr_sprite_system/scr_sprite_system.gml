@@ -300,6 +300,14 @@ function scr_setup_player_sprites(){
 		//Each one of these functions will be run every frame, in order of priority (which is set later)
 		//They MUST return either true or false, "false" means the system should run the following check, "true" means it should stop here.
 	
+		var animation_lock_check = function(){
+			
+			if(!animation_lock)return false;
+			
+			if(scr_sprite_finished(spr_manager, spr_port_x_warp_in))change_sprite(spr_manager, spr_port_x_idle);
+			return true;
+		}
+	
 		var machdash_check = function(){
 			if !(global.x_armour_leg = "Blade Leg" and airdash_state > 0)
 				return false;
@@ -474,6 +482,7 @@ function scr_setup_player_sprites(){
 				}
 				else
 				{
+					
 					change_sprite(spr_manager, spr_port_x_idle);
 				}
 				
@@ -488,6 +497,7 @@ function scr_setup_player_sprites(){
 	//Adding the checks to the sprite manager.
 	//Here you can set their priority, the higher the priority, the sooner the checks will run.
 	
+	spr_manager.add_check(99, animation_lock_check)
 	spr_manager.add_check(15, damage_check)
 	spr_manager.add_check(10, wall_check)
 	spr_manager.add_check(9, machdash_check)

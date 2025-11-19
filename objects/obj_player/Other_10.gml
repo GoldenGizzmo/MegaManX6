@@ -5,8 +5,6 @@
 if global.pause = true
 	return;
 
-if animation_lock = true
-	exit;
 
 if bike = true
 {

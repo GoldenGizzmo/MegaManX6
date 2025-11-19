@@ -40,7 +40,6 @@ if keyboard_check_pressed(ord("R"))
 		{
 			animation_lock = true
 			xspeed = 0;
-			sprite_index = spr_port_x_idle
 		}
 		else
 			animation_lock = false	
