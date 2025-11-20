@@ -10,6 +10,9 @@ if movement_freeze = false
 {
 	if colliding = true
 	{
+		
+		scr_update_ignore_coll()
+		
 		if bike = true //Collide with special walls on the side of the screen which only block the player
 		{
 			xspeed = scr_move(xspeed, AXIS_HORIZONTAL,true,obj_solid_player);

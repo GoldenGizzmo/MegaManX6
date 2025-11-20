@@ -41,21 +41,9 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 		
 				var col = collision_list[| i];
 				if(!col.slope)continue;
-		
-				try{
-					if(!col.collide_horizontal and axis == AXIS_HORIZONTAL){
-						scr_add_to_ignore_coll(col)
-						continue;
-					}
-					
-					if(!col.collide_vertical and axis == AXIS_VERTICAL){
-						scr_add_to_ignore_coll(col)
-						continue;
-					}
-					
-					if(scr_in_ignore_coll(col))continue;
-				}
-		
+				if(scr_check_ignore(col, axis))continue;
+				
+				
 				if(axis != AXIS_VERTICAL or spd < 0){
 			
 					var res = scr_collide_slope(spd, axis, col, _x, _y);
@@ -93,21 +81,8 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 		
 				var col = collision_list[| i];
 				if(col.slope)continue;
+				if(scr_check_ignore(col, axis))continue;
 				
-				try{
-					if(!col.collide_horizontal and axis == AXIS_HORIZONTAL){
-						scr_add_to_ignore_coll(col)
-						continue;
-					}
-					
-					if(!col.collide_vertical and axis == AXIS_VERTICAL){
-						scr_add_to_ignore_coll(col)
-						continue;
-					}
-					
-					if(scr_in_ignore_coll(col))continue;
-				}
-		
 				return scr_basic_collide(spd, axis, col, _x + hsp, _y + vsp);
 			}
 		}
@@ -138,6 +113,9 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 					slp = col; 
 					break;
 				}
+					
+				if(scr_check_ignore(col, axis))continue;
+
 				flr = col;
 			}
 		
@@ -156,6 +134,25 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 	return spd;
 }
 
+
+function scr_check_ignore(col, axis){
+	
+	try{
+		if(!col.collide_horizontal and axis == AXIS_HORIZONTAL){
+			scr_add_to_ignore_coll(col)
+			return true;
+		}
+					
+		if(!col.collide_vertical and axis == AXIS_VERTICAL){
+			scr_add_to_ignore_coll(col)
+			return true;
+		}
+	}
+	
+	if(scr_in_ignore_coll(col))return true;
+	
+	return false;
+}
 
 function scr_add_to_ignore_coll(col){
 	
