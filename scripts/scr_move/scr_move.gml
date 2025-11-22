@@ -6,7 +6,7 @@
 //update_variables -> Wether to update the variables if no collision was found. (like set airborne to true).
 //object -> base object to check for collisions for.
 //slope -> base slope to check for collisions for.
-function scr_move(spd, axis, update_variables = true, object = obj_solid, slope = obj_solid_slope){
+function scr_move(spd, axis, update_variables = true, object = obj_entity, slope = obj_solid_slope){
 
 	#region setup
 

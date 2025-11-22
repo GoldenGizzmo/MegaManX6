@@ -6,6 +6,10 @@ if global.pause = true
 	return;
 
 
+if(animation_lock){
+	return;
+}
+
 if bike = true
 {
 	sprite_index = spr_port_x_bike;

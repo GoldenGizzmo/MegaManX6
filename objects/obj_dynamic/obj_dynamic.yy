@@ -9,17 +9,14 @@
   ],
   "managed":true,
   "name":"obj_dynamic",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"propertyId":{"name":"collide_vertical","path":"objects/obj_solid/obj_solid.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"propertyId":{"name":"collide_horizontal","path":"objects/obj_solid/obj_solid.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":{
-    "name":"obj_solid",
-    "path":"objects/obj_solid/obj_solid.yy",
+    "name":"obj_entity",
+    "path":"objects/obj_entity/obj_entity.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

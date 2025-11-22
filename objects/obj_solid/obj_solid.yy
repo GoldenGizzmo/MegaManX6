@@ -7,12 +7,18 @@
   ],
   "managed":true,
   "name":"obj_solid",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_entity","path":"objects/obj_entity/obj_entity.yy",},"propertyId":{"name":"collide_horizontal","path":"objects/obj_entity/obj_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_entity","path":"objects/obj_entity/obj_entity.yy",},"propertyId":{"name":"collide_vertical","path":"objects/obj_entity/obj_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
   "parent":{
     "name":"Collisions",
     "path":"folders/Objects/Collisions.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_entity",
+    "path":"objects/obj_entity/obj_entity.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,10 +32,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v2","%Name":"collide_horizontal","filters":[],"listItems":[],"multiselect":false,"name":"collide_horizontal","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-    {"$GMObjectProperty":"v2","%Name":"collide_vertical","filters":[],"listItems":[],"multiselect":false,"name":"collide_vertical","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
