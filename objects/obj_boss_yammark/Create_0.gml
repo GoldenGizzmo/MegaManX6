@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-life = 200;
+life = 250;  //Less health due to yanma shield
 lifemax = life;
 life_drone = 18;
 damage = 0;

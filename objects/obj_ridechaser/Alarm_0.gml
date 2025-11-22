@@ -13,7 +13,7 @@ switch (action)
 			if ridechaser_type = 1
 				action = 111;
 				
-				action = 21;
+				//action = 21;
 		}
 		else
 			alarm[0] = 1;

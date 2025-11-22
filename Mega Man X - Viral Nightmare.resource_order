@@ -265,7 +265,6 @@
     {"name":"obj_solid_door","order":3,"path":"objects/obj_solid_door/obj_solid_door.yy",},
     {"name":"obj_solid_moving","order":1,"path":"objects/obj_solid_moving/obj_solid_moving.yy",},
     {"name":"obj_solid_noclimb","order":19,"path":"objects/obj_solid_noclimb/obj_solid_noclimb.yy",},
-    {"name":"obj_solid_player","order":26,"path":"objects/obj_solid_player/obj_solid_player.yy",},
     {"name":"obj_solid_slippery","order":10,"path":"objects/obj_solid_slippery/obj_solid_slippery.yy",},
     {"name":"obj_solid_slope","order":23,"path":"objects/obj_solid_slope/obj_solid_slope.yy",},
     {"name":"obj_solid_slope1","order":4,"path":"objects/obj_solid_slope1/obj_solid_slope1.yy",},

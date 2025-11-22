@@ -148,6 +148,7 @@ if global.death = false and animation_lock = false
 			{
 				dash_speed = dash_speed*1.25; //25% faster
 				jump_height = jump_height*1.10 //10% higher
+				
 			}
 			
 			if global.input_jump_pressed and airborne = false and attack_priority = 0

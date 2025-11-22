@@ -13,16 +13,11 @@ if movement_freeze = false
 		
 		scr_update_ignore_coll()
 		
-		if bike = true //Collide with special walls on the side of the screen which only block the player
-		{
-			xspeed = scr_move(xspeed, AXIS_HORIZONTAL, true, obj_solid_player);
-			yspeed = scr_move(yspeed, AXIS_VERTICAL);
-		}
-		else
-		{
-			xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
-			yspeed = scr_move(yspeed, AXIS_VERTICAL);
-		}
+		xspeed = scr_move(xspeed, AXIS_HORIZONTAL);
+		yspeed = scr_move(yspeed, AXIS_VERTICAL);
+		
+		if bike = true
+			x = clamp(x,obj_camera.x-200,obj_camera.x+200);
 	}
 	else
 	{
@@ -32,3 +27,4 @@ if movement_freeze = false
 }
 else
 	speed = 0;
+	

@@ -15,7 +15,7 @@ with obj_player
 	
 	bike = true;
 	x -= 200;
-	//y += 2;
+	y += 5;
 	
 	colliding = false;
 	sprite_index = spr_port_x_bike_reel;

@@ -23,3 +23,4 @@ if global.animate%2 = 0 and sprite_index = spr_bullet_bike_charge
 	effect.speed = speed/4;
 	effect.image_alpha = image_alpha;
 }
+

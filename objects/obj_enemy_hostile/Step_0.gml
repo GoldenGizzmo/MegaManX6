@@ -5,7 +5,7 @@
 event_inherited();
 
 //Spawned enemies from the ride chaser event will despawn after appearing on screen and leaving
-if instance_exists(obj_ridechaser) and despawn = false and place_meeting(x,y,obj_camera)
+if instance_exists(obj_ridechaser) and despawn = false and place_meeting(x,y,obj_camera) and boss = false
 	despawn = true;
 
 //Blade buster mark effect

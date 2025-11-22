@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-life = 200;
+life = 200; //Less health due to second phase
 lifemax = life;
 damage = 4;
 damage_store = damage

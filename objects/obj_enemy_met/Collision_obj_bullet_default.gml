@@ -17,6 +17,9 @@ if shielding = true
 	{
 		guard_break = true;
 		life = 0;
+		
+		with other
+			alarm[9] = 1;
 	}
 }
 

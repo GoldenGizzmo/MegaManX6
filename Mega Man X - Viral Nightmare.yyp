@@ -144,7 +144,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"Mega Man X - Viral Nightmare",
   "resources":[
@@ -303,7 +303,6 @@
     {"id":{"name":"obj_solid_door","path":"objects/obj_solid_door/obj_solid_door.yy",},},
     {"id":{"name":"obj_solid_moving","path":"objects/obj_solid_moving/obj_solid_moving.yy",},},
     {"id":{"name":"obj_solid_noclimb","path":"objects/obj_solid_noclimb/obj_solid_noclimb.yy",},},
-    {"id":{"name":"obj_solid_player","path":"objects/obj_solid_player/obj_solid_player.yy",},},
     {"id":{"name":"obj_solid_slippery","path":"objects/obj_solid_slippery/obj_solid_slippery.yy",},},
     {"id":{"name":"obj_solid_slope","path":"objects/obj_solid_slope/obj_solid_slope.yy",},},
     {"id":{"name":"obj_solid_slope1","path":"objects/obj_solid_slope1/obj_solid_slope1.yy",},},
@@ -1567,10 +1566,10 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
-    {"roomId":{"name":"rm_yammark","path":"rooms/rm_yammark/rm_yammark.yy",},},
-    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_heatnix","path":"rooms/rm_heatnix/rm_heatnix.yy",},},
+    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_turtloid","path":"rooms/rm_turtloid/rm_turtloid.yy",},},
+    {"roomId":{"name":"rm_yammark","path":"rooms/rm_yammark/rm_yammark.yy",},},
     {"roomId":{"name":"rm_intro","path":"rooms/rm_intro/rm_intro.yy",},},
     {"roomId":{"name":"rm_yammark","path":"rooms/rm_yammark/rm_yammark.yy",},},
     {"roomId":{"name":"rm_stage_select","path":"rooms/rm_stage_select/rm_stage_select.yy",},},

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-life = 225;
+life = 225; //Less health due to the jewel defense
 lifemax = life;
 damage = 6;
 bullet_damage = 4; //Rockets

@@ -49,8 +49,6 @@ switch (action)
 		{
 			dash = true;
 			xspeed = 10;
-			
-			instance_destroy(obj_solid_player);
 				
 			//Dash effect
 			effect = instance_create_layer(x-5*image_xscale,y+23,"Explosions",obj_explosion);

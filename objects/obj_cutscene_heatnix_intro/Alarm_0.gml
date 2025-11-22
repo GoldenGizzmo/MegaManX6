@@ -48,6 +48,8 @@ switch (action_player)
 		if obj_player.image_index > 2
 		{
 			action_player++;
+			alarm[0] = 30;
+			
 			obj_player.animation_lock = false;
 		}
 		break;

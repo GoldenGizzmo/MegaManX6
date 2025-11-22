@@ -18,11 +18,11 @@ if open_state = 2
 			colliding = true;
 			
 			//Weird bug
-			if place_meeting(x,y+1,obj_solid)
+			if place_meeting(x,y+8,obj_solid)
 			{
 				airborne = false;
-				y += 1
-				sprite_index = spr_port_x_move_loop;
+				//y += 1
+				//sprite_index = spr_port_x_move_loop;
 			}
 			
 			

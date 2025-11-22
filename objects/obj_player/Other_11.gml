@@ -75,7 +75,11 @@ if global.input_shoot_released
 	shooting_charged = false;
 	if shooting_charge > shooting_charge_lvl_2
 	{
-		switch (global.x_armour_arm)
+		var chargeshot_type = global.x_armour_arm
+		if bike = true
+			chargeshot_type = 0;
+			
+		switch (chargeshot_type)
 		{
 			case "Blade Arm":
 				bullet = instance_create_layer(x+shootpos_x+(5*image_xscale*wall_slide_reverse),y+shootpos_y,"Projectiles",obj_bullet_bladeshot)
