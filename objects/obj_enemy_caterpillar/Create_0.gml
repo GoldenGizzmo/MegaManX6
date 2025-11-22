@@ -16,3 +16,5 @@ animation_ended = false;
 
 turn_delay = false;
 weight = 0.15;
+
+axis = AXIS_HORIZONTAL

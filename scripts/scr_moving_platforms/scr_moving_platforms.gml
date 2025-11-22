@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function scr_platform_move_objects(internal_spd){
+function scr_platform_move_objects(internal_spd, axis = id.axis){
 	
 	ds_list_clear(coll_list)
 	var size = instance_place_list(x + (axis == AXIS_HORIZONTAL ? internal_spd : 0), y + (axis == AXIS_VERTICAL ? internal_spd : 0), obj_dynamic, coll_list, false);

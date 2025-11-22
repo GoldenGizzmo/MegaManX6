@@ -4,8 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-slope = true;
-
 type = 1;
 
 if(image_xscale > 0){

@@ -45,8 +45,6 @@ if life > 0
 			
 		case "Curl":
 		
-			collide_vertical = false;
-		
 			switch (action)
 			{
 				case 0: //Curl up
