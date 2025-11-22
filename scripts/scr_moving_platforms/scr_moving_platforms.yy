@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_moving_platforms",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_moving_platforms",
+  "parent":{
+    "name":"Moving_platforms",
+    "path":"folders/Scripts/Collision/Moving_platforms.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

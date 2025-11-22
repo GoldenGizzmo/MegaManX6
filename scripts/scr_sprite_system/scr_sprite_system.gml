@@ -474,6 +474,7 @@ function scr_setup_player_sprites(){
 				}
 				else
 				{
+					
 					change_sprite(spr_manager, spr_port_x_idle);
 				}
 				
@@ -488,6 +489,7 @@ function scr_setup_player_sprites(){
 	//Adding the checks to the sprite manager.
 	//Here you can set their priority, the higher the priority, the sooner the checks will run.
 	
+
 	spr_manager.add_check(15, damage_check)
 	spr_manager.add_check(10, wall_check)
 	spr_manager.add_check(9, machdash_check)

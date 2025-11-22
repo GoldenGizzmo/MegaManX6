@@ -6,7 +6,7 @@
 //update_variables -> Wether to update the variables if no collision was found. (like set airborne to true).
 //object -> base object to check for collisions for.
 //slope -> base slope to check for collisions for.
-function scr_move(spd, axis, update_variables = true, object = obj_solid, slope = obj_solid_slope){
+function scr_move(spd, axis, update_variables = true, object = obj_entity, slope = obj_solid_slope){
 
 	#region setup
 
@@ -41,7 +41,9 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 		
 				var col = collision_list[| i];
 				if(!col.slope)continue;
-		
+				if(scr_check_ignore(col, axis))continue;
+				
+				
 				if(axis != AXIS_VERTICAL or spd < 0){
 			
 					var res = scr_collide_slope(spd, axis, col, _x, _y);
@@ -79,7 +81,8 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 		
 				var col = collision_list[| i];
 				if(col.slope)continue;
-		
+				if(scr_check_ignore(col, axis))continue;
+				
 				return scr_basic_collide(spd, axis, col, _x + hsp, _y + vsp);
 			}
 		}
@@ -99,6 +102,7 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 			ds_list_clear(collision_list)
 			size = instance_place_list(x, y + SLOPE_CHECK_REACH, object, collision_list, true)
 		
+		
 			var slp = noone;
 			var flr = noone;
 		
@@ -109,6 +113,9 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 					slp = col; 
 					break;
 				}
+					
+				if(scr_check_ignore(col, axis))continue;
+
 				flr = col;
 			}
 		
@@ -127,6 +134,60 @@ function scr_move(spd, axis, update_variables = true, object = obj_solid, slope 
 	return spd;
 }
 
+
+function scr_check_ignore(col, axis){
+	
+	try{
+		if(!col.collide_horizontal and axis == AXIS_HORIZONTAL){
+			scr_add_to_ignore_coll(col)
+			return true;
+		}
+					
+		if(!col.collide_vertical and axis == AXIS_VERTICAL){
+			scr_add_to_ignore_coll(col)
+			return true;
+		}
+	}
+	
+	if(scr_in_ignore_coll(col))return true;
+	
+	return false;
+}
+
+function scr_add_to_ignore_coll(col){
+	
+	if(ds_list_find_index(ignore_coll, col) > -1)return;
+	
+	ds_list_add(ignore_coll, col)
+	ignore_coll_size += 1;
+}
+
+function scr_update_ignore_coll(){
+	
+	
+	var i = 0;
+	while(i < ignore_coll_size){
+		
+		
+		var col = ignore_coll[| i];
+		
+		if(!place_meeting(x, y, col)){
+			
+			ds_list_delete(ignore_coll, i)
+			ignore_coll_size -= 1;
+			continue;
+		}
+		
+		i++;
+	}
+	
+}
+
+function scr_in_ignore_coll(col){
+	
+	return ds_list_find_index(ignore_coll, col) > -1;
+	
+}
 
 function scr_basic_collide(spd, axis, col, _x = x, _y = y){
 	
