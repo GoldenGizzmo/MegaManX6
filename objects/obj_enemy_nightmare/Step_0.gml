@@ -10,12 +10,8 @@ event_inherited();
 
 if life > 0
 {
-	speed = 0;
-	if sprite_index = spr_enemy_nightmare_move
-		speed = 1;
-	
 	//Afterimages
-	if global.animate%10 = 0 and fade_in = 0
+	if global.animate%10 = 0 and fade_in = 0 and image_alpha > 0
 	{
 		offset_x = 0;
 		offset_y = 0;

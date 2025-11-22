@@ -6,8 +6,12 @@ event_inherited();
 
 if life > 0
 {
+	
 	if state = "Moving"
 	{
+		
+		collide_vertical = true;
+		
 		if turn_delay = false
 			event_user(0);
 		
@@ -21,13 +25,20 @@ if life > 0
 	}
 	else if state = "Rolling"
 	{
+		
+		collide_vertical = false;
 		xspeed = 1*image_xscale;
 	}
 }
 else
 {
+	
+	
+	collide_vertical = false;
+	
 	if death = 0 and global.pause = false //Lock for alarm
 	{
+		
 		//Death event
 		instance_create_layer(x,y,"Explosions",obj_explosion);
 		scr_make_sound(snd_explosion,1,1,false);
@@ -35,4 +46,4 @@ else
 	}
 }
 
-scr_move_along_with_platform(xspeed);
+scr_move_along_with_platform(xspeed)

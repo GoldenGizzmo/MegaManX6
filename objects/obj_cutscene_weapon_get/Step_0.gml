@@ -19,7 +19,7 @@ if action > 3
 //Player can still get hit, but can't die
 global.life = global.lifemax;
 //Infinite ammo
-global.weapon[global.weapon_choice].ammo = global.weapon[global.weapon_choice].ammo_max
+global.weapon[global.weapon_choice].ammo = global.weapon_ammo_max
 
 //Turn off enemy item drops
 with obj_enemy_parent

@@ -72,7 +72,8 @@ if global.pause_screen = true
 					draw_sprite_ext(spr_hud_weapon,i,(42*scale),(31*scale)+(17*scale*i),scale,scale,0,c_white,1);	
 			
 					//Ammo bar
-					var amount = (global.weapon[i].ammo/global.weapon[i].ammo_max);
+					//var amount = (global.weapon[i].ammo/global.weapon[i].ammo_max);
+					var amount = global.weapon[i].ammo/global.weapon_ammo_max
 					draw_rectangle_color((57*scale),(35*scale)+(17*scale*i),(62*scale)+(120*scale),(35*scale)+(17*scale*i)+(3*scale),menu_colour,menu_colour,menu_colour,menu_colour,0);
 					draw_set_alpha(0.7);
 					draw_rectangle_color((57*scale),(35*scale)+(17*scale*i),(62*scale)+(120*scale),(35*scale)+(17*scale*i)+(3*scale),c_black,c_black,c_black,c_black,0);
@@ -411,7 +412,6 @@ if global.pause_screen = true
 		case "Stage Select":
 			#region 
 			var scale = global.ui_scale/1.25; //Menu size
-			window_set_fullscreen(true)
 	
 			draw_sprite_ext(spr_white_space,0,x,y,room_width,room_height,0,c_black,1)
 			scr_get_level(menu_position);
@@ -736,10 +736,10 @@ if global.pause_screen = true
 				var text = part_description;
 			}
 			
-			//Alia
-			draw_sprite_ext(spr_mugshot_alia,blink,(96*scale),(8*scale),-scale,scale,0,c_white,1)
+			//Douglas
+			draw_sprite_ext(spr_mugshot_douglas,blink,(96*scale),(8*scale),-scale,scale,0,c_white,1)
 			if text_scrolling < string_length(text)
-				draw_sprite_ext(spr_mugshot_alia_talk,text_scrolling/6,(96*scale),(8*scale),-scale,scale,0,c_white,1);
+				draw_sprite_ext(spr_mugshot_douglas_talk,text_scrolling/6,(96*scale),(8*scale),-scale,scale,0,c_white,1);
 			
 			
 			//Check if text has changed to reset typewriter effect

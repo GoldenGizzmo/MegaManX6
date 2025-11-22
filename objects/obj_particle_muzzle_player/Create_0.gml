@@ -6,3 +6,5 @@ y_pos = 0;
 
 palette_type = 0;
 palette = 0;
+
+track_player = true;

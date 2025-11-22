@@ -347,7 +347,7 @@ if global.pause = true
 									{
 										if global.weapon[i] != 0
 										{
-											if global.weapon[i].ammo < global.weapon[i].ammo_max
+											if global.weapon[i].ammo < global.weapon_ammo_max
 											{
 												global.weapon[i].ammo++;
 												check_full = false;
@@ -612,12 +612,16 @@ if global.pause = true
 						{
 							if obj_fade_out.alpha >= 2
 							{
-								global.pause = false;
-								global.pause_screen = false;
-								global.pause_screen_state = 0;
 								
-								scr_get_level(menu_position);
-								room_goto(level_destination);
+								stageselect_state = 4;
+								
+								//Check if level is already completed or not
+								if ds_list_find_index(global.level_list,level_destination) = -1
+									global.level_completed = false;
+								else
+									global.level_completed = true;
+									
+								instance_create_depth(0,0,0,obj_cutscene_investigator);
 							}
 						}
 						

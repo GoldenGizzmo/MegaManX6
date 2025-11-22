@@ -47,6 +47,42 @@ if life > 0
 				rotate_speed += 0.5;
 		}
 		
+		if state = "Rolling" and rotate_speed != 0 and airborne = false
+		{
+			//Rumble sound
+			if !audio_is_playing(snd_heatnix_rumble)
+				scr_make_sound(snd_heatnix_rumble,1,1,true);
+			
+			if !instance_exists(obj_shake)
+			{
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.style = 1;
+				shake.intensity = 0.5;
+				shake.length = 10;
+			}
+			
+			//Rocks when spinning
+			if global.animate%3 = 0 
+			{
+				repeat(2)
+				{
+					particle = instance_create_layer(x+random_range(-30,30),y+55,"Projectiles",obj_particle_rubble)
+					particle.speed = random_range(3,4);
+					particle.gravity = 0.1; 
+					if xspeed > 0
+						particle.direction = 90+random_range(0,30)
+					else
+						particle.direction = 90-random_range(0,30);
+					particle.image_xscale = choose(-1,1);
+					particle.image_index = irandom(1);
+				}
+				
+				//particle.sprite_index = choose(spr_bullet_rubble,spr_effect_rubble,spr_effect_rubble)
+			}
+		}
+		else
+			audio_stop_sound(snd_heatnix_rumble)
+		
 		//Giga attack movement
 		if zip_x != 0
 		{
@@ -60,7 +96,7 @@ if life > 0
 			afterimage.sprite_index = sprite_index;
 			afterimage.image_index = image_index;
 			afterimage.image_angle = rotate;
-			afterimage.image_blend = c_aqua;
+			afterimage.image_blend = make_colour_rgb(41,51,153);
 		}
 	}
 	else
@@ -83,8 +119,8 @@ if life > 0
 			//Set a jewel respawn when both are destroyed
 			if armour = true
 			{
-				jewel_respawn_top = 60*10;
-				jewel_respawn_bottom = 60*10;
+				jewel_respawn_top = 60*8;
+				jewel_respawn_bottom = 60*8;
 			}		
 		
 			armour = false;
@@ -116,6 +152,9 @@ else
 	sprite_index = spr_boss_turtloid_death;
 	image_alpha = 1;
 	rotate = 0;
+	
+	if surface_exists(surface)
+		surface_free(surface);
 	
 	//Death scream
 	if death = -2

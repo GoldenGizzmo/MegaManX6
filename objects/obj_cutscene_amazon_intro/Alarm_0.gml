@@ -25,7 +25,7 @@ switch (action)
 			with obj_player
 			{
 				image_alpha = 1;
-				sprite_index = spr_player_x_warp_no_armour;
+				sprite_index = spr_port_x_warp_no_armour;
 				image_index = 0;
 				image_xscale = 1;
 			}
@@ -71,7 +71,7 @@ switch (action)
 		
 	case 5: //Yammark appears
 		action++;
-		alarm[0] = 180;
+		alarm[0] = 1;
 	
 		actor.direction = 0;
 		actor.speed = 14;
@@ -80,9 +80,57 @@ switch (action)
 		shake.intensity = 8;
 		shake.smooth = true;
 		shake.style = 1;
+		
+		with obj_player
+		{
+			animation_lock = true
+			sprite_index = spr_port_x_crouch;
+			image_index = 0;
+		}
 		break;
 		
-	case 6: //Dialogue
+	case 6:
+		if obj_player.image_index > obj_player.image_number-1
+		{
+			action++;
+			alarm[0] = 120;
+			
+			with obj_player
+			{
+				image_index = -1;
+				image_speed = 0;
+			}
+		}
+		else
+			alarm[0] = 1;
+		break;
+		
+	case 7:
+		action++;
+		alarm[0] = 1;
+	
+		with obj_player
+			image_speed = -1;
+		break;
+		
+	case 8:
+		if obj_player.image_index < 0.1
+		{
+			action++;
+			alarm[0] = 60;
+			
+			with obj_player
+			{
+				animation_lock = false
+				sprite_index = spr_port_x_idle;
+				image_speed = 1;
+			}
+		}
+		else
+			alarm[0] = 1;
+		break;
+		
+	case 9: //Dialogue
 		action++;
 		alarm[0] = 10;
 		
@@ -91,7 +139,7 @@ switch (action)
 		conversation.movement = false;
 		break;
 		
-	case 7: //Do opening animation
+	case 10: //Do opening animation
 		if !instance_exists(obj_dialogue)
 		{
 			action++;
@@ -107,7 +155,7 @@ switch (action)
 		}
 		break;
 		
-	case 8: //Equip armour
+	case 11: //Equip armour
 		alarm[0] = 1;
 		if obj_ready.state = 4
 		{
@@ -118,12 +166,14 @@ switch (action)
 			{
 				animation_lock = true;
 				image_index = 0;
-				sprite_index = spr_player_x_armour_up;
+				
+				armour_down = false;
+				sprite_index = spr_port_x_armour_up;
 			}
 		}
 		break;
 		
-	case 9: //Player idle animation
+	case 12: //Player idle animation
 		if obj_player.image_index > obj_player.image_number-1
 		{
 			action++;
@@ -136,10 +186,12 @@ switch (action)
 			alarm[0] = 1;
 		break;
 		
-	case 10: //Play	
+	case 13: //Play	
 		with obj_player
 		{
 			movement = true;
+			sprite_index = spr_port_x_idle;
+			image_speed = 1;
 			
 			animation_lock = false;
 			image_index = 0;

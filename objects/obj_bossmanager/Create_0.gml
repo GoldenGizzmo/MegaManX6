@@ -8,6 +8,7 @@ image_alpha = 0;
 run_direction = 1;
 
 boss = noone;
+miniboss = false;
 boss_theme = snd_music_investigator;
 dialogue = 0;
 

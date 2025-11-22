@@ -15,5 +15,3 @@ fall_speed = 6;
 weight = 0.2;
 collision_list = ds_list_create();
 
-ignore_coll_size = 0;
-ignore_coll = ds_list_create();

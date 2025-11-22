@@ -6,7 +6,7 @@
   "name":"scr_moving_platforms",
   "parent":{
     "name":"Moving_platforms",
-    "path":"folders/Scripts/Moving_platforms.yy",
+    "path":"folders/Scripts/Collision/Moving_platforms.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

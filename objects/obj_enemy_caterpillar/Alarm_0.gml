@@ -44,6 +44,7 @@ if life > 0
 			break;
 			
 		case "Curl":
+		
 			switch (action)
 			{
 				case 0: //Curl up
@@ -87,6 +88,10 @@ if life > 0
 			break;
 			
 		case "Uncurl":
+		
+			collide_vertical = true;
+		
+		
 			switch (action)
 			{
 				case 0: //Stop

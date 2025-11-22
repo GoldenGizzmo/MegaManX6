@@ -6,3 +6,5 @@ event_inherited();
 
 with inst_1F7220A
 	x = 0;
+	
+obj_player.armour_down = true;

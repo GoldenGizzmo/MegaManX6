@@ -21,14 +21,15 @@
   "height":46,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"caf7ad17-1a6c-4840-8d03-0c4595237d0a","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"caf7ad17-1a6c-4840-8d03-0c4595237d0a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"893e169c-087a-460f-9f01-0469548d0749","blendMode":0,"displayName":"default","isLocked":false,"name":"893e169c-087a-460f-9f01-0469548d0749","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_enemy_seahorse_alt",
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Hazards/Enemies.yy",
+    "name":"Seahorse",
+    "path":"folders/Sprites/Hazards/Enemies/Seahorse.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -72,9 +73,15 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"3bf18d61-fccb-49ec-bcd1-9e69bd004c32","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9960d764-f77d-4f2d-815e-42f5880f90c1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8cdb9ade-5588-4ad8-ab78-236546a45d08","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"43d93fe6-c3ba-4a07-8182-c2c897af1222","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"3bf18d61-fccb-49ec-bcd1-9e69bd004c32","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed03e8f1-5b04-4ef3-a5db-bdbd7d694c06","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"9960d764-f77d-4f2d-815e-42f5880f90c1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"934e2e6f-5cf8-4317-a7ca-451beb5c5a64","path":"sprites/spr_enemy_seahorse_alt/spr_enemy_seahorse_alt.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8cdb9ade-5588-4ad8-ab78-236546a45d08","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

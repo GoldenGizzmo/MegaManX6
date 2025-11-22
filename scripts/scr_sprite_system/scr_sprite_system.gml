@@ -300,6 +300,28 @@ function scr_setup_player_sprites(){
 		//Each one of these functions will be run every frame, in order of priority (which is set later)
 		//They MUST return either true or false, "false" means the system should run the following check, "true" means it should stop here.
 	
+		var machdash_check = function(){
+			if !(global.x_armour_leg = "Blade Leg" and airdash_state > 0)
+				return false;
+			
+			if airdash_state < 2
+			{
+				change_sprite(spr_manager,spr_port_x_machdash_hold,undefined,sprite_loop_type.no_loop); //Holding sprite
+			}
+			else
+			{
+				//Get mach dash direction
+				if machdash_direction = 90
+					change_sprite(spr_manager,spr_port_x_machdash_up,undefined,sprite_loop_type.no_loop); //Holding sprite
+				else if machdash_direction = 270
+					change_sprite(spr_manager,spr_port_x_machdash_down,undefined,sprite_loop_type.no_loop); //Holding sprite
+				else
+					change_sprite(spr_manager,spr_port_x_machdash,undefined,sprite_loop_type.no_loop); //Holding sprite
+			}
+			
+			return true;
+		}
+	
 		var airborne_check = function(){
 		
 			if(!airborne)return false;
@@ -433,7 +455,7 @@ function scr_setup_player_sprites(){
 						change_sprite(spr_manager, spr_port_x_idle_shoot, shot_fired ? animation_sync_type.override : animation_sync_type.base, sprite_loop_type.no_loop);
 					}
 				
-					else if(attack_action == attack_actions.rain or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
+					else if(attack_action == attack_actions.rain or attack_action == attack_actions.yanma or !scr_sprite_finished(spr_manager, spr_port_x_idle_shoot)){
 						change_sprite(spr_manager, spr_port_x_idle_shoot)
 					}
 					
@@ -452,6 +474,7 @@ function scr_setup_player_sprites(){
 				}
 				else
 				{
+					
 					change_sprite(spr_manager, spr_port_x_idle);
 				}
 				
@@ -466,8 +489,10 @@ function scr_setup_player_sprites(){
 	//Adding the checks to the sprite manager.
 	//Here you can set their priority, the higher the priority, the sooner the checks will run.
 	
+
 	spr_manager.add_check(15, damage_check)
 	spr_manager.add_check(10, wall_check)
+	spr_manager.add_check(9, machdash_check)
 	spr_manager.add_check(8, airborne_check)
 	spr_manager.add_check(5, dash_check)
 	spr_manager.add_check(3, crouch_check)

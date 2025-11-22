@@ -18,3 +18,5 @@ for (var a = 0; a < count; a++)
 	spawn.order = a;
 	spawn.follow = true;
 }
+
+obj_player.armour_down = true;

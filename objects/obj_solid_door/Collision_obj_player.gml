@@ -12,7 +12,7 @@ if open_state = 0 and ((image_xscale = 1 and obj_player.x < x) or (image_xscale 
 		movement_freeze = true;
 		colliding = false;
 		
-		if sprite_index != spr_player_x_move_simple
+		if sprite_index != spr_port_x_move_loop// and sprite_index != spr_port_x_dash
 			image_speed = 0;
 	}
 	

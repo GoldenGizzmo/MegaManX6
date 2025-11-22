@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_bullet_seahorse",
-    "path":"sprites/spr_bullet_seahorse/spr_bullet_seahorse.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

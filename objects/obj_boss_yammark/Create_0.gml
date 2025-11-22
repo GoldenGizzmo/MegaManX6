@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-life = 150;
+life = 200;
 lifemax = life;
 life_drone = 18;
 damage = 0;

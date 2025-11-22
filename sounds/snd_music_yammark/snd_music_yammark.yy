@@ -7,10 +7,10 @@
   },
   "bitDepth":1,
   "channelFormat":1,
-  "compression":0,
+  "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":91.97134,
+  "duration":1799.2446,
   "exportDir":"",
   "name":"snd_music_yammark",
   "parent":{

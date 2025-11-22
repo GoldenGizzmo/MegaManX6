@@ -15,6 +15,9 @@ if background != 0
 			case spr_bg_intro_night:
 				ambience = snd_ambience_wilderness; break;
 			case spr_bg_turtloid: ambience = snd_ambience_temple; break;
+			case spr_bg_heatnix:
+			case spr_bg_heatnix_purple:
+				ambience = snd_ambience_magma; break;
 		}
 		if ambience != "Level"
 		{

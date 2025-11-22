@@ -2,7 +2,7 @@
 
 knockback = set_knockback;
 
-if global.life > 0 and invul = false
+if global.life > 0 and invul = false and movement = true
 {
 	if recovery = 0 and other.damage > 0
 	{
@@ -27,6 +27,9 @@ if global.life > 0 and invul = false
 			yspeed = 0;
 			alarm[4] = 1;
 		}
+		
+		//Part: Death Blocker
+		if ds_list_find_index(global.parts_equipped,8) != -1 {scr_get_part_effect(8,false);}	
 			
 		//Settings
 		recovery = 1;
@@ -35,16 +38,22 @@ if global.life > 0 and invul = false
 		climbing = false;
 		attack_action = attack_actions.none;
 		
-		//Knockback
-		yspeed = -3;
-		if other.x > x
-			xspeed = -knockback;
+		if bike = true
+		{
+			if global.life > 0
+				alarm[3] = 5;
+		}
 		else
-			xspeed = knockback;
+		{
+			//Knockback
+			yspeed = -3;
+			if other.x > x
+				xspeed = -knockback;
+			else
+				xspeed = knockback;
+		}
 	}
 } 
-
-
 
 
 

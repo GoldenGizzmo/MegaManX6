@@ -23,7 +23,7 @@ switch (action)
 					image_xscale = -1;
 				
 				//Stop running
-				sprite_index = spr_player_x_idle;
+				sprite_index = spr_port_x_idle;
 			}
 		}
 		else
@@ -39,7 +39,7 @@ switch (action)
 				animation_lock = true;
 				image_xscale = move_direction;
 				x += move_speed*move_direction;
-				sprite_index = spr_player_x_move_simple;
+				sprite_index = spr_port_x_move_loop;
 			}
 		}
 		
@@ -111,7 +111,7 @@ switch (action)
 			with obj_player
 			{
 				image_index = 0;
-				sprite_index = spr_player_x_warp_out;
+				sprite_index = spr_port_x_warp_out;
 			}
 		}
 		else

@@ -6,4 +6,5 @@ switch (room)
 {
 	case rm_yammark: scr_weapon_get(1,"Yanma Option"); break;
 	case rm_turtloid: scr_weapon_get(6,"Meteor Rain"); break;
+	case rm_heatnix: scr_weapon_get(3,"Magma Blade"); break;
 }

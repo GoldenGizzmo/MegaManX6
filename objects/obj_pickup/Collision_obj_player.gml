@@ -66,14 +66,14 @@ switch pickup_type
 		var refilled_weapon = 0;
 	
 		//If selected special weapon is not at max and not the X-Saber
-		if global.weapon[global.weapon_choice].ammo < global.weapon[global.weapon_choice].ammo_max and global.weapon_choice != 0
+		if global.weapon[global.weapon_choice].ammo < global.weapon_ammo_max and global.weapon_choice != 0
 			refilled_weapon = global.weapon[global.weapon_choice]; //Refill it
 		else
 		{
 			//Check all the other special weapons and fill them instead
 			for (var i = 1; i < array_length(global.weapon); i++)
 			{
-				if global.weapon[i].ammo < global.weapon[i].ammo_max
+				if global.weapon[i].ammo < global.weapon_ammo_max and global.weapon[i].type != 0
 					refilled_weapon = global.weapon[i];
 			}
 			
@@ -81,8 +81,8 @@ switch pickup_type
 		//If found a weapon to refill
 		if refilled_weapon != 0
 		{
-			scr_make_sound(snd_weapon_tank,1,1,false);
-			
+			scr_make_sound(snd_weapon_tank,1,1.5,false);
+			/*
 			//Fill a percentage amount of ammo
 			if sprite_index = spr_pickup_energy_small
 				pickup_power = ceil(refilled_weapon.ammo_max/5); //Refill 20%
@@ -90,12 +90,13 @@ switch pickup_type
 				pickup_power = ceil(refilled_weapon.ammo_max/2); //Refill 50% 
 			else if sprite_index = spr_pickup_energy_siphon
 				pickup_power = ceil(refilled_weapon.ammo_max/5); //Refill 5% 
+				*/
 				
 			//Refill
-			if refilled_weapon.ammo+pickup_power < refilled_weapon.ammo_max
+			if refilled_weapon.ammo+pickup_power < global.weapon_ammo_max
 				refilled_weapon.ammo += pickup_power;
 			else 
-				refilled_weapon.ammo = refilled_weapon.ammo_max;
+				refilled_weapon.ammo = global.weapon_ammo_max;
 		}
 		else  //If all special weapons are at max, fill weapontank instead
 		{
@@ -155,8 +156,9 @@ switch pickup_type
 		scr_make_sound(snd_pickup,1,1,false);
 		
 		//Increase max ammo for all special weapons
-		for (var i = 0; i < 9; i++)
-			global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 
+		global.weapon_ammo_max = ceil(global.weapon_ammo_max*1.25); 
+		//for (var i = 0; i < 9; i++)
+		//	global.weapon[i].ammo_max = ceil(global.weapon[i].ammo_max*1.25); 
 		break;
 		
 	case 7: //Nightmare Souls

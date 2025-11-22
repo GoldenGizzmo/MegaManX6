@@ -5,6 +5,8 @@
 instance_create_layer(x,y,"Collision",obj_spawnzone);
 instance_create_layer(x,y,"Collision",obj_camera);
 
+//Part manager
+instance_create_layer(x,y,"Instances",obj_part_manager);
 
 global.animate = 0;
 global.hud_toggle = false;
@@ -14,6 +16,7 @@ base_life = 32; //Starting max health
 global.life = base_life;
 global.lifemax = base_life;
 life_tick = global.life;
+life_extend = 0;
 
 global.death = false;
 death_animation = 0;

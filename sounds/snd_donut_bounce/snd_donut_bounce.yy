@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_donut_bounce",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.5126304,
+  "exportDir":"",
+  "name":"snd_donut_bounce",
+  "parent":{
+    "name":"Blaze-Heatnix-stage",
+    "path":"folders/Sounds/Stage-Sounds/Blaze-Heatnix-stage.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_donut_bounce.wav",
+  "volume":1.0,
+}
