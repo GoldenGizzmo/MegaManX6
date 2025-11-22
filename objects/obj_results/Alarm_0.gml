@@ -34,7 +34,7 @@ switch (state)
 			with obj_player
 			{
 				image_index = 0;
-				sprite_index = spr_player_x_victory;
+				sprite_index = spr_port_x_victory;
 				animation_lock = true;
 			}
 		}
@@ -64,7 +64,7 @@ switch (state)
 		{
 			image_index = 0;
 			image_speed = 1;
-			sprite_index = spr_player_x_warp_out;
+			sprite_index = spr_port_x_warp_out;
 		}
 		break;
 		
@@ -102,6 +102,11 @@ switch (state)
 	case 7:
 		alarm[0] = 1;
 		if fade.alpha >= 1
-			room_goto(rm_weapon_get);
+		{
+			if global.level_completed = false
+				room_goto(rm_weapon_get);
+			else
+				room_goto(rm_stage_select);
+		}
 		break;
 }

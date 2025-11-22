@@ -11,6 +11,6 @@ bullet.breakable = true;
 
 bullet.sprite_index = spr_bullet_yanma_giga;
 bullet.explosion = spr_explosion_yanma_small;
-bullet.explosion_angle = bullet.direction;
+bullet.explosion_angle = true;
 
 scr_make_sound(snd_yammark_shoot,1,1,false);

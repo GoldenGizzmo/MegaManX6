@@ -9,7 +9,7 @@ if shoot_delay = 0
 	bullet.image_xscale = image_xscale;
 	bullet.speed = 6*image_xscale;;
 
-	bullet.sprite_index = spr_bullet_yanma_boss;
+	bullet.sprite_index = spr_bullet_yanma;
 	bullet.explosion = spr_explosion_yanma_small;
 	
 	bullet.special = true;

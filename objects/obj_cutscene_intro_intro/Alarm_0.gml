@@ -25,7 +25,7 @@ switch (action)
 			with obj_player
 			{
 				image_alpha = 1;
-				sprite_index = spr_player_x_warp_no_armour;
+				sprite_index = spr_port_x_warp_no_armour;
 				image_index = 0;
 				image_xscale = 1;
 			}
@@ -84,7 +84,8 @@ switch (action)
 			{
 				animation_lock = true;
 				image_index = 0;
-				sprite_index = spr_player_x_armour_up;
+				sprite_index = spr_port_x_armour_up;
+				armour_down = false;
 			}
 		}
 		break;
@@ -106,6 +107,8 @@ switch (action)
 		with obj_player
 		{
 			movement = true;
+			sprite_index = spr_port_x_idle;
+			image_speed = 1;
 			
 			animation_lock = false;
 			image_index = 0;

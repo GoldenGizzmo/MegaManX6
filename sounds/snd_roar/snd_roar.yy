@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_roar",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":4.1925397,
+  "exportDir":"",
+  "name":"snd_roar",
+  "parent":{
+    "name":"Blaze-Heatnix-stage",
+    "path":"folders/Sounds/Stage-Sounds/Blaze-Heatnix-stage.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_roar.mp3",
+  "volume":1.0,
+}

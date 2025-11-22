@@ -29,6 +29,20 @@ function scr_get_character(character)
 			mugshot_talk = spr_mugshot_turtloid_talk;
 			break;
 			
+		case "Heatnix":
+			character_colour = make_color_rgb(255,130,0);
+			character_name = "Blaze Heatnix"; //If I were to change the name
+			mugshot = spr_mugshot_heatnix;
+			mugshot_talk = spr_mugshot_heatnix_talk;
+			break;
+			
+		case "Mijinion":
+			character_colour = make_color_rgb(102,45,145);
+			character_name = "Infinity Mijinion"; //If I were to change the name
+			mugshot = spr_mugshot_mijinion;
+			mugshot_talk = spr_mugshot_mijinion;
+			break;
+			
 		case "Dr. Light":
 			character_colour = make_color_rgb(171,232,255);
 			mugshot = spr_mugshot_drlight;
@@ -40,6 +54,18 @@ function scr_get_character(character)
 			mugshot = spr_mugshot_alia;
 			mugshot_talk = spr_mugshot_alia_talk;
 			pause_hue = 10;
+			break;
+			
+		case "Douglas":
+			character_colour = make_color_rgb(89,178,89);
+			mugshot = spr_mugshot_douglas;
+			mugshot_talk = spr_mugshot_douglas_talk
+			break;
+			
+		case "Reploid":
+			character_colour = make_color_rgb(205,108,199);
+			mugshot = spr_mugshot_reploid;
+			mugshot_talk = spr_mugshot_reploid_talk;
 			break;
 			
 		case "High Max":

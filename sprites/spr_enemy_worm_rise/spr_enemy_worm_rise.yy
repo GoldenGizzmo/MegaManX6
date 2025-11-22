@@ -37,8 +37,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Hazards/Enemies.yy",
+    "name":"Worm",
+    "path":"folders/Sprites/Hazards/Enemies/Worm.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

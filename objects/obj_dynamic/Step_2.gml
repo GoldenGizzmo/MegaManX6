@@ -5,9 +5,6 @@
 if global.pause = true
 	return;
 
-
-scr_update_ignore_coll();
-
 //Current collision scripts
 if movement_freeze = false
 {

@@ -12,6 +12,7 @@ if life > 0
 				alarm[0] = 1;
 				action++;
 			
+				speed = 1;
 				direction = point_direction(x,y,obj_player.x,obj_player.y);
 				
 				sprite_index = spr_enemy_nightmare_move;
@@ -21,6 +22,7 @@ if life > 0
 				alarm[0] = 60;
 				action = 0;
 			
+				speed = 0;
 				sprite_index = spr_enemy_nightmare;
 			}
 			break;
@@ -36,9 +38,11 @@ if life > 0
 						action++;
 				
 						sprite_index = spr_enemy_nightmare_shoot;
+						speed = 0;
 					}
 					else
 					{
+						speed = 1;
 						direction = point_direction(x,y,obj_player.x,obj_player.y);
 						sprite_index = spr_enemy_nightmare_move;
 						alarm[0] = 1;
@@ -74,6 +78,48 @@ if life > 0
 						state = "Follow"
 						
 						sprite_index = spr_enemy_nightmare;
+					}
+					break;
+			}
+			break;
+			
+		case "Ride Chaser":
+			if xstart < x
+				image_xscale = -1;
+			else
+				image_xscale = 1;
+		
+			switch (action)
+			{
+				case 0:
+					action++;
+					alarm[0] = 1;
+				
+					x = obj_camera.x-random_range(-200,200);
+					y = obj_camera.y-150;
+					image_alpha = 1;
+					break;
+					
+				case 1:
+					if distance_to_point(xstart,ystart) > 5
+					{
+						alarm[0] = 1;
+						
+						speed = 2;
+						direction = point_direction(x,y,xstart,ystart);
+						sprite_index = spr_enemy_nightmare_move;
+					}
+					else
+					{
+						action = 0;
+						alarm[0] = 30;
+						
+						speed = 0;
+						damage = damage_store;
+						event_user(3);
+						state = "Shooting";
+						sprite_index = spr_enemy_nightmare;
+						aggro_range = 999;
 					}
 					break;
 			}

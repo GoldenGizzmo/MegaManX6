@@ -23,7 +23,7 @@ if other.villainy != 2 and life > 0 and other.damage > 0
 		
 				if other.melee_slash = true
 				{
-					cut = instance_create_layer(x+offset_x,y+offset_y,"Explosions",obj_particle_cut);
+					cut = instance_create_layer(between_x+offset_x,between_y+offset_y,"Explosions",obj_particle_cut);
 					cut.image_angle = effect.image_angle+45;
 				}
 		

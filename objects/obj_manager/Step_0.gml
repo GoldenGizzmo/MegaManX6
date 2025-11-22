@@ -13,6 +13,7 @@ if keyboard_check(vk_control)
 	{
 		room_goto(rm_highmax);
 		scr_weapon_get(1,"Yanma Option");
+		scr_weapon_get(3,"Magma Blade");
 		scr_weapon_get(6,"Meteor Rain");
 	}
 		
@@ -31,6 +32,20 @@ if keyboard_check(vk_control)
 	}
 }
 
+if keyboard_check_pressed(ord("R"))
+{
+	with obj_player
+	{
+		if animation_lock = false
+		{
+			animation_lock = true
+			xspeed = 0;
+			sprite_index = spr_port_x_idle
+		}
+		else
+			animation_lock = false	
+	}
+}
 
 //Music volume
 audio_group_set_gain(audiogroup_sfx,global.volume_effect*global.volume_master,0);

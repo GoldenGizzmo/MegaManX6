@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_heatnix_screech",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.3858957,
+  "exportDir":"",
+  "name":"snd_heatnix_screech",
+  "parent":{
+    "name":"Blaze-Heatnix",
+    "path":"folders/Sounds/Blaze-Heatnix.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_heatnix_screech.mp3",
+  "volume":1.0,
+}

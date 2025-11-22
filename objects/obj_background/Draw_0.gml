@@ -22,7 +22,10 @@ if room = rm_weapon_get or room = rm_highmax
 }
 else
 {
-	draw_sprite_tiled_ext(background,0,lerp(0,camera_get_view_x(view_camera[0])-(global.view_width/2),0.8),camera_get_view_y(view_camera[0]),1,1,c_white,1);
+	if background = spr_bg_mijinion
+		draw_sprite_ext(background,global.animate/10,camera_get_view_x(view_camera[0])+(global.view_width/2),camera_get_view_y(view_camera[0]),0.75,0.75,0,c_white,1);
+	else
+		draw_sprite_tiled_ext(background,0,lerp(0,camera_get_view_x(view_camera[0])-(global.view_width/2),0.8)+bg_scrolling,camera_get_view_y(view_camera[0]),1,1,c_white,1);
 	
 	if instance_exists(obj_acid_rain)
 		draw_sprite_ext(spr_white_space,0,camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),room_width,room_height,0,c_black,obj_acid_rain.rain_alpha)

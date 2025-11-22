@@ -4,13 +4,31 @@ if life > 0
 	sprite_index = spr_boss_turtloid_idle;
 	image_speed = 1;
 	
+	var change = irandom(2);
+	
 	//Choose attack
 	switch (state)
 	{
-		case "Rockets": state = "Rolling"; break;
-		case "Rolling": state = "Stomp"; break;
-		case "Stomp": state = "Bounce"; break;
-		case "Bounce": state = "Rockets"; break;
+		case "Rockets": 
+			state = "Rolling"; 
+			if change = 0
+				state = "Bounce";
+			break;
+		case "Rolling": 
+			state = "Stomp"; 
+			if change = 0
+				state = "Rockets";
+			break;
+		case "Stomp": 
+			state = "Bounce"; 
+			if change = 0
+				state = "Rockets";
+			break;
+		case "Bounce": 
+			state = "Rockets";
+			if change = 0
+				state = "Rolling";
+			break;
 		
 		default: state = "Rockets"; break;
 	}
@@ -25,4 +43,7 @@ if life > 0
 		
 		alarm[0] = 1;
 	}
+	
+	if done_giga = true
+		alarm[0] = 30; //Attack faster
 }

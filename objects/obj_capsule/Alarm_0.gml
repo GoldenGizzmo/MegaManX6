@@ -49,6 +49,9 @@ switch (state)
 		
 		conversation = instance_create_depth(0,0,0,obj_dialogue);
 		conversation.dialogue = dialogue;
+		//Check if any parts are collected
+		if !global.blade_head_get and !global.blade_chest_get and !global.blade_arm_get and !global.blade_leg_get and !global.shadow_head_get and !global.shadow_chest_get and !global.shadow_arm_get and !global.shadow_leg_get 
+			conversation.dialogue = "Dr.Light Intro";
 		break;
 		
 	case 4: //Do opening animation
@@ -199,7 +202,7 @@ switch (state)
 		with obj_player
 		{
 			image_index = 0;
-			sprite_index = spr_player_x_victory;
+			sprite_index = spr_port_x_victory;
 			animation_lock = true;
 		}
 	
@@ -231,6 +234,7 @@ switch (state)
 			movement = true;
 			animation_lock = false;
 			image_speed = 1;
+			sprite_index = spr_port_x_idle;
 		}
 		break;
 }

@@ -3,24 +3,30 @@
 
 event_user(0);
 
+
 draw_set_font(global.fnt_game);
 
-//draw_text(x,y-80,"xspeed:   "+string(xspeed))
+//draw_text(x,y-80,global.damage_taken)
 
 if flicker = true or flicker_weapon_swap = true
 {
 	gpu_set_fog(true,make_color_rgb(211,232,248),0,0);
-	draw_self();
+	if bike = true //On a bike, only faces to the left
+		draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,image_blend,image_alpha);
+	else
+		draw_self();
+	
+	scr_draw_armour();
 	gpu_set_fog(false,make_color_rgb(211,232,248),0,0);
 	
 	flicker_weapon_swap = false;
 }
 else
 {
-	palette = 0;
+	palette = 4;
 	if global.weapon_choice > 0 //Select right palette when using special weapons
-		palette = (4+global.weapon_choice)
-	else if shooting > 25
+		palette = (5+global.weapon_choice)
+	else if shooting > 10
 		palette = 1;
 	
 	pal_swap_set(spr_player_x_palette,palette,false);
@@ -31,7 +37,12 @@ else
 		else if shooting_charge >= shooting_charge_lvl_1
 			pal_swap_set(spr_player_x_palette,2,false);
 	}	
-	draw_self();
+	if bike = true //On a bike, only faces to the left
+		draw_sprite_ext(sprite_index,image_index,x,y,1,1,0,image_blend,image_alpha);
+	else
+		draw_self();
+	
+	scr_draw_armour();	
 	pal_swap_reset();
 	
 	image_blend = c_white;
@@ -72,7 +83,6 @@ pal_swap_reset();
 
 
 
-draw_text(x, y - 32, image_index)
 
 
 

@@ -7,7 +7,7 @@ tick = false; //used for continuous damage
 villainy = 0;
 explosion = spr_explosion_player;
 explosion_sound = 0;
-explosion_angle = 0;
+explosion_angle = false;
 explosive = false;
 
 piercing = false; //Goes through enemies
@@ -27,6 +27,12 @@ special = false; //They are a special weapon (High Max)
 palette_type = 0;
 palette = 0;
 
+afterimage_toggle = false;
+afterimage_blend = c_white;
+afterimage_fade = 0.075;
+
+animation_loop = true;
+animation_next = 0;
 
 
 

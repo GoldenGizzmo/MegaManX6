@@ -29,6 +29,19 @@ function scr_stop_floor(){
 			
 		break;
 		
+		case obj_boss_donut:
+			if crash = false
+			{
+				crash = true;
+				
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.length = 30;
+				shake.style = 1;
+			
+				scr_make_sound(snd_d1000_crash,1,1,false);
+			}
+			break;
+		
 	}
 	
 	airborne = false;
@@ -38,6 +51,22 @@ function scr_stop_floor(){
 
 //Code that should run when the player hits the ceiling
 function scr_stop_ceiling(){
+	switch(object_index){
+		
+		case obj_boss_donut:
+			if crash = false
+			{
+				crash = true;
+				
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.length = 30;
+				shake.style = 1;
+			
+				scr_make_sound(snd_d1000_crash,1,1,false);
+			}
+			break;
+	}
+	
 	return 0;
 }
 
@@ -73,27 +102,36 @@ function scr_stop_wall(spd, col = obj_solid){
 			}
 		break;
 		
-		case obj_player:
-		
-			if(!walled){
-				attack_action = attack_actions.none;
+		case obj_boss_donut:
+			if crash = false
+			{
+				crash = true;
+				
+				shake = instance_create_depth(0,0,0,obj_shake);
+				shake.length = 30;
+			
+				scr_make_sound(snd_d1000_crash,1,1,false);
 			}
+			break;
+		
+		case obj_player:
 		
 			walled = true;
 			
 			//Checking if touching a wall that can't be climbed
-			var climbable = true
-			if place_meeting(x+image_xscale,y,obj_solid_noclimb)
-				climbable = false;
+			var can_climb = false
+			with instance_place(x+image_xscale,y,obj_solid)
+				can_climb = climbable;
 		
 			//Holding the button into the wall while falling
-			if (airborne and yspeed > 0 and climbable = true)
+			if (airborne and yspeed > 0 and can_climb = true)
 			{
 				yspeed = 1; //Wall slide	
 				if wall_slide = false
 				{
 					wall_slide = true;
 					dash = false;
+					attack_action = attack_actions.none;
 					
 					scr_make_sound(snd_player_x_wallslide,1,1,false);
 				}
@@ -119,8 +157,6 @@ function scr_stop_wall(spd, col = obj_solid){
 				{
 					yspeed = -jump_height;
 					wall_jump = true;
-					
-					attack_action = attack_actions.none;
 					
 					//Wall kick effect
 					effect = instance_create_layer(x+14*image_xscale,y+18,"Explosions",obj_explosion); //y+23

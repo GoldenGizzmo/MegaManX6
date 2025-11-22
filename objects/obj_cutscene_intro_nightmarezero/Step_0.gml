@@ -7,7 +7,7 @@ if action = 13
 	{
 		animation_lock = true;
 		x += move_speed;
-		sprite_index = spr_player_x_move_simple;
+		sprite_index = spr_port_x_move_loop;
 	}
 }
 else
@@ -15,6 +15,6 @@ else
 	with obj_player
 	{
 		animation_lock = false;
-		sprite_index = spr_player_x_idle;
+		sprite_index = spr_port_x_idle;
 	}
 }

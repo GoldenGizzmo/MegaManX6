@@ -12,7 +12,11 @@ if turtloid = true
 		//Set
 		surface_set_target(surface);
 		gpu_set_blendmode_ext_sepalpha(bm_one, bm_zero, bm_one, bm_zero)
-		draw_sprite_tiled_ext(sprite_index,global.animate/4,0,0,1,1,c_white,rain_alpha);
+		draw_sprite_tiled_ext(sprite_index,global.animate,0,0,1,1,c_white,rain_alpha);
+		
+		//	for (var i = 0; i < obj_raindrops.image_xscale; i++)
+		//		draw_sprite_ext(spr_raindrops_meteor_rain,global.animate/2,obj_raindrops.x+(160*i)-cam_x,obj_raindrops.y-cam_y,1,1,0,c_white,rain_alpha);
+
 	
 		gpu_set_blendmode(bm_subtract);
 		draw_sprite_ext(obj_boss_turtloid.sprite_index,obj_boss_turtloid.image_index,obj_boss_turtloid.x-cam_x,obj_boss_turtloid.y-cam_y,obj_boss_turtloid.image_xscale,obj_boss_turtloid.image_yscale,obj_boss_turtloid.rotate,c_white,1);
@@ -37,4 +41,4 @@ if turtloid = true
 		white_alpha -= 0.05;
 }
 else
-	draw_sprite_tiled_ext(sprite_index,global.animate/4,0,0,1,1,c_white,rain_alpha);
+	draw_sprite_tiled_ext(sprite_index,global.animate,0,0,1,1,c_white,rain_alpha);

@@ -156,7 +156,7 @@ if animation_y = 1 and finish = false
 				i -= length;
 			
 				//Text
-				delay = 0; //4; //Accurate to X series
+				delay = 1; //4; //Accurate to X series
 				
 				text_colour = character_colour;
 				draw_text_transformed_color(text_x+(space*char_width)+(6*global.ui_scale),text_y+(13*line),string_char_at(text[page],i),scale,scale,0,text_colour,text_colour,text_colour,text_colour,1);
@@ -244,7 +244,7 @@ if animation_y = 1 and finish = false
 				if timer >= delay
 				{
 					//if string_char_at(text[page],i) != " "
-					if cutoff%4 = 0
+					if cutoff%2 = 0
 						scr_make_sound(snd_text_scroll,1,1,false);
 				
 					cutoff++;
@@ -255,7 +255,7 @@ if animation_y = 1 and finish = false
 			}
 		
 			//Continue arrow
-			if !(i = string_length(text[page]) or i = cutoff) and space > 1
+			if !(i = string_length(text[page]) or i = cutoff) and space > 1 and timer = 0
 			{
 				left_talking = 0;
 				right_talking = 0;

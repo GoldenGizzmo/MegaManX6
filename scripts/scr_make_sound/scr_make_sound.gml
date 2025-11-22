@@ -11,7 +11,7 @@ function scr_make_sound(sound,volume,pitch,loop)
 		//Too loud
 		case snd_explosion_bullet: volume *= 0.5; break;
 		case snd_armour: volume *= 0.5; break;
-		case snd_rescue: volume *= 0.25; break;
+		case snd_rescue: volume *= 0.5; break;
 		
 		case snd_player_x_charge_fadeout: volume *= 0.75; break;
 		case snd_player_x_landing: volume *= 0.75; break;
@@ -47,9 +47,15 @@ function scr_make_sound(sound,volume,pitch,loop)
 		case snd_highmax_talk_die: volume *= 2; break;
 		case snd_highmax_talk_muda: volume *= 2; break;
 		
+		case snd_heatnix_talk_godbird: volume *= 2; break;
+		case snd_heatnix_talk_hiyah: volume *= 2; break;
+		case snd_heatnix_talk_magmastream: volume *= 2; break;
+		case snd_heatnix_talk_kah: volume *= 2; break;
+		
 		//Ambience Management
 		case snd_ambience_rainforest: volume *= 0.5; break;
 		case snd_ambience_wilderness: volume *= 2; break;
+		case snd_ambience_industrial: volume *= 2; break;
 	}
 
 	audio_stop_sound(sound); //Reset dupilcate sounds

@@ -14,9 +14,12 @@ switch (action)
 		alarm[10] = 60*2;
 		alarm[11] = 10;
 		
-		//Stop music
-		audio_stop_sound(global.music);
-		global.music = "Off";
+		if miniboss = false
+		{
+			//Stop music
+			audio_stop_sound(global.music);
+			global.music = "Off";
+		}
 		
 		instance_create_layer(x,y,"Explosions",obj_explosion);
 		scr_make_sound(snd_explosion_boss,1,1,false);
@@ -31,6 +34,9 @@ switch (action)
 		fade_out.fade_speed = 0.005;
 		//fade_out.fade_type = 1;
 		fade_out.image_blend = c_white;
+		
+		if miniboss = true
+			fade_out.fade_speed = 0.01;
 		break;
 		
 	case 3: //Check if fully faded to white
@@ -47,7 +53,7 @@ switch (action)
 			
 			scr_make_sound(snd_explosion_boss_final,1,1,false);
 			
-			with obj_bossmanager
+			with instance_nearest(x,y,obj_bossmanager)
 				bossfight_state = 9;
 		}
 		else
@@ -61,10 +67,23 @@ switch (action)
 		//fade_in.fade_type = 1;
 		fade_in.image_blend = c_white;
 		
-		soul = instance_create_layer(x,y,"Projectiles",obj_pickup);
-		soul.sprite_index = spr_pickup_soul_large;
+		with obj_explosion_death_line_2
+			instance_destroy();
 		
-		instance_create_depth(0,0,0,obj_results);
+		//Re activate the doors
+		with obj_solid_door
+			open_state = 0;
+		
+		if miniboss = true
+			fade_in.fade_speed = 0.015;
+		
+		if miniboss = false
+		{
+			soul = instance_create_layer(x,y,"Projectiles",obj_pickup);
+			soul.sprite_index = spr_pickup_soul_large;
+		
+			instance_create_depth(0,0,0,obj_results);
+		}
 		instance_destroy();
 		break;
 }

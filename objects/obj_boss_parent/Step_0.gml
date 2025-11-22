@@ -28,11 +28,16 @@ if life <= 0
 		with obj_bullet_default
 			alarm[9] = 1;
 		
-		with obj_player
+		if miniboss = false
 		{
-			movement = false;
-			xspeed = 0;
-			dash = false;
+			with obj_player
+			{
+				movement = false;
+				xspeed = 0;
+				dash = false;
+				
+				event_user(5);
+			}
 		}
 		
 		//Flicker slowly

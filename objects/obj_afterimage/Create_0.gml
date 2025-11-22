@@ -7,6 +7,7 @@ image_speed = 0;
 blank = true;
 blendmode = bm_add;
 
+player = false;
 
 
 
